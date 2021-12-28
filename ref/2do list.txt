@@ -1,0 +1,130 @@
+FIX ROT: MAKE IT DO DEF(-INF; 0) INSTEAD OF ALLWAYS = 0
+
+skills
+- 
+grilled cheese - full HP, +DMG [lasts the rest of the run]
+milk - clears all status fx (3 uses)
+plunger - 50% chance to rot enemy, 50% chance to heal them
+
+enemy -DMG
+
+COOKIES every zone [all of em regen 1/3 hp BUT are cheaper than other means of regeneration]
+city: cookie - 1 use, basic regen.
+tunnel: dynamite cookie - 3 uses, regens half hp, chance to inflict global, low damage instead
+lemonade stand: lemon cookie - 3 uses, chance to inflict bitter
+shortcut: shroomy cookie - 3 uses, chance to regen the enemy instead
+incinerator: fire cookie: 1 use, +tempDMG
+
+sewer: trashy cookie - 3 uses, chance to rot you.
+circus: ghost cookie - 3 uses, chance to spook you
+shaft: void cookie - 1 use, heals all status fx
+ashtray: burger cookie - 3 uses, chance to burgify the enemy
+
+cloud: electric cookie - 3 uses, chance to electrocute you
+breach: phishy cookie - 3 uses, chance to take some of your money away
+strip: cheap cookie - 3 uses, chance to regen 1/4hp instead of 1/3
+
+council: pillow cookie - 1 use, cheaper nap
+fridge: frozen cookie - 3 uses, chance to freeze yourself for a turn.
+
+cookie jar - 5 uses, pulls a random cookie
+
+SPECIFIC COOKIES FOR COOKIE JAR:
+christmas cookie - bell sounds when used, heals freeze.
+valentine cookie - chance to inflict regen <3 heals 1/2 instead of 1/3
+skeleton cookie - chance to disengage
+glass cookie - global damage, +tempDMG
+spicy cookie - chance to burn the enemy
+
+grilled cheese - you can only get this in incinerator by eating cheese in front of a feu
+
+RAT SKILLS
+rat bomb - 3 uses, offensive rat that makes a lot of dmg. chance to burn enemy
+pocket rat - when used, one of the enemy's skills goes right to your skills tab. works like steal but you can use it later. you can also get pocket rats when using the rat flute
+
+bitter rat - damages and gives bitter
+spooky rat - damages and scares the enemy
+E-RAT - damages and connects the enemy
+electric rat - damages and electrocutes enemy
+mossy rat - damages and shrooms the enemy
+burnt rat - damages and burns the enemy
+rabid rat - damages and rots the enemy
+iced rat - damages and freezes the enemy
+
+rat nurse - heals 1/2 hp, removes status effects
+gym rat - raises defense
+violent rat - raises damage
+
+mafia rat - decreases enemy defense
+threatening rat - decreases enemy damage
+
+lovely rat - gives regen
+kamikaze rat - makes enemy explode, 1 use
+ciggy rat - -1/2 of current hp, HUGE DEF up
+mini rat king - replaces ALL FOUR of your skills with rat related ones. one use
+
+rat horn - honk honk (cheesy)
+cookie rat - gives you a random cookie
+ratify - 1 use, turns enemy into rat. useful for farming rat flutes! (for pocket rats)
+fancy cheese - heals all hp, costs 1 turn
+
+liquid cheese - heals 2/3 hp, makes you tipsy
+rat key - opens the door to the cheese dimension
+ratuary - 5 uses, activates any rat item [not including cheeses and stuff like that]
+
+playable chars
+achievements (LAST CHORE)
+
+a secret for every main stage
+
+city - cheese + rat = rat flute = 2nd route
+tunnel - honk + car = 3rd route
+lemonade stand - lemonade + kid = fridge
+shortcut - shroom + = = rock blunt
+incinerator - cheese + feu = grilled cheese
+
+bosses
+sewer: -
+hidden circus:  clown car
+shaft - papa soul
+ashtray - omar
+
+cloud - 
+shaft - michael
+strip - tito/bondiola
+
+CHANGE ITEM POOLS:
+lemon:
+bitter
+armor
+punch
+lemonade
+juicer - drains 1/2 enemy hp and saves it for later.
+ 
+shaft:
+void - turns enemy into its special skill, doesn't work on bosses
+nap
+napLong
+rubbish
+
+ashtray:
+shroom
+lily juice
+burgify
+nap
+napLong
+
+council:
+green book - inflicts regen, talks about skills, turns into white book
+red book - inflicts burn, talks about fighting, turns into white book
+blue book - inflicts very long freeze to enemy, talks about innate skills, turns into white book
+white book - talks about a famous pillow witch
+AFTER WHOLE GAME IS FINISHED: translate to spanish
+payasos en español:
+depresin
+congelin
+marketin
+pretendin
+degradito
+cigarrina
+altucho

@@ -1,0 +1,102 @@
+SHOP
+grabbing a skill now rerolls its duplicates
+pools changed
+pricing changed, now prices scale with progress
+shops now heal you when you enter them
+
+GENERAL
+color palettes! - 10 background colors added
+skill descriptions now tell you the ammount of uses/cost
+rock blunt - a rock that smokes a blunt
+achievements
+
+STATUS EFFECTS-
+!frozen- wastes turns
+!spooked- 50% you won't attack with regular hit
+!connected - recieve the damage you make. regenerate the enemy when regenerating yourself
+!rotten - disables your armor
+!regen - i mean.. 
+!electrocuted - disables your special skills
+!tipsy - 25% chance to miss entirely
+disengaged
+
+NEW SKILLS-
+smile - regens 1/4 health AND decreases some defense
+disengage - immunity to damage for a turn
+
+pretend - same as confuse, without wasting turns
+honk2 - honks but clowny
+ghost juggle - spooked fx
+skate rush - makes 1.2 dmg
+
+extra lemonade - heals 1/2 your health, raises your defense - "tastes like 2 lemons"
+seed lemonade - heals 1/2 your health, raises your damage
+rotten lemonade - heals full health, gives you rotten status fx
+bitter lemonade - heals full health, gives you bitter status fx
+
+jewel toss - damages and lowers enemy defense
+crown - inflicts regen status fx
+illegal - makes a move ilegal for 2 turns
+
+connect - applies conected status fx
+phish - takes money away
+download - copies the enemy
+
+warn - raises enemy defense but lowers their damage
+electrocute - damages and gives electrocuted effect
+
+munch soul- makes 2x damage 50% to apply spooked
+steal soul- applies rotten effect
+block soul - same as disengage
+
+bugged - uses random skill
+
+burger - turns you into a burger for 2 turns.
+burgers have 0.5 damage and the cheese skill
+
+lily juice - heals 1/2hp, applies tipsy status fx
+
+rot - rots the enemy
+freeze - freezes the enemy
+
+
+OLD SKILLS
+-bite got nerfed lol
+-scare can inflict spooked
+
+PLAYABLE CHARACTERS!
+(1st Route)
+-LEMON
+unlocks:
+
+-JEAN (fridge)
+unlocks: 
+
+
+(2nd Route)
+-RAT KING
+unlocks: BETTER RAT FLUTE (NOW BOOSTS DAMAGE AND DEFENSE)
+
+-OMAR
+unlocks: burgify
+
+(3rd Route)
+-PHISH
+unlocks: MERCHANT
+
+-TITO/BONDIOLA
+unlocks: lifebar trade
+
+Other
+-PILLOW
+unlocks: alternate routes
+
+-MERCHANT BUYS IN BULK (skill sets), MANDATORY SET SWAP
+unlocks: portable shop (spawns a shop)
+
+NOT FOR THIS UPDATE BUT SOMEDAY: BURGER MODE??
+burgers CAN BUY these skills:
+
+tomato - toss a rolling tomato that makes full damage
+pepper - same damage as explode without hurting you
+BURGER MODE GOT CANCELLED DUE TO RAT KING BEING SO MUCH BETTER

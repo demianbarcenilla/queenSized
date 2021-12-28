@@ -1,0 +1,87 @@
+the city (standard pool):
+- cheese
+- nap
+- distract
+- resist
+- punch
+
+the tunnel (standard pool +):
+- honk
+- punch
+- napLong
+- confuse
+- armor
+
+the lemonade stand (lemon pool):
+- lemonade
+- lemonade+
+- rot
+- armor
+- bitter
+
+the shortcut (regenerative pool):
+- shroom
+- drain
+- blood bag
+- armor
+- confuse
+
+the incinerator (scarce pool):
+- fireball
+- short nap
+- bite
+- confuse
+- armor
+
+the sewer (yucky pool):
+- rubbish
+- disengage
+- napLong
+- confuse
+- armor
+
+the circus (funny pool):
+-scare
+-ghost cookies
+-
+-
+-
+
+the shaft (a pool i guess):
+-
+-
+-
+-
+-
+
+the ashtray (no pool)
+
+the cloud (technopool):
+-connect
+-electrocute
+-
+-
+-
+
+the breach (error pool):
+-phish
+-electrocute
+-
+-
+-
+
+the strip (no pool)
+
+the council (library pool):
+-orange book
+-blue book
+-nap
+-napLong
+-BOSS GIVES YOU - purple book
+
+the fridge (chilly pool):
+-freeze
+-
+-
+-
+-

@@ -1,0 +1,57 @@
+pillow - default
+pas- low chance to stun enemies
+act- heal !!
+
+?? - spend 1000$ in shops
+pas - 1/2 life; regenerate 1/2 of the life you lost in battle after every win.
+act - 
+
+rat king - defeat rat king
+act - use a skill from enemy. if no skills, default to Cheese.
+
+bat - cross The Tunnel
+pas - chance to regenerate when hitting enemies
+act - blood shot: spend life, make a LOT of damage
+
+?? - buy something in the shop
+pas - more money; skills cost money instead of turns
+act - generate more money (cost turns)
+
+omar - special interaction with toadman in The Shortcut
+pas - 
+act - 
+
+Tito and Bondiola - defeat Tito and Bondiola
+pas - two moves in one turn, half as effective
+act - stun !! (50% chance)
+
+LIST OF EFFECTS
+
+STUN - can't move for one turn
+
+LIST OF ACHIEVEMENTS!
+
+Feelin' Cheesy -defeat rat king
+
+Bad Dog -defeat cerberus
+BAD DOG! -defeat cerberus again
+VERY BAD DOG -defeat cerberus... this is the last one i swear
+
+Bittersweet victory - defeat lemonade kid
+Blood Thirsty -defeat mega bat
+Fire Princess - defeat the queen!
+
+All over again - Loop to the beginning!!
+
+Shopkeeper - unlock ciggy rat
+Filthy Thieg -unlock rat king
+Tu nariz contr -unlock tito/bondiola
+Burgaholic -unlock omar
+Fire Queen -unlock.. the queen?
+
+Hacker- reach the cloud
+Snow Plower - reach the fridge!
+
+I Only Need the Power of Naps - Win the game without using any skills
+TRUE internaut- Connect to an Internaut
+UR DUMB - HIT A DISENGAGED ENEMY 5 TIMES
