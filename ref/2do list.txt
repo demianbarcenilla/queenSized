@@ -1,23 +1,55 @@
-FIX ROT: MAKE IT DO DEF(-INF; 0) INSTEAD OF ALLWAYS = 0
-
+SHROOMS ARE BROKEN!!!!! 
 skills from skillRef
 
+NEW SFX FOR
+drain
+bite
+explode
+shoot
+bark
+rat flute
+honk honk funny
+jewel toss
+swap
+phish
+download
+warn
+lily juice?
+burgify
+life hack
+rubbish
+switch life bar
+milk
+melk
+muah
+plunger
+frown
+books
+cigar
+change
+sneeze
+cookie jar
+
+freeze sfx
+rotten sfx
+electric sfx
+connected sfx
+regen sfx
+shroomed sfx
+bitter sfx
+scared sfx
+burnt sfx
+disengaged sfx
+
+purchasing in shops
+rerolling
+
 RAT SKILLS
-mossy rat - damages and shrooms the enemy
-burnt rat - damages and burns the enemy
-rabid rat - damages and rots the enemy
-iced rat - damages and freezes the enemy
-
-rat nurse - heals 1/2 hp, removes status effects
-gym rat - raises defense
-violent rat - raises damage
-
-mafia rat - decreases enemy defense
+jester rat - decreases enemy defense
 threatening rat - decreases enemy damage
 
 lovely rat - gives regen
 kamikaze rat - makes enemy explode, 1 use
-ciggy rat - -1/2 of current hp, HUGE DEF up
 mini rat king - replaces ALL FOUR of your skills with rat related ones. one use
 
 rat horn - honk honk (cheesy)
@@ -26,10 +58,40 @@ ratify - 1 use, turns enemy into rat. useful for farming rat flutes! (for pocket
 fancy cheese - heals all hp, costs 1 turn
 
 liquid cheese - heals 2/3 hp, makes you tipsy
-rat key - opens the door to the cheese dimension
 ratuary - 5 uses, activates any rat item [not including cheeses and stuff like that]
 
 playable chars
+
+UNLOCKABLES:
+beating game with pillow:
+events
+reroll
+
+beating game with rat king
+-better rat flute
+-rat items in normal pool
+
+beating game with omar
+-mixup game mode
+-cookie
+
+beating game with phish
+-merchant
+-ocassional discounts
+
+beating game with tito/bondiola
+-bad memory
+-
+beating the game with jean
+-permafrost
+-kills enemies under 1/2hp
+
+beating the game with cookie
+-cookies everywhere
+
+beating game with merchant
+-unlocked shopify
+
 achievements (LAST CHORE)
 
 a secret for every main stage
@@ -40,42 +102,8 @@ lemonade stand - lemonade + kid = fridge
 shortcut - shroom + = = rock blunt
 incinerator - cheese + feu = grilled cheese
 
-bosses
-sewer: -
-hidden circus:  clown car
-shaft - papa soul
-ashtray - omar
 
-cloud - 
-shaft - michael
-strip - tito/bondiola
 
-CHANGE ITEM POOLS:
-lemon:
-bitter
-armor
-punch
-lemonade
-juicer - drains 1/2 enemy hp and saves it for later.
- 
-shaft:
-void - turns enemy into its special skill, doesn't work on bosses
-nap
-napLong
-rubbish
-
-ashtray:
-shroom
-lily juice
-burgify
-nap
-napLong
-
-council:
-green book - inflicts regen, talks about skills, turns into white book
-red book - inflicts burn, talks about fighting, turns into white book
-blue book - inflicts very long freeze to enemy, talks about innate skills, turns into white book
-white book - talks about a famous pillow witch
 AFTER WHOLE GAME IS FINISHED: translate to spanish
 payasos en español:
 depresin
