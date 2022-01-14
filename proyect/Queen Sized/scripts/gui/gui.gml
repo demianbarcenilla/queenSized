@@ -110,18 +110,6 @@ function execute_ui()
 			else if(obj_skill4.selected = true){ guiSelected = 3 };
 			else{ guiSelected = -1 };
 			
-			var _phishUse = false;
-			if(global.player = enemy.phish) and (guiSelected != -1)
-			{
-				if(st_skills[guiSelected] != -1)
-				{
-					if(global.money >= arr_price[st_skills[guiSelected]])
-					{
-						_phishUse = true;
-					};
-				};
-			};
-			
 		switch(guiSelected)
 		{
 			case -1: //Nothing is Selected
@@ -136,21 +124,7 @@ function execute_ui()
 				//function
 				if(mouse_check_button_pressed(mb_left))
 				{
-					//use the skill
-					if(st_skills[guiSelected] != -1) and (_phishUse)
-					{
-						skillUses();
-						skill(st_skills[guiSelected]);
-						
-						global.primaryUI = true;
-						resetToPrimary();
-						
-						nextTurn();
-					};
-					else
-					{
-						audio_play_sound(snd_error, 1, 0);
-					};
+					skillTrigger();
 				};
 				
 			break;
@@ -164,19 +138,7 @@ function execute_ui()
 				if(mouse_check_button_pressed(mb_left))
 				{
 					//use the skill
-					if(st_skills[guiSelected] != -1) and (_phishUse)
-					{
-						skillUses()
-						skill(st_skills[guiSelected]);
-						global.primaryUI = true;
-						resetToPrimary();
-						
-						nextTurn();
-					};
-					else
-					{
-						audio_play_sound(snd_error, 1, 0);
-					};
+					skillTrigger();
 				};
 			break;
 	
@@ -189,19 +151,7 @@ function execute_ui()
 				if(mouse_check_button_pressed(mb_left))
 				{
 					//use the skill
-					if(st_skills[guiSelected] != -1)  and (_phishUse)
-					{
-						skillUses()
-						skill(st_skills[guiSelected]);
-						global.primaryUI = true;
-						resetToPrimary();
-						
-						nextTurn();
-					};
-					else
-					{
-						audio_play_sound(snd_error, 1, 0);
-					};
+					skillTrigger();
 				};
 			break;
 	
@@ -214,19 +164,7 @@ function execute_ui()
 				if(mouse_check_button_pressed(mb_left))
 				{					
 					//use the skill
-					if(st_skills[guiSelected] != -1) and (_phishUse)
-					{
-						skillUses();
-						skill(st_skills[guiSelected]);
-						global.primaryUI = true;
-						resetToPrimary();
-						
-						nextTurn();
-					};
-					else
-					{
-						audio_play_sound(snd_error, 1, 0);
-					};
+					skillTrigger();
 				};
 			break;
 		};
@@ -234,6 +172,57 @@ function execute_ui()
 };
 };
 
+function skillTrigger()
+{
+	var _phishUse = false;
+	if(global.player = enemy.phish) and (guiSelected != -1)
+	{
+		if(st_skills[guiSelected] != -1)
+		{
+			if(global.money >= arr_price[st_skills[guiSelected]])
+			{
+				_phishUse = true;
+			};
+		};
+	};
+			
+	if(global.player = enemy.phish)
+	{
+		if(st_skills[guiSelected] != -1) and (_phishUse)
+		{
+			skillUses();
+			skill(st_skills[guiSelected]);
+						
+			global.primaryUI = true;
+			resetToPrimary();
+						
+			nextTurn();
+		};
+						
+		else
+		{
+			audio_play_sound(snd_error, 1, 0);
+		};
+	};
+	else
+	{
+		if(st_skills[guiSelected] != -1)
+		{
+			skillUses();
+			skill(st_skills[guiSelected]);
+						
+			global.primaryUI = true;
+			resetToPrimary();
+						
+			nextTurn();
+		};
+						
+		else
+		{
+			audio_play_sound(snd_error, 1, 0);
+		};
+	}
+}
 function screenshake(time, ammount, fade)
 {
 	with(obj_control)

@@ -1,7 +1,7 @@
 image_speed = 0;
 
-var _hpDoubled = obj_player.maxHp >= obj_player.arr_enemy[obj_player.playerSelected, character.hp] ? true : false,
-	_dmgDoubled = obj_player.st_damage >= (obj_player.arr_enemy[obj_player.playerSelected, character.damage]/2) ? true : false,
+var _hpDoubled = obj_player.maxHp >= 200 ? true : false,
+	_dmgDoubled = obj_player.st_damage >= 35,
 	_pick;
 
 if(_hpDoubled) and (!_dmgDoubled)
