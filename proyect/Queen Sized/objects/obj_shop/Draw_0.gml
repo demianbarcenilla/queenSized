@@ -1,0 +1,1 @@
+draw_sprite(spr_vendors, vendor, room_width/2, 210)
