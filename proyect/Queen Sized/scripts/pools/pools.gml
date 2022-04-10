@@ -100,8 +100,10 @@ function pools(){
 		arr_poolTable[stage.city, array_length(arr_poolTable[stage.city])] = normal.rat_pocket;
 		arr_poolTable[stage.tunnel, array_length(arr_poolTable[stage.tunnel])] = normal.rat_bomb;
 		arr_poolTable[stage.tunnel, array_length(arr_poolTable[stage.tunnel])] = normal.rat_gym;
+		arr_poolTable[stage.tunnel, array_length(arr_poolTable[stage.tunnel])] = normal.rat_horn;
 		arr_poolTable[stage.lemon_stand, array_length(arr_poolTable[stage.lemon_stand])] = normal.rat_bitter;
 		arr_poolTable[stage.lemon_stand, array_length(arr_poolTable[stage.lemon_stand])] = normal.rat_nurse;
+		arr_poolTable[stage.lemon_stand, array_length(arr_poolTable[stage.lemon_stand])] = normal.steal;
 		arr_poolTable[stage.shortcut, array_length(arr_poolTable[stage.shortcut])] = normal.rat_mossy;
 		arr_poolTable[stage.shortcut, array_length(arr_poolTable[stage.shortcut])] = normal.rat_rabid;
 		arr_poolTable[stage.incinerator, array_length(arr_poolTable[stage.incinerator])] = normal.rat_burnt;
@@ -113,6 +115,7 @@ function pools(){
 		arr_poolTable[stage.circus, array_length(arr_poolTable[stage.circus])] = normal.rat_bad;
 		arr_poolTable[stage.shaft, array_length(arr_poolTable[stage.shaft])] = normal.rat_nurse;
 		arr_poolTable[stage.shaft, array_length(arr_poolTable[stage.shaft])] = normal.rat_ratuary;
+		arr_poolTable[stage.shaft, array_length(arr_poolTable[stage.shaft])] = normal.steal;
 		arr_poolTable[stage.ashtray, array_length(arr_poolTable[stage.ashtray])] = normal.rat_ratify;
 		arr_poolTable[stage.ashtray, array_length(arr_poolTable[stage.ashtray])] = normal.rat_miniKing;
 		

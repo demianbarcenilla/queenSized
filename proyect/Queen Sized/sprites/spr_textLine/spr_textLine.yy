@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_textLine","path":"sprites/spr_textLine/spr_textLine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_textLine",
     "tags": [],
     "resourceType": "GMSequence",

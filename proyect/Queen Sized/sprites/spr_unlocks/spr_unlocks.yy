@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_unlocks","path":"sprites/spr_unlocks/spr_unlocks.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_unlocks",
     "tags": [],
     "resourceType": "GMSequence",

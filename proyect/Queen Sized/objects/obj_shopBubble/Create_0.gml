@@ -68,7 +68,9 @@ switch(var_holding)
 	break;
 };
 
+if(discount)
+{
+	alarm[0] = 3;
+};
 var_soundPlay = snd_heal;
 checked = false;
-
-alarm[0] = 3;

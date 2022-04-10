@@ -293,7 +293,7 @@ function eventStart(_value)
 		obj_stats.alarm[0] = 1;
 	};
 	
-	if(obj_enemy.playerSelected = enemy.rat) and (_value = normal.cheese)
+	if(obj_enemy.playerSelected = enemy.rat) and (_value = normal.cheese) //RAT FLUTE EVENT
 	{
 		var _flute = false;
 		for(i=0; i < 4; i++)
@@ -312,13 +312,13 @@ function eventStart(_value)
 			nextTurn();
 		};
 	}
-	else if(obj_enemy.playerSelected = enemy.rat_king) and (_value = normal.rat_flute)
+	else if(obj_enemy.playerSelected = enemy.rat_king) and (_value = normal.rat_flute) //KING+FLUTE EVENT
 	{
 		global.event = true;
 		global.eventType = 1;
 		nextTurn();
 	};
-	else if(obj_enemy.playerSelected = enemy.car) and (_value = normal.honk)
+	/*else if(obj_enemy.playerSelected = enemy.car) and (_value = normal.honk) //CAR EVENT
 	{
 		global.event = true;
 		global.eventType = 2;
@@ -354,7 +354,7 @@ function eventStart(_value)
 		global.event = true;
 		global.eventType = 4;
 		nextTurn();
-	};
+	};*/
 };
 
 function execute_event(_value)

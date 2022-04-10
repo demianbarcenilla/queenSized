@@ -99,7 +99,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fxSelector","path":"sprites/spr_fxSelector/spr_fxSelector.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fxSelector",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_cerberus2","path":"sprites/spr_cerberus2/spr_cerberus2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_cerberus2",
     "tags": [],
     "resourceType": "GMSequence",

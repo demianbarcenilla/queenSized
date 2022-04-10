@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_omar","path":"sprites/spr_omar/spr_omar.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_omar",
     "tags": [],
     "resourceType": "GMSequence",

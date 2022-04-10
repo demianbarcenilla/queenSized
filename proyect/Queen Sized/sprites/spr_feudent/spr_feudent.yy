@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_feudent","path":"sprites/spr_feudent/spr_feudent.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_feudent",
     "tags": [],
     "resourceType": "GMSequence",

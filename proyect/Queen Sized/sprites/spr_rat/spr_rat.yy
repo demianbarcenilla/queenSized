@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_rat","path":"sprites/spr_rat/spr_rat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_rat",
     "tags": [],
     "resourceType": "GMSequence",

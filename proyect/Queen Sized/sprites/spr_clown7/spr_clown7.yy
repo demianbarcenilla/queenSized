@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_clown7","path":"sprites/spr_clown7/spr_clown7.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_clown7",
     "tags": [],
     "resourceType": "GMSequence",

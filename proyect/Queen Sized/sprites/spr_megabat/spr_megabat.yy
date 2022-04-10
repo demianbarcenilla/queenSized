@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_megabat","path":"sprites/spr_megabat/spr_megabat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_megabat",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_thief","path":"sprites/spr_thief/spr_thief.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_thief",
     "tags": [],
     "resourceType": "GMSequence",

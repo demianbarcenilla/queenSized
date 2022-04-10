@@ -111,7 +111,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_vendors","path":"sprites/spr_vendors/spr_vendors.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_vendors",
     "tags": [],
     "resourceType": "GMSequence",

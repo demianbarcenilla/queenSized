@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_smokey","path":"sprites/spr_smokey/spr_smokey.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_smokey",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_driver","path":"sprites/spr_driver/spr_driver.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_driver",
     "tags": [],
     "resourceType": "GMSequence",

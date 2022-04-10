@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_burger","path":"sprites/spr_burger/spr_burger.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_burger",
     "tags": [],
     "resourceType": "GMSequence",

@@ -111,7 +111,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_stage","path":"sprites/spr_stage/spr_stage.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_stage",
     "tags": [],
     "resourceType": "GMSequence",

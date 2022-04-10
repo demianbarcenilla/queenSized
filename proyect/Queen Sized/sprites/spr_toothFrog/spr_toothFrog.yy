@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_toothFrog","path":"sprites/spr_toothFrog/spr_toothFrog.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_toothFrog",
     "tags": [],
     "resourceType": "GMSequence",

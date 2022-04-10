@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_electrolotl","path":"sprites/spr_electrolotl/spr_electrolotl.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_electrolotl",
     "tags": [],
     "resourceType": "GMSequence",

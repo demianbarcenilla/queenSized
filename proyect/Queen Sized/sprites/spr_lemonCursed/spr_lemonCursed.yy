@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_lemonCursed","path":"sprites/spr_lemonCursed/spr_lemonCursed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_lemonCursed",
     "tags": [],
     "resourceType": "GMSequence",

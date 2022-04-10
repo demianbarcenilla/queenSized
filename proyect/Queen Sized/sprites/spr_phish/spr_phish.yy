@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_phish","path":"sprites/spr_phish/spr_phish.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_phish",
     "tags": [],
     "resourceType": "GMSequence",

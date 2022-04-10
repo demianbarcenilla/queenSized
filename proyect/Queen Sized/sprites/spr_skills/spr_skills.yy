@@ -527,7 +527,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_skills","path":"sprites/spr_skills/spr_skills.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_skills",
     "tags": [],
     "resourceType": "GMSequence",

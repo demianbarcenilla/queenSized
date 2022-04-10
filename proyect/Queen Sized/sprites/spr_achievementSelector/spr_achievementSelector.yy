@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_achievementSelector","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_achievementSelector",
     "tags": [],
     "resourceType": "GMSequence",

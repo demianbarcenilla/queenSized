@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_nope","path":"sprites/spr_nope/spr_nope.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_nope",
     "tags": [],
     "resourceType": "GMSequence",

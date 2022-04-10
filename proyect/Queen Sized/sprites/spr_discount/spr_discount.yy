@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_discount","path":"sprites/spr_discount/spr_discount.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_discount",
     "tags": [],
     "resourceType": "GMSequence",

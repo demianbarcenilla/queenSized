@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_internaut","path":"sprites/spr_internaut/spr_internaut.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_internaut",
     "tags": [],
     "resourceType": "GMSequence",

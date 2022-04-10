@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_bondiola_alt","path":"sprites/spr_bondiola_alt/spr_bondiola_alt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_bondiola_alt",
     "tags": [],
     "resourceType": "GMSequence",

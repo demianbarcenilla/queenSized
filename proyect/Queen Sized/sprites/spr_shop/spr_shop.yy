@@ -111,7 +111,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_shop","path":"sprites/spr_shop/spr_shop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_shop",
     "tags": [],
     "resourceType": "GMSequence",

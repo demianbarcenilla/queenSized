@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_shopSkills","path":"sprites/spr_shopSkills/spr_shopSkills.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_shopSkills",
     "tags": [],
     "resourceType": "GMSequence",

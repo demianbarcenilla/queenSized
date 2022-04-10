@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_charSel","path":"sprites/spr_charSel/spr_charSel.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_charSel",
     "tags": [],
     "resourceType": "GMSequence",

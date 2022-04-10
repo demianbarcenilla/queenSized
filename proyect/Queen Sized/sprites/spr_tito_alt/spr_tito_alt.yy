@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_tito_alt","path":"sprites/spr_tito_alt/spr_tito_alt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_tito_alt",
     "tags": [],
     "resourceType": "GMSequence",

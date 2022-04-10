@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_skater","path":"sprites/spr_skater/spr_skater.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_skater",
     "tags": [],
     "resourceType": "GMSequence",

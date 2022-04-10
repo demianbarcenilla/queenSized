@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_phish_alt","path":"sprites/spr_phish_alt/spr_phish_alt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_phish_alt",
     "tags": [],
     "resourceType": "GMSequence",

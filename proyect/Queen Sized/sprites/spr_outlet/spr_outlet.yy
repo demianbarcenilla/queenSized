@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_outlet","path":"sprites/spr_outlet/spr_outlet.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_outlet",
     "tags": [],
     "resourceType": "GMSequence",

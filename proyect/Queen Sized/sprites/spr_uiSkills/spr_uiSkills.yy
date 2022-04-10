@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_uiSkills","path":"sprites/spr_uiSkills/spr_uiSkills.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_uiSkills",
     "tags": [],
     "resourceType": "GMSequence",

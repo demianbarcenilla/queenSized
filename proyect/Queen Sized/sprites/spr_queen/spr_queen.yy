@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_queen","path":"sprites/spr_queen/spr_queen.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_queen",
     "tags": [],
     "resourceType": "GMSequence",

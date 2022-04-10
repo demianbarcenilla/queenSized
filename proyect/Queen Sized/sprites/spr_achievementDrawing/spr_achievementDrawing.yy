@@ -139,7 +139,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_achievementDrawing","path":"sprites/spr_achievementDrawing/spr_achievementDrawing.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_achievementDrawing",
     "tags": [],
     "resourceType": "GMSequence",

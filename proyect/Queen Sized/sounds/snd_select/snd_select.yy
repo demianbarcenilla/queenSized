@@ -1,6 +1,7 @@
 {
+  "conversionMode": 0,
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.5,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,7 +12,7 @@
     "path": "audiogroups/ag_sfx",
   },
   "soundFile": "snd_select.wav",
-  "duration": 1.714286,
+  "duration": 3.523447,
   "parent": {
     "name": "skills",
     "path": "folders/Sounds/fx/skills.yy",

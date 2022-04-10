@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_michael","path":"sprites/spr_michael/spr_michael.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_michael",
     "tags": [],
     "resourceType": "GMSequence",

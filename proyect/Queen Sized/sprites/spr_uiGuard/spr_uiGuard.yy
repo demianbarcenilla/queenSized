@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_uiGuard","path":"sprites/spr_uiGuard/spr_uiGuard.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_uiGuard",
     "tags": [],
     "resourceType": "GMSequence",

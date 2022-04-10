@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_virus","path":"sprites/spr_virus/spr_virus.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_virus",
     "tags": [],
     "resourceType": "GMSequence",

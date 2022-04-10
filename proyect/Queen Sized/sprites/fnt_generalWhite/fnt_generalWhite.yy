@@ -263,7 +263,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"fnt_generalWhite","path":"sprites/fnt_generalWhite/fnt_generalWhite.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "fnt_generalWhite",
     "tags": [],
     "resourceType": "GMSequence",

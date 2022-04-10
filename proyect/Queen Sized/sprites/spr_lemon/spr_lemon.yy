@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_lemon","path":"sprites/spr_lemon/spr_lemon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_lemon",
     "tags": [],
     "resourceType": "GMSequence",

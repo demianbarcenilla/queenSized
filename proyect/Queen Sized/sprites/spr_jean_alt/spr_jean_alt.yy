@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_jean_alt","path":"sprites/spr_jean_alt/spr_jean_alt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_jean_alt",
     "tags": [],
     "resourceType": "GMSequence",

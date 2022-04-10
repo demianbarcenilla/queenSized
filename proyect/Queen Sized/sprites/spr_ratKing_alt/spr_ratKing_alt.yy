@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_ratKing_alt","path":"sprites/spr_ratKing_alt/spr_ratKing_alt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_ratKing_alt",
     "tags": [],
     "resourceType": "GMSequence",

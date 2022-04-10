@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_tbSelect","path":"sprites/spr_tbSelect/spr_tbSelect.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_tbSelect",
     "tags": [],
     "resourceType": "GMSequence",

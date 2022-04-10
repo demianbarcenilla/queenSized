@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_skimo","path":"sprites/spr_skimo/spr_skimo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_skimo",
     "tags": [],
     "resourceType": "GMSequence",

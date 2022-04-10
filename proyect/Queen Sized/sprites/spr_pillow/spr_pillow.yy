@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pillow","path":"sprites/spr_pillow/spr_pillow.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pillow",
     "tags": [],
     "resourceType": "GMSequence",

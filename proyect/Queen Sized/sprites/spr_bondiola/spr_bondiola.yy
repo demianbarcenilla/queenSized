@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_bondiola","path":"sprites/spr_bondiola/spr_bondiola.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_bondiola",
     "tags": [],
     "resourceType": "GMSequence",

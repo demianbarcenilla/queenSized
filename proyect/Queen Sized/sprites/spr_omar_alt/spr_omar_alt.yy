@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_omar_alt","path":"sprites/spr_omar_alt/spr_omar_alt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_omar_alt",
     "tags": [],
     "resourceType": "GMSequence",

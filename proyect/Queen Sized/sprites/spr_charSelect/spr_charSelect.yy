@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_charSelect","path":"sprites/spr_charSelect/spr_charSelect.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_charSelect",
     "tags": [],
     "resourceType": "GMSequence",

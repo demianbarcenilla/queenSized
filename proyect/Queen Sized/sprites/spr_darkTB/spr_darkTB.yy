@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_darkTB","path":"sprites/spr_darkTB/spr_darkTB.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_darkTB",
     "tags": [],
     "resourceType": "GMSequence",

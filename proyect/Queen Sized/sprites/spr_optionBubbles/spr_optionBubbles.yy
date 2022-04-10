@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_optionBubbles","path":"sprites/spr_optionBubbles/spr_optionBubbles.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_optionBubbles",
     "tags": [],
     "resourceType": "GMSequence",

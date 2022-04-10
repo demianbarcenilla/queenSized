@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_plumber","path":"sprites/spr_plumber/spr_plumber.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_plumber",
     "tags": [],
     "resourceType": "GMSequence",

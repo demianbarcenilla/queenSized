@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_blocker","path":"sprites/spr_blocker/spr_blocker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_blocker",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_cat","path":"sprites/spr_cat/spr_cat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_cat",
     "tags": [],
     "resourceType": "GMSequence",

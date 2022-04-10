@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pigeon","path":"sprites/spr_pigeon/spr_pigeon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pigeon",
     "tags": [],
     "resourceType": "GMSequence",

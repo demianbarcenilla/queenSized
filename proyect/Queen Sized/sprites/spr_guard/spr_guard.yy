@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_guard","path":"sprites/spr_guard/spr_guard.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_guard",
     "tags": [],
     "resourceType": "GMSequence",

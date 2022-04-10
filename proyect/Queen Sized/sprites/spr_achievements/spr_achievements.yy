@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_achievements","path":"sprites/spr_achievements/spr_achievements.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_achievements",
     "tags": [],
     "resourceType": "GMSequence",

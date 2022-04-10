@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_lifeBar","path":"sprites/spr_lifeBar/spr_lifeBar.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_lifeBar",
     "tags": [],
     "resourceType": "GMSequence",

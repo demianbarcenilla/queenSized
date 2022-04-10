@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_savvy","path":"sprites/spr_savvy/spr_savvy.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_savvy",
     "tags": [],
     "resourceType": "GMSequence",

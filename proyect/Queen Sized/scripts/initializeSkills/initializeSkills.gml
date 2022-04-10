@@ -161,21 +161,29 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.explode, skills.desc] = "SACRIFICE YOURSELF!";
 	
 	arr_skill[normal.explode, skills.cost] = 1; arr_skill[normal.explode, skills.uses] = -1;	
+	arr_skill[normal.explode, skills.sound] = snd_error;
+	arr_skill[normal.explode, skills.text] = string(var_name) + " IS PREPARING FOR SOMETHING!";
 	arr_skill[normal.explode, skills.func] = function(){
 		if(explodeTimer = -1)
 		{
-			explodeTimer = arr_skill[normal.explode, skills.cost]
-		};
+			explodeTimer = arr_skill[normal.explode, skills.cost];
+			var_turnWait = explodeTimer;
+			arr_skill[normal.explode, skills.sound] = snd_error;
+			arr_skill[normal.explode, skills.text] = string(var_name) + " IS PREPARING FOR SOMETHING!";
+		}
 		else
 		{
+			arr_skill[normal.explode, skills.sound] = snd_explosion;
+			arr_skill[normal.explode, skills.text] = string(var_name) + " GOES OUT WITH A BANG!";
+		
+			//Trigger Death
 			attack(st_damage*4); 
-			_self.hp = 0
+			_self.hp = 0;
 		};
 	};
 	arr_skill[normal.explode, skills.selfIndex] = 3;
 	arr_skill[normal.explode, skills.otherIndex] = 1;
-	if(explodeTimer = -1){arr_skill[normal.explode, skills.sound] = snd_error}else{arr_skill[normal.explode, skills.sound] = snd_explosion};
-	if(explodeTimer = -1){arr_skill[normal.explode, skills.text] = string(var_name) + " IS PREPARING FOR SOMETHING!"} else{ arr_skill[normal.explode, skills.text] = string(var_name) + " GOES OUT WITH A BANG!"};
+	
 	arr_skill[normal.explode, skills.shop] = 75;
 	
 	arr_skill[normal.explode, skills.recharge] = 0;
@@ -574,7 +582,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.lemonade_plus, skills.otherIndex] = 0;
 	arr_skill[normal.lemonade_plus, skills.sound] = snd_heal;
 	arr_skill[normal.lemonade_plus, skills.text] = string(var_name) + " DRANK SOME LEMONADE PLUS!";
-	arr_skill[normal.lemonade_plus, skills.shop] = 25;
+	arr_skill[normal.lemonade_plus, skills.shop] = 40;
 	
 	arr_skill[normal.lemonade_plus, skills.recharge] = 10;
 	
@@ -588,7 +596,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.lemonade_seedy, skills.otherIndex] = 0;
 	arr_skill[normal.lemonade_seedy, skills.sound] = snd_heal;
 	arr_skill[normal.lemonade_seedy, skills.text] = string(var_name) + " DRANK SOME SEEDY LEMONADE!";
-	arr_skill[normal.lemonade_seedy, skills.shop] = 25;
+	arr_skill[normal.lemonade_seedy, skills.shop] = 45;
 	
 	arr_skill[normal.lemonade_seedy, skills.recharge] = 10;
 	
@@ -602,7 +610,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.lemonade_rotten, skills.otherIndex] = 0;
 	arr_skill[normal.lemonade_rotten, skills.sound] = snd_heal;
 	arr_skill[normal.lemonade_rotten, skills.text] = string(var_name) + " DRANK SOME ROTTEN LEMONADE...";
-	arr_skill[normal.lemonade_rotten, skills.shop] = 25;
+	arr_skill[normal.lemonade_rotten, skills.shop] = 45;
 	
 	arr_skill[normal.lemonade_rotten, skills.recharge] = 10;
 	
@@ -1707,7 +1715,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.rat_iced, skills.name] = "iced rat";
 	arr_skill[normal.rat_iced, skills.desc] = "damages and freezes the enemy!";
 	
-	arr_skill[normal.rat_iced, skills.text] = string(var_name) + " EATS AN " + arr_skill[normal.rat_iced, skills.name];
+	arr_skill[normal.rat_iced, skills.text] = string(var_name) + " TOSSES AN " + arr_skill[normal.rat_iced, skills.name];
 	arr_skill[normal.rat_iced, skills.func] = function(){attack(st_damage); _other.frozenCountdown = 2; _other.arr_status[status.frozen] = true};
 	arr_skill[normal.rat_iced, skills.cost] = 0; arr_skill[normal.rat_iced, skills.uses] = 3;
 	arr_skill[normal.rat_iced, skills.selfIndex] = 3;
@@ -1833,7 +1841,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.rat_horn, skills.name] = "RAT HORN";
 	arr_skill[normal.rat_horn, skills.desc] = "HONK HONK ( CHEESY )";
 	
-	arr_skill[normal.rat_horn, skills.text] = string(var_name) + " EATS AN " + arr_skill[normal.rat_horn, skills.name];
+	arr_skill[normal.rat_horn, skills.text] = string(var_name) + " BLOWS THE " + arr_skill[normal.rat_horn, skills.name];
 	arr_skill[normal.rat_horn, skills.func] = function(){};
 	arr_skill[normal.rat_horn, skills.cost] = 0; arr_skill[normal.rat_horn, skills.uses] = -1;
 	arr_skill[normal.rat_horn, skills.selfIndex] = 3;
@@ -1906,7 +1914,7 @@ function initializeSkills(_self, _other)
 	
 	//os
 	arr_skill[normal.os, skills.name] = "OS";
-	arr_skill[normal.os, skills.desc] = "WORKS POORLY!";
+	arr_skill[normal.os, skills.desc] = "PLAY WITH YOUR ENVIRONMENT!";
 	
 	arr_skill[normal.os, skills.text] = string(var_name) + " HACKS THE OS!"
 	arr_skill[normal.os, skills.func] = function(){
@@ -1925,7 +1933,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.glitch, skills.name] = " ";
 	arr_skill[normal.glitch, skills.desc] = "? A A11QWE JKFJLQ NO";
 	
-	arr_skill[normal.glitch, skills.text] = string(var_name) + " PULLED A ";
+	arr_skill[normal.glitch, skills.text] = string(var_name) + " USES ";
 	arr_skill[normal.glitch, skills.func] = function(){
 			var _choice = irandom_range(normal.nap, normal.os)
 			while((_choice = normal.swap) or (_choice = normal.explode))
@@ -1934,7 +1942,7 @@ function initializeSkills(_self, _other)
 			};
 			skill(_choice)
 			
-			arr_skill[normal.glitch, skills.text] = string(var_name) + " SELECTED " + string(arr_skill[_choice, skills.name]);
+			arr_skill[normal.glitch, skills.text] = string(var_name) + " USES " + string(arr_skill[_choice, skills.name]);
 		};	
 	arr_skill[normal.glitch, skills.cost] = 0; arr_skill[normal.glitch, skills.uses] = -1;
 	arr_skill[normal.glitch, skills.selfIndex] = 3;
@@ -1956,13 +1964,13 @@ function phishPrices()
 	arr_price[normal.armor] = 10;
 	arr_price[normal.punch] = 15;
 	arr_price[normal.bite] = 20;
-	arr_price[normal.cheese] = 15;
+	arr_price[normal.cheese] = 2;
 	arr_price[normal.explode] = 5;
 	arr_price[normal.wait] = 10;
 	arr_price[normal.heal] = 5;
 	arr_price[normal.shoot] = 5;
 	arr_price[normal.triangle] = 5;
-	arr_price[normal.honk] = 5;
+	arr_price[normal.honk] = 3;
 	arr_price[normal.steal] = 15;
 	arr_price[normal.bark] = 5;
 	arr_price[normal.bitter] = 10;
@@ -1973,7 +1981,7 @@ function phishPrices()
 	arr_price[normal.fireball] = 10;
 	arr_price[normal.dissipate] = 15;
 	arr_price[normal.disengage] = 15;
-	arr_price[normal.rat_flute] = 5;
+	arr_price[normal.rat_flute] = 3;
 	arr_price[normal.lick] = 15;
 	arr_price[normal.smile] = 5;
 	arr_price[normal.pretend] = 15;
@@ -1999,9 +2007,9 @@ function phishPrices()
 	arr_price[normal.burgify] = 20;
 	arr_price[normal.rot] = 10;
 	arr_price[normal.freeze] = 10;
-	arr_price[normal.lifehack] = 10;
+	arr_price[normal.lifehack] = 12;
 	arr_price[normal.rubbish] = 15;
-	arr_price[normal.bug] = 10;
+	arr_price[normal.bug] = irandom_range(5, 15);
 	arr_price[normal.cheese_old] = 5;
 	arr_price[normal.can] = 15;
 	arr_price[normal.lifeswap] = 20;

@@ -181,7 +181,7 @@ function enemylist(){
 	arr_enemy[enemy.shroom, character.defense] = 15;
 	
 	arr_enemy[enemy.shroom, character.skill_1] = normal.shroom;
-	arr_enemy[enemy.shroom, character.skill_2] = normal.resist;
+	arr_enemy[enemy.shroom, character.skill_2] = -1;
 	arr_enemy[enemy.shroom, character.skill_3] = -1;
 	arr_enemy[enemy.shroom, character.skill_4] = -1;
 	
@@ -592,8 +592,8 @@ function enemylist(){
 	arr_enemy[enemy.rat_king, character.name] = "Rat King";
 	arr_enemy[enemy.rat_king, character.sprite] = spr_ratKing;
 	arr_enemy[enemy.rat_king, character.damage] = 15;
-	arr_enemy[enemy.rat_king, character.hp] = 75;
-	arr_enemy[enemy.rat_king, character.defense] = 0;
+	arr_enemy[enemy.rat_king, character.hp] = 100;
+	arr_enemy[enemy.rat_king, character.defense] = 5;
 	
 	arr_enemy[enemy.rat_king, character.skill_1] = normal.steal;
 	arr_enemy[enemy.rat_king, character.skill_2] = normal.cheese;
@@ -611,7 +611,7 @@ function enemylist(){
 	arr_enemy[enemy.cerberus, character.sprite] = spr_cerberus;
 	arr_enemy[enemy.cerberus, character.damage] = 25;
 	arr_enemy[enemy.cerberus, character.hp] = 100;
-	arr_enemy[enemy.cerberus, character.defense] = 15;
+	arr_enemy[enemy.cerberus, character.defense] = 10;
 	
 	arr_enemy[enemy.cerberus, character.skill_1] = choose(normal.bark, normal.explode);
 	arr_enemy[enemy.cerberus, character.skill_2] = -1;
@@ -664,7 +664,7 @@ function enemylist(){
 	arr_enemy[enemy.kid, character.name] = "Lemonade Kid";
 	arr_enemy[enemy.kid, character.sprite] = spr_kid;
 	arr_enemy[enemy.kid, character.damage] = 30;
-	arr_enemy[enemy.kid, character.hp] = 200;
+	arr_enemy[enemy.kid, character.hp] = 150;
 	arr_enemy[enemy.kid, character.defense] = 5;
 	
 	arr_enemy[enemy.kid, character.skill_1] = normal.bitter;
@@ -682,8 +682,8 @@ function enemylist(){
 	arr_enemy[enemy.mega_bat, character.name] = "Mega Bat";
 	arr_enemy[enemy.mega_bat, character.sprite] = spr_megabat;
 	arr_enemy[enemy.mega_bat, character.damage] = 35;
-	arr_enemy[enemy.mega_bat, character.hp] = 300;
-	arr_enemy[enemy.mega_bat, character.defense] = 10;
+	arr_enemy[enemy.mega_bat, character.hp] = 200;
+	arr_enemy[enemy.mega_bat, character.defense] = 5;
 	
 	arr_enemy[enemy.mega_bat, character.skill_1] = normal.lick;
 	arr_enemy[enemy.mega_bat, character.skill_2] = -1;
@@ -700,7 +700,7 @@ function enemylist(){
 	arr_enemy[enemy.queen, character.name] = "Queen";
 	arr_enemy[enemy.queen, character.sprite] = spr_queen;
 	arr_enemy[enemy.queen, character.damage] = 40;
-	arr_enemy[enemy.queen, character.hp] = 500;
+	arr_enemy[enemy.queen, character.hp] = 300;
 	arr_enemy[enemy.queen, character.defense] = 15;
 	
 	arr_enemy[enemy.queen, character.skill_1] = -1;
@@ -1127,10 +1127,10 @@ function playerEnemies(){
 	arr_enemy[enemy.rat_king, character.name] = "Rat King";
 	arr_enemy[enemy.rat_king, character.sprite] = spr_ratKing;
 	arr_enemy[enemy.rat_king, character.damage] = 20;
-	arr_enemy[enemy.rat_king, character.hp] = 125;
-	arr_enemy[enemy.rat_king, character.defense] = 5;
+	arr_enemy[enemy.rat_king, character.hp] = 100;
+	arr_enemy[enemy.rat_king, character.defense] = 0;
 	
-	arr_enemy[enemy.rat_king, character.skill_1] = normal.cheese_expensive;
+	arr_enemy[enemy.rat_king, character.skill_1] = -1;
 	arr_enemy[enemy.rat_king, character.skill_2] = -1;
 	arr_enemy[enemy.rat_king, character.skill_3] = -1;
 	arr_enemy[enemy.rat_king, character.skill_4] = -1;

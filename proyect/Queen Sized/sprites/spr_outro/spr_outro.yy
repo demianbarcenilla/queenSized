@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_outro","path":"sprites/spr_outro/spr_outro.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_outro",
     "tags": [],
     "resourceType": "GMSequence",

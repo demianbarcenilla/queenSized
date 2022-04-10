@@ -26,8 +26,6 @@ if(!instance_exists(obj_shop))
 		{
 			if(explodeTimer = 0)
 			{
-				if(explodeTimer = -1){arr_skill[normal.explode, skills.sound] = snd_heal}else{arr_skill[normal.explode, skills.sound] = snd_explosion};
-				if(explodeTimer = -1){arr_skill[normal.explode, skills.text] = string(var_name) + "IS PREPARING FOR SOMETHING!"} else{ arr_skill[normal.explode, skills.text] = string(var_name) + " GOES OUT WITH A BANG!"};
 				skill(normal.explode);
 				nextTurn();
 			};

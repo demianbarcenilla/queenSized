@@ -531,7 +531,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_uiSkillset","path":"sprites/spr_uiSkillset/spr_uiSkillset.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_uiSkillset",
     "tags": [],
     "resourceType": "GMSequence",

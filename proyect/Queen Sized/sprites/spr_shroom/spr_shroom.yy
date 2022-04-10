@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_shroom","path":"sprites/spr_shroom/spr_shroom.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_shroom",
     "tags": [],
     "resourceType": "GMSequence",

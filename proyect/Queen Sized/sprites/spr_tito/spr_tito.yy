@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_tito","path":"sprites/spr_tito/spr_tito.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_tito",
     "tags": [],
     "resourceType": "GMSequence",

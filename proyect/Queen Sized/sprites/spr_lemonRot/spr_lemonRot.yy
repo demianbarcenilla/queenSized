@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_lemonRot","path":"sprites/spr_lemonRot/spr_lemonRot.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_lemonRot",
     "tags": [],
     "resourceType": "GMSequence",

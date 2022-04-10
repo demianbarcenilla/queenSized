@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_papa","path":"sprites/spr_papa/spr_papa.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_papa",
     "tags": [],
     "resourceType": "GMSequence",
