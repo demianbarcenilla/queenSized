@@ -11,12 +11,12 @@ function pools(){
 	arr_poolTable[stage.tunnel, 1] = normal.armor;
 	arr_poolTable[stage.tunnel, 2] = normal.confuse;
 	arr_poolTable[stage.tunnel, 3] = normal.honk;
-	arr_poolTable[stage.tunnel, 4] = normal.punch;
+	arr_poolTable[stage.tunnel, 4] = normal.milk;
 			
 	arr_poolTable[stage.lemon_stand, 0] = normal.bitter;
-	arr_poolTable[stage.lemon_stand, 1] = normal.lemonade_plus;
+	arr_poolTable[stage.lemon_stand, 1] = normal.rot;
 	arr_poolTable[stage.lemon_stand, 2] = normal.lemonade;
-	arr_poolTable[stage.lemon_stand, 3] = normal.punch;
+	arr_poolTable[stage.lemon_stand, 3] = normal.bite;
 	arr_poolTable[stage.lemon_stand, 4] = normal.armor;
 	
 	arr_poolTable[stage.shortcut, 0] = normal.drain;
@@ -29,8 +29,7 @@ function pools(){
 	arr_poolTable[stage.incinerator, 0] = normal.fireball;
 	arr_poolTable[stage.incinerator, 1] = normal.nap;
 	arr_poolTable[stage.incinerator, 2] = normal.napLong;
-	arr_poolTable[stage.incinerator, 3] = normal.armor;
-	arr_poolTable[stage.incinerator, 4] = normal.confuse;
+	arr_poolTable[stage.incinerator, 4] = normal.rubbish;
 	arr_poolTable[stage.incinerator, 5] = normal.milk;
 	
 	//2nd route

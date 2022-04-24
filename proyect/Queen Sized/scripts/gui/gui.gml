@@ -27,6 +27,7 @@ function execute_ui()
 				if(mouse_check_button_pressed(mb_left))
 				{
 					attack(st_damage);
+					
 					audio_play_sound(var_sound, 10, false);
 					
 					nextTurn();
@@ -44,7 +45,7 @@ function execute_ui()
 	
 			case 2: //Guard
 				global.text = "Halve damage for this turn! chance to evade attacks"
-			
+				
 				if(mouse_check_button_pressed(mb_left))
 				{
 					guard()
@@ -223,6 +224,7 @@ function skillTrigger()
 		};
 	}
 }
+
 function screenshake(time, ammount, fade)
 {
 	with(obj_control)
@@ -291,7 +293,7 @@ function resetToPrimary()
 
 function color()
 {
-	arr_colors[0] = c_white;
+	arr_colors[0] = GRAY;
 	arr_colors[1] = RED;
 	arr_colors[2] = ORANGE;
 	arr_colors[3] = YELLOW;
@@ -301,7 +303,7 @@ function color()
 	arr_colors[7] = LIGHT_BLUE;
 	arr_colors[8] = PINK;
 	arr_colors[9] = PURPLE;
-	arr_colors[10] = GRAY;
+	arr_colors[10] = c_white;
 };
 
 function skillText(_obj)

@@ -77,6 +77,8 @@ function skill(value){
 	image_index = arr_skill[value, skills.selfIndex];
 	_other.image_index = arr_skill[value, skills.otherIndex];
 	
+	createAnim(arr_skill[value, skills.anim]); //middle animation
+	
 	//text
 	global.text = arr_skill[value, skills.text];
 	
@@ -103,7 +105,15 @@ function nextTurn(){
 	
 	with(obj_control)
 	{
-		alarm[0] = stopCinematics;
+		if(!instance_exists(obj_midAnim))
+		{
+			alarm[0] = stopCinematics+20;
+		}
+		else
+		{
+			alarm[0] = stopCinematics;
+		}
+		
 	};
 }
 
@@ -170,6 +180,7 @@ function guard()
 	var_guarding = true;
 	image_index = 3;
 	
+	createAnim(ani_guard);
 	if(playerSelected = enemy.eggplant) and (_other.arr_status[status.frozen])
 	{
 		hp += maxHp/6;
@@ -243,3 +254,10 @@ function statusEffects()
 	};
 	tipsyRoll = choose(1, 2, 3, 4);
 }
+
+function createAnim(sprite)
+{
+	//var _place = (obj_control.anim_x[0] + obj_control.anim_x[1]/2)-(room_width-ROOMWIDTH)/2;
+	var anim = instance_create_depth(ROOMWIDTH/2, room_height/2, depth, obj_midAnim);
+	anim.sprite_index = sprite;
+};

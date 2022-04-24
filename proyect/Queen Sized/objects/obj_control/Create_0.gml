@@ -14,6 +14,9 @@
 color();
 randomize();
 
+//INTI ENUMS
+initEnum();
+
 //sets a cooldown for purchasing in the shops when it just spawns
 global.canPurchase = false;
 
@@ -54,15 +57,13 @@ global.stage = stage.city;
 global.text = "";
 global.textPrev = global.text;
 global.michaelMode = -1;
-stopCinematics = 60;
+stopCinematics = 30;
 
 //Screenshake
 shaking = false;
 shakeTime = 0;
 shakeAmmount = 0;
 shakeFade = .25;
-
-initEnum();
 
 music = mus_silent;
 global.money = 0;
@@ -88,5 +89,7 @@ inc = 5; //degrees -- freq = 1 oscillation per second (1Hz) in a 30 fps room
 amp = 50; //pixels of peak oscillation
 shift = 0;
 
+anim_x[0]=0;
+anim_x[1]=0;
 var_calledNope = obj_player;
 global.player = enemy.pillow;

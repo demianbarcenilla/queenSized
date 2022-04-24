@@ -53,5 +53,7 @@ for(i=0; i < 3; i++)
 	_stat.displace = (sprite_get_width(sprite_index)/2) +35+16;
 	_stat.target = obj_player;
 	arr_stats[i] = _stat.id;
+	
+	_stat.enemySide = false;
 };
 //instance_create_depth(0, 0, depth, obj_newUnlockBattle);

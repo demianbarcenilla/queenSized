@@ -79,4 +79,6 @@ for(i=0; i < 3; i++)
 	_stat.displace = healthbarDisplace-20;
 	_stat.target = obj_enemy;
 	arr_stats[i] = _stat.id;
+	
+	_stat.enemySide = true;
 };

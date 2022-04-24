@@ -1,0 +1,25 @@
+MUSIC:
+-rat king boss ////
+-tunnel (enhance) ////
+-lemonade stand
+-lemonade stand SHOP
+-lemonade stand BOSS
+-shortcut boss
+-incinerator (enhance)
+-QUEEN
+-ending sequence
+-You unlocked Something!
+
+-equalize volumes!
+
+GRAPX:
+-worm
+-shortcut shop
+-ruins (enemies, background)
+-ratlantis (enemies)
+-rat king SK anims
+-NEW UNLOCK! (turn into balloon, confetti)
+OTHERS
+-adjust achievements
+-characte select screen
+-new type of event: YAY!/NO WAY! (replace WAIT with YAY!)

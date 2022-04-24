@@ -35,7 +35,7 @@ function enemylist(){
 	
 	arr_enemy[enemy.rat, character.special] = normal.cheese;
 	
-	arr_enemy[enemy.pidgeon, character.name] = "Mafia Pigeon";
+	arr_enemy[enemy.pidgeon, character.name] = " Pigeon";
 	arr_enemy[enemy.pidgeon, character.sprite] = spr_pigeon;
 	arr_enemy[enemy.pidgeon, character.damage] = 15;
 	arr_enemy[enemy.pidgeon, character.hp] = choose(50, 60);
@@ -100,7 +100,7 @@ function enemylist(){
 	
 	arr_enemy[enemy.car, character.text_1] = "MAD CAR FEELS LIKE RUNNING OVER YOUR MATTRESS!";
 	arr_enemy[enemy.car, character.text_2] = "MAD CAR HONKS ANGRILY"
-	arr_enemy[enemy.car, character.text_3] = "MAD CAR WAS CURSED BY A WITCH WITH ASTIGMATISM! ( SHE TOUGHT THE CAR WAS SOMEONE ELSE )";
+	arr_enemy[enemy.car, character.text_3] = "MAD CAR HONKS HAPPILY";
 	
 	arr_enemy[enemy.car, character.special] = normal.honk;
 	
@@ -116,8 +116,8 @@ function enemylist(){
 	arr_enemy[enemy.skater, character.skill_4] = -1;
 	
 	arr_enemy[enemy.skater, character.text_1] = "SKATER FEELS LIKE STEALING YOUR MATTRESS!";
-	arr_enemy[enemy.skater, character.text_2] = "SKATER IS RESTLESS! TOO MUCH ENERGY DRINKS!"
-	arr_enemy[enemy.skater, character.text_3] = "'' I SMOKE, I DRINK, I PLAY WITH GIRLS' HEARTS. WHAT ELSE DO YOU WANT ME TO SAY? ''";
+	arr_enemy[enemy.skater, character.text_2] = "SKATER IS RESTLESS!"
+	arr_enemy[enemy.skater, character.text_3] = "SKATER IS IN A SUGAR RUSH!";
 	
 	arr_enemy[enemy.skater, character.special] = normal.rush;
 	
@@ -178,7 +178,7 @@ function enemylist(){
 	arr_enemy[enemy.shroom, character.sprite] = spr_shroom;
 	arr_enemy[enemy.shroom, character.damage] = 35;
 	arr_enemy[enemy.shroom, character.hp] = 95;
-	arr_enemy[enemy.shroom, character.defense] = 15;
+	arr_enemy[enemy.shroom, character.defense] = 5;
 	
 	arr_enemy[enemy.shroom, character.skill_1] = normal.shroom;
 	arr_enemy[enemy.shroom, character.skill_2] = -1;
@@ -191,20 +191,20 @@ function enemylist(){
 	
 	arr_enemy[enemy.shroom, character.special] = normal.shroom;
 	
-	arr_enemy[enemy.plant, character.name] = "Plant";
+	arr_enemy[enemy.plant, character.name] = "Worm";
 	arr_enemy[enemy.plant, character.sprite] = spr_plant;
 	arr_enemy[enemy.plant, character.damage] = 40;
 	arr_enemy[enemy.plant, character.hp] = 115;
 	arr_enemy[enemy.plant, character.defense] = 5;
 	
-	arr_enemy[enemy.plant, character.skill_1] = normal.confuse;
-	arr_enemy[enemy.plant, character.skill_2] = normal.scare;
+	arr_enemy[enemy.plant, character.skill_1] = normal.disengage;
+	arr_enemy[enemy.plant, character.skill_2] = normal.confuse;
 	arr_enemy[enemy.plant, character.skill_3] = -1;
 	arr_enemy[enemy.plant, character.skill_4] = -1;
 	
-	arr_enemy[enemy.plant, character.text_1] = "PLANT FEELS LIKE EATING YOUR MATTRESS!";
-	arr_enemy[enemy.plant, character.text_2] = "PLANT IS TIRED OF EATING BUGS";
-	arr_enemy[enemy.plant, character.text_3] = "PLANT IS HUNGRY";
+	arr_enemy[enemy.plant, character.text_1] = "WORM FEELS LIKE DROOLING!";
+	arr_enemy[enemy.plant, character.text_2] = "WORM IS DUMB DUBM WORM IS!!!";
+	arr_enemy[enemy.plant, character.text_3] = "WORM IS A COWARD";
 	
 	arr_enemy[enemy.plant, character.special] = normal.bite;
 	
@@ -239,7 +239,7 @@ function enemylist(){
 	
 	arr_enemy[enemy.feudent, character.text_1] = "FEU FEELS LIKE BURNING YOUR MATTRESS! (NOT THE WAY YOU WANT TO)";
 	arr_enemy[enemy.feudent, character.text_2] = "FEU IS DETERMINED!";
-	arr_enemy[enemy.feudent, character.text_3] = "FEU ALARM ACTIVATES!";
+	arr_enemy[enemy.feudent, character.text_3] = "THE FIRE ALARM ACTIVATES!";
 	
 	arr_enemy[enemy.feudent, character.special] = normal.fireball;
 	
@@ -251,7 +251,7 @@ function enemylist(){
 	
 	arr_enemy[enemy.smokey, character.skill_1] = normal.dissipate;
 	arr_enemy[enemy.smokey, character.skill_2] = normal.punch;
-	arr_enemy[enemy.smokey, character.skill_3] = choose(normal.nap, normal.confuse);
+	arr_enemy[enemy.smokey, character.skill_3] = -1;
 	arr_enemy[enemy.smokey, character.skill_4] = -1;
 	
 	arr_enemy[enemy.smokey, character.text_1] = "SMOKE FEELS LIKE GRILLING YOUR MATTRESS!";
@@ -268,12 +268,12 @@ function enemylist(){
 	
 	arr_enemy[enemy.guard, character.skill_1] = normal.punch;
 	arr_enemy[enemy.guard, character.skill_2] = normal.armor;
-	arr_enemy[enemy.guard, character.skill_3] = normal.nap;
+	arr_enemy[enemy.guard, character.skill_3] = -1;
 	arr_enemy[enemy.guard, character.skill_4] = -1;
 	
 	arr_enemy[enemy.guard, character.text_1] = "GUARD FEELS LIKE DESTROYING YOUR MATTRESS!";
 	arr_enemy[enemy.guard, character.text_2] = "INCINERATION NATION";
-	arr_enemy[enemy.guard, character.text_3] = "GUARD IS JUST DOING HER JOB";
+	arr_enemy[enemy.guard, character.text_3] = "THE GUARD ALARM ACTIVATES!";
 	
 	arr_enemy[enemy.guard, character.special] = normal.armor;
 	
@@ -393,7 +393,7 @@ function enemylist(){
 	arr_enemy[enemy.muncher, character.skill_3] = -1;
 	arr_enemy[enemy.muncher, character.skill_4] = -1;
 	
-	arr_enemy[enemy.muncher, character.text_1] = "SOUL MUNCHER FEELS LIKE CHEWING YOUR SPIRIT!";
+	arr_enemy[enemy.muncher, character.text_1] = "MINECRAFT STEVE FEELS LIKE CRAFTING A MATRESS!";
 	arr_enemy[enemy.muncher, character.text_2] = "SOUNDS LIKE CHEWING NOISES AND SCREAMS";
 	arr_enemy[enemy.muncher, character.text_3] = "YOU'RE BREAKFAST TO ME";
 	
@@ -668,13 +668,13 @@ function enemylist(){
 	arr_enemy[enemy.kid, character.defense] = 5;
 	
 	arr_enemy[enemy.kid, character.skill_1] = normal.bitter;
-	arr_enemy[enemy.kid, character.skill_2] = normal.nap;
-	arr_enemy[enemy.kid, character.skill_3] = normal.lemon_toss;
+	arr_enemy[enemy.kid, character.skill_2] = -1;
+	arr_enemy[enemy.kid, character.skill_3] = -1;
 	arr_enemy[enemy.kid, character.skill_4] = -1;
 	
 	arr_enemy[enemy.kid, character.text_1] = "LEMONADE KID FEELS LIKE SPILLING LEMONADE ON YOUR MATTRESS!";
 	arr_enemy[enemy.kid, character.text_2] = "LEMONADE KID ASKS FOR 25 CENTS";
-	arr_enemy[enemy.kid, character.text_3] = "LEMONADE KID IS BEING RUDE!";
+	arr_enemy[enemy.kid, character.text_3] = "LEMONADE KID IS BEING BITTER!";
 	
 	arr_enemy[enemy.kid, character.special] = normal.bitter;
 	
@@ -682,8 +682,8 @@ function enemylist(){
 	arr_enemy[enemy.mega_bat, character.name] = "Mega Bat";
 	arr_enemy[enemy.mega_bat, character.sprite] = spr_megabat;
 	arr_enemy[enemy.mega_bat, character.damage] = 35;
-	arr_enemy[enemy.mega_bat, character.hp] = 200;
-	arr_enemy[enemy.mega_bat, character.defense] = 5;
+	arr_enemy[enemy.mega_bat, character.hp] = 100;
+	arr_enemy[enemy.mega_bat, character.defense] = 15;
 	
 	arr_enemy[enemy.mega_bat, character.skill_1] = normal.lick;
 	arr_enemy[enemy.mega_bat, character.skill_2] = -1;
@@ -708,8 +708,8 @@ function enemylist(){
 	arr_enemy[enemy.queen, character.skill_3] = normal.jewel_toss;
 	arr_enemy[enemy.queen, character.skill_4] = normal.crown;
 	
-	arr_enemy[enemy.queen, character.text_1] = "QUEEN FEELS LIKE STOPPING YOUR MATTRESS...";
-	arr_enemy[enemy.queen, character.text_2] = "QUEEN WON'T STOP UNTIL YOUR MATTRESS IS JUST A MEMORY";
+	arr_enemy[enemy.queen, character.text_1] = "QUEEN FEELS LIKE STOPPING YOU!";
+	arr_enemy[enemy.queen, character.text_2] = "ALL HAIL THE QUEEN";
 	arr_enemy[enemy.queen, character.text_3] = "YOU'RE BLINDED BY THE ROYALTY";
 	
 	arr_enemy[enemy.queen, character.special] = normal.crown;
@@ -1114,7 +1114,7 @@ function playerEnemies(){
 	//Pillow
 	arr_enemy[enemy.pillow, character.name] = "Pillow";
 	arr_enemy[enemy.pillow, character.sprite] = spr_pillow;
-	arr_enemy[enemy.pillow, character.damage] = 25;
+	arr_enemy[enemy.pillow, character.damage] = 190;//25;
 	arr_enemy[enemy.pillow, character.hp] = 100;
 	arr_enemy[enemy.pillow, character.defense] = 0;
 
@@ -1203,7 +1203,7 @@ function stageEnemies(){
 	arr_stageEnemies[stage.shaft, 1] = enemy.eraser;
 	arr_stageEnemies[stage.shaft, 2] = enemy.thief;
 	
-	arr_stageEnemies[stage.cloud, 0] = enemy.outlet;
+	/*arr_stageEnemies[stage.cloud, 0] = enemy.outlet;
 	arr_stageEnemies[stage.cloud, 1] = enemy.internaut;
 	arr_stageEnemies[stage.cloud, 2] = enemy.phish;
 	
@@ -1221,7 +1221,7 @@ function stageEnemies(){
 	
 	arr_stageEnemies[stage.council, 0] = enemy.pillow_elder;
 	arr_stageEnemies[stage.council, 1] = enemy.pillow_baby;
-	arr_stageEnemies[stage.council, 2] = enemy.pillow_savvy;
+	arr_stageEnemies[stage.council, 2] = enemy.pillow_savvy;*/
 	
 	arr_stageEnemies[stage.fridge, 0] = enemy.cat;
 	arr_stageEnemies[stage.fridge, 1] = enemy.skimo;
@@ -1341,11 +1341,6 @@ function tempLoad(){
 		st_skillUses[1] = ini_read_real("skillUses", "2", st_skillUses[1]);
 		st_skillUses[2] = ini_read_real("skillUses", "3", st_skillUses[2]);
 		st_skillUses[3] = ini_read_real("skillUses", "4", st_skillUses[3]);
-		
-		/*st_skillUses[0] = ini_read_real("skillUses", "1", arr_skill[st_skills[0], skills.uses]);
-		st_skillUses[1] = ini_read_real("skillUses", "2", arr_skill[st_skills[1], skills.uses]);
-		st_skillUses[2] = ini_read_real("skillUses", "3", arr_skill[st_skills[2], skills.uses]);
-		st_skillUses[3] = ini_read_real("skillUses", "4", arr_skill[st_skills[3], skills.uses]);*/
 		
 		st_defense = ini_read_real("stats", "def", st_defense);
 		st_damage = ini_read_real("stats", "dmg", st_damage);
