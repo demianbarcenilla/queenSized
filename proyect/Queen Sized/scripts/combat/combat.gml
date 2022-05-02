@@ -52,22 +52,13 @@ function attack(_value){
 		{
 			alarm[0] = stopCinematics;
 		};
+		
+		_other.arr_status[status.disengaged] = false;
 	};
 	if(arr_status[status.connected]) //If you're connected to the enemy, recieve dmg
 	{
 		hp -= dmgCalc(_other,_self, _value);
 	};
-		
-	if(_other.playerSelected = enemy.clown_car)
-	{
-		ini_open("tempDATA.ini")
-			ini_write_real("clownCar", "hp", _other.hp)
-		ini_close();
-		with(_other)
-		{
-			initializeEnemy(irandom_range(enemy.clown1, enemy.clown7));
-		};
-	}
 };
 
 function skill(value){
@@ -94,7 +85,7 @@ function skill(value){
 		var _eventsUnlocked = ini_read_real("unlocks", "1", false);
 		if(_other = obj_enemy) and (_eventsUnlocked)
 		{
-			eventStart(value); //If the conditions are given, start a skill
+			eventStart(value); //If the conditions are given, start an event
 		};
 	ini_close();
 };
@@ -131,19 +122,23 @@ function dmgCalc(_target, _self, _val)
 		
 	if(_target.var_guarding) //If your target is guarding, halve the damage
 	{
-		var _chance;
-		if(_target  = obj_enemy){_chance = 2}
-		else{_chance = 6};
+		var _whiff;
 		
-		var _whiff = irandom_range(1, _chance);
+		if(_target != obj_enemy)
+		{
+			_whiff = irandom_range(0, 3);
+		};
+		else
+		{
+			_whiff = -1;
+		};
 		
-		if(_whiff = 1)
+		if(_whiff = 0)
 		{
 			_finalDMG = 0;
 			
 			obj_control.var_calledNope = _target;
 			instance_create_depth(_target.x, _target.y,_target.depth+1, obj_nope);
-
 		};
 		else
 		{
@@ -154,6 +149,7 @@ function dmgCalc(_target, _self, _val)
 	if(_target.arr_status[status.disengaged])
 	{
 		_finalDMG = 0;
+		_other.arr_status[status.disengaged] = false;
 	};
 	return _finalDMG
 };
@@ -239,12 +235,6 @@ function statusEffects()
 	if(electrocuted <= 0)
 	{
 		arr_status[status.electrocuted] = false
-	};
-	
-	disengaged --;
-	if(disengaged <= 0)
-	{
-		arr_status[status.disengaged] = false
 	};
 	
 	connectedCountdown--;

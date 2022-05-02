@@ -44,25 +44,38 @@ if(global.turn%2 = 1) and (global.canAct)
 				};
 				else
 				{
-					if(var_guarding){ var_guarding = false };
+					if(var_guarding){var_guarding = false};
 					var _ski = choose(0, 1, 2, 3);
 	
-					if(irandom_range(0, 100) > 75) and (skillsAvailable)//and (hp < maxHp-maxHp/4) //Skill
+					if(irandom_range(0, 100) > 60) and (skillsAvailable) //Skill
 					{
-						if(arr_status[status.electrocuted] = false)
+						if(!arr_status[status.electrocuted])
 						{
-							while(st_skills[_ski] = -1)
+							//Choose a skill to use
+							while(st_skills[_ski] = -1) or (st_skillUses[_ski] = 0)
 							{
 								_ski = choose(0, 1, 2, 3)
 							};
+							
+							//Trigger Skill
 							skill(st_skills[_ski]);
+							st_skillUses[_ski] --;
+							
+							skillsAvailable = false;
+							for(i=0; i < 4; i++)
+							{
+								if(st_skills[i] != -1) and (st_skillUses[i] != 0)
+								{
+									skillsAvailable = true;
+								};
+							};
 						};
 						else
 						{
 							global.text = string(var_name) +" IS ELECTROCUTED AND CAN'T USE ANY SKILLS!"
 						}
 					};
-					else if(choose(1, 2, 3) = 1) //Guard
+					else if(choose(1, 2, 3, 4) = 1) //Guard
 					{
 						guard();	
 					};
@@ -118,7 +131,7 @@ x = lerp(x, newX, .1);
 //PARTICLE FX
 if(alarm[0] = -1) //Status FX
 {
-	for(i=0; i < 10; i++)
+	for(i=0; i <=10; i++)
 	{
 		if(arr_status[i] = true)
 		{

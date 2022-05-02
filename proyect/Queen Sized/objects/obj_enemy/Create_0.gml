@@ -4,7 +4,7 @@ enemylist();
 stageEnemies(); //assign enemies for each stage
 
 //initialize Character
-if((global.battleCount -9) %10 = 0) or (global.stage = stage.ashtray or global.stage = stage.strip) //a random boss, based on stage
+if((global.battleCount -9) %10 = 0) //boss
 {
 	global.bossFight = true;
 	_enemy = arr_bossList[global.stage];
@@ -65,6 +65,14 @@ if(global.player = playerSelected)
 	if(_sprite > -1)
 	{
 		sprite_index = _sprite
+	};
+};
+
+for(i=0; i < 4; i++)
+{
+	if(st_skills[i] != -1)
+	{
+		st_skillUses[i] = arr_skill[st_skills[i], skills.uses];
 	};
 };
 

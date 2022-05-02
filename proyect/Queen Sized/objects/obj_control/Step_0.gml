@@ -66,7 +66,7 @@ if(!audio_is_playing(music)){
 	audio_play_sound(music, 1, true);
 };
 
-if(instance_exists(obj_enemy))
+/* MICHAEL MODE if(instance_exists(obj_enemy))
 {
 	if(global.player = enemy.michael) or (obj_enemy.playerSelected = enemy.michael)
 	{
@@ -77,7 +77,7 @@ if(instance_exists(obj_enemy))
 	};
 };
 
-switch(global.michaelMode)
+switch(global.mischaelMode)
 {
 	case 0: //sine wave
 		window_set_fullscreen(false);
@@ -103,4 +103,4 @@ switch(global.michaelMode)
 		var _shift = amp * dcos(t);
 		window_set_position((display_get_width()/2)-(window_get_width()/2) + shift, (display_get_height()/2)-(window_get_height()/2) + _shift); //circular wave motion
 	break;
-};
+};*/

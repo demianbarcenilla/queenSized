@@ -57,6 +57,8 @@ global.stage = stage.city;
 global.text = "";
 global.textPrev = global.text;
 global.michaelMode = -1;
+
+global.chat = false;
 stopCinematics = 30;
 
 //Screenshake

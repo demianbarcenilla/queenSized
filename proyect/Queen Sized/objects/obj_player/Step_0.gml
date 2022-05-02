@@ -58,6 +58,7 @@ if(!instance_exists(obj_shop))
 				else
 				{
 					if(var_guarding){ var_guarding = false };
+					
 					if(!global.event)
 					{
 						if(instance_exists(obj_uiAttack) or (instance_exists(obj_skill4))){ execute_ui();};
@@ -69,6 +70,8 @@ if(!instance_exists(obj_shop))
 				};
 			};
 		};
+		
+		execute_chat();
 	};
 };
 

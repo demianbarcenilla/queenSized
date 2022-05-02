@@ -1,4 +1,5 @@
 image_speed = 0;
+
 //initialize
 enemylist();
 playerEnemies(); //Sets the changes for playable enemies
@@ -13,6 +14,8 @@ initializeEnemy(_player);
 initializeSkills(_self, _other);
 
 eventValues();
+chatValues();
+var_chatNumber = 0;
 
 global.money = 0;
 //Skill Uses

@@ -258,35 +258,32 @@ function uiBehave()
 
 function resetToPrimary()
 {
-	if(!global.event)
+	if(!instance_exists(obj_shop)) and (!instance_exists(obj_uiAttack))
 	{
-		if(!instance_exists(obj_shop)) and (!instance_exists(obj_uiAttack))
-		{
-			instance_create_depth(40, 240, depth, obj_uiAttack);
-			instance_create_depth(140, 240, depth, obj_uiSkills);
-			instance_create_depth(240, 240, depth, obj_uiGuard);
-			instance_create_depth(340, 240, depth, obj_uiSpecial);
-		};
-		else
-		{
-			instance_activate_object(obj_arrow);
-			instance_activate_object(obj_shopBubble);
-			instance_activate_object(obj_shopSkill);
-			instance_activate_object(obj_shopSwitch);
-			instance_activate_object(obj_shopReroll);
-		};
+		instance_create_depth(40, 240, depth, obj_uiAttack);
+		instance_create_depth(140, 240, depth, obj_uiSkills);
+		instance_create_depth(240, 240, depth, obj_uiGuard);
+		instance_create_depth(340, 240, depth, obj_uiSpecial);
+	};
+	else
+	{
+		instance_activate_object(obj_arrow);
+		instance_activate_object(obj_shopBubble);
+		instance_activate_object(obj_shopSkill);
+		instance_activate_object(obj_shopSwitch);
+		instance_activate_object(obj_shopReroll);
+	};
 		
-		instance_destroy(obj_skill1);
-		instance_destroy(obj_skill2);
-		instance_destroy(obj_skill3);
-		instance_destroy(obj_skill4);
+	instance_destroy(obj_skill1);
+	instance_destroy(obj_skill2);
+	instance_destroy(obj_skill3);
+	instance_destroy(obj_skill4);
 		
-		if(instance_exists(obj_back))
+	if(instance_exists(obj_back))
+	{
+		with(obj_back)
 		{
-			with(obj_back)
-			{
-				instance_destroy();
-			};
+			instance_destroy();
 		};
 	};
 };

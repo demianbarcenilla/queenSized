@@ -26,6 +26,7 @@ if(instance_exists(obj_enemy))
 	{
 		if(dead)
 		{
+			global.turn = 0;
 			global.enemyPrev = playerSelected;
 			if(obj_player.playerSelected = enemy.tito)
 			{
@@ -92,17 +93,6 @@ if(instance_exists(obj_enemy))
 					global.newUnlocks = _newUnlock;
 					
 					global.michaelMode = -1;
-					
-					if(_enemy >= enemy.clown1) and (_enemy <= enemy.clown7)
-					{
-						with(_enemy)
-						{
-							initializeEnemy(enemy.clown_car);
-						};
-						ini_open("tempDATA.ini")
-							_enemy.hp = ini_read_real("clownCar", "hp", maxHp)
-						ini_close();
-					}
 					
 					if(global.battleCount % 5 = 0)
 					{

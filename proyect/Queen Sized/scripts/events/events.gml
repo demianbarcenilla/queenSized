@@ -92,198 +92,6 @@ function eventValues()
 	arr_event[1, 2] = "RAT KING ASKS FOR THE RAT FLUTE, HE WILL TAKE YOU SOMEWHERE IN RETURN!"//Text
 	arr_event[1, 3] = "RAT KING TAKES YOU TO A DEEPER PLACE"//Text for when you accept
 	arr_event[1, 4] = "RAT KING SAYS YOU'RE MAKING A MISTAKE!"//Text for when you decline
-	
-	//Car Honk Event
-	arr_event[2, 0] = normal.honk;//Left Choice
-	arr_event[2, 1] = function(){ //Consecuences of event
-		with(obj_player)
-		{
-			for(i=0; i < 4; i++)
-			{
-				if(st_skills[i] = normal.honk)
-				{
-					st_skills[i] = -1;
-					st_skillUses[i] = -1;
-					break;
-				};
-			};
-		}
-		global.battleCount = 0;
-		global.turn = 0;
-		global.stage = stage.cloud;
-		obj_player.hp += obj_player.maxHp/2;
-		if(global.player = enemy.tito) or (global.player = enemy.bondiola)
-		{
-			if(obj_player.playerSelected = enemy.tito)
-			{
-				ini_open("tempBONDIOLA.ini")
-			}
-			else
-			{
-				ini_open("tempTITO.ini")
-			};
-				ini_write_real("stats", "hp", maxHp/2);
-			};
-	};
-	arr_event[2, 2] = "MAD CAR HONKS BACK!"//Text
-	arr_event[2, 3] = "MAD CAR GIVES YOU A RIDE"//Text for when you accept
-	arr_event[2, 4] = "HONK HONK?"//Text for when you decline
-	
-	//Lemonade Kid Event
-	arr_event[3, 0] = normal.lemonade_plus;//Left Choice
-	arr_event[3, 1] = function(){ //Consecuences of event
-		with(obj_player)
-		{
-			var hasLemonade = false;
-			for(i=0; i < 4; i++)
-			{
-				if(st_skills[i] = normal.lemonade)
-				{
-					st_skills[i] = normal.lemonade_plus;
-					st_skillUses[i] = arr_skill[normal.lemonade_plus, skills.uses];
-					hasLemonade = true
-					break;
-				}
-				else if(st_skills[i] = normal.lemonade_plus)
-				{
-					break;
-				};
-			};
-			
-			if(!hasLemonade)
-			{
-				for(i=0; i < 4; i++)
-				{
-					if(st_skills[i] = -1)
-					{
-						st_skills[i] = normal.lemonade_plus;
-						st_skillUses[i] = arr_skill[normal.lemonade_plus, skills.uses];
-						break;
-					};
-				};
-			}
-		}
-	};
-	arr_event[3, 2] = "LEMONADE KID WANTS TO GIVE YOU SOMETHING BETTER"//Text
-	arr_event[3, 3] = "LEMONADE KID GIVES YOU A BETTER LEMONADE!"//Text for when you accept
-	arr_event[3, 4] = "ENJOY YOUR REGULAR LEMONADE, THEN"//Text for when you decline
-	
-	//Lemonade Kid Event 2
-	arr_event[3, 0] = normal.lemonade_bitter;//Left Choice
-	arr_event[3, 1] = function(){ //Consecuences of event
-		with(obj_player)
-		{
-			var hasLemonade = false;
-			for(i=0; i < 4; i++)
-			{
-				if(st_skills[i] = normal.lemonade)
-				{
-					st_skills[i] = normal.lemonade_plus;
-					st_skillUses[i] = arr_skill[normal.lemonade_plus, skills.uses];
-					hasLemonade = true
-					break;
-				}
-				else if(st_skills[i] = normal.lemonade_plus)
-				{
-					break;
-				};
-			};
-			
-			if(!hasLemonade)
-			{
-				for(i=0; i < 4; i++)
-				{
-					if(st_skills[i] = -1)
-					{
-						st_skills[i] = normal.lemonade_plus;
-						st_skillUses[i] = arr_skill[normal.lemonade_plus, skills.uses];
-						break;
-					};
-				};
-			}
-		}
-	};
-	arr_event[3, 2] = "LEMONADE KID WANTS TO GIVE YOU SOMETHING BETTER"//Text
-	arr_event[3, 3] = "LEMONADE KID GIVES YOU A BETTER LEMONADE!"//Text for when you accept
-	arr_event[3, 4] = "ENJOY YOUR REGULAR LEMONADE, THEN"//Text for when you decline
-	
-	//Lemonade Kid Event 2
-	arr_event[3, 0] = normal.lemonade_seedy;//Left Choice
-	arr_event[3, 1] = function(){ //Consecuences of event
-		with(obj_player)
-		{
-			var hasLemonade = false;
-			for(i=0; i < 4; i++)
-			{
-				if(st_skills[i] = normal.lemonade)
-				{
-					st_skills[i] = normal.lemonade_plus;
-					st_skillUses[i] = arr_skill[normal.lemonade_plus, skills.uses];
-					hasLemonade = true
-					break;
-				}
-				else if(st_skills[i] = normal.lemonade_plus)
-				{
-					break;
-				};
-			};
-			
-			if(!hasLemonade)
-			{
-				for(i=0; i < 4; i++)
-				{
-					if(st_skills[i] = -1)
-					{
-						st_skills[i] = normal.lemonade_plus;
-						st_skillUses[i] = arr_skill[normal.lemonade_plus, skills.uses];
-						break;
-					};
-				};
-			}
-		}
-	};
-	arr_event[3, 2] = "LEMONADE KID WANTS TO GIVE YOU SOMETHING BETTER"//Text
-	arr_event[3, 3] = "LEMONADE KID GIVES YOU A BETTER LEMONADE!"//Text for when you accept
-	arr_event[3, 4] = "ENJOY YOUR REGULAR LEMONADE, THEN"//Text for when you decline
-	
-	//Lemonade Kid Event 2
-	arr_event[3, 0] = normal.lemonade_rotten;//Left Choice
-	arr_event[3, 1] = function(){ //Consecuences of event
-		with(obj_player)
-		{
-			var hasLemonade = false;
-			for(i=0; i < 4; i++)
-			{
-				if(st_skills[i] = normal.lemonade)
-				{
-					st_skills[i] = normal.lemonade_plus;
-					st_skillUses[i] = arr_skill[normal.lemonade_plus, skills.uses];
-					hasLemonade = true
-					break;
-				}
-				else if(st_skills[i] = normal.lemonade_plus)
-				{
-					break;
-				};
-			};
-			
-			if(!hasLemonade)
-			{
-				for(i=0; i < 4; i++)
-				{
-					if(st_skills[i] = -1)
-					{
-						st_skills[i] = normal.lemonade_plus;
-						st_skillUses[i] = arr_skill[normal.lemonade_plus, skills.uses];
-						break;
-					};
-				};
-			}
-		}
-	};
-	arr_event[3, 2] = "LEMONADE KID WANTS TO GIVE YOU SOMETHING BETTER"//Text
-	arr_event[3, 3] = "LEMONADE KID GIVES YOU A BETTER LEMONADE!"//Text for when you accept
-	arr_event[3, 4] = "ENJOY YOUR REGULAR LEMONADE, THEN"//Text for when you decline
 };
 
 function eventStart(_value)
@@ -357,6 +165,88 @@ function eventStart(_value)
 	};*/
 };
 
+function chatValues()
+{
+	//Rat Queen
+	if(obj_player.playerSelected != enemy.rat_king)
+	{
+		arr_chat[0, 0] = "Welcome to ratlantis! We like to fight for fun";
+		arr_chat[0, 1] = "If you beat me in a battle i will enhance your special skill with my rat powers";
+		arr_chat[0, 2] = "If you lose i steal your cheese. Deal?";
+	};
+	else
+	{
+		arr_chat[0, 0] = "Welcome to ratlantis! We like to...";
+		arr_chat[0, 1] = "UH... HANG ON...";
+		arr_chat[0, 2] = "AREN'T YOU THAT FAKE RAT KING FROM THE CITY?";
+	};
+};
+
+function execute_chat()
+{
+	if(global.turn = 0)
+	{
+		if(obj_enemy.playerSelected = enemy.rat_queen)
+		{
+			global.chat = true;
+			global.primaryUI = false;
+			chatFunctions(0);
+		};
+	};
+};
+
+function chatFunctions(_chat)
+{
+	if(instance_exists(obj_uiAttack))
+	{
+		instance_destroy(obj_uiAttack);
+		instance_destroy(obj_uiSkills);
+		instance_destroy(obj_uiGuard);
+		instance_destroy(obj_uiSpecial);
+	};
+	if(instance_exists(obj_back))
+	{
+		instance_destroy(obj_back);
+	};
+	obj_control.music = mus_silent;
+	//Create YAY!
+	if(!instance_exists(obj_uiYay))
+	{
+		instance_create_depth(190, 240, depth, obj_uiYay);
+		obj_uiYay.image_index = normal.wait+1;
+	};
+	
+	global.text = arr_chat[_chat, var_chatNumber];
+	
+	if(mouse_check_button_pressed(mb_left))
+	{
+		if(obj_uiYay.selected)
+		{
+			if(var_chatNumber < array_length(arr_chat[_chat]) -1)
+			{
+				var_chatNumber ++;
+				global.text = arr_chat[_chat, var_chatNumber];
+				
+				global.turn--;
+				
+				obj_uiYay.y += 40;
+				audio_play_sound(snd_select, 0, false);
+			};
+			
+			else
+			{
+				global.chat = false;
+				global.primaryUI = true;
+			
+				resetToPrimary();
+				global.turn = 1;
+			};
+			
+			nextTurn();
+		};
+	};
+};
+
 function execute_event(_value)
 {
 	if(instance_exists(obj_uiAttack))
@@ -377,6 +267,7 @@ function execute_event(_value)
 		instance_create_depth(140, 240, depth, obj_uiChoice);
 		instance_create_depth(240, 240, depth, obj_uiChoice2);
 		
+		//obj_uiChoice.image_index = normal.wait+1;
 		obj_uiChoice.image_index = arr_event[global.eventType, 0]+1;
 		global.text = arr_event[global.eventType, 2];
 	};
@@ -390,13 +281,12 @@ function execute_event(_value)
 			
 			arr_event[global.eventType, 1]();
 			global.text = arr_event[global.eventType, 3];
-			
 			obj_enemy.newX = 540;
 			obj_enemy.alarm[1] = 59;
 			
 			global.enemyPrev = playerSelected;
+			
 			resetToPrimary();
-			nextTurn();
 		};
 		else if(obj_uiChoice2.selected)
 		{
@@ -404,7 +294,6 @@ function execute_event(_value)
 			global.primaryUI = true;
 			
 			global.text = arr_event[global.eventType, 4];
-			global.turn ++;
 			resetToPrimary();
 		};
 	};

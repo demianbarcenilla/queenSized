@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,10 +12,10 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_6.mp3",
-  "duration": 137.717545,
+  "duration": 175.412247,
   "parent": {
-    "name": "circus",
-    "path": "folders/Sounds/music/2nd route/circus.yy",
+    "name": "ruins",
+    "path": "folders/Sounds/music/2nd route/ruins.yy",
   },
   "resourceVersion": "1.0",
   "name": "mus_6",

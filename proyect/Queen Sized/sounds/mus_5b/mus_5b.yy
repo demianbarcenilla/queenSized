@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -10,8 +11,8 @@
     "name": "ag_music",
     "path": "audiogroups/ag_music",
   },
-  "soundFile": "mus_5b.mp3",
-  "duration": 218.226944,
+  "soundFile": "mus_5b.wav",
+  "duration": 36.0,
   "parent": {
     "name": "sewer",
     "path": "folders/Sounds/music/2nd route/sewer.yy",

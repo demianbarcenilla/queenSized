@@ -3,17 +3,17 @@
 function initEnum(){
 		enum status
 		{
-		bitter,
-		shroomed,
-		burnt,
-		frozen,
-		spooked,
-		connected,
-		rotten,
-		regeneration,
-		electrocuted,
-		disengaged,
-		tipsy
+			bitter,
+			shroomed,
+			burnt,
+			frozen,
+			spooked,
+			connected,
+			rotten,
+			regeneration,
+			electrocuted,
+			disengaged,
+			tipsy
 		};
 
 		enum skills
@@ -75,6 +75,8 @@ function initEnum(){
 		grilled_cheese,
 		plunger,
 		milk,
+		cigar,
+		sneeze,
 		
 		rat_pocket,
 		rat_bomb,
@@ -134,10 +136,9 @@ function initEnum(){
 		book_green,
 		book_white,
 		grape_soda,
-		cigar,
+		
 		change,
 		rubber_glove,
-		sneeze,
 		
 		cookie_jar,
 		cookie_christmas,
@@ -192,15 +193,11 @@ function initEnum(){
 		shortcut,
 		incinerator,
 		sewer,
-		circus,
-		shaft,
-		ashtray,
-		cloud,
-		breach,
-		strip,
-		council,
+		ruins,
+		ratlantis,
 		fridge
 		};
+		
 		enum enemy
 		{
 		pillow,
@@ -229,14 +226,18 @@ function initEnum(){
 		plumber,
 		toothfrog,
 	
-		mime, //circus
-		clown,
-		ghost,
+		wet_rat, //ruins
+		ruined_rat,
+		nervous_rat,
 	
-		muncher, //shaft
-		eraser,
-		thief,
-	
+		fat_rat, //shaft
+		wobbly_rat,
+		shivery_rat,
+		
+		skimo, //fridge
+		ice_cube,
+		cat,
+		
 		virus, //cloud
 		phish,
 		internaut,
@@ -244,16 +245,8 @@ function initEnum(){
 		warning, //breach
 		outlet,
 		bug,
-	
-		pillow_baby, //council
-		pillow_savvy,
-		pillow_elder,
-		skimo, //fridge
-		ice_cube,
-		cat,
-		
+
 		//BOSSES
-		
 		rat_king, //city
 		
 		cerberus, //tunnel
@@ -265,33 +258,27 @@ function initEnum(){
 		mega_bat, //route
 		
 		slug,//sewer
-		clown_car, //circus
+		wheel_cheese, //ruins
+		rat_queen, //ratlantis
 		
-		clown1, //degrady
-		clown2, //depressy
-		clown3, //freezy
-		clown4, //markety
-		clown5, //mimey
-		clown6, //smokey
-		clown7, //tally
+		eggplant, //fridge
+		merchant,
 		
-		papa_soul, //shaft
-		omar, //ashtray
+		omar,
+		burger,
+		
+		tito,
+		bondiola,
+		
+		cookie,
+		rock_blunt
+		
+		/*omar, //ashtray
 	
 		electrolotl, //cloud
 		michael, //breach
 	
 		tito, //strip
-		bondiola,
-	
-		eggplant, //fridge
-		head_council, //council
-	
-		burger,
-		merchant,
-		
-		cookie,
-		
-		rock_blunt
+		bondiola,*/
 		};
-}
+};

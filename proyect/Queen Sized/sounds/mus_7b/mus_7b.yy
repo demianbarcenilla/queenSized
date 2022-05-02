@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -13,8 +14,8 @@
   "soundFile": "mus_7b.mp3",
   "duration": 182.543671,
   "parent": {
-    "name": "shaft",
-    "path": "folders/Sounds/music/2nd route/shaft.yy",
+    "name": "ratlantis",
+    "path": "folders/Sounds/music/2nd route/ratlantis.yy",
   },
   "resourceVersion": "1.0",
   "name": "mus_7b",

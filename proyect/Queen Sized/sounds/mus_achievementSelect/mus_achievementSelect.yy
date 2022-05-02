@@ -11,8 +11,8 @@
     "name": "ag_music",
     "path": "audiogroups/ag_music",
   },
-  "soundFile": "mus_achievementSelect.ogg",
-  "duration": 71.93751,
+  "soundFile": "mus_achievementSelect.mp3",
+  "duration": 96.05221,
   "parent": {
     "name": "music",
     "path": "folders/Sounds/music.yy",

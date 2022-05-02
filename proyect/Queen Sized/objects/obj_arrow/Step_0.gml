@@ -8,16 +8,10 @@ if(mouse_check_button_pressed(mb_left)) and (place_meeting(x, y, obj_mouse))
 	{
 		initializeSkills(_self, _other);
 	};
-	if(global.stage = stage.council) and (global.battleCount % 10 = 0)
+	if(global.stage = stage.ratlantis /*or global.stage = stage.cloud*/) and (global.battleCount % 10 = 0)
 	{
 		global.battleCount = 0;
-		global.stage = stage.incinerator;
-		global.mult++;
-	};
-	else if(global.stage = stage.ashtray or global.stage = stage.strip) and (global.battleCount % 10 = 0)
-	{
-		global.battleCount = 0;
-		global.stage = stage.council
+		global.stage = stage.incinerator
 		global.mult++;
 	}
 	else if(global.battleCount % 10 = 0)//Change stages after shopping
@@ -26,10 +20,6 @@ if(mouse_check_button_pressed(mb_left)) and (place_meeting(x, y, obj_mouse))
 		global.mult++;
 	};
 	
-	if(global.stage = stage.ashtray or global.stage = stage.strip)
-	{
-		global.battleCount = 9;
-	};
 	var _newEnemy = instance_create_depth(obj_shop.xx, obj_shop.yy, obj_shop._depth, obj_enemy);
 		_newEnemy.newX = 400;
 	
