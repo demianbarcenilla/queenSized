@@ -1,4 +1,9 @@
 IF U GET THERE
 -make an expensive cheese anim
 
+UPDATE 2:
 -work on THE FRIDGE
+-solve issues: skills that waste turns are useless, let me see what the enemy'll do next to strategize around it!
+
+UPDATE 3:
+-work on ROUTE 3! (The Cloud, The Breach and The )
