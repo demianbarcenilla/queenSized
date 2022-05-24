@@ -4,8 +4,8 @@ x = 0;
 y = 0;
 
 i = 0;
-arr_text[0]= "there was once a city far, far away, where people went to live a quiet life";
-arr_text[1]= "unfortunately, the queen decided to make matresses completely illegal!";
-arr_text[2]= "she sent her henchmen to retrieve every single mattress, so she could toss them in an incinerator";
-arr_text[3]= "but they couldn't get one of the MATTRESSes. it was hidden, and it was so big it could break the incinerator"
-arr_text[4]= "the pillow, guard of the MATTRESS, decided to slap some wheels in it and carry it all the way to the incinerator, to destroy it once and for all and restore peace!";
+arr_text[0]= "There once was a queen so mean, she'd burn all the matresses in a machine";
+arr_text[1]= "she'd toss them in a fire, make them disappear, everyone now has insomnia that's clear!";
+arr_text[2]= "but the pillow couldn't stand seeing everyone so tired, she decided to dethrone the queen, as required";
+arr_text[3]= "so she took the only matress that was left in the world, the plan was to go to the castle and get it burned"
+arr_text[4]= "since the matress was so big, it would break the whole castle. then pillow'd just take the throne and take us out of this hassle";

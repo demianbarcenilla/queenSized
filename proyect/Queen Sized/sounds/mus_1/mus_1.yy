@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_1.mp3",
-  "duration": 157.178757,
+  "duration": 157.135086,
   "parent": {
     "name": "tunnel",
     "path": "folders/Sounds/music/1st route/tunnel.yy",

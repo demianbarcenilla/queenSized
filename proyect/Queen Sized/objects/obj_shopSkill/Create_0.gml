@@ -60,7 +60,7 @@ if(global.player = enemy.phish) //ALLWAYS discount with phish
 }
 
 ini_open("unlocks.ini") //Ocasional discount
-	if(ini_read_real("unlocks", "14", false))
+	if(ini_read_real("unlocks", "100", false))
 	{
 		var r = irandom_range(0, 50);
 		if(r > 25)
@@ -69,7 +69,12 @@ ini_open("unlocks.ini") //Ocasional discount
 		};
 	};
 ini_close()
-text = arr_skill[var_holding, skills.desc];
+
+holdingPlus = false;
+
+if(holdingPlus){text = arr_skill[var_holding, skills.descPlus]}
+else{text = arr_skill[var_holding, skills.desc]};
+
 cost = arr_skill[var_holding, skills.shop] + (10 * global.mult);
 
 checked = false;
@@ -83,3 +88,4 @@ xx = x;
 yy = ystart;
 
 reroll = false;
+global.shoplift = false;

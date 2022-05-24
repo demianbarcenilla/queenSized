@@ -46,12 +46,12 @@ function eventValues()
 		//UNLOCK RAT KING
 		var _newUnlock = false;
 		ini_open("unlocks.ini")
-			if(ini_read_real("unlocks", "3", false) = false)
+			if(ini_read_real("unlocks", "6", false) = false)
 			{
 				_newUnlock = true;
 				instance_create_depth(0, 0, depth, obj_newUnlockBattle);
 			}
-			ini_write_real("unlocks", "3", true);
+			ini_write_real("unlocks", "6", true);
 		ini_close();
 		
 		with(obj_player)
@@ -167,30 +167,133 @@ function eventStart(_value)
 
 function chatValues()
 {
-	//Rat Queen
-	if(obj_player.playerSelected != enemy.rat_king)
+	ini_open("unlocks.ini");
+		var _gameFinished = ini_read_real("other","timesFinished", 0) > 0,
+			_timesFinished = ini_read_real("other","timesFinished", 0);
+	ini_close();
+	//PILLOW DIALOGUES
+	if(obj_player.playerSelected = enemy.pillow)
 	{
-		arr_chat[0, 0] = "Welcome to ratlantis! We like to fight for fun";
-		arr_chat[0, 1] = "If you beat me in a battle i will enhance your special skill with my rat powers";
-		arr_chat[0, 2] = "If you lose i steal your cheese. Deal?";
+		if(_gameFinished)
+		{
+			//Rat Queen
+			arr_chat[0, 0] = "Welcome again Ms. PILLOW!";
+			arr_chat[0, 1] = "DO YOU WISH TO FIGHT?";
+			
+			//Queen
+			arr_chat[1, 0] = "YOU AGAIN?";
+			arr_chat[1, 1] = "YOU DIDN'T LEARN THE LESSON DID YOU?";
+			arr_chat[1, 2] = "WE'VE BEEN OVER THIS OVER AND OVER AGAIN HUN!";
+			arr_chat[1, 3] = "IT DOESN'T MATTER IF YOU DEFEAT ME LIKE, " + string(_timesFinished) + " TIMES OR SO";
+			arr_chat[1, 4] = "THIS WILL ALLWAYS END WITH ME GETTING UP AND KICKING YOU OUT OF MY CASTLE";
+			arr_chat[1, 5] = "SO YEAH, I'LL LET YOU START YOUR LITTLE ATTEMPT TO DETHRONE ME";
+			
+			//Queen (Flaming)
+			arr_chat[2, 0] = "AWW YOU'VE BEEN PLAYING WITH THE RATS AGAIN HAVEN'T YOU?"
+			arr_chat[2, 1] = "BUT THIS WON'T END LIKE IT ENDED LAST TIME NO, NOW IT'S GONNA CHANGE"
+			arr_chat[2, 2] = "HAHAHAH! POOR BABY"
+		};
+		else
+		{
+			//Rat Queen
+			arr_chat[0, 0] = "Welcome to ratlantis! We like to fight for fun";
+			arr_chat[0, 1] = "If you beat me in a battle i will enhance your special skill with my rat powers";
+			arr_chat[0, 2] = "If you lose i steal ALL OF your belongings. Deal?";
+			
+			//Queen
+			arr_chat[1, 0] = "OH MY GOD, YOU REALLY CAME!";
+			arr_chat[1, 1] = "I COULDN'T BELIEVE IT WHEN I HEARD A TALKING PILLOW HAD THE LAST MATRESS IN THE WORLD";
+			arr_chat[1, 2] = "BUT YOU ARE HERE! YOU BRANG IT RIGHT TO ME!";
+			arr_chat[1, 3] = "DID YOU REALLY BUY THE WHOLE ''MATRESS IS SO BIG IT CAN'T FIT IN THE INCINERATOR'' STORY?";
+			arr_chat[1, 4] = "THAT'S LITERALLY WHAT THE INCINERATOR IS FOR!";
+			arr_chat[1, 5] = "SO YEAH, I'LL LET YOU START YOUR LITTLE ATTEMPT TO DETHRONE ME";
+			
+			arr_chat[2, 0] = "AWW DID YOU GET YOUR LITTLE SKILLS ALL FIRED UP?"
+			arr_chat[2, 1] = "LIKE YOU'RE UNIQUE!"
+			arr_chat[2, 2] = "JUST GIVE UP, I'VE BEEN THROUGH THIS ENOUGH TIMES TO KNOW HOW IT ENDS"
+		};
+	};
+	
+	//RAT KING DIALOGUES
+	else if(obj_player.playerSelected = enemy.rat_king)
+	{
+		if(_gameFinished)
+		{
+			//Rat Queen
+			arr_chat[0, 0] = "YOU AGAIN!?";
+			arr_chat[0, 1] = "COME ON MAN JUST GO AWAY";
+			
+			//Queen
+			arr_chat[1, 0] = "YOU AGAIN?";
+			arr_chat[1, 1] = "YOU DIDN'T LEARN THE LESSON DID YOU?";
+			arr_chat[1, 2] = "WE'VE BEEN OVER THIS OVER AND OVER AGAIN HUN!";
+			arr_chat[1, 3] = "IT DOESN'T MATTER IF YOU DEFEAT ME LIKE, " + string(_timesFinished) + " TIMES OR SO";
+			arr_chat[1, 4] = "THIS WILL ALLWAYS END WITH ME GETTING UP AND KICKING YOU OUT OF MY CASTLE";
+			arr_chat[1, 5] = "SO YEAH, I'LL LET YOU START YOUR LITTLE ATTEMPT TO DETHRONE ME";
+			
+			//Flaming Queen
+			arr_chat[2, 0] = "AWW YOU GOT THE PWEETY COLORS IN YOUR PWEETY LITTLE SKILLS?"
+			arr_chat[2, 1] = "THAT'S SO CUTE! IT GIVES YOU ALMOST ENOUGH POWER TO LICK MY SHOES!"
+			arr_chat[2, 2] = "DAMN... KIDS THESE DAYS"
+		};
+		else
+		{
+			//Rat Queen
+			arr_chat[0, 0] = "Welcome to ratlantis! We like to...";
+			arr_chat[0, 1] = "UH... HANG ON...";
+			arr_chat[0, 2] = "AREN'T YOU THAT FAKE RAT KING FROM THE CITY?";	
+			
+			//Queen Dialogue
+			arr_chat[1, 0] = "OH MY GOD, YOU REALLY CAME!";
+			arr_chat[1, 1] = "AND I THOUGHT RATS WERE SMART. AS IF!";
+			arr_chat[1, 2] = "I GUESS YOU'RE TIRED OF BEING A LIAR, A CROOK";
+			arr_chat[1, 3] = "YOU WANT MY SWEET, SHINY CROWN DON'T YOU?";
+			arr_chat[1, 4] = "...";
+			arr_chat[1, 5] = "I GUESS WE'RE FIGHTING THEN!";
+		};
 	};
 	else
 	{
-		arr_chat[0, 0] = "Welcome to ratlantis! We like to...";
-		arr_chat[0, 1] = "UH... HANG ON...";
-		arr_chat[0, 2] = "AREN'T YOU THAT FAKE RAT KING FROM THE CITY?";
-	};
+		//Rat Queen
+		arr_chat[0, 0] = "Welcome to ratlantis! We like to fight for fun";
+		arr_chat[0, 1] = "If you beat me in a battle i will enhance your special skill with my rat powers";
+		arr_chat[0, 2] = "If you lose i steal your cheese. Deal?"
+		
+		//Normal Queen
+		arr_chat[1, 0] = "OH MY GOD, YOU REALLY CAME!";
+		arr_chat[1, 1] = "I COULDN'T BELIEVE IT WHEN I HEARD A TALKING PILLOW HAD THE LAST MATRESS IN THE WORLD";
+		arr_chat[1, 2] = "BUT YOU ARE HERE! YOU BRANG IT RIGHT TO ME!";
+		arr_chat[1, 3] = "DID YOU REALLY BUY THE WHOLE ''MATRESS IS SO BIG IT CAN'T FIT IN THE INCINERATOR'' STORY?";
+		arr_chat[1, 4] = "THAT'S LITERALLY WHAT THE INCINERATOR IS FOR!";
+		arr_chat[1, 5] = "SO YEAH, I'LL LET YOU START YOUR LITTLE ATTEMPT TO DETHRONE ME";
+		
+		//Flaming Queen
+		arr_chat[2, 0] = "AWW DID YOU GET YOUR LITTLE SKILLS ALL FIRED UP?"
+		arr_chat[2, 1] = "LIKE YOU'RE UNIQUE!"
+		arr_chat[2, 2] = "JUST GIVE UP, I'VE BEEN THROUGH THIS ENOUGH TIMES TO KNOW HOW IT ENDS"
+	}
 };
 
 function execute_chat()
 {
+	chatValues(); //REFRESH CHAT VALUES JUST IN CASE
 	if(global.turn = 0)
 	{
 		if(obj_enemy.playerSelected = enemy.rat_queen)
 		{
 			global.chat = true;
 			global.primaryUI = false;
+			obj_player.var_specialPlus = true;
+			
+			global.queenType = 1;
 			chatFunctions(0);
+		};
+		else if(obj_enemy.playerSelected = enemy.queen)
+		{
+			global.chat = true;
+			global.primaryUI = false;
+			if(global.queenType = 0){chatFunctions(1)};
+			else if(global.queenType = 1){ chatFunctions(2)};
 		};
 	};
 };
@@ -240,6 +343,22 @@ function chatFunctions(_chat)
 			
 				resetToPrimary();
 				global.turn = 1;
+				
+				if(global.queenType = 1) and (obj_enemy.playerSelected = enemy.queen)
+				{
+					with(obj_enemy) //MORPH
+					{
+						arr_enemy[enemy.queen, character.sprite] = spr_queen2
+						sprite_index = arr_enemy[enemy.queen, character.sprite]
+						
+						screenshake(10, 10, .1)
+						audio_play_sound(snd_queenFire, 1, false);
+						repeat(50)
+						{
+							instance_create_depth(x, y-40, -1000, obj_smokeParts)
+						}
+					};
+				}
 			};
 			
 			nextTurn();

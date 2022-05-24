@@ -1,31 +1,3 @@
-NAP+: recover 1/2HP and inflicts regen for 3 turns. 3 USES
-LONG NAP+: recover ALL HP, inflicts regen for 3 turns, doesn't cost any turns, +25MAXHP. 1 USE
-DRAIN+: heals x1.5 your DMG instead of x1. 3 USES
-DISTRACT+: lowers the same defense as confuse without the turn cost drawback. 
-CONFUSE+: lowers 999TEMPDEF, doesn't cost any turns, freezes the enemy for 3 turns. 1 USE
-RESIST+: gives the same defense as armor without the turn cost drawback
-ARMOR+: gives 999TEMPDEF like DISSIPATE, heals 1/2HP, gives TEMPDMG. 3 USES
-PUNCH+: deals X2.5DMG INSTEAD OF 2
-BITE+: deals X4DMG. 1 USE, doesn't cost turns
-CHEESE+: regens 1/2hp [the equivalent of eating both cheeses in one turn]. grants small TEMPDEF boost
-EXPLODE+: no effect
-HEAL+: recover 1/2HP and inflicts regen for 3 turns
-SHOOT+: deals DMG+30 instead of DMG+20
-TRIANGULATE+: can be used multiple times in one turn. 5 USES
-HONK+: gives more defense than regular honk.. escentially cheaper DISTRACT
-STEAL+: triggers the enhanced variant of the skill instead of the regular skill
-BARK+: can be used multiple times in a turn. 5 USES
-BITTER+: you get what the enemy doesn't regen. as well as regular BITTER, enhances your healing by 20%
-LEMONADE+: regens 1/2HP, immune to bitter, inflicts bitter to the enemy. 2 USES
-SHROOM+: x1.5DMG to enemy on use. 3 USES
-SCARE+: no effect
-ROT+: no effect
-FIREBALL+: x1.5DMG to enemy on use. 3 USES
-DISSIPATE+: +999TEMPDEF, +3TEMPDMG
-DISENGAGE+: no effect
-RAT FLUTE+: gives a random [NORMAL] rat item after use. 1 USE
-LICK+: fills up your HP, x2 your damage instead of x1.5
-SMILE+:
 RUSH+: can be used multiple times in a turn. 3 USES
 CROWN+: heals 1/4HP upon use, regen lasts longer
 RUBBISH+: if you got

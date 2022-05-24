@@ -1,5 +1,6 @@
 image_speed = 0;
 
+
 //initialize
 enemylist();
 playerEnemies(); //Sets the changes for playable enemies
@@ -10,14 +11,11 @@ _other = obj_enemy;
 var _player = global.player;
 phishPrices();
 
+canPressCards = true;
+
 initializeEnemy(_player);
 initializeSkills(_self, _other);
 
-eventValues();
-chatValues();
-var_chatNumber = 0;
-
-global.money = 0;
 //Skill Uses
 for(i=0; i < 4; i++)
 {
@@ -26,6 +24,13 @@ for(i=0; i < 4; i++)
 		st_skillUses[i] = arr_skill[st_skills[i], skills.uses];
 	};
 };
+chatValues();
+eventValues();
+
+var_chatNumber = 0;
+
+global.money = 0;
+
 mx_specialRecharge = st_special != -1 ? arr_skill[st_special, skills.recharge] +1 : 0;
 st_specialRecharge = 0;
 
@@ -59,4 +64,5 @@ for(i=0; i < 3; i++)
 	
 	_stat.enemySide = false;
 };
-//instance_create_depth(0, 0, depth, obj_newUnlockBattle);
+
+var_specialPlus = false;

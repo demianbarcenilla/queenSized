@@ -94,4 +94,7 @@ shift = 0;
 anim_x[0]=0;
 anim_x[1]=0;
 var_calledNope = obj_player;
+
 global.player = enemy.pillow;
+global.shoplift = false;
+global.queenType = 0;

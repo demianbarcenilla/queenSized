@@ -21,7 +21,6 @@ function initEnum(){
 		name,
 		desc,
 		target,
-		value,
 		func,
 		cost,
 		uses,
@@ -31,7 +30,12 @@ function initEnum(){
 		text,
 		shop, //how much does it cost on the shop
 		recharge,
-		anim
+		anim,
+		
+		descPlus,
+		funcPlus,
+		costPlus,
+		usesPlus,
 		};
 
 		enum normal
@@ -66,7 +70,6 @@ function initEnum(){
 		lick,
 		smile,
 		rush,
-		jewel_toss,
 		crown,
 		rubbish,
 		bug,
@@ -75,8 +78,8 @@ function initEnum(){
 		grilled_cheese,
 		plunger,
 		milk,
-		cigar,
 		sneeze,
+		cigar,
 		
 		rat_pocket,
 		rat_bomb,
@@ -84,6 +87,7 @@ function initEnum(){
 		rat_bitter,
 		rat_mossy,
 		rat_burnt,
+		rat_rabid,
 		rat_nurse,
 		rat_gym,
 		rat_angry,
@@ -97,7 +101,6 @@ function initEnum(){
 		cheese_liquid,
 		rat_ratuary,
 		
-		rat_rabid,
 		rat_iced,
 		rat_electro,
 		rat_e,
@@ -215,10 +218,10 @@ function initEnum(){
 		cursed_lemon,
 	
 		shroom,
-		plant, //man-eating plant
-		bat, //a rotten, living fruit
+		worm, 
+		bat,
 	
-		feudent, //fire piranha
+		feu,
 		smokey, //smoke cloud
 		guard, // eye-shaped
 	

@@ -17,8 +17,19 @@ if(shaking)
 	};
 };
 
+//If battling the queen change theme song
+var _queenThemeChange = false;
+
+if(instance_exists(obj_enemy))
+{
+	if(obj_enemy.playerSelected = enemy.queen)
+	{
+		_queenThemeChange = true
+	};
+}
+
 //Music
-if(room = rm_start) //or (pause = true)
+if(room = rm_start) or (global.chat)
 {
 	music = mus_silent;
 };
@@ -30,6 +41,10 @@ else if(room = rm_dead)
 {
 	music = mus_dead;
 };
+else if(room = rm_newUnlocks)
+{
+	music = mus_achievementSelect;
+};
 else if(room = rm_intro)
 {
 	music = mus_intro;
@@ -38,7 +53,6 @@ else if(room = rm_outro)
 {
 	music = mus_outro;
 };
-
 else if(room = rm_achievements)
 {
 	music = mus_achievementSelect;
@@ -46,6 +60,10 @@ else if(room = rm_achievements)
 else if(room = rm_characterSelect)
 {
 	music = mus_charsel;
+};
+else if(global.queenType = 1) and (_queenThemeChange)
+{
+	music = mus_4b2;
 };
 else //Music
 {

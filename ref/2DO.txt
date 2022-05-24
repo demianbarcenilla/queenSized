@@ -1,20 +1,4 @@
-MUSIC:
--lemonade stand
--lemonade stand SHOP
--lemonade stand BOSS
--shortcut boss
+IF U GET THERE
+-make an expensive cheese anim
 
--QUEEN
--ending sequence
--You unlocked Something!
-
--equalize volumes!
-
-GRAPX:
--worm //dk about this one
--rat king SK anims
--NEW UNLOCK!
-
-OTHERS
--adjust achievements
--characte select screen
+-work on THE FRIDGE

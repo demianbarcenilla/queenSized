@@ -1,4 +1,4 @@
-var _xdisplace = 50, _ydisplace = 50;
+/*var _xdisplace = 50, _ydisplace = 50;
 
 for(ii = 0; ii < 2; ii++)
 {
@@ -8,7 +8,7 @@ for(ii = 0; ii < 2; ii++)
 		_obj.var_key = i+1+(ii*10);
 		_obj.t -=i*10;
 	};
-};
+};*/
 
 noUnlocks = true;
 ini_open("unlocks.ini")

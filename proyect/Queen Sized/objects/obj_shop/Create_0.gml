@@ -40,18 +40,27 @@ instance_create_depth(550, room_height/2, -10, obj_arrow)
 //Create Items
 var _items = choose(3, 4, 5);
 
-//There's allways two instant bubbles
-instance_create_depth(160, 100,depth-1, obj_shopBubble);
-instance_create_depth(60, 140,depth-1, obj_shopSkill);
-
-//The rest of drops are random
-_arr[0, 0] = 160;	_arr[1, 0] = 60;	_arr[2, 0] = 260;
-_arr[0, 1] = 200;	_arr[1, 1] = 240;	_arr[2, 1] = 140;
-
-//If playing as tito/bondiola, add a switch button
-if(global.player = enemy.tito) or (global.player = enemy.bondiola)
+if(hasPlus()) and (global.battleCount = 5) and (global.stage = stage.city)
 {
-	instance_create_depth(ROOMWIDTH-50, room_height-20,depth-1, obj_shopSwitch);
+	instance_create_depth(90, 212, depth-1, obj_tv);	
+	
+	//There's allways two items AT LEAST
+	instance_create_depth(180, 180,depth-1, obj_shopBubble);
+	instance_create_depth(300, 180,depth-1, obj_shopSkill);
+	
+	//The rest of drops are random
+	_arr[0, 0] = 300;	_arr[1, 0] = 180;	_arr[2, 0] = 60;
+	_arr[0, 1] = 300;	_arr[1, 1] = 300;	_arr[2, 1] = 300;
+};
+else
+{
+	//There's allways two items AT LEAST
+	instance_create_depth(160, 100,depth-1, obj_shopBubble);
+	instance_create_depth(60, 140,depth-1, obj_shopSkill);
+	
+	//The rest of drops are random
+	_arr[0, 0] = 160;	_arr[1, 0] = 60;	_arr[2, 0] = 260;
+	_arr[0, 1] = 200;	_arr[1, 1] = 240;	_arr[2, 1] = 140;
 };
 
 for(i = 0; i < _items-2; i++)
@@ -59,16 +68,29 @@ for(i = 0; i < _items-2; i++)
 	var _type = choose(obj_shopBubble, obj_shopSkill);
 	instance_create_depth(_arr[i, 0], _arr[i, 1], depth-1, _type);
 };
-//if playing as pillow and the reroll skill is unlocked, spawn that
 
-var _rerollUnlocked;
+//If playing as tito/bondiola, add a switch button
+if(global.player = enemy.tito) or (global.player = enemy.bondiola)
+{
+	instance_create_depth(ROOMWIDTH-50, room_height-20,depth-1, obj_shopSwitch);
+};
+
+//if playing as pillow and the reroll skill is unlocked, spawn it
+var _rerollUnlocked, _shopliftUnlocked;
 ini_open("unlocks.ini");
 	_rerollUnlocked = ini_read_real("unlocks", "2", false);
+	_shopliftUnlocked = ini_read_real("unlocks", "7", false);
 ini_close();
 
 if(global.player = enemy.pillow) and (_rerollUnlocked)
 {
 	instance_create_depth(ROOMWIDTH-50, room_height-20,depth-1, obj_shopReroll);
+};
+
+//If playing as the Rat King and the conditions are met, spawn SHOPLIFT
+if(global.player = enemy.rat_king) and (_shopliftUnlocked)
+{
+	instance_create_depth(ROOMWIDTH-50, room_height-20,depth-1, obj_shopLift);
 };
 
 canChangeText = 0;
@@ -96,17 +118,17 @@ with(obj_player)
 arr_shopText[0] ="WELCOME TO THE SHOP"; //CITY
 arr_shopText[1] ="WOOF WOOF!! SHOP!!"; //TUNNEL
 arr_shopText[2] ="WELCOME TO THE LEMONADE STAND"; //LEMON
-arr_shopText[3] ="AAA... WELCOME TO THE SHOP..."; //SHORTCUT
-arr_shopText[4] ="WELCOME TO THE FLAMING SHOP"; //INCINERATOR
+arr_shopText[3] ="SHOP... OR SOMETHING"; //SHORTCUT
+arr_shopText[4] ="WELCOME TO THE SHOP"; //INCINERATOR
 arr_shopText[5] ="WAWAAA, BUYYY!!"; //SEWER
-arr_shopText[6] ="COME ON... BUY SOMETHING..."; //CIRCUS
-arr_shopText[7] ="BUY MY JUNK, FELLOW STRANGER"; //SHAFT
-arr_shopText[8] ="WELCOME TO THE ASHTRAY"; //ASHTRAY
+arr_shopText[6] ="PLEASE DON'T BITE MY FACE!"; //RUINS
+arr_shopText[7] ="BUY OUR JUNK!!"; //RATLANTIS
+arr_shopText[8] ="BRRR.... ITS COLD IN HERE..."; //FRIDGE
+
+/*
 arr_shopText[9] ="BUY E - MARKET NOW!!"; //CLOUD
 arr_shopText[10] ="B   Y ERKET   NOW !!! 102601"; //BREACH
-arr_shopText[11] ="QUE BUSCAS PIBE?"; //STRIP
-arr_shopText[12] ="WANT SOME SECRET BOOKS?"; // COUNCIL
-arr_shopText[13] ="BRRR.... BUY SOMETHING COLD!"; //FRIDGE
+*/
 
 global.text = arr_shopText[global.stage];
 global.textPrev = global.text;

@@ -12,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_0s.mp3",
-  "duration": 93.231,
+  "duration": 186.392242,
   "parent": {
     "name": "city",
     "path": "folders/Sounds/music/1st route/city.yy",

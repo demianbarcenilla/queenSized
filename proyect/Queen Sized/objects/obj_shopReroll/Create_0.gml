@@ -5,7 +5,7 @@ amp = 5; //pixels of peak oscillation
 shift = 0;
 
 image_speed = 0;
-image_index = 0;
+image_index = 2;
 
 cost = 5;
 checked = false;

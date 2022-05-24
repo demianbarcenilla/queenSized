@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_0.mp3",
-  "duration": 167.05304,
+  "duration": 167.009369,
   "parent": {
     "name": "city",
     "path": "folders/Sounds/music/1st route/city.yy",

@@ -12,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_6b.mp3",
-  "duration": 135.810608,
+  "duration": 41.5693741,
   "parent": {
     "name": "ruins",
     "path": "folders/Sounds/music/2nd route/ruins.yy",

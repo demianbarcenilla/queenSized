@@ -14,8 +14,8 @@
   "soundFile": "snd_select.wav",
   "duration": 3.523447,
   "parent": {
-    "name": "skills",
-    "path": "folders/Sounds/fx/skills.yy",
+    "name": "fx",
+    "path": "folders/Sounds/fx.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_select",

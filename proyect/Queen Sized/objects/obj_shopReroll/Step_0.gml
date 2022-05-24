@@ -1,10 +1,16 @@
 t = (t + inc) mod 360;
 shift = amp * dsin(t);
 y = ystart + shift; //vertical wave motion
-if(!instance_exists(obj_shop)) or (!instance_exists(obj_shopSkill))
+if(!instance_exists(obj_shop))
 {
 	instance_destroy();
 };
+
+if(!instance_exists(obj_shopSkill))
+{
+	repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}
+	instance_destroy();
+}
 
 if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 {

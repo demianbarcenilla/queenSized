@@ -1,0 +1,1 @@
+canPressCards = true;

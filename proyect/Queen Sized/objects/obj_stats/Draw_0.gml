@@ -55,20 +55,34 @@ if(place_meeting(x, y, obj_mouse))
 		case 2: //DEF
 		
 			//Colors
-			if(target.tempDef != 0)
+			if(target.arr_status[status.rotten])
 			{
-				if(target.tempDef > 0){draw_set_color(c_lime)};
-				else{draw_set_color(c_red)};
-			};
+				draw_set_color(c_red);
+			}
 			else
 			{
-				draw_set_color(c_white);
+				if(target.tempDef != 0)
+				{
+					if(target.tempDef > 0){draw_set_color(c_lime)};
+					else{draw_set_color(c_red)};
+				};
+				else
+				{
+					draw_set_color(c_white);
+				}
 			}
 			
+			var _tempString = "";
 			//Text
-			if(target.tempDef != 0) and (target != obj_enemy)
+			if(target.arr_status[status.rotten])
 			{
-				var _tempString = statText(target.st_defense, target.tempDef);
+				_tempString = "NO DEFENSE";	
+				draw_text(x +_xdisplace, 120 +5+_ydisplace*2, _tempString);
+			};
+			
+			else if(target.tempDef != 0) and (target != obj_enemy)
+			{
+				_tempString = statText(target.st_defense, target.tempDef);
 				draw_text(x +_xdisplace, 120 +5+_ydisplace*2, _tempString);
 			};
 			else

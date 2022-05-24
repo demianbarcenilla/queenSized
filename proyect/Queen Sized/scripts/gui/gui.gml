@@ -24,7 +24,7 @@ function execute_ui()
 				global.text = "Damage the opponent!"
 				
 				//function
-				if(mouse_check_button_pressed(mb_left))
+				if(mouse_check_button_pressed(mb_left)) and (canPressCards)
 				{
 					attack(st_damage);
 					
@@ -37,7 +37,7 @@ function execute_ui()
 			case 1: //Skills
 				global.text = "Use the skills you collected in your journey!"
 			
-				if(mouse_check_button_pressed(mb_left))
+				if(mouse_check_button_pressed(mb_left)) and (canPressCards)
 				{
 					global.primaryUI = false;
 				};
@@ -46,7 +46,7 @@ function execute_ui()
 			case 2: //Guard
 				global.text = "Halve damage for this turn! chance to evade attacks"
 				
-				if(mouse_check_button_pressed(mb_left))
+				if(mouse_check_button_pressed(mb_left)) and (canPressCards)
 				{
 					guard()
 					nextTurn();
@@ -65,12 +65,19 @@ function execute_ui()
 						};
 						else
 						{
-							global.text = arr_skill[obj_player.st_special, skills.desc];
+							if(var_specialPlus)
+							{
+								global.text = arr_skill[obj_player.st_special, skills.descPlus];
+							};
+							else
+							{
+								global.text = arr_skill[obj_player.st_special, skills.desc];
+							};
 						};
 					
 					
-						//function
-						if(mouse_check_button_pressed(mb_left))
+						//function 
+						if(mouse_check_button_pressed(mb_left)) and (canPressCards)
 						{
 							special(st_special);
 						};
@@ -192,7 +199,7 @@ function skillTrigger()
 		if(st_skills[guiSelected] != -1) and (_phishUse)
 		{
 			skillUses();
-			skill(st_skills[guiSelected]);
+			skill(st_skills[guiSelected], st_skillPlus[guiSelected]);
 						
 			global.primaryUI = true;
 			resetToPrimary();
@@ -210,7 +217,7 @@ function skillTrigger()
 		if(st_skills[guiSelected] != -1)
 		{
 			skillUses();
-			skill(st_skills[guiSelected]);
+			skill(st_skills[guiSelected], st_skillPlus[guiSelected]);
 						
 			global.primaryUI = true;
 			resetToPrimary();
@@ -360,6 +367,7 @@ function resetGameState()
 	global.event = false;
 	global.eventType = 0;
 	global.newUnlocks = false;
+	global.queenType = 0;
 	
 	global.primaryUI = true;
 	tempErase();
@@ -389,4 +397,108 @@ function skillUses()
 		};
 		global.money -= st_skillUses[guiSelected];
 	};
+}
+
+function unlocks()
+{
+	ini_open("unlocks.ini")
+		ini_write_real("other", "timesFinished", global.timesFinished);
+						
+		//Stores the unlocks to compare them to the NEW unlocks after updating them
+		var _arrUnlocked;
+		for(i = 1; i <= 100; i++)
+		{
+			_arrUnlocked[i] = ini_read_real("unlocks", i, false);
+		}
+		
+		if(global.timesFinished > 0)
+		{
+			ini_write_real("unlocks", 01, true);
+		};
+		
+		switch(obj_player.playerSelected)
+		{
+			case enemy.pillow:
+				if(global.queenType = 0)
+				{
+					ini_write_real("unlocks", 2, true);
+				};
+				else if(global.queenType = 1)
+				{
+					ini_write_real("unlocks", 3, true);
+				};
+				
+			break;
+						
+			case enemy.rat_king:
+				if(global.queenType = 0)
+				{
+					ini_write_real("unlocks", 7, true);
+				};
+				else if(global.queenType = 1)
+				{
+					ini_write_real("unlocks", 8, true);
+				};
+			break;
+			
+			case enemy.eggplant:
+				if(global.queenType = 0)
+				{
+					ini_write_real("unlocks", 12, true);
+				};
+				else if(global.queenType = 1)
+				{
+					ini_write_real("unlocks", 13, true);
+				};
+			break;
+			/*						
+			case enemy.omar:
+				ini_write_real("unlocks", 9, true);
+				ini_write_real("unlocks", 12, true);
+			break;
+						
+			case enemy.phish:
+				ini_write_real("unlocks", 8, true);
+				ini_write_real("unlocks", 14, true);
+			break;
+						
+			case (enemy.tito or enemy.bondiola):
+				ini_write_real("unlocks", 13, true);
+				ini_write_real("unlocks", 15, true);
+			break;
+						
+			case enemy.merchant:
+				ini_write_real("unlocks", 19, true);
+			break;
+						
+			case enemy.cookie:
+				ini_write_real("unlocks", 18, true);
+			break;*/
+		}
+		
+		for(i = 1; i <= 20; i++)
+		{
+			if(_arrUnlocked[i] != ini_read_real("unlocks", i, false))
+			{
+				global.newUnlocks = true;
+				break;
+			};
+		}
+	ini_close();
+}
+
+function hasPlus()
+{
+	ini_open("unlocks.ini")
+	if((global.player = enemy.pillow) and (ini_read_real("unlocks", "3", false))) or
+	((global.player = enemy.rat_king) and (ini_read_real("unlocks", "8", false)))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+	ini_close();
+
 }

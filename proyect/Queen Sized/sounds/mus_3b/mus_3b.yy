@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_3b.mp3",
-  "duration": 100.101212,
+  "duration": 116.619164,
   "parent": {
     "name": "shortcut",
     "path": "folders/Sounds/music/1st route/shortcut.yy",

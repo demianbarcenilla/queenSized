@@ -83,7 +83,11 @@ if(disengaged and global.canAct)
 if(hp = 0)
 {
 	dead = true;
-	x = lerp(x, -80, .1);
+	if(global.canAct)
+	{
+		room_goto(rm_dead);
+	};
+	x = lerp(x, -100, .1);
 };
 
 if(alarm[0] = -1) //Status FX

@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_2s.mp3",
-  "duration": 72.1240845,
+  "duration": 121.321205,
   "parent": {
     "name": "lemon",
     "path": "folders/Sounds/music/1st route/lemon.yy",

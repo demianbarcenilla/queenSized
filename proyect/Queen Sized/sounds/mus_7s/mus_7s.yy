@@ -12,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_7s.mp3",
-  "duration": 136.489792,
+  "duration": 43.29829,
   "parent": {
     "name": "ratlantis",
     "path": "folders/Sounds/music/2nd route/ratlantis.yy",

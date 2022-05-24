@@ -71,8 +71,8 @@ function pools(){
 	
 	var _ratLeak, _cookieLeak;
 	ini_open("unlocks.ini");
-		_ratLeak = ini_read_real("unlocks", "11", false);
-		_cookieLeak = ini_read_real("unlocks", "18", false);
+		_ratLeak = ini_read_real("unlocks", "100", false);
+		_cookieLeak = ini_read_real("unlocks", "100", false);
 	ini_close();
 	
 	if(_ratLeak)
@@ -144,7 +144,7 @@ function poolsRat(){
 	arr_poolTable[stage.lemon_stand, 0] = normal.rat_bitter;
 	arr_poolTable[stage.lemon_stand, 1] = normal.rat_bad;
 	arr_poolTable[stage.lemon_stand, 2] = normal.rat_angry;
-	arr_poolTable[stage.lemon_stand, 3] = normal.rat_bomb;
+	arr_poolTable[stage.lemon_stand, 3] = normal.rat_rabid;
 	arr_poolTable[stage.lemon_stand, 4] = normal.rat_pocket;
 	
 	arr_poolTable[stage.shortcut, 0] = normal.rat_mossy;
@@ -158,24 +158,26 @@ function poolsRat(){
 	arr_poolTable[stage.incinerator, 2] = normal.cheese_expensive;
 	arr_poolTable[stage.incinerator, 3] = normal.rat_miniKing;
 	arr_poolTable[stage.incinerator, 4] = normal.rat_ratuary;
+	arr_poolTable[stage.incinerator, 5] = normal.rat_rabid;
 	
 	//2nd route
-	arr_poolTable[stage.sewer, 0] = normal.rat_ratuary;
+	arr_poolTable[stage.sewer, 0] = normal.rat_spooky;
 	arr_poolTable[stage.sewer, 1] = normal.rubbish;
 	arr_poolTable[stage.sewer, 2] = normal.cheese_expensive;
-	arr_poolTable[stage.sewer, 3] = normal.armor;
-	arr_poolTable[stage.sewer, 4] = normal.confuse;
+	arr_poolTable[stage.sewer, 3] = normal.rat_bad;
+	arr_poolTable[stage.sewer, 4] = normal.rat_jester;
+	arr_poolTable[stage.sewer, 5] = normal.rat_rabid;
 	
-	arr_poolTable[stage.ruins, 0] = normal.rat_spooky;
-	arr_poolTable[stage.ruins, 1] = normal.rat_pocket;
-	arr_poolTable[stage.ruins, 2] = normal.rat_nurse;
-	arr_poolTable[stage.ruins, 3] = normal.rat_bomb; //replace these with something better
-	arr_poolTable[stage.ruins, 4] = normal.cheese;
+	arr_poolTable[stage.ruins, 0] = normal.rat_nurse;
+	arr_poolTable[stage.ruins, 1] = normal.rat_gym;
+	arr_poolTable[stage.ruins, 2] = normal.rat_jester;
+	arr_poolTable[stage.ruins, 3] = normal.rat_kamikaze; //replace these with something better
+	arr_poolTable[stage.ruins, 4] = normal.rat_ratuary;
 	
-	arr_poolTable[stage.ratlantis, 0] = normal.rat_rabid;
-	arr_poolTable[stage.ratlantis, 1] = normal.rat_nurse;
+	arr_poolTable[stage.ratlantis, 0] = normal.rat_ratify;
+	arr_poolTable[stage.ratlantis, 1] = normal.rat_miniKing;
 	arr_poolTable[stage.ratlantis, 2] = normal.cheese_expensive;
-	arr_poolTable[stage.ratlantis, 3] = normal.rat_pocket;
+	arr_poolTable[stage.ratlantis, 3] = normal.rat_nurse;
 	arr_poolTable[stage.ratlantis, 4] = normal.rubbish;
 	
 	/*

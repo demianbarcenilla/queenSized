@@ -49,6 +49,7 @@ while(reroll)
 	};
 };
 
+cost = arr_skill[var_holding, skills.shop] + (10 * global.mult);
 //HOVER
 t = (t + inc) mod 360;
 shift = amp * dsin(t);
@@ -70,7 +71,7 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 	
 	if(mouse_check_button_pressed(mb_left)) and (!centered) and (global.canPurchase)
 	{
-		if(global.money >= cost)
+		if(global.money >= cost) or (global.shoplift)
 		{
 			for(i=0; i < 4; i++)
 			{
@@ -89,13 +90,23 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 			
 			if(skillsFull < 4)
 			{
-				global.money -= cost;
-				obj_shop.canChangeText --;
-			
-				repeat(cost)
+				
+				if(!global.shoplift)
 				{
-					instance_create_depth(x, y, depth, obj_money);
-				};
+					global.money -= cost;
+					
+					repeat(cost)
+					{
+						instance_create_depth(x, y, depth, obj_money);
+					};
+				}
+				else
+				{
+					with(obj_shopSkill){instance_destroy(); repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}}
+					with(obj_shopBubble){instance_destroy(); repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}}
+				}
+				
+				obj_shop.canChangeText --;
 				audio_play_sound(snd_heal, 0, false);
 				instance_destroy();
 			}
@@ -115,6 +126,7 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 				instance_deactivate_object(obj_shopSkill);
 				instance_deactivate_object(obj_shopSwitch);
 				instance_deactivate_object(obj_shopReroll);
+				instance_deactivate_object(obj_shopLift);
 				
 				instance_activate_object(id)
 				centered = true;
@@ -210,12 +222,6 @@ if(guiSelected != -1)
 			case 0:
 				if(place_meeting(x, y, obj_skill1))
 				{
-					global.money -= cost;
-				
-					repeat(cost)
-					{
-						instance_create_depth(x, y, depth, obj_money);
-					};
 					audio_play_sound(snd_heal, 0, false);
 				
 					obj_player.st_skills[0] = var_holding;
@@ -227,6 +233,22 @@ if(guiSelected != -1)
 					obj_shop.canChangeText = 0;
 					
 					with(obj_shopSkill){reroll = true};
+					
+					if(!global.shoplift)
+					{
+						global.money -= cost;
+				
+						repeat(cost)
+						{
+							instance_create_depth(x, y, depth, obj_money);
+						};
+					};
+					
+					else
+					{
+						global.shoplift = false;
+					}
+					
 					instance_destroy();
 				};
 			break;
@@ -234,12 +256,6 @@ if(guiSelected != -1)
 			case 1:
 				if(place_meeting(x, y, obj_skill2))
 				{
-					global.money -= cost;
-					
-					repeat(cost)
-					{
-						instance_create_depth(x, y, depth, obj_money);
-					};
 					audio_play_sound(snd_heal, 0, false);
 				
 					obj_player.st_skills[1] = var_holding;
@@ -251,18 +267,26 @@ if(guiSelected != -1)
 					obj_shop.canChangeText = 0;
 					with(obj_shopSkill){reroll = true};
 					instance_destroy();
+					
+					if(!global.shoplift)
+					{
+						global.money -= cost;
+				
+						repeat(cost)
+						{
+							instance_create_depth(x, y, depth, obj_money);
+						};
+					};
+					else
+					{
+						global.shoplift = false;
+					}
 				};
 			break;
 		
 			case 2:
 				if(place_meeting(x, y, obj_skill3))
 				{
-					global.money -= cost;
-					
-					repeat(cost)
-					{
-						instance_create_depth(x, y, depth, obj_money);
-					};
 					audio_play_sound(snd_heal, 0, false);
 				
 					obj_player.st_skills[2] = var_holding;
@@ -274,18 +298,26 @@ if(guiSelected != -1)
 					obj_shop.canChangeText = 0;
 					with(obj_shopSkill){reroll = true};
 					instance_destroy();
+					
+					if(!global.shoplift)
+					{
+						global.money -= cost;
+				
+						repeat(cost)
+						{
+							instance_create_depth(x, y, depth, obj_money);
+						};
+					};
+					else
+					{
+						global.shoplift = false;
+					}
 				};
 			break;
 		
 			case 3:
 				if(place_meeting(x, y, obj_skill4))
 				{
-					global.money -= cost;
-					
-					repeat(cost)
-					{
-						instance_create_depth(x, y, depth, obj_money);
-					};
 					audio_play_sound(snd_heal, 0, false);
 					
 					with(obj_shopSkill){reroll = true};
@@ -299,6 +331,20 @@ if(guiSelected != -1)
 				
 					obj_shop.canChangeText = 0;
 					instance_destroy();
+					
+					if(!global.shoplift)
+					{
+						global.money -= cost;
+				
+						repeat(cost)
+						{
+							instance_create_depth(x, y, depth, obj_money);
+						};
+					};
+					else
+					{
+						global.shoplift = false;
+					}
 				};
 			break;
 		};

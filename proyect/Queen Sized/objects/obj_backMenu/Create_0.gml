@@ -11,3 +11,4 @@ shift = 0;
 text = "BACK TO MAIN MENU";
 
 selected = false;
+clicks = 0;

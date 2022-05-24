@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -7,11 +8,11 @@
   "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "ag_music",
-    "path": "audiogroups/ag_music",
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_pause.mp3",
-  "duration": 101.093872,
+  "duration": 1.750167,
   "parent": {
     "name": "music",
     "path": "folders/Sounds/music.yy",

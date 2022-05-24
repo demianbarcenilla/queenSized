@@ -4,7 +4,7 @@ if(obj_playerSelect_pillow.selected)
 {
 	if(obj_playerSelect_pillow.unlocked)
 	{
-		global.text = "PILLOW\nTHE GUARD OF THE MATRESS"
+		global.text = "PILLOW\nDETHRONE THE QUEEN! SAVE THE MATRESSES!"
 		sprite_index = spr_pillow;
 	};
 	else
@@ -18,12 +18,26 @@ else if(obj_playerSelect_ratKing.selected)
 {
 	if(obj_playerSelect_ratKing.unlocked)
 	{
-		global.text = "RAT KING\nFILTHY LITTLE THIEF"
+		global.text = "RAT KING\nDETHRONE THE QUEEN! TAKE HER PLACE!"
 		sprite_index = spr_ratKing;
 	};
 	else
 	{
-		global.text = "REACH THE SEWER TO UNLOCK";
+		global.text = "GIVE THE RAT FLUTE TO ??? TO UNLOCK";
+		sprite_index = spr_empty;
+	}
+	
+};
+/*else if(obj_playerSelect_jean.selected)
+{
+	if(obj_playerSelect_jean.unlocked)
+	{
+		global.text = "JEAN\nFREEZE THE ENEMY!"
+		sprite_index = spr_jean;
+	}
+	else
+	{
+		global.text = "BEAT ??? TO UNLOCK"
 		sprite_index = spr_empty;
 	}
 	
@@ -83,20 +97,6 @@ else if(obj_playerSelect_merchant.selected)
 	};
 	
 };
-else if(obj_playerSelect_jean.selected)
-{
-	if(obj_playerSelect_jean.unlocked)
-	{
-		global.text = "JEAN\nFREEZE THE ENEMY!"
-		sprite_index = spr_jean;
-	}
-	else
-	{
-		global.text = "BEAT ??? TO UNLOCK"
-		sprite_index = spr_empty;
-	}
-	
-};
 else if(obj_playerSelect_tb.selected)
 {
 	if(obj_playerSelect_tb.unlocked)
@@ -109,7 +109,7 @@ else if(obj_playerSelect_tb.selected)
 		global.text = "BEAT ??? TO UNLOCK"
 		sprite_index = spr_empty;
 	}
-};
+};*/
 else
 {
 	global.text = "SELECT A CHARACTER!";

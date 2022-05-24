@@ -12,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_3.mp3",
-  "duration": 122.932205,
+  "duration": 122.940788,
   "parent": {
     "name": "shortcut",
     "path": "folders/Sounds/music/1st route/shortcut.yy",

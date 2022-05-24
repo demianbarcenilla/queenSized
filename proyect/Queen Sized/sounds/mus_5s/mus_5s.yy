@@ -11,8 +11,8 @@
     "name": "ag_music",
     "path": "audiogroups/ag_music",
   },
-  "soundFile": "mus_5s.wav",
-  "duration": 36.0,
+  "soundFile": "mus_5s.mp3",
+  "duration": 35.2738762,
   "parent": {
     "name": "sewer",
     "path": "folders/Sounds/music/2nd route/sewer.yy",

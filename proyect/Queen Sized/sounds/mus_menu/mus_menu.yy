@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_menu.mp3",
-  "duration": 101.093872,
+  "duration": 101.102455,
   "parent": {
     "name": "music",
     "path": "folders/Sounds/music.yy",

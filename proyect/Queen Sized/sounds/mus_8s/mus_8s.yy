@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -14,7 +15,7 @@
   "duration": 234.710175,
   "parent": {
     "name": "ashtray",
-    "path": "folders/Sounds/music/2nd route/ashtray.yy",
+    "path": "folders/Sounds/music/ashtray.yy",
   },
   "resourceVersion": "1.0",
   "name": "mus_8s",

@@ -1,437 +1,705 @@
 function enemylist(){
+	
+	var _enemyName = enemy.pillow;
+	
 	//Pillow
-	arr_enemy[enemy.pillow, character.name] = "Pillow";
-	arr_enemy[enemy.pillow, character.sprite] = spr_pillow;
-	arr_enemy[enemy.pillow, character.damage] = 25;
-	arr_enemy[enemy.pillow, character.hp] = 100;
-	arr_enemy[enemy.pillow, character.defense] = 0;
+	arr_enemy[_enemyName, character.name] = "Pillow";
+	arr_enemy[_enemyName, character.sprite] = spr_pillow;
+	arr_enemy[_enemyName, character.damage] = 25;
+	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.defense] = 0;
 
-	arr_enemy[enemy.pillow, character.skill_1] = normal.heal;
-	arr_enemy[enemy.pillow, character.skill_2] = -1;
-	arr_enemy[enemy.pillow, character.skill_3] = -1;
-	arr_enemy[enemy.pillow, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.skill_1] = normal.heal;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.pillow, character.text_1] = "PILLOW FEELS LIKE SAVING THE MATTRESS!";
-	arr_enemy[enemy.pillow, character.text_2] = "PILLOW ISN'T PILLOW ACTUALLY";
-	arr_enemy[enemy.pillow, character.text_3] = "PILLOW'S KINDA OFF...";
+	arr_enemy[_enemyName, character.text_1] = "PILLOW FEELS LIKE SAVING THE MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "PILLOW ISN'T PILLOW ACTUALLY";
+	arr_enemy[_enemyName, character.text_3] = "PILLOW'S KINDA OFF...";
 	
-	arr_enemy[enemy.pillow, character.special] = normal.heal;
+	arr_enemy[_enemyName, character.special] = normal.heal;
 	
 	//City
-	arr_enemy[enemy.rat, character.name] = "Rat";
-	arr_enemy[enemy.rat, character.sprite] = spr_rat;
-	arr_enemy[enemy.rat, character.damage] = 15;
-	arr_enemy[enemy.rat, character.hp] = 50;
-	arr_enemy[enemy.rat, character.defense] = 0;
+	_enemyName = enemy.rat
+	arr_enemy[_enemyName, character.name] = "Rat";
+	arr_enemy[_enemyName, character.sprite] = spr_rat;
+	arr_enemy[_enemyName, character.damage] = 15;
+	arr_enemy[_enemyName, character.hp] = 50;
+	arr_enemy[_enemyName, character.defense] = 0;
 	
-	arr_enemy[enemy.rat, character.skill_1] = choose(normal.cheese, -1);
-	arr_enemy[enemy.rat, character.skill_2] = -1;
-	arr_enemy[enemy.rat, character.skill_3] = -1;
-	arr_enemy[enemy.rat, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.skill_1] = choose(normal.cheese, -1);
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.rat, character.text_1] = "RAT FEELS LIKE BITING YOUR MATTRESS!";
-	arr_enemy[enemy.rat, character.text_2] = "RAT LOVES CHEESE!";
-	arr_enemy[enemy.rat, character.text_3] = "RAT RAT RAT RAT RAT RAT RAT RAT RAT RAT RAT RA...";
+	arr_enemy[_enemyName, character.text_1] = "RAT FEELS LIKE BITING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "RAT LOVES CHEESE!";
+	arr_enemy[_enemyName, character.text_3] = "RAT RAT RAT RAT RAT RAT RAT RAT RAT RAT RAT RA...";
 	
-	arr_enemy[enemy.rat, character.special] = normal.cheese;
+	arr_enemy[_enemyName, character.special] = normal.cheese;
 	
-	arr_enemy[enemy.pidgeon, character.name] = " Pigeon";
-	arr_enemy[enemy.pidgeon, character.sprite] = spr_pigeon;
-	arr_enemy[enemy.pidgeon, character.damage] = 15;
-	arr_enemy[enemy.pidgeon, character.hp] = choose(50, 60);
-	arr_enemy[enemy.pidgeon, character.defense] = 2;
+	_enemyName = enemy.pidgeon
 	
-	arr_enemy[enemy.pidgeon, character.skill_1] = choose(normal.shoot, -1);
-	arr_enemy[enemy.pidgeon, character.skill_2] = -1;
-	arr_enemy[enemy.pidgeon, character.skill_3] = -1;
-	arr_enemy[enemy.pidgeon, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.name] = " Pigeon";
+	arr_enemy[_enemyName, character.sprite] = spr_pigeon;
+	arr_enemy[_enemyName, character.damage] = 15;
+	arr_enemy[_enemyName, character.hp] = choose(50, 60);
+	arr_enemy[_enemyName, character.defense] = 2;
 	
-	arr_enemy[enemy.pidgeon, character.text_1] = "PIGEON FEELS LIKE SHOOTING YOUR MATTRESS!";
-	arr_enemy[enemy.pidgeon, character.text_2] = "DON'T MESS WITH PIGEONS!";
-	arr_enemy[enemy.pidgeon, character.text_3] = "PIGEON HAD A TOUGH LIFE!";
+	arr_enemy[_enemyName, character.skill_1] = choose(normal.shoot, -1);
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.pidgeon, character.special] = normal.shoot;
+	arr_enemy[_enemyName, character.text_1] = "PIGEON FEELS LIKE SHOOTING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "DON'T MESS WITH PIGEONS!";
+	arr_enemy[_enemyName, character.text_3] = "PIGEON HAD A TOUGH LIFE!";
 	
-	arr_enemy[enemy.trianglehead, character.name] = "Trianglehead";
-	arr_enemy[enemy.trianglehead, character.sprite] = spr_triangle;
-	arr_enemy[enemy.trianglehead, character.damage] = 15;
-	arr_enemy[enemy.trianglehead, character.hp] = 50;
-	arr_enemy[enemy.trianglehead, character.defense] = 5;
+	arr_enemy[_enemyName, character.special] = normal.shoot;
 	
-	arr_enemy[enemy.trianglehead, character.skill_1] = choose(normal.triangle, -1);
-	arr_enemy[enemy.trianglehead, character.skill_2] = -1;
-	arr_enemy[enemy.trianglehead, character.skill_3] = -1;
-	arr_enemy[enemy.trianglehead, character.skill_4] = -1;
+	_enemyName = enemy.trianglehead
 	
-	arr_enemy[enemy.trianglehead, character.text_1] = "TRIANGLEHEAD FEELS LIKE USING YOUR MATTRESS!";
-	arr_enemy[enemy.trianglehead, character.text_2] = "TRIANGLEHEAD HASN'T SLEPT IN A LONG TIME!";
-	arr_enemy[enemy.trianglehead, character.text_3] = "TRIANGLEHEAD WANTS YOU TO SHUT UP!";
+	arr_enemy[_enemyName, character.name] = "Trianglehead";
+	arr_enemy[_enemyName, character.sprite] = spr_triangle;
+	arr_enemy[_enemyName, character.damage] = 15;
+	arr_enemy[_enemyName, character.hp] = 50;
+	arr_enemy[_enemyName, character.defense] = 5;
 	
-	arr_enemy[enemy.trianglehead, character.special] = normal.triangle;
+	arr_enemy[_enemyName, character.skill_1] = choose(normal.triangle, -1);
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "TRIANGLEHEAD FEELS LIKE USING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "TRIANGLEHEAD HASN'T SLEPT IN A LONG TIME!";
+	arr_enemy[_enemyName, character.text_3] = "TRIANGLEHEAD WANTS YOU TO SHUT UP!";
+	
+	arr_enemy[_enemyName, character.special] = normal.triangle;
 	
 	//Tunnel
-	arr_enemy[enemy.dog, character.name] = "Dogcket";
-	arr_enemy[enemy.dog, character.sprite] = spr_dog;
-	arr_enemy[enemy.dog, character.damage] = 20;
-	arr_enemy[enemy.dog, character.hp] = 75;
-	arr_enemy[enemy.dog, character.defense] = 5;
+	_enemyName = enemy.dog
 	
-	arr_enemy[enemy.dog, character.skill_1] = choose(normal.explode, -1);
-	arr_enemy[enemy.dog, character.skill_2] = choose(normal.bark, -1);
-	arr_enemy[enemy.dog, character.skill_3] = -1;
-	arr_enemy[enemy.dog, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.name] = "Dogcket";
+	arr_enemy[_enemyName, character.sprite] = spr_dog;
+	arr_enemy[_enemyName,character.damage] = 20;
+	arr_enemy[_enemyName, character.hp] = 75;
+	arr_enemy[_enemyName, character.defense] = 5;
 	
-	arr_enemy[enemy.dog, character.text_1] = "DOGCKET FEELS LIKE BITING YOUR MATTRESS!";
-	arr_enemy[enemy.dog, character.text_2] = "DOGCKET WIGGLES ITS.. TAIL?"
-	arr_enemy[enemy.dog, character.text_3] = "DOGCKET IS ANGRY!";
+	arr_enemy[_enemyName, character.skill_1] = choose(normal.explode, -1);
+	arr_enemy[_enemyName, character.skill_2] = choose(normal.bark, -1);
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.dog, character.special] = normal.explode;
+	arr_enemy[_enemyName, character.text_1] = "DOGCKET FEELS LIKE BITING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "DOGCKET WIGGLES ITS.. TAIL?"
+	arr_enemy[_enemyName, character.text_3] = "DOGCKET IS ANGRY!";
 	
-	arr_enemy[enemy.car, character.name] = "Mad Car";
-	arr_enemy[enemy.car, character.sprite] = spr_driver;
-	arr_enemy[enemy.car, character.damage] = 25;
-	arr_enemy[enemy.car, character.hp] = 100;
-	arr_enemy[enemy.car, character.defense] = 0;
+	arr_enemy[_enemyName, character.special] = normal.explode;
 	
-	arr_enemy[enemy.car, character.skill_1] = choose(normal.honk, -1);
-	arr_enemy[enemy.car, character.skill_2] = -1;
-	arr_enemy[enemy.car, character.skill_3] = -1;
-	arr_enemy[enemy.car, character.skill_4] = -1;
+	_enemyName = enemy.car
 	
-	arr_enemy[enemy.car, character.text_1] = "MAD CAR FEELS LIKE RUNNING OVER YOUR MATTRESS!";
-	arr_enemy[enemy.car, character.text_2] = "MAD CAR HONKS ANGRILY"
-	arr_enemy[enemy.car, character.text_3] = "MAD CAR HONKS HAPPILY";
+	arr_enemy[_enemyName, character.name] = "Mad Car";
+	arr_enemy[_enemyName, character.sprite] = spr_driver;
+	arr_enemy[_enemyName, character.damage] = 25;
+	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.defense] = 0;
 	
-	arr_enemy[enemy.car, character.special] = normal.honk;
+	arr_enemy[_enemyName, character.skill_1] = choose(normal.honk, -1);
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.skater, character.name] = "Skater";
-	arr_enemy[enemy.skater, character.sprite] = spr_skater;
-	arr_enemy[enemy.skater, character.damage] = 20;
-	arr_enemy[enemy.skater, character.hp] = 50;
-	arr_enemy[enemy.skater, character.defense] = 10;
+	arr_enemy[_enemyName, character.text_1] = "MAD CAR FEELS LIKE RUNNING OVER YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "MAD CAR HONKS ANGRILY"
+	arr_enemy[_enemyName, character.text_3] = "MAD CAR HONKS HAPPILY";
 	
-	arr_enemy[enemy.skater, character.skill_1] = normal.rush;
-	arr_enemy[enemy.skater, character.skill_2] = normal.confuse;
-	arr_enemy[enemy.skater, character.skill_3] = -1;
-	arr_enemy[enemy.skater, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.special] = normal.honk;
 	
-	arr_enemy[enemy.skater, character.text_1] = "SKATER FEELS LIKE STEALING YOUR MATTRESS!";
-	arr_enemy[enemy.skater, character.text_2] = "SKATER IS RESTLESS!"
-	arr_enemy[enemy.skater, character.text_3] = "SKATER IS IN A SUGAR RUSH!";
+	_enemyName = enemy.skater
+	arr_enemy[_enemyName, character.name] = "Skater";
+	arr_enemy[_enemyName, character.sprite] = spr_skater;
+	arr_enemy[_enemyName, character.damage] = 20;
+	arr_enemy[_enemyName, character.hp] = 50;
+	arr_enemy[_enemyName, character.defense] = 10;
 	
-	arr_enemy[enemy.skater, character.special] = normal.rush;
+	arr_enemy[_enemyName, character.skill_1] = normal.rush;
+	arr_enemy[_enemyName, character.skill_2] = normal.confuse;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "SKATER FEELS LIKE STEALING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "SKATER IS RESTLESS!"
+	arr_enemy[_enemyName, character.text_3] = "SKATER IS IN A SUGAR RUSH!";
+	
+	arr_enemy[_enemyName, character.special] = normal.rush;
 	
 	//Lemonade Stand
-	arr_enemy[enemy.lemon, character.name] = "Lemon";
-	arr_enemy[enemy.lemon, character.sprite] = spr_lemon;
-	arr_enemy[enemy.lemon, character.damage] = 35;
-	arr_enemy[enemy.lemon, character.hp] = 75;
-	arr_enemy[enemy.lemon, character.defense] = 10;
 	
-	arr_enemy[enemy.lemon, character.skill_1] = choose(normal.bitter, -1);
-	arr_enemy[enemy.lemon, character.skill_2] = -1;
-	arr_enemy[enemy.lemon, character.skill_3] = -1;
-	arr_enemy[enemy.lemon, character.skill_4] = -1;
+	_enemyName = enemy.lemon
+	arr_enemy[_enemyName, character.name] = "Lemon";
+	arr_enemy[_enemyName, character.sprite] = spr_lemon;
+	arr_enemy[_enemyName, character.damage] = 30;
+	arr_enemy[_enemyName, character.hp] = 75;
+	arr_enemy[_enemyName, character.defense] = 10;
 	
-	arr_enemy[enemy.lemon, character.text_1] = "LEMON FEELS LIKE JUICING YOUR MATTRESS!";
-	arr_enemy[enemy.lemon, character.text_2] = "LEMON FEELS BITTER!"
-	arr_enemy[enemy.lemon, character.text_3] = "SMELLS LIKE LEMONADE!";
+	arr_enemy[_enemyName, character.skill_1] = choose(normal.bitter, -1);
+	arr_enemy[_enemyName, character.skill_2] = normal.nap;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.lemon, character.special] = normal.bitter;
+	arr_enemy[_enemyName, character.text_1] = "LEMON FEELS LIKE JUICING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "LEMON FEELS BITTER!"
+	arr_enemy[_enemyName, character.text_3] = "SMELLS LIKE LEMONADE!";
 	
-	arr_enemy[enemy.rotten_lemon, character.name] = "Rotten Lemon";
-	arr_enemy[enemy.rotten_lemon, character.sprite] = spr_lemonRot;
-	arr_enemy[enemy.rotten_lemon, character.damage] = 40;
-	arr_enemy[enemy.rotten_lemon, character.hp] = 60;
-	arr_enemy[enemy.rotten_lemon, character.defense] = 5;
+	arr_enemy[_enemyName, character.special] = normal.bitter;
 	
-	arr_enemy[enemy.rotten_lemon, character.skill_1] = choose(normal.bitter, -1);
-	arr_enemy[enemy.rotten_lemon, character.skill_2] = choose(-1, normal.rot);
-	arr_enemy[enemy.rotten_lemon, character.skill_3] = -1;
-	arr_enemy[enemy.rotten_lemon, character.skill_4] = -1;
+	_enemyName = enemy.rotten_lemon
 	
-	arr_enemy[enemy.rotten_lemon, character.text_1] = "ROTTEN LEMON IS FEELING FRESH!";
-	arr_enemy[enemy.rotten_lemon, character.text_2] = "ROTTEN LEMON HAS NO PURPOSE!"
-	arr_enemy[enemy.rotten_lemon, character.text_3] = "SMELLS LIKE MOSS AND CYTRICS...";
+	arr_enemy[_enemyName, character.name] = "Rotten Lemon";
+	arr_enemy[_enemyName, character.sprite] = spr_lemonRot;
+	arr_enemy[_enemyName, character.damage] = 25;
+	arr_enemy[_enemyName, character.hp] = 60;
+	arr_enemy[_enemyName, character.defense] = 5;
 	
-	arr_enemy[enemy.rotten_lemon, character.special] = normal.rot;
+	arr_enemy[_enemyName, character.skill_1] = choose(normal.bitter, -1);
+	arr_enemy[_enemyName, character.skill_2] = choose(normal.nap, normal.rot);
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.cursed_lemon, character.name] = "Cursed Lemon";
-	arr_enemy[enemy.cursed_lemon, character.sprite] = spr_lemonCursed;
-	arr_enemy[enemy.cursed_lemon, character.damage] = 30;
-	arr_enemy[enemy.cursed_lemon, character.hp] = 100;
-	arr_enemy[enemy.cursed_lemon, character.defense] = 5;
+	arr_enemy[_enemyName, character.text_1] = "ROTTEN LEMON IS FEELING FRESH!";
+	arr_enemy[_enemyName, character.text_2] = "ROTTEN LEMON HAS NO PURPOSE!"
+	arr_enemy[_enemyName, character.text_3] = "SMELLS LIKE MOSS AND CYTRICS...";
 	
-	arr_enemy[enemy.cursed_lemon, character.skill_1] = choose(normal.bitter, normal.lemon_toss);
-	arr_enemy[enemy.cursed_lemon, character.skill_2] = normal.scare;
-	arr_enemy[enemy.cursed_lemon, character.skill_3] = -1;
-	arr_enemy[enemy.cursed_lemon, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.special] = normal.rot;
 	
-	arr_enemy[enemy.cursed_lemon, character.text_1] = "CURSED LEMON FEELS LIKE ...?";
-	arr_enemy[enemy.cursed_lemon, character.text_2] = "CURSED LEMON IS"
-	arr_enemy[enemy.cursed_lemon, character.text_3] = "SMELLS LIKE D:";
+	_enemyName = enemy.cursed_lemon
 	
-	arr_enemy[enemy.cursed_lemon, character.special] = normal.scare;
+	arr_enemy[_enemyName, character.name] = "Cursed Lemon";
+	arr_enemy[_enemyName, character.sprite] = spr_lemonCursed;
+	arr_enemy[_enemyName, character.damage] = 30;
+	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.defense] = 5;
+	
+	arr_enemy[_enemyName, character.skill_1] = normal.bitter;
+	arr_enemy[_enemyName, character.skill_2] = choose(normal.scare, normal.nap);
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "CURSED LEMON FEELS LIKE ...?";
+	arr_enemy[_enemyName, character.text_2] = "CURSED LEMON IS"
+	arr_enemy[_enemyName, character.text_3] = "SMELLS LIKE D:";
+	
+	arr_enemy[_enemyName, character.special] = normal.scare;
 	
 	//Shortcut
-	arr_enemy[enemy.shroom, character.name] = "Shroom";
-	arr_enemy[enemy.shroom, character.sprite] = spr_shroom;
-	arr_enemy[enemy.shroom, character.damage] = 35;
-	arr_enemy[enemy.shroom, character.hp] = 95;
-	arr_enemy[enemy.shroom, character.defense] = 5;
+	_enemyName = enemy.shroom
+	arr_enemy[_enemyName, character.name] = "Shroom";
+	arr_enemy[_enemyName, character.sprite] = spr_shroom;
+	arr_enemy[_enemyName, character.damage] = 35;
+	arr_enemy[_enemyName, character.hp] = 95;
+	arr_enemy[_enemyName, character.defense] = 5;
 	
-	arr_enemy[enemy.shroom, character.skill_1] = normal.shroom;
-	arr_enemy[enemy.shroom, character.skill_2] = -1;
-	arr_enemy[enemy.shroom, character.skill_3] = -1;
-	arr_enemy[enemy.shroom, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.skill_1] = normal.shroom;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.shroom, character.text_1] = "SHROOM FEELS LIKE TOSSING SPORES TO YOUR MATTRESS!";
-	arr_enemy[enemy.shroom, character.text_2] = "FEELING SHROOMY";
-	arr_enemy[enemy.shroom, character.text_3] = "SHROOM DANCES!";
+	arr_enemy[_enemyName, character.text_1] = "SHROOM FEELS LIKE TOSSING SPORES TO YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "FEELING SHROOMY";
+	arr_enemy[_enemyName, character.text_3] = "SHROOM DANCES!";
 	
-	arr_enemy[enemy.shroom, character.special] = normal.shroom;
+	arr_enemy[_enemyName, character.special] = normal.shroom;
 	
-	arr_enemy[enemy.plant, character.name] = "Worm";
-	arr_enemy[enemy.plant, character.sprite] = spr_plant;
-	arr_enemy[enemy.plant, character.damage] = 40;
-	arr_enemy[enemy.plant, character.hp] = 115;
-	arr_enemy[enemy.plant, character.defense] = 5;
+	_enemyName = enemy.worm
 	
-	arr_enemy[enemy.plant, character.skill_1] = normal.disengage;
-	arr_enemy[enemy.plant, character.skill_2] = normal.confuse;
-	arr_enemy[enemy.plant, character.skill_3] = -1;
-	arr_enemy[enemy.plant, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.name] = "Worm";
+	arr_enemy[_enemyName, character.sprite] = spr_plant;
+	arr_enemy[_enemyName, character.damage] = 40;
+	arr_enemy[_enemyName, character.hp] = 115;
+	arr_enemy[_enemyName, character.defense] = 5;
 	
-	arr_enemy[enemy.plant, character.text_1] = "WORM FEELS LIKE DROOLING!";
-	arr_enemy[enemy.plant, character.text_2] = "WORM IS DUMB DUBM WORM IS!!!";
-	arr_enemy[enemy.plant, character.text_3] = "WORM IS A COWARD";
+	arr_enemy[_enemyName, character.skill_1] = normal.disengage;
+	arr_enemy[_enemyName, character.skill_2] = normal.nap;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.plant, character.special] = normal.bite;
+	arr_enemy[_enemyName, character.text_1] = "WORM FEELS LIKE DROOLING!";
+	arr_enemy[_enemyName, character.text_2] = "WORM IS DUMB DUBM WORM IS!!!";
+	arr_enemy[_enemyName, character.text_3] = "WORM IS A COWARD";
 	
-	arr_enemy[enemy.bat, character.name] = "BAT";
-	arr_enemy[enemy.bat, character.sprite] = spr_bat;
-	arr_enemy[enemy.bat, character.damage] = 35;
-	arr_enemy[enemy.bat, character.hp] = 80;
-	arr_enemy[enemy.bat, character.defense] = 0;
+	arr_enemy[_enemyName, character.special] = normal.bite;
 	
-	arr_enemy[enemy.bat, character.skill_1] = choose(normal.drain, -1);
-	arr_enemy[enemy.bat, character.skill_2] = choose(normal.scare, -1);
-	arr_enemy[enemy.bat, character.skill_3] = -1;
-	arr_enemy[enemy.bat, character.skill_4] = -1;
+	_enemyName = enemy.bat
+	arr_enemy[_enemyName, character.name] = "BAT";
+	arr_enemy[_enemyName, character.sprite] = spr_bat;
+	arr_enemy[_enemyName, character.damage] = 35;
+	arr_enemy[_enemyName, character.hp] = 80;
+	arr_enemy[_enemyName, character.defense] = 0;
 	
-	arr_enemy[enemy.bat, character.text_1] = "BAT FEELS LIKE SUCKING ON YOUR MATTRESS!";
-	arr_enemy[enemy.bat, character.text_2] = "BAT IS BEING RUDE!";
-	arr_enemy[enemy.bat, character.text_3] = "SMELLS LIKE TRANSYLVANIA!";
+	arr_enemy[_enemyName, character.skill_1] = choose(normal.drain, -1);
+	arr_enemy[_enemyName, character.skill_2] = choose(normal.scare, -1);
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.bat, character.special] = normal.drain;
+	arr_enemy[_enemyName, character.text_1] = "BAT FEELS LIKE SUCKING ON YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "BAT IS BEING RUDE!";
+	arr_enemy[_enemyName, character.text_3] = "SMELLS LIKE TRANSYLVANIA!";
 	
+	arr_enemy[_enemyName, character.special] = normal.drain;
+	
+	_enemyName = enemy.feu
 	//Incinerator
-	arr_enemy[enemy.feudent, character.name] = "FEU";
-	arr_enemy[enemy.feudent, character.sprite] = spr_feudent;
-	arr_enemy[enemy.feudent, character.damage] = 40;
-	arr_enemy[enemy.feudent, character.hp] = 100;
-	arr_enemy[enemy.feudent, character.defense] = 20;
+	arr_enemy[_enemyName, character.name] = "FEU";
+	arr_enemy[_enemyName, character.sprite] = spr_feudent;
+	arr_enemy[_enemyName, character.damage] = 40;
+	arr_enemy[_enemyName, character.hp] = 60;
+	arr_enemy[_enemyName, character.defense] = 20;
 	
-	arr_enemy[enemy.feudent, character.skill_1] = normal.fireball;
-	arr_enemy[enemy.feudent, character.skill_2] = choose(normal.confuse, normal.armor);
-	arr_enemy[enemy.feudent, character.skill_3] = -1;
-	arr_enemy[enemy.feudent, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.skill_1] = normal.fireball;
+	arr_enemy[_enemyName, character.skill_2] = choose(normal.confuse, normal.armor);
+	arr_enemy[_enemyName, character.skill_3] = choose(normal.nap, -1);
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.feudent, character.text_1] = "FEU FEELS LIKE BURNING YOUR MATTRESS! (NOT THE WAY YOU WANT TO)";
-	arr_enemy[enemy.feudent, character.text_2] = "FEU IS DETERMINED!";
-	arr_enemy[enemy.feudent, character.text_3] = "THE FIRE ALARM ACTIVATES!";
+	arr_enemy[_enemyName, character.text_1] = "FEU FEELS LIKE BURNING YOUR MATTRESS! (NOT THE WAY YOU WANT TO)";
+	arr_enemy[_enemyName, character.text_2] = "FEU IS DETERMINED!";
+	arr_enemy[_enemyName, character.text_3] = "THE FIRE ALARM ACTIVATES!";
 	
-	arr_enemy[enemy.feudent, character.special] = normal.fireball;
+	arr_enemy[_enemyName, character.special] = normal.fireball;
 	
-	arr_enemy[enemy.smokey, character.name] = "SMOKE";
-	arr_enemy[enemy.smokey, character.sprite] = spr_smokey;
-	arr_enemy[enemy.smokey, character.damage] = 35;
-	arr_enemy[enemy.smokey, character.hp] = choose(100, 150);
-	arr_enemy[enemy.smokey, character.defense] = 15;
+	_enemyName = enemy.smokey
 	
-	arr_enemy[enemy.smokey, character.skill_1] = normal.dissipate;
-	arr_enemy[enemy.smokey, character.skill_2] = normal.punch;
-	arr_enemy[enemy.smokey, character.skill_3] = -1;
-	arr_enemy[enemy.smokey, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.name] = "SMOKE";
+	arr_enemy[_enemyName, character.sprite] = spr_smokey;
+	arr_enemy[_enemyName, character.damage] = 35;
+	arr_enemy[_enemyName, character.hp] = choose(75, 100);
+	arr_enemy[_enemyName, character.defense] = 15;
 	
-	arr_enemy[enemy.smokey, character.text_1] = "SMOKE FEELS LIKE GRILLING YOUR MATTRESS!";
-	arr_enemy[enemy.smokey, character.text_2] = "SMOKE IS ETHEREAL";
-	arr_enemy[enemy.smokey, character.text_3] = "THE SMOKE ALARM ACTIVATES!";
+	arr_enemy[_enemyName, character.skill_1] = normal.dissipate;
+	arr_enemy[_enemyName, character.skill_2] = normal.punch;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.smokey, character.special] = normal.dissipate;
+	arr_enemy[_enemyName, character.text_1] = "SMOKE FEELS LIKE GRILLING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "SMOKE IS ETHEREAL";
+	arr_enemy[_enemyName, character.text_3] = "THE SMOKE ALARM ACTIVATES!";
 	
-	arr_enemy[enemy.guard, character.name] = "Guard";
-	arr_enemy[enemy.guard, character.sprite] = spr_guard;
-	arr_enemy[enemy.guard, character.damage] = 35;
-	arr_enemy[enemy.guard, character.hp] = choose(175, 200);
-	arr_enemy[enemy.guard, character.defense] = 15;
+	arr_enemy[_enemyName, character.special] = normal.dissipate;
 	
-	arr_enemy[enemy.guard, character.skill_1] = normal.punch;
-	arr_enemy[enemy.guard, character.skill_2] = normal.armor;
-	arr_enemy[enemy.guard, character.skill_3] = -1;
-	arr_enemy[enemy.guard, character.skill_4] = -1;
+	_enemyName = enemy.guard
 	
-	arr_enemy[enemy.guard, character.text_1] = "GUARD FEELS LIKE DESTROYING YOUR MATTRESS!";
-	arr_enemy[enemy.guard, character.text_2] = "INCINERATION NATION";
-	arr_enemy[enemy.guard, character.text_3] = "THE GUARD ALARM ACTIVATES!";
+	arr_enemy[_enemyName, character.name] = "Guard";
+	arr_enemy[_enemyName, character.sprite] = spr_guard;
+	arr_enemy[_enemyName, character.damage] = 35;
+	arr_enemy[_enemyName, character.hp] = choose(75, 100);
+	arr_enemy[_enemyName, character.defense] = 15;
 	
-	arr_enemy[enemy.guard, character.special] = normal.armor;
+	arr_enemy[_enemyName, character.skill_1] = normal.punch;
+	arr_enemy[_enemyName, character.skill_2] = normal.armor;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "GUARD FEELS LIKE DESTROYING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "INCINERATION NATION";
+	arr_enemy[_enemyName, character.text_3] = "THE GUARD ALARM ACTIVATES!";
+	
+	arr_enemy[_enemyName, character.special] = normal.armor;
 	
 	//SEWER
-	arr_enemy[enemy.skelly, character.name] = "Skeleton";
-	arr_enemy[enemy.skelly, character.sprite] = spr_skelly;
-	arr_enemy[enemy.skelly, character.damage] = 15;
-	arr_enemy[enemy.skelly, character.hp] = 50;
-	arr_enemy[enemy.skelly, character.defense] = 5;
+	_enemyName = enemy.skelly
 	
-	arr_enemy[enemy.skelly, character.skill_1] = normal.disengage;
-	arr_enemy[enemy.skelly, character.skill_2] = -1;
-	arr_enemy[enemy.skelly, character.skill_3] = -1;
-	arr_enemy[enemy.skelly, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.name] = "Skeleton";
+	arr_enemy[_enemyName, character.sprite] = spr_skelly;
+	arr_enemy[_enemyName, character.damage] = 15;
+	arr_enemy[_enemyName, character.hp] = 50;
+	arr_enemy[_enemyName, character.defense] = 5;
 	
-	arr_enemy[enemy.skelly, character.text_1] = "SKELETON WILL GRAB YOUR BONES WHETHER YOU HAVE THEM OR NOT";
-	arr_enemy[enemy.skelly, character.text_2] = "STICKS AND STONES MAY, INDEED, BREAK YOUR BONES";
-	arr_enemy[enemy.skelly, character.text_3] = "SKELETON MISSES HAVING LUNGS";
+	arr_enemy[_enemyName, character.skill_1] = normal.disengage;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.skelly, character.special] = normal.disengage;
+	arr_enemy[_enemyName, character.text_1] = "SKELETON WILL GRAB YOUR BONES WHETHER YOU HAVE THEM OR NOT";
+	arr_enemy[_enemyName, character.text_2] = "STICKS AND STONES MAY, INDEED, BREAK YOUR BONES";
+	arr_enemy[_enemyName, character.text_3] = "SKELETON MISSES HAVING LUNGS";
 	
-	arr_enemy[enemy.toothfrog, character.name] = "TOOTHFROG";
-	arr_enemy[enemy.toothfrog, character.sprite] = spr_toothFrog;
-	arr_enemy[enemy.toothfrog, character.damage] = 30;
-	arr_enemy[enemy.toothfrog, character.hp] = 40;
-	arr_enemy[enemy.toothfrog, character.defense] = 2;
+	arr_enemy[_enemyName, character.special] = normal.disengage;
 	
-	arr_enemy[enemy.toothfrog, character.skill_1] = normal.smile;
-	arr_enemy[enemy.toothfrog, character.skill_2] = -1;
-	arr_enemy[enemy.toothfrog, character.skill_3] = -1;
-	arr_enemy[enemy.toothfrog, character.skill_4] = -1;
+	_enemyName = enemy.toothfrog
+	arr_enemy[_enemyName, character.name] = "TOOTHFROG";
+	arr_enemy[_enemyName, character.sprite] = spr_toothFrog;
+	arr_enemy[_enemyName, character.damage] = 30;
+	arr_enemy[_enemyName, character.hp] = 40;
+	arr_enemy[_enemyName, character.defense] = 2;
 	
-	arr_enemy[enemy.toothfrog, character.text_1] = "TOOTHFROG FEELS LIKE SHOWING YOU HIS SMILE!";
-	arr_enemy[enemy.toothfrog, character.text_2] = "TOOTHFROG IS PROUD OF HIS SHINY TEETH";
-	arr_enemy[enemy.toothfrog, character.text_3] = "BRUSH YOUR TEETH TILL YOUR GUMS BLEED OF HAPPINESS";
+	arr_enemy[_enemyName, character.skill_1] = normal.smile;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.toothfrog, character.special] = normal.smile;
+	arr_enemy[_enemyName, character.text_1] = "TOOTHFROG FEELS LIKE SHOWING YOU HIS SMILE!";
+	arr_enemy[_enemyName, character.text_2] = "TOOTHFROG IS PROUD OF HIS SHINY TEETH";
+	arr_enemy[_enemyName, character.text_3] = "BRUSH YOUR TEETH TILL YOUR GUMS BLEED OF HAPPINESS";
 	
-	arr_enemy[enemy.plumber, character.name] = "PLUMBERDILE";
-	arr_enemy[enemy.plumber, character.sprite] = spr_plumber;
-	arr_enemy[enemy.plumber, character.damage] = 20;
-	arr_enemy[enemy.plumber, character.hp] = 75;
-	arr_enemy[enemy.plumber, character.defense] = 5;
+	arr_enemy[_enemyName, character.special] = normal.smile;
 	
-	arr_enemy[enemy.plumber, character.skill_1] = normal.plunger;
-	arr_enemy[enemy.plumber, character.skill_2] = -1;
-	arr_enemy[enemy.plumber, character.skill_3] = -1;
-	arr_enemy[enemy.plumber, character.skill_4] = -1;
+	_enemyName = enemy.plumber
 	
-	arr_enemy[enemy.plumber, character.text_1] = "PLUMBERDILE FEELS LIKE MANTAINING THE SEWER SYSTEM CLEAN AND FUNCTIONAL!";
-	arr_enemy[enemy.plumber, character.text_2] = "PLUMBERDILE IS VERY PASSIONATE ABOUT PLUMBING";
-	arr_enemy[enemy.plumber, character.text_3] = "PLUMB!!";
+	arr_enemy[_enemyName, character.name] = "PLUMBERDILE";
+	arr_enemy[_enemyName, character.sprite] = spr_plumber;
+	arr_enemy[_enemyName, character.damage] = 20;
+	arr_enemy[_enemyName, character.hp] = 75;
+	arr_enemy[_enemyName, character.defense] = 5;
+
+	arr_enemy[_enemyName, character.skill_1] = normal.plunger;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.plumber, character.special] = normal.plunger;
+	arr_enemy[_enemyName, character.text_1] = "PLUMBERDILE FEELS LIKE MANTAINING THE SEWER SYSTEM CLEAN AND FUNCTIONAL!";
+	arr_enemy[_enemyName, character.text_2] = "PLUMBERDILE IS VERY PASSIONATE ABOUT PLUMBING";
+	arr_enemy[_enemyName, character.text_3] = "PLUMB!!";
+	
+	arr_enemy[_enemyName, character.special] = normal.plunger;
 	
 	//RUINS
-	arr_enemy[enemy.wet_rat, character.name] = "WET RAT";
-	arr_enemy[enemy.wet_rat, character.sprite] = spr_wetRat;
-	arr_enemy[enemy.wet_rat, character.damage] = 25;
-	arr_enemy[enemy.wet_rat, character.hp] = 75;
-	arr_enemy[enemy.wet_rat, character.defense] = 10;
 	
-	arr_enemy[enemy.wet_rat, character.skill_1] = normal.cheese;
-	arr_enemy[enemy.wet_rat, character.skill_2] = -1;
-	arr_enemy[enemy.wet_rat, character.skill_3] = -1;
-	arr_enemy[enemy.wet_rat, character.skill_4] = -1;
+	_enemyName = enemy.wet_rat;
 	
-	arr_enemy[enemy.wet_rat, character.text_1] = "WET RAT BRANG AN UMBRELLA INSIDE!";
-	arr_enemy[enemy.wet_rat, character.text_2] = "WET RAT'S SOCKS ARE DRIPPING";
-	arr_enemy[enemy.wet_rat, character.text_3] = "WET RAT IS INSANE";
+	arr_enemy[_enemyName, character.name] = "WET RAT";
+	arr_enemy[_enemyName, character.sprite] = spr_wetRat;
+	arr_enemy[_enemyName, character.damage] = 25;
+	arr_enemy[_enemyName, character.hp] = 50;
+	arr_enemy[_enemyName, character.defense] = 10;
 	
-	arr_enemy[enemy.wet_rat, character.special] = normal.cheese;
+	arr_enemy[_enemyName, character.skill_1] = normal.cheese;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.ruined_rat, character.name] = "TROUBLED RAT";
-	arr_enemy[enemy.ruined_rat, character.sprite] = spr_ruinedRat;
-	arr_enemy[enemy.ruined_rat, character.damage] = 30;
-	arr_enemy[enemy.ruined_rat, character.hp] = 60;
-	arr_enemy[enemy.ruined_rat, character.defense] = 5;
+	arr_enemy[_enemyName, character.text_1] = "WET RAT BRANG AN UMBRELLA INSIDE!";
+	arr_enemy[_enemyName, character.text_2] = "WET RAT'S SOCKS ARE DRIPPING";
+	arr_enemy[_enemyName, character.text_3] = "WET RAT IS INSANE";
 	
-	arr_enemy[enemy.ruined_rat, character.skill_1] = normal.cheese_liquid;
-	arr_enemy[enemy.ruined_rat, character.skill_2] = -1;
-	arr_enemy[enemy.ruined_rat, character.skill_3] = -1;
-	arr_enemy[enemy.ruined_rat, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.special] = normal.cheese;
 	
-	arr_enemy[enemy.ruined_rat, character.text_1] = "TROUBLED RAT OVERDOSES ON GORGONZOLA!";
-	arr_enemy[enemy.ruined_rat, character.text_2] = "TROUBLED RAT DROWNS HIS PAIN IN FONDUE!";
-	arr_enemy[enemy.ruined_rat, character.text_3] = "It's a REAL bliss, GETTING drunk on SWISS cheese";
+	_enemyName = enemy.ruined_rat
 	
-	arr_enemy[enemy.ruined_rat, character.special] = normal.cheese_liquid;
+	arr_enemy[_enemyName, character.name] = "TROUBLED RAT";
+	arr_enemy[_enemyName, character.sprite] = spr_ruinedRat;
+	arr_enemy[_enemyName, character.damage] = 20;
+	arr_enemy[_enemyName, character.hp] = 60;
+	arr_enemy[_enemyName, character.defense] = 5;
 	
-	arr_enemy[enemy.nervous_rat, character.name] = "NERVOUS RAT";
-	arr_enemy[enemy.nervous_rat, character.sprite] = spr_nervousRat;
-	arr_enemy[enemy.nervous_rat, character.damage] = 15;
-	arr_enemy[enemy.nervous_rat, character.hp] = 100;
-	arr_enemy[enemy.nervous_rat, character.defense] = 2;
+	arr_enemy[_enemyName, character.skill_1] = normal.cheese_liquid;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.nervous_rat, character.skill_1] = normal.cigar;
-	arr_enemy[enemy.nervous_rat, character.skill_2] = -1;
-	arr_enemy[enemy.nervous_rat, character.skill_3] = -1;
-	arr_enemy[enemy.nervous_rat, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.text_1] = "TROUBLED RAT OVERDOSES ON GORGONZOLA!";
+	arr_enemy[_enemyName, character.text_2] = "TROUBLED RAT DROWNS HIS PAIN IN FONDUE!";
+	arr_enemy[_enemyName, character.text_3] = "It's a REAL bliss, GETTING drunk on SWISS cheese";
 	
-	arr_enemy[enemy.nervous_rat, character.text_1] = "NERVOUS RAT FEELS... WELL... NERVOUS!";
-	arr_enemy[enemy.nervous_rat, character.text_2] = "NERVOUS RAT LOVES A GOOD SMOKE";
-	arr_enemy[enemy.nervous_rat, character.text_3] = "NERVOUS RAT LIGHTS UP A CIGAR!";
+	arr_enemy[_enemyName, character.special] = normal.cheese_liquid;
 	
-	arr_enemy[enemy.nervous_rat, character.special] = normal.cigar;
+	_enemyName = enemy.nervous_rat
+	
+	arr_enemy[_enemyName, character.name] = "NERVOUS RAT";
+	arr_enemy[_enemyName, character.sprite] = spr_nervousRat;
+	arr_enemy[_enemyName, character.damage] = 30;
+	arr_enemy[_enemyName, character.hp] = 75;
+	arr_enemy[_enemyName, character.defense] = 2;
+
+	arr_enemy[_enemyName, character.skill_1] = normal.cigar;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "NERVOUS RAT FEELS... WELL... NERVOUS!";
+	arr_enemy[_enemyName, character.text_2] = "NERVOUS RAT LOVES A GOOD SMOKE";
+	arr_enemy[_enemyName, character.text_3] = "NERVOUS RAT LIGHTS UP A CIGAR!";
+	
+	arr_enemy[_enemyName, character.special] = normal.cigar;
 	
 	//SHAFT
-	arr_enemy[enemy.fat_rat, character.name] = "FAT RAT";
-	arr_enemy[enemy.fat_rat, character.sprite] = spr_fatRat;
-	arr_enemy[enemy.fat_rat, character.damage] = 20;
-	arr_enemy[enemy.fat_rat, character.hp] = 80;
-	arr_enemy[enemy.fat_rat, character.defense] = 15;
+	_enemyName = enemy.fat_rat;
 	
-	arr_enemy[enemy.fat_rat, character.skill_1] = normal.cheese_expensive;
-	arr_enemy[enemy.fat_rat, character.skill_2] = -1;
-	arr_enemy[enemy.fat_rat, character.skill_3] = -1;
-	arr_enemy[enemy.fat_rat, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.name] = "FAT RAT";
+	arr_enemy[_enemyName, character.sprite] = spr_fatRat;
+	arr_enemy[_enemyName, character.damage] = 30;
+	arr_enemy[_enemyName, character.hp] = 80;
+	arr_enemy[_enemyName, character.defense] = 15;
 	
-	arr_enemy[enemy.fat_rat, character.text_1] = "FAT RAT FEELS LIKE CHEWING ON YOUR MATRESS!!";
-	arr_enemy[enemy.fat_rat, character.text_2] = "FAT RAT LAUGHS IN RAT LANGUAGE";
-	arr_enemy[enemy.fat_rat, character.text_3] = "FAT RAT LOVES TO FIGHT WITH OUTSIDERS!";
+	arr_enemy[_enemyName, character.skill_1] = normal.cheese_expensive;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.fat_rat, character.special] = normal.cheese_expensive;
+	arr_enemy[_enemyName, character.text_1] = "FAT RAT FEELS LIKE CHEWING ON YOUR MATRESS!!";
+	arr_enemy[_enemyName, character.text_2] = "FAT RAT LAUGHS IN RAT LANGUAGE";
+	arr_enemy[_enemyName, character.text_3] = "FAT RAT LOVES TO FIGHT WITH OUTSIDERS!";
 	
-	arr_enemy[enemy.wobbly_rat, character.name] = "Wobbly Rat";
-	arr_enemy[enemy.wobbly_rat, character.sprite] = spr_wobblyRat;
-	arr_enemy[enemy.wobbly_rat, character.damage] = 15;
-	arr_enemy[enemy.wobbly_rat, character.hp] = 100;
-	arr_enemy[enemy.wobbly_rat, character.defense] = 15;
+	arr_enemy[_enemyName, character.special] = normal.cheese_expensive;
 	
-	arr_enemy[enemy.wobbly_rat, character.skill_1] = normal.cheese;
-	arr_enemy[enemy.wobbly_rat, character.skill_2] = -1;
-	arr_enemy[enemy.wobbly_rat, character.skill_3] = -1;
-	arr_enemy[enemy.wobbly_rat, character.skill_4] = -1;
+	_enemyName = enemy.wobbly_rat;
 	
-	arr_enemy[enemy.wobbly_rat, character.text_1] = "WOBBLY RAT FEELS LIKE WOBBLING ARROUND";
-	arr_enemy[enemy.wobbly_rat, character.text_2] = "WOBBLE WOBBLE";
-	arr_enemy[enemy.wobbly_rat, character.text_3] = "WOBBLY RAT EATS A PIECE OF CLOUD!";
+	arr_enemy[_enemyName, character.name] = "Wobbly Rat";
+	arr_enemy[_enemyName, character.sprite] = spr_wobblyRat;
+	arr_enemy[_enemyName, character.damage] = 35;
+	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.defense] = 5;
 	
-	arr_enemy[enemy.wobbly_rat, character.special] = normal.cheese;
+	arr_enemy[_enemyName, character.skill_1] = normal.cheese;
+	arr_enemy[_enemyName, character.skill_2] = normal.resist;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.shivery_rat, character.name] = "SHIVERY RAT";
-	arr_enemy[enemy.shivery_rat, character.sprite] = spr_shiveryRat;
-	arr_enemy[enemy.shivery_rat, character.damage] = 25;
-	arr_enemy[enemy.shivery_rat, character.hp] = 80;
-	arr_enemy[enemy.shivery_rat, character.defense] = 10;
+	arr_enemy[_enemyName, character.text_1] = "WOBBLY RAT FEELS LIKE WOBBLING ARROUND";
+	arr_enemy[_enemyName, character.text_2] = "WOBBLE WOBBLE";
+	arr_enemy[_enemyName, character.text_3] = "WOBBLY RAT EATS A PIECE OF CLOUD!";
 	
-	arr_enemy[enemy.shivery_rat, character.skill_1] = normal.sneeze;
-	arr_enemy[enemy.shivery_rat, character.skill_2] = -1;
-	arr_enemy[enemy.shivery_rat, character.skill_3] = -1;
-	arr_enemy[enemy.shivery_rat, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.special] = normal.cheese;
 	
-	arr_enemy[enemy.shivery_rat, character.text_1] = "SHIVERY RAT FEELS COLD!";
-	arr_enemy[enemy.shivery_rat, character.text_2] = "SHIVERY RAT ASKS FOR A TISSUE!";
-	arr_enemy[enemy.shivery_rat, character.text_3] = "SHIVERY RAT WANTS TO SNEEZE!";
+	_enemyName = enemy.shivery_rat
 	
-	arr_enemy[enemy.shivery_rat, character.special] = normal.sneeze;
+	arr_enemy[_enemyName, character.name] = "SHIVERY RAT";
+	arr_enemy[_enemyName, character.sprite] = spr_shiveryRat;
+	arr_enemy[_enemyName, character.damage] = 25;
+	arr_enemy[_enemyName, character.hp] = 80;
+	arr_enemy[_enemyName, character.defense] = 10;
+	
+	arr_enemy[_enemyName, character.skill_1] = normal.sneeze;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "SHIVERY RAT FEELS COLD!";
+	arr_enemy[_enemyName, character.text_2] = "SHIVERY RAT ASKS FOR A TISSUE!";
+	arr_enemy[_enemyName, character.text_3] = "SHIVERY RAT WANTS TO SNEEZE!";
+	
+	arr_enemy[_enemyName,character.special] = normal.sneeze;
+	
+	//BOSSES
+	_enemyName = enemy.rat_king;
+	
+	arr_enemy[_enemyName, character.name] = "Rat King";
+	arr_enemy[_enemyName, character.sprite] = spr_ratKing;
+	arr_enemy[_enemyName, character.damage] = 15;
+	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.defense] = 5;
+	
+	arr_enemy[_enemyName, character.skill_1] = normal.steal;
+	arr_enemy[_enemyName, character.skill_2] = normal.cheese;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "RAT KING FEELS LIKE STEALING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "RAT KING IS THE RAT WHO MAKES ALL OF THE RULES!";
+	arr_enemy[_enemyName, character.text_3] = "KING KING KING KING KING KING KING KING KING KI...";
+	
+	arr_enemy[_enemyName, character.special] = normal.steal;
+	
+	//Cerberus 
+	_enemyName = enemy.cerberus
+	
+	arr_enemy[_enemyName, character.name] = "Cerberus";
+	arr_enemy[_enemyName, character.sprite] = spr_cerberus;
+	arr_enemy[_enemyName, character.damage] = 25;
+	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.defense] = 10;
+	
+	arr_enemy[_enemyName, character.skill_1] = choose(normal.bark, normal.explode);
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "CERBERUS FEELS LIKE OBLITERATING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "CERBERUS FEELS STRONG!";
+	arr_enemy[_enemyName, character.text_3] = "CERBERUS IS A BAD BOY!";
+	
+	arr_enemy[_enemyName, character.special] = normal.bark;
+	
+	_enemyName = enemy.cerberus2
+	//Cerberus 2
+	arr_enemy[_enemyName, character.name] = "Cerberus";
+	arr_enemy[_enemyName, character.sprite] = spr_cerberus2;
+	arr_enemy[_enemyName, character.damage] = 20;
+	arr_enemy[_enemyName, character.hp] = 75;
+	arr_enemy[_enemyName, character.defense] = 10;
+	
+	arr_enemy[_enemyName, character.skill_1] = normal.bark;
+	arr_enemy[_enemyName, character.skill_2] = choose(-1, normal.explode);
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "CERBERUS FEELS LIKE BREAKING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "CERBERUS FEELS WEAKER!";
+	arr_enemy[_enemyName, character.text_3] = "CERBERUS IS STILL A BAD BOY!";
+	
+	arr_enemy[_enemyName, character.special] = normal.bark;
+	
+
+	//Cerberus
+	
+	_enemyName = enemy.cerberus3
+	
+	arr_enemy[_enemyName, character.name] = "Cerberus";
+	arr_enemy[_enemyName, character.sprite] = spr_cerberus3;
+	arr_enemy[_enemyName, character.damage] = 15;
+	arr_enemy[_enemyName, character.hp] = 50;
+	arr_enemy[_enemyName, character.defense] = 5;
+	
+	arr_enemy[_enemyName, character.skill_1] = normal.explode;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "CERBERUS FEELS LIKE BITING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "CERBERUS FEELS WEAK!";
+	arr_enemy[_enemyName, character.text_3] = "CERBERUS IS A VERY BAD BOY!";
+	
+	arr_enemy[_enemyName, character.special] = normal.bark;
+	
+	//Kid
+	_enemyName = enemy.kid
+	
+	arr_enemy[_enemyName, character.name] = "Lemonade Kid";
+	arr_enemy[_enemyName, character.sprite] = spr_kid;
+	arr_enemy[_enemyName, character.damage] = 30;
+	arr_enemy[_enemyName, character.hp] = 150;
+	arr_enemy[_enemyName, character.defense] = 5;
+	
+	arr_enemy[_enemyName, character.skill_1] = normal.bitter;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "LEMONADE KID FEELS LIKE SPILLING LEMONADE ON YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "LEMONADE KID ASKS FOR 25 CENTS";
+	arr_enemy[_enemyName, character.text_3] = "LEMONADE KID IS BEING BITTER!";
+	
+	arr_enemy[_enemyName, character.special] = normal.bitter;
+	
+	//Mega Bat
+	_enemyName = enemy.mega_bat
+	
+	arr_enemy[_enemyName, character.name] = "Mega Bat";
+	arr_enemy[_enemyName, character.sprite] = spr_megabat;
+	arr_enemy[_enemyName, character.damage] = 35;
+	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.defense] = 15;
+	
+	arr_enemy[_enemyName, character.skill_1] = normal.lick;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "MEGA BAT FEELS LIKE DRAINING YOUR MATTRESS!";
+	arr_enemy[_enemyName, character.text_2] = "MEGA BAT SMELLS LIKE A BLOOD BANK!";
+	arr_enemy[_enemyName, character.text_3] = "LICK LICK LICK LICK LICK LICK LICK LICK LICK LICK LICK...";
+	
+	arr_enemy[_enemyName, character.special] = normal.drain;
+	
+	//Queen
+	_enemyName = enemy.queen
+	
+	if(global.queenType = 1)
+	{
+		arr_enemy[_enemyName, character.name] = "Queen";
+		arr_enemy[_enemyName, character.sprite] = spr_queen;
+		arr_enemy[_enemyName, character.damage] = 45;
+		arr_enemy[_enemyName, character.hp] = 300;
+		arr_enemy[_enemyName, character.defense] = 15;
+	
+		arr_enemy[_enemyName, character.skill_1] = normal.crown;
+		arr_enemy[_enemyName, character.skill_2] = normal.fireball;
+		arr_enemy[_enemyName, character.skill_3] = normal.crown;
+		arr_enemy[_enemyName, character.skill_4] = -1;
+	
+		arr_enemy[_enemyName, character.text_1] = "QUEEN FEELS ENHANCED!";
+		arr_enemy[_enemyName, character.text_2] = "ALL HAIL THE QUEEN";
+		arr_enemy[_enemyName, character.text_3] = "YOU'RE BLINDED BY THE ROYALTY (AND THE FIRE)";
+	
+		arr_enemy[_enemyName, character.special] = normal.crown;
+	};
+	
+	else
+	{
+		arr_enemy[_enemyName, character.name] = "Queen";
+		arr_enemy[_enemyName, character.sprite] = spr_queen;
+		arr_enemy[_enemyName, character.damage] = 40;
+		arr_enemy[_enemyName, character.hp] = 250;
+		arr_enemy[_enemyName, character.defense] = 15;
+	
+		arr_enemy[_enemyName, character.skill_1] = normal.crown;
+		arr_enemy[_enemyName, character.skill_2] = normal.napLong;
+		arr_enemy[_enemyName, character.skill_3] = normal.armor;
+		arr_enemy[_enemyName, character.skill_4] = -1;
+	
+		arr_enemy[_enemyName, character.text_1] = "QUEEN FEELS LIKE STOPPING YOU!";
+		arr_enemy[_enemyName, character.text_2] = "ALL HAIL THE QUEEN";
+		arr_enemy[_enemyName, character.text_3] = "YOU'RE BLINDED BY THE ROYALTY";
+	
+		arr_enemy[_enemyName, character.special] = normal.crown;
+	};
+	
+	//ALT ROUTE
+	_enemyName = enemy.slug
+	
+	arr_enemy[_enemyName, character.name] = "sewer slug";
+	arr_enemy[_enemyName, character.sprite] = spr_slug;
+	arr_enemy[_enemyName, character.damage] = 20;
+	arr_enemy[_enemyName, character.hp] = 125;
+	arr_enemy[_enemyName, character.defense] = 0;
+	
+	arr_enemy[_enemyName, character.skill_1] = normal.smile;
+	arr_enemy[_enemyName, character.skill_2] = normal.rot;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "SEWER SLUG WANTS TO ABSORB YOU!";
+	arr_enemy[_enemyName, character.text_2] = "SEWER SLUG IS MADE OUT OF !//$&!/!";
+	arr_enemy[_enemyName, character.text_3] = "SEWER SLUG IS FEELING SLIMY";
+	
+	arr_enemy[_enemyName, character.special] = normal.smile;
+	
+	_enemyName = enemy.wheel_cheese
+	
+	arr_enemy[_enemyName, character.name] = "WHEEL OF CHEESE";
+	arr_enemy[_enemyName, character.sprite] = spr_wheelCheese;
+	arr_enemy[_enemyName, character.damage] = 25;
+	arr_enemy[_enemyName, character.hp] = 150;
+	arr_enemy[_enemyName, character.defense] = 0;
+	
+	arr_enemy[_enemyName, character.skill_1] = normal.cheese_expensive;
+	arr_enemy[_enemyName, character.skill_2] = -1
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "WHEEL OF CHEESE IS IN THE WRONG PLACE!";
+	arr_enemy[_enemyName, character.text_2] = "DEATH IS AN OPTION FOR THE WHEEL OF CHEESE!";
+	arr_enemy[_enemyName, character.text_3] = "WHERE DID YOU THINK ALL THAT CHEESE CAME FROM HUH? ME. THE CHEESE IS ME.";
+	
+	arr_enemy[_enemyName, character.special] = normal.cheese_expensive;
+	
+	_enemyName = enemy.rat_queen
+	
+	arr_enemy[_enemyName, character.name] = "RAT QUEEN!"
+	arr_enemy[_enemyName, character.sprite] = spr_ratQueen;
+	arr_enemy[_enemyName, character.damage] = 30;
+	arr_enemy[_enemyName, character.hp] = 200;
+	arr_enemy[_enemyName, character.defense] = 0;
+	
+	arr_enemy[_enemyName, character.skill_1] = normal.steal;
+	arr_enemy[_enemyName, character.skill_2] = normal.cheese;
+	arr_enemy[_enemyName, character.skill_3] = normal.steal;
+	arr_enemy[_enemyName, character.skill_4] = normal.steal;
+	
+	arr_enemy[_enemyName, character.text_1] = "RAT QUEEN FEELS BORED!";
+	arr_enemy[_enemyName, character.text_2] = "RAT QUEEN CHEWS ON A POLE";
+	arr_enemy[_enemyName, character.text_3] = "RAT QUEEN RAT QUEEN RAT QUEEN RAT QUEEN RAT QUEEN...";
+	
+	arr_enemy[_enemyName, character.special] = -1;
 	
 	//CLOUD
 	arr_enemy[enemy.internaut, character.name] = "INTERNAUT";
@@ -588,132 +856,6 @@ function enemylist(){
 	
 	arr_enemy[enemy.cat, character.special] = normal.freeze;
 	
-	//BOSSES
-	arr_enemy[enemy.rat_king, character.name] = "Rat King";
-	arr_enemy[enemy.rat_king, character.sprite] = spr_ratKing;
-	arr_enemy[enemy.rat_king, character.damage] = 15;
-	arr_enemy[enemy.rat_king, character.hp] = 100;
-	arr_enemy[enemy.rat_king, character.defense] = 5;
-	
-	arr_enemy[enemy.rat_king, character.skill_1] = normal.steal;
-	arr_enemy[enemy.rat_king, character.skill_2] = normal.cheese;
-	arr_enemy[enemy.rat_king, character.skill_3] = -1;
-	arr_enemy[enemy.rat_king, character.skill_4] = -1;
-	
-	arr_enemy[enemy.rat_king, character.text_1] = "RAT KING FEELS LIKE STEALING YOUR MATTRESS!";
-	arr_enemy[enemy.rat_king, character.text_2] = "RAT KING IS THE RAT WHO MAKES ALL OF THE RULES!";
-	arr_enemy[enemy.rat_king, character.text_3] = "KING KING KING KING KING KING KING KING KING KI...";
-	
-	arr_enemy[enemy.rat_king, character.special] = normal.steal;
-	
-	//Cerberus
-	arr_enemy[enemy.cerberus, character.name] = "Cerberus";
-	arr_enemy[enemy.cerberus, character.sprite] = spr_cerberus;
-	arr_enemy[enemy.cerberus, character.damage] = 25;
-	arr_enemy[enemy.cerberus, character.hp] = 100;
-	arr_enemy[enemy.cerberus, character.defense] = 10;
-	
-	arr_enemy[enemy.cerberus, character.skill_1] = choose(normal.bark, normal.explode);
-	arr_enemy[enemy.cerberus, character.skill_2] = -1;
-	arr_enemy[enemy.cerberus, character.skill_3] = -1;
-	arr_enemy[enemy.cerberus, character.skill_4] = -1;
-	
-	arr_enemy[enemy.cerberus, character.text_1] = "CERBERUS FEELS LIKE OBLITERATING YOUR MATTRESS!";
-	arr_enemy[enemy.cerberus, character.text_2] = "CERBERUS FEELS STRONG!";
-	arr_enemy[enemy.cerberus, character.text_3] = "CERBERUS IS A BAD BOY!";
-	
-	arr_enemy[enemy.cerberus, character.special] = normal.bark;
-	
-	//Cerberus 2
-	arr_enemy[enemy.cerberus2, character.name] = "Cerberus";
-	arr_enemy[enemy.cerberus2, character.sprite] = spr_cerberus2;
-	arr_enemy[enemy.cerberus2, character.damage] = 20;
-	arr_enemy[enemy.cerberus2, character.hp] = 75;
-	arr_enemy[enemy.cerberus2, character.defense] = 10;
-	
-	arr_enemy[enemy.cerberus2, character.skill_1] = normal.bark;
-	arr_enemy[enemy.cerberus2, character.skill_2] = choose(-1, normal.explode);
-	arr_enemy[enemy.cerberus2, character.skill_3] = -1;
-	arr_enemy[enemy.cerberus2, character.skill_4] = -1;
-	
-	arr_enemy[enemy.cerberus2, character.text_1] = "CERBERUS FEELS LIKE BREAKING YOUR MATTRESS!";
-	arr_enemy[enemy.cerberus2, character.text_2] = "CERBERUS FEELS WEAKER!";
-	arr_enemy[enemy.cerberus2, character.text_3] = "CERBERUS IS STILL A BAD BOY!";
-	
-	arr_enemy[enemy.cerberus2, character.special] = normal.bark;
-	
-	//Cerberus
-	arr_enemy[enemy.cerberus3, character.name] = "Cerberus";
-	arr_enemy[enemy.cerberus3, character.sprite] = spr_cerberus3;
-	arr_enemy[enemy.cerberus3, character.damage] = 15;
-	arr_enemy[enemy.cerberus3, character.hp] = 50;
-	arr_enemy[enemy.cerberus3, character.defense] = 5;
-	
-	arr_enemy[enemy.cerberus3, character.skill_1] = normal.explode;
-	arr_enemy[enemy.cerberus3, character.skill_2] = -1;
-	arr_enemy[enemy.cerberus3, character.skill_3] = -1;
-	arr_enemy[enemy.cerberus3, character.skill_4] = -1;
-	
-	arr_enemy[enemy.cerberus3, character.text_1] = "CERBERUS FEELS LIKE BITING YOUR MATTRESS!";
-	arr_enemy[enemy.cerberus3, character.text_2] = "CERBERUS FEELS WEAK!";
-	arr_enemy[enemy.cerberus3, character.text_3] = "CERBERUS IS A VERY BAD BOY!";
-	
-	arr_enemy[enemy.cerberus3, character.special] = normal.bark;
-	
-	//Kid
-	arr_enemy[enemy.kid, character.name] = "Lemonade Kid";
-	arr_enemy[enemy.kid, character.sprite] = spr_kid;
-	arr_enemy[enemy.kid, character.damage] = 30;
-	arr_enemy[enemy.kid, character.hp] = 150;
-	arr_enemy[enemy.kid, character.defense] = 5;
-	
-	arr_enemy[enemy.kid, character.skill_1] = normal.bitter;
-	arr_enemy[enemy.kid, character.skill_2] = -1;
-	arr_enemy[enemy.kid, character.skill_3] = -1;
-	arr_enemy[enemy.kid, character.skill_4] = -1;
-	
-	arr_enemy[enemy.kid, character.text_1] = "LEMONADE KID FEELS LIKE SPILLING LEMONADE ON YOUR MATTRESS!";
-	arr_enemy[enemy.kid, character.text_2] = "LEMONADE KID ASKS FOR 25 CENTS";
-	arr_enemy[enemy.kid, character.text_3] = "LEMONADE KID IS BEING BITTER!";
-	
-	arr_enemy[enemy.kid, character.special] = normal.bitter;
-	
-	//Mega Bat
-	arr_enemy[enemy.mega_bat, character.name] = "Mega Bat";
-	arr_enemy[enemy.mega_bat, character.sprite] = spr_megabat;
-	arr_enemy[enemy.mega_bat, character.damage] = 35;
-	arr_enemy[enemy.mega_bat, character.hp] = 100;
-	arr_enemy[enemy.mega_bat, character.defense] = 15;
-	
-	arr_enemy[enemy.mega_bat, character.skill_1] = normal.lick;
-	arr_enemy[enemy.mega_bat, character.skill_2] = -1;
-	arr_enemy[enemy.mega_bat, character.skill_3] = -1;
-	arr_enemy[enemy.mega_bat, character.skill_4] = -1;
-	
-	arr_enemy[enemy.mega_bat, character.text_1] = "MEGA BAT FEELS LIKE DRAINING YOUR MATTRESS!";
-	arr_enemy[enemy.mega_bat, character.text_2] = "MEGA BAT SMELLS LIKE A BLOOD BANK!";
-	arr_enemy[enemy.mega_bat, character.text_3] = "LICK LICK LICK LICK LICK LICK LICK LICK LICK LICK LICK...";
-	
-	arr_enemy[enemy.mega_bat, character.special] = normal.drain;
-	
-	//Queen
-	arr_enemy[enemy.queen, character.name] = "Queen";
-	arr_enemy[enemy.queen, character.sprite] = spr_queen;
-	arr_enemy[enemy.queen, character.damage] = 40;
-	arr_enemy[enemy.queen, character.hp] = 300;
-	arr_enemy[enemy.queen, character.defense] = 15;
-	
-	arr_enemy[enemy.queen, character.skill_1] = normal.crown;
-	arr_enemy[enemy.queen, character.skill_2] = -1;
-	arr_enemy[enemy.queen, character.skill_3] = -1;
-	arr_enemy[enemy.queen, character.skill_4] = -1;
-	
-	arr_enemy[enemy.queen, character.text_1] = "QUEEN FEELS LIKE STOPPING YOU!";
-	arr_enemy[enemy.queen, character.text_2] = "ALL HAIL THE QUEEN";
-	arr_enemy[enemy.queen, character.text_3] = "YOU'RE BLINDED BY THE ROYALTY";
-	
-	arr_enemy[enemy.queen, character.special] = normal.crown;
-	
 	//Omar
 	arr_enemy[enemy.omar, character.name] = "Omar";
 	arr_enemy[enemy.omar, character.sprite] = spr_baby;
@@ -822,60 +964,6 @@ function enemylist(){
 	
 	arr_enemy[enemy.eggplant, character.special] = normal.freeze;
 	
-	//SLUG
-	arr_enemy[enemy.slug, character.name] = "sewer slug";
-	arr_enemy[enemy.slug, character.sprite] = spr_slug;
-	arr_enemy[enemy.slug, character.damage] = 20;
-	arr_enemy[enemy.slug, character.hp] = 175;
-	arr_enemy[enemy.slug, character.defense] = 0;
-	
-	arr_enemy[enemy.slug, character.skill_1] = normal.smile;
-	arr_enemy[enemy.slug, character.skill_2] = normal.rot;
-	arr_enemy[enemy.slug, character.skill_3] = -1;
-	arr_enemy[enemy.slug, character.skill_4] = -1;
-	
-	arr_enemy[enemy.slug, character.text_1] = "SEWER SLUG WANTS TO ABSORB YOU!";
-	arr_enemy[enemy.slug, character.text_2] = "SEWER SLUG IS MADE OUT OF !//$&!/!";
-	arr_enemy[enemy.slug, character.text_3] = "SEWER SLUG IS FEELING SLIMY";
-	
-	arr_enemy[enemy.slug, character.special] = normal.smile;
-	
-	//CLOWN CAR
-	arr_enemy[enemy.wheel_cheese, character.name] = "WHEEL OF CHEESE";
-	arr_enemy[enemy.wheel_cheese, character.sprite] = spr_wheelCheese;
-	arr_enemy[enemy.wheel_cheese, character.damage] = 25;
-	arr_enemy[enemy.wheel_cheese, character.hp] = 150;
-	arr_enemy[enemy.wheel_cheese, character.defense] = 0;
-	
-	arr_enemy[enemy.wheel_cheese, character.skill_1] = normal.cheese_expensive;
-	arr_enemy[enemy.wheel_cheese, character.skill_2] = -1
-	arr_enemy[enemy.wheel_cheese, character.skill_3] = -1;
-	arr_enemy[enemy.wheel_cheese, character.skill_4] = -1;
-	
-	arr_enemy[enemy.wheel_cheese, character.text_1] = "WHEEL OF CHEESE IS IN THE WRONG PLACE!";
-	arr_enemy[enemy.wheel_cheese, character.text_2] = "DEATH IS AN OPTION FOR THE WHEEL OF CHEESE!";
-	arr_enemy[enemy.wheel_cheese, character.text_3] = "WHERE DID YOU THINK ALL THAT CHEESE CAME FROM HUH? ME. THE CHEESE IS ME.";
-	
-	arr_enemy[enemy.wheel_cheese, character.special] = normal.cheese_expensive;
-	
-	//PAPA SOUL
-	arr_enemy[enemy.rat_queen, character.name] = "RAT QUEEN!"
-	arr_enemy[enemy.rat_queen, character.sprite] = spr_ratQueen;
-	arr_enemy[enemy.rat_queen, character.damage] = 15;
-	arr_enemy[enemy.rat_queen, character.hp] = 300;
-	arr_enemy[enemy.rat_queen, character.defense] = 0;
-	
-	arr_enemy[enemy.rat_queen, character.skill_1] = normal.steal;
-	arr_enemy[enemy.rat_queen, character.skill_2] = normal.cheese;
-	arr_enemy[enemy.rat_queen, character.skill_3] = -1
-	arr_enemy[enemy.rat_queen, character.skill_4] = -1
-	
-	arr_enemy[enemy.rat_queen, character.text_1] = "RAT QUEEN FEELS BORED!";
-	arr_enemy[enemy.rat_queen, character.text_2] = "RAT QUEEN CHEWS ON A POLE";
-	arr_enemy[enemy.rat_queen, character.text_3] = "RAT QUEEN RAT QUEEN RAT QUEEN RAT QUEEN RAT QUEEN...";
-	
-	arr_enemy[enemy.rat_queen, character.special] = -1;
-	
 	/*//ELECTROLOTL
 	arr_enemy[enemy.electrolotl, character.name] = "ELECTROLOTL"
 	arr_enemy[enemy.electrolotl, character.sprite] = spr_electrolotl;
@@ -930,9 +1018,9 @@ function playerEnemies(){
 	//Rat King
 	arr_enemy[enemy.rat_king, character.name] = "Rat King";
 	arr_enemy[enemy.rat_king, character.sprite] = spr_ratKing;
-	arr_enemy[enemy.rat_king, character.damage] = 20;
-	arr_enemy[enemy.rat_king, character.hp] = 100;
-	arr_enemy[enemy.rat_king, character.defense] = 0;
+	arr_enemy[enemy.rat_king, character.damage] = 30;
+	arr_enemy[enemy.rat_king, character.hp] = 75;
+	arr_enemy[enemy.rat_king, character.defense] = 5;
 	
 	arr_enemy[enemy.rat_king, character.skill_1] = -1;
 	arr_enemy[enemy.rat_king, character.skill_2] = -1;
@@ -989,9 +1077,9 @@ function stageEnemies(){
 	
 	arr_stageEnemies[stage.shortcut, 0] = enemy.bat;
 	arr_stageEnemies[stage.shortcut, 1] = enemy.shroom;
-	arr_stageEnemies[stage.shortcut, 2] = enemy.plant;
+	arr_stageEnemies[stage.shortcut, 2] = enemy.worm;
 	
-	arr_stageEnemies[stage.incinerator, 0] = enemy.feudent;
+	arr_stageEnemies[stage.incinerator, 0] = enemy.feu;
 	arr_stageEnemies[stage.incinerator, 1] = enemy.smokey;
 	arr_stageEnemies[stage.incinerator, 2] = enemy.guard;
 	
@@ -1068,6 +1156,12 @@ function initializeEnemy(_enemy){
 	st_skillUses[1] = -1;
 	st_skillUses[2] = -1;
 	st_skillUses[3] = -1;
+	
+	st_skillPlus[0] = false;
+	st_skillPlus[1] = false;
+	st_skillPlus[2] = false;
+	st_skillPlus[3] = false;
+	
 	st_special = arr_enemy[_enemy, character.special];
 	tempDef = 0;
 	tempDmg = 0;

@@ -61,8 +61,26 @@ function attack(_value){
 	};
 };
 
-function skill(value){
-	arr_skill[value, skills.func]();
+function skill(value, isPlus){
+	
+	if(!isPlus)
+	{
+		//wait the cost of the skill
+		if(global.player != enemy.phish)
+		{
+			var_turnWait = arr_skill[value, skills.cost];
+		};
+		arr_skill[value, skills.func]();
+	}
+	else
+	{
+		//wait the cost of the skill
+		if(global.player != enemy.phish)
+		{
+			var_turnWait = arr_skill[value, skills.costPlus];
+		};
+		arr_skill[value, skills.funcPlus]();
+	}
 			
 	//change sprites
 	image_index = arr_skill[value, skills.selfIndex];
@@ -73,11 +91,6 @@ function skill(value){
 	//text
 	global.text = arr_skill[value, skills.text];
 	
-	//wait the cost of the skill
-	if(global.player != enemy.phish)
-	{
-		var_turnWait = arr_skill[value, skills.cost];
-	};
 	//play sound
 	audio_play_sound(arr_skill[value, skills.sound], 0, 0);
 	
@@ -158,7 +171,7 @@ function special(_skill)
 {
 	if(st_specialRecharge = 0)
 	{
-		skill(_skill);
+		skill(_skill, var_specialPlus);
 		st_specialRecharge = mx_specialRecharge;
 			
 		nextTurn();	
@@ -216,7 +229,7 @@ function statusEffects()
 			
 	if(arr_status[status.regeneration])
 	{
-		_percent = (maxHp/100) *5;
+		_percent = (maxHp/100) *15;
 		hp += _percent;
 	};
 					
@@ -247,7 +260,6 @@ function statusEffects()
 
 function createAnim(sprite)
 {
-	//var _place = (obj_control.anim_x[0] + obj_control.anim_x[1]/2)-(room_width-ROOMWIDTH)/2;
 	var anim = instance_create_depth(ROOMWIDTH/2, room_height/2, depth, obj_midAnim);
 	anim.sprite_index = sprite;
 };

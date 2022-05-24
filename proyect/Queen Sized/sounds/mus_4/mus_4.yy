@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_4.mp3",
-  "duration": 122.253044,
+  "duration": 122.261627,
   "parent": {
     "name": "incinerator",
     "path": "folders/Sounds/music/1st route/incinerator.yy",

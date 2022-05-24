@@ -9,13 +9,24 @@ if(_skill != -1)
 		image_index = _skill+1;
 	};
 
-	text = obj_player.arr_skill[_skill, skills.desc];
+	if(obj_player.st_skillPlus[0]){text = obj_player.arr_skill[_skill, skills.descPlus]}
+	else{text = obj_player.arr_skill[_skill, skills.desc]};
 }
 else
 {
 	image_index = 0;
 	text= "no skill";
 }
+
+//SPRITE INDEX
+if(obj_player.st_skillPlus[0])
+{
+	sprite_index = spr_uiSkillsetPlus;
+};
+else
+{
+	sprite_index = spr_uiSkillset;
+};
 
 if(!global.primaryUI)
 {

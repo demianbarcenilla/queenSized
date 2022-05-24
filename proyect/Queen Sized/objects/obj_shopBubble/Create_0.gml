@@ -2,21 +2,15 @@ image_speed = 0;
 
 var _hpDoubled = obj_player.maxHp >= 200 ? true : false,
 	_dmgDoubled = obj_player.st_damage >= 35,
-	_pick;
+	_pick = irandom_range(1, 8),
+	_finalPick = 0;
 
-if(_hpDoubled) and (!_dmgDoubled)
-{
-	_pick = choose(0, 2, 3); //exclude hp from the equation if you got double your hp
-};
+if(_pick <= 3){_finalPick = 0} //Regen
+else if(_pick = 8){_finalPick = 1} //HP UP!
+else if((_pick > 3) and (_pick <= 5)){_finalPick = 2} //Defense
+else if((_pick > 5) and (_pick <= 7)){_finalPick = 3} //Damage
 
-else if(_hpDoubled) and (_dmgDoubled)
-{
-	_pick = choose(0, 1, 2); //exclude dmg from the equation if you got 1.5 your dmg
-};
-
-var_holding = irandom_range(0, 3); //0=regen, 1= health, 2=def, 3=dmg
-
-
+var_holding = _finalPick;
 
 image_index = var_holding;
 
@@ -35,7 +29,7 @@ if(global.player = enemy.phish) //ALLWAYS discount with phish
 	discount = true;
 }
 ini_open("unlocks.ini") //Ocasional discount
-	if(ini_read_real("unlocks", "14", false))
+	if(ini_read_real("unlocks", "100", false))
 	{
 		var r = irandom_range(0, 50);
 		if(r > 25)
