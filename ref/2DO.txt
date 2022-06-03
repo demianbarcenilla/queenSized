@@ -3,7 +3,17 @@ IF U GET THERE
 
 UPDATE 2:
 -work on THE FRIDGE
+-playable characters: JEAN, COOKIE
+
 -solve issues: skills that waste turns are useless, let me see what the enemy'll do next to strategize around it!
 
 UPDATE 3:
--work on ROUTE 3! (The Cloud, The Breach and The )
+-work on ROUTE 3! (The Cloud, The Breach and The ***)
+-playable characters: PHISH, MERCHANT
+
+-solve issues: ???
+
+UPDATE 4:
+-playable characters: TITO/BONDIOLA, OMAR
+
+-solve issues: ???

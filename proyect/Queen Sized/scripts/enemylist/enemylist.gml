@@ -215,7 +215,7 @@ function enemylist(){
 	
 	arr_enemy[_enemyName, character.name] = "Worm";
 	arr_enemy[_enemyName, character.sprite] = spr_plant;
-	arr_enemy[_enemyName, character.damage] = 40;
+	arr_enemy[_enemyName, character.damage] = 30;
 	arr_enemy[_enemyName, character.hp] = 115;
 	arr_enemy[_enemyName, character.defense] = 5;
 	
@@ -233,7 +233,7 @@ function enemylist(){
 	_enemyName = enemy.bat
 	arr_enemy[_enemyName, character.name] = "BAT";
 	arr_enemy[_enemyName, character.sprite] = spr_bat;
-	arr_enemy[_enemyName, character.damage] = 35;
+	arr_enemy[_enemyName, character.damage] = 30;
 	arr_enemy[_enemyName, character.hp] = 80;
 	arr_enemy[_enemyName, character.defense] = 0;
 	
@@ -252,7 +252,7 @@ function enemylist(){
 	//Incinerator
 	arr_enemy[_enemyName, character.name] = "FEU";
 	arr_enemy[_enemyName, character.sprite] = spr_feudent;
-	arr_enemy[_enemyName, character.damage] = 40;
+	arr_enemy[_enemyName, character.damage] = 30;
 	arr_enemy[_enemyName, character.hp] = 60;
 	arr_enemy[_enemyName, character.defense] = 20;
 	
