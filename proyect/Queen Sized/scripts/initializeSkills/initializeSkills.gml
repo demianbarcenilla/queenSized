@@ -27,7 +27,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.napLong, skills.anim] = ani_napLong;
 	
 	arr_skill[normal.napLong, skills.func] = function(){regen(_self, maxHp)};
-	arr_skill[normal.napLong, skills.cost] = 1; arr_skill[normal.napLong, skills.uses] = 1;	
+	arr_skill[normal.napLong, skills.cost] = 1; arr_skill[normal.napLong, skills.uses] = 3;	
 	arr_skill[normal.napLong, skills.selfIndex] = 3;
 	arr_skill[normal.napLong, skills.otherIndex] = 0;
 	arr_skill[normal.napLong, skills.sound] = snd_heal;
@@ -1327,13 +1327,13 @@ function initializeSkills(_self, _other)
 		
 		arr_skill[normal.rat_ratuary, skills.text] = "THE RATUARY ACTIVATED " + arr_skill[_ski, skills.name]
 	};
-	arr_skill[normal.rat_ratuary, skills.cost] = 0; arr_skill[normal.rat_ratuary, skills.uses] = 5;
+	arr_skill[normal.rat_ratuary, skills.cost] = 1; arr_skill[normal.rat_ratuary, skills.uses] = -1;
 	arr_skill[normal.rat_ratuary, skills.selfIndex] = 3;
 	arr_skill[normal.rat_ratuary, skills.otherIndex] = 0;
 	arr_skill[normal.rat_ratuary, skills.sound] = snd_steal;
 	arr_skill[normal.rat_ratuary, skills.shop] = 50;
 	
-	arr_skill[normal.rat_ratuary, skills.recharge] = 3;
+	arr_skill[normal.rat_ratuary, skills.recharge] = 5;
 	
 	arr_skill[normal.rat_ratuary, skills.descPlus] = "use a random rat skill!";
 	arr_skill[normal.rat_ratuary, skills.funcPlus] = arr_skill[normal.rat_ratuary, skills.func]
@@ -1346,7 +1346,7 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.cheese_expensive, skills.text] = string(var_name) + " EATS AN " + arr_skill[normal.cheese_expensive, skills.name];
 	arr_skill[normal.cheese_expensive, skills.func] = function(){regen(_self, maxHp)};
-	arr_skill[normal.cheese_expensive, skills.cost] = 1; arr_skill[normal.cheese_expensive, skills.uses] = 1;
+	arr_skill[normal.cheese_expensive, skills.cost] = 1; arr_skill[normal.cheese_expensive, skills.uses] = 3;
 	arr_skill[normal.cheese_expensive, skills.selfIndex] = 3;
 	arr_skill[normal.cheese_expensive, skills.otherIndex] = 0;
 	arr_skill[normal.cheese_expensive, skills.sound] = snd_grilledCheese;
