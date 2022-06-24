@@ -32,9 +32,10 @@ alarm[2] = 9;
 //Is Rechargeable
 var_rechargeable = false;
 
-if(obj_player.st_skillRecharge[3] != -1) and (obj_player.st_skills[3] != -1)
+var val = 3;
+if(obj_player.st_skillRecharge[val] != -1) and (obj_player.st_skills[val] != -1)
 {
-	var_rechargeable = true;
+	var_rechargeable = true;	
 }
 else
 {

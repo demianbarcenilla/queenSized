@@ -79,7 +79,9 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 				{
 					obj_player.st_skills[i]= var_holding;
 					obj_player.st_skillUses[i]= arr_skill[var_holding, skills.uses];
-					setSkillRecharge(i);
+					obj_player.st_skillRecharge[i]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
+	
+					break;
 				};
 				
 				else

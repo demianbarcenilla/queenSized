@@ -1,15 +1,9 @@
 /// @description Draw!
 draw_self();
 
-var val = 1, _dontShow = false;
-
-//CONDITION: last use AND recharge time = 0
- if(obj_player.st_skillUses[val] = 1) and (obj_player.st_skillRecharge[val] = 0)
- {
-	_dontShow = true;
- };
+var val = 1;
  
-if(var_rechargeable) and (!_dontShow)
+if(var_rechargeable)
 {
 	drawRecharge(obj_player.st_skillRecharge[val]);
 };

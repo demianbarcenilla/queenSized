@@ -276,7 +276,7 @@ function enemylist(){
 	arr_enemy[_enemyName, character.defense] = 15;
 	
 	arr_enemy[_enemyName, character.skill_1] = normal.dissipate;
-	arr_enemy[_enemyName, character.skill_2] = normal.punch;
+	arr_enemy[_enemyName, character.skill_2] = -1;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
@@ -294,7 +294,7 @@ function enemylist(){
 	arr_enemy[_enemyName, character.hp] = choose(75, 100);
 	arr_enemy[_enemyName, character.defense] = 15;
 	
-	arr_enemy[_enemyName, character.skill_1] = normal.punch;
+	arr_enemy[_enemyName, character.skill_1] = normal.nap;
 	arr_enemy[_enemyName, character.skill_2] = normal.armor;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
@@ -1010,10 +1010,10 @@ function playerEnemies(){
 	arr_enemy[enemy.pillow, character.hp] = 100;
 	arr_enemy[enemy.pillow, character.defense] = 0;
 
-	arr_enemy[enemy.pillow, character.skill_1] = -1;
-	arr_enemy[enemy.pillow, character.skill_2] = -1;
-	arr_enemy[enemy.pillow, character.skill_3] = -1;
-	arr_enemy[enemy.pillow, character.skill_4] = normal.wait;
+	arr_enemy[enemy.pillow, character.skill_1] = normal.napLong;
+	arr_enemy[enemy.pillow, character.skill_2] = normal.napLong;
+	arr_enemy[enemy.pillow, character.skill_3] = normal.napLong;
+	arr_enemy[enemy.pillow, character.skill_4] = normal.napLong;
 	
 	//Rat King
 	arr_enemy[enemy.rat_king, character.name] = "Rat King";

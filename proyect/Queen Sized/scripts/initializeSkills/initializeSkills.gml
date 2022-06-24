@@ -34,7 +34,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.napLong, skills.text] = string(var_name) + " TOOK A LONG NAP!";
 	arr_skill[normal.napLong, skills.shop] = 50;
 	
-	arr_skill[normal.napLong, skills.recharge] = 8;	
+	arr_skill[normal.napLong, skills.recharge] = 2//8;
 	
 	arr_skill[normal.napLong, skills.descPlus] = "REFILLS HP, +20 TEMPDEF";
 	arr_skill[normal.napLong, skills.funcPlus] = function(){_self.tempDef +=20; regen(_self, maxHp)};
@@ -515,11 +515,11 @@ function initializeSkills(_self, _other)
 	
 	//LEMONADE!
 	arr_skill[normal.lemonade, skills.name] = "LEMONADE";
-	arr_skill[normal.lemonade, skills.desc] = "HEALS, NOT AFFECTED BY BITTER!";
+	arr_skill[normal.lemonade, skills.desc] = "HEALS, NOT AFFECTED BY BITTER! ALSO RECHARGES";
 	arr_skill[normal.lemonade, skills.anim] = ani_lemonade;
 	
 	arr_skill[normal.lemonade, skills.func] = function(){_self.hp += maxHp/2};
-	arr_skill[normal.lemonade, skills.cost] = 0; arr_skill[normal.lemonade, skills.uses] = 3;	
+	arr_skill[normal.lemonade, skills.cost] = 1; arr_skill[normal.lemonade, skills.uses] = 3;	
 	arr_skill[normal.lemonade, skills.selfIndex] = 3;
 	arr_skill[normal.lemonade, skills.otherIndex] = 0;
 	arr_skill[normal.lemonade, skills.sound] = snd_heal;

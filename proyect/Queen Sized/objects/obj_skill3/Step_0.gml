@@ -34,7 +34,8 @@ else
 	y = lerp(y, ystart+yPlus, .1);
 };
 
-if(obj_player.st_skillRecharge[2] != -1)
+var val = 2;
+if(obj_player.st_skillRecharge[val] != -1) and (obj_player.st_skills[val] != -1)
 {
 	var_rechargeable = true;	
 }
