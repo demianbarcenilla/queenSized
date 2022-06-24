@@ -194,6 +194,9 @@ function skillTrigger()
 		};
 	};
 			
+	var isRechargeable = false;
+	if(st_skillRecharge[guiSelected] != -1){isRechargeable = true};
+	
 	if(global.player = enemy.phish)
 	{
 		if(st_skills[guiSelected] != -1) and (_phishUse)
@@ -216,15 +219,28 @@ function skillTrigger()
 	{
 		if(st_skills[guiSelected] != -1)
 		{
-			skillUses();
-			skill(st_skills[guiSelected], st_skillPlus[guiSelected]);
+			if(!isRechargeable) or (isRechargeable and st_skillRecharge[guiSelected] = 0)
+			{
+				if(isRechargeable)
+				{
+					st_skillRecharge[guiSelected] = arr_skill[st_skills[guiSelected], skills.recharge] + 1; 
+				};
+			
+				skillUses();
+				skill(st_skills[guiSelected], st_skillPlus[guiSelected]);
 						
-			global.primaryUI = true;
-			resetToPrimary();
-						
-			nextTurn();
+				global.primaryUI = true;
+				resetToPrimary();
+			
+				nextTurn();
+			};
+			
+			else
+			{
+				audio_play_sound(snd_error, 1, 0);
+			};
 		};
-						
+			
 		else
 		{
 			audio_play_sound(snd_error, 1, 0);
@@ -317,7 +333,7 @@ function skillText(_obj)
 		//text
 		if(global.player != enemy.phish)
 		{
-			var _uses = "", _cost="";
+			var _uses = "";
 			if(st_skillUses[guiSelected] >= 1) //If uses remain, use item
 			{
 				if(st_skillUses[guiSelected] = 1)
@@ -329,23 +345,12 @@ function skillText(_obj)
 					_uses = "( " + string(st_skillUses[guiSelected]) + " USES LEFT )";
 				};
 			}
-			if(arr_skill[st_skills[guiSelected], skills.cost] >= 1) //If uses remain, use item
-			{
-				if(arr_skill[st_skills[guiSelected], skills.cost] = 1)
-				{
-					_cost = "( COSTS A TURN )";
-				};
-				else
-				{
-					_cost = "( COSTS " + string(st_skillUses[guiSelected]) + " TURNS )";
-				};
-			};
-			global.text = _obj.text +_cost +_uses;
+			global.text = _obj.text +_uses;
 		}
 		else
 		{
 			var _cost = st_skillUses[guiSelected],
-				_costText = " ( COSTS " + string(_cost) + " MONEYS )"
+				_costText = " ( COSTS " + string(_cost) + " DOUGH )"
 			
 			global.text = _obj.text +_costText;
 		}
@@ -502,3 +507,28 @@ function hasPlus()
 	ini_close();
 
 }
+
+function drawRecharge(rechargeNumber)
+{
+	var _rechargeX = x+80, _displace = 7;
+
+	var _subimage 
+
+	if(!obj_player.arr_status[status.electrocuted])
+	{
+		_subimage = rechargeNumber > 0 ? 0 : 1;
+	};
+	else
+	{
+		_subimage = 2;
+	};
+
+	draw_set_color(c_white)
+
+	draw_sprite(spr_rechargeTime, _subimage, _rechargeX, y)
+
+	if(_subimage = 0)
+	{
+		draw_text(_rechargeX, y-_displace, string(rechargeNumber))
+	};
+};

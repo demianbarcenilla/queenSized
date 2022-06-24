@@ -38,3 +38,12 @@ else
 	if(alarm[0] = -1){alarm[0] = 6};
 	y = lerp(y, ystart+yPlus, .1);
 };
+
+if(obj_player.st_skillRecharge[1] != -1) and (obj_player.st_skills[1] != -1)
+{
+	var_rechargeable = true;	
+}
+else
+{
+	var_rechargeable = false;
+}

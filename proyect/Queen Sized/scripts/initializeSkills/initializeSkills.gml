@@ -15,7 +15,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.nap, skills.text] = string(var_name) + " TOOK A NAP!";
 	arr_skill[normal.nap, skills.shop] = 25;
 	
-	arr_skill[normal.nap, skills.recharge] = 7;
+	arr_skill[normal.nap, skills.recharge] = 5;
 	
 	arr_skill[normal.nap, skills.descPlus] = "RECOVER 1/2HP, APPLIES REGENERATION, DOESN'T WASTE ANY TURNS";
 	arr_skill[normal.nap, skills.funcPlus] = function(){regen(_self, maxHp/2); _self.arr_status[status.regeneration] = true; regenCountdown = 3; global.turn = 1};
@@ -34,7 +34,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.napLong, skills.text] = string(var_name) + " TOOK A LONG NAP!";
 	arr_skill[normal.napLong, skills.shop] = 50;
 	
-	arr_skill[normal.napLong, skills.recharge] = 15;	
+	arr_skill[normal.napLong, skills.recharge] = 8;	
 	
 	arr_skill[normal.napLong, skills.descPlus] = "REFILLS HP, +20 TEMPDEF";
 	arr_skill[normal.napLong, skills.funcPlus] = function(){_self.tempDef +=20; regen(_self, maxHp)};
@@ -72,7 +72,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.distract, skills.text] = string(var_name) + " DID SOMETHING DISTRACTING!"
 	arr_skill[normal.distract, skills.shop] = 25;
 	
-	arr_skill[normal.distract, skills.recharge] = 0;
+	arr_skill[normal.distract, skills.recharge] = 1;
 	
 	arr_skill[normal.distract, skills.descPlus] = "SAME AS CONFUSE, WITHOUT COSTING A TURN!";
 	arr_skill[normal.distract, skills.funcPlus] = function(){_other.tempDef -= 25};
@@ -91,7 +91,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.confuse, skills.text] = string(var_name) + " DID SOMETHING CONFUSING!"
 	arr_skill[normal.confuse, skills.shop] = 50;
 	
-	arr_skill[normal.confuse, skills.recharge] = 0;
+	arr_skill[normal.confuse, skills.recharge] = 3;
 	
 	arr_skill[normal.confuse, skills.descPlus] = "DECREASES ENEMY DEFENSE A LOT, FREEZES IT FOR 3 TURNS";
 	arr_skill[normal.confuse, skills.funcPlus] = function(){_other.tempDef -= 999; _other.frozenCountdown = 2; _other.arr_status[status.frozen] = true; global.turn = 1};
@@ -109,7 +109,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.resist, skills.text] = string(var_name) + " HAS MORE RESISTANCE!";
 	arr_skill[normal.resist, skills.shop] = 25;
 	
-	arr_skill[normal.resist, skills.recharge] = 0;
+	arr_skill[normal.resist, skills.recharge] = 3;
 	
 	arr_skill[normal.resist, skills.descPlus] = "SAME AS ARMOR, WITHOUT COSTING A TURN!";
 	arr_skill[normal.resist, skills.funcPlus] = function(){_self.tempDef += 20};
@@ -128,7 +128,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.armor, skills.text] = string(var_name) + " GOT SOME ARMOR!";
 	arr_skill[normal.armor, skills.shop] = 50;
 	
-	arr_skill[normal.armor, skills.recharge] = 0;
+	arr_skill[normal.armor, skills.recharge] = 3;
 
 	arr_skill[normal.armor, skills.descPlus] = "LOTS OF DEFENSE, HEALS 1/2HP, +TEMPORARY DAMAGE";
 	arr_skill[normal.armor, skills.funcPlus] = function(){_self.tempDef += 999; regen(_self, maxHp/2); _self.tempDmg += 5};
@@ -147,7 +147,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.punch, skills.text] = string(var_name) + " PUNCHES VERY HARD!";
 	arr_skill[normal.punch, skills.shop] = 50;
 	
-	arr_skill[normal.punch, skills.recharge] = 3;
+	arr_skill[normal.punch, skills.recharge] = 5;
 	
 	arr_skill[normal.punch, skills.descPlus] = "X2.5 DAMAGE, DOESN'T COST TURNS";
 	arr_skill[normal.punch, skills.funcPlus] = function(){attack(st_damage*2.5); global.turn = 1};
@@ -196,7 +196,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.wait, skills.desc] = "RAISES THE ID OF THE FIRST SKILL BY ONE";
 	arr_skill[normal.wait, skills.anim] = ani_attack;
 	
-	arr_skill[normal.wait, skills.func] = function(){st_skills[0] ++; global.turn = 1};
+	arr_skill[normal.wait, skills.func] = function(){st_skills[0] ++; global.turn = 1; setSkillRecharge(0)};
 	arr_skill[normal.wait, skills.cost] = 0; arr_skill[normal.wait, skills.uses] = -1;	
 	arr_skill[normal.wait, skills.selfIndex] = 3;
 	arr_skill[normal.wait, skills.otherIndex] = 1;
@@ -204,7 +204,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.wait, skills.text] = string(var_name) + " CHANGES THE ID OF A SKILL!";
 	arr_skill[normal.wait, skills.shop] = 50;
 	
-	arr_skill[normal.wait, skills.recharge] = 0;
+	arr_skill[normal.wait, skills.recharge] = 1;
 	
 	arr_skill[normal.wait, skills.descPlus] = "RAISES THE ID OF THE FIRST SKILL BY ONE!";
 	arr_skill[normal.wait, skills.funcPlus] = function(){st_skills[0] ++; global.turn = 1};
@@ -243,7 +243,7 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.explode, skills.shop] = 75;
 	
-	arr_skill[normal.explode, skills.recharge] = 0;
+	arr_skill[normal.explode, skills.recharge] = 1;
 	
 	arr_skill[normal.explode, skills.descPlus] = "SACRIFICE YOURSELF! NO BONUS EFFECT";
 	arr_skill[normal.explode, skills.func] = function(){
@@ -338,7 +338,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.honk, skills.text] = "HONK HONK";
 	arr_skill[normal.honk, skills.shop] = 25;
 	
-	arr_skill[normal.honk, skills.recharge] = 0;
+	arr_skill[normal.honk, skills.recharge] = 2;
 	
 	arr_skill[normal.honk, skills.descPlus] = "HONK HONK";
 	arr_skill[normal.honk, skills.funcPlus] = function(){screenshake(5, 2, .5); _self.tempDef += 5};
@@ -724,7 +724,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.rush, skills.text] = string(var_name) + " RUSHES INTO THEMY!"
 	arr_skill[normal.rush, skills.shop] = 50;
 	
-	arr_skill[normal.rush, skills.recharge] = 1;
+	arr_skill[normal.rush, skills.recharge] = 4;
 	
 	arr_skill[normal.rush, skills.descPlus] = "MAKES A LITTLE BIT MORE DAMAGE THAN RUSH";
 	arr_skill[normal.rush, skills.funcPlus] = function(){attack(st_damage*1.5)};
@@ -763,6 +763,7 @@ function initializeSkills(_self, _other)
 					st_skills[i] = _choice
 					
 					if(_choice != -1){st_skillUses[i] = arr_skill[_choice, skills.uses]} else {st_skillUses[i] = -1};
+					setSkillRecharge(i)
 					break;
 				};
 			};	
@@ -990,6 +991,7 @@ function initializeSkills(_self, _other)
 				{
 					st_skills[i] = _other.st_skills[_ski];
 					st_skillUses[i] = arr_skill[_other.st_skills[_ski], skills.uses];
+					setSkillRecharge(i)
 					break;
 				};
 				
@@ -1005,6 +1007,7 @@ function initializeSkills(_self, _other)
 					var _ski = irandom_range(normal.rat_bomb, normal.rat_cookie);
 					st_skills[i] = _ski;
 					st_skillUses[i] = arr_skill[_ski, skills.uses];
+					setSkillRecharge(i);
 					break;
 				};
 				
@@ -1259,8 +1262,9 @@ function initializeSkills(_self, _other)
 		{
 			var _skill = irandom_range(normal.rat_pocket, normal.rat_ratuary); 
 			st_skills[i] = _skill;
-			st_skillUses[i] = arr_skill[_skill, skills.uses]
-		}
+			st_skillUses[i] = arr_skill[_skill, skills.uses];
+			setSkillRecharge(i);
+		};
 	};
 	arr_skill[normal.rat_miniKing, skills.cost] = 0; arr_skill[normal.rat_miniKing, skills.uses] = -1;
 	arr_skill[normal.rat_miniKing, skills.selfIndex] = 3;

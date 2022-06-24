@@ -66,7 +66,7 @@ function skill(value, isPlus){
 	if(!isPlus)
 	{
 		//wait the cost of the skill
-		if(global.player != enemy.phish)
+		if(global.player != enemy.phish) and (_other = obj_player)
 		{
 			var_turnWait = arr_skill[value, skills.cost];
 		};
@@ -75,9 +75,9 @@ function skill(value, isPlus){
 	else
 	{
 		//wait the cost of the skill
-		if(global.player != enemy.phish)
+		if(global.player != enemy.phish) and (_other = obj_player)
 		{
-			var_turnWait = arr_skill[value, skills.costPlus];
+			var_turnWait = arr_skill[value, skills.cost];
 		};
 		arr_skill[value, skills.funcPlus]();
 	}
@@ -101,6 +101,17 @@ function skill(value, isPlus){
 			eventStart(value); //If the conditions are given, start an event
 		};
 	ini_close();
+};
+
+function setSkillRecharge(value){
+	if(obj_player.arr_skill[st_skills[value], skills.cost] > 0)
+	{
+		st_skillRecharge[value] = 0;
+	};
+	else
+	{
+		st_skillRecharge[value] = -1;
+	};
 };
 
 function nextTurn(){

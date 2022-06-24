@@ -28,3 +28,11 @@ if(obj_player.st_skillUses[_set] = 0) //if no more skill uses, wipe the skill ou
 };
 
 alarm[2] = 3;
+
+//Is Rechargeable
+var_rechargeable = false;
+
+if(obj_player.st_skillRecharge[1] > 0)
+{
+	var_rechargeable = true;	
+};

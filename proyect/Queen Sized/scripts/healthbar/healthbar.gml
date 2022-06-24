@@ -24,10 +24,3 @@ function setHp(_hp)
 	maxHp = hp;
 	prevHp = hp;
 };
-
-function setHp_custom(_hp, _maxHp)
-{
-	hp = _hp
-	
-	maxHp = _maxHp
-};

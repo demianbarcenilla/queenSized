@@ -6,9 +6,9 @@ var _hpDoubled = obj_player.maxHp >= 200 ? true : false,
 	_finalPick = 0;
 
 if(_pick <= 3){_finalPick = 0} //Regen
-else if(_pick = 8){_finalPick = 1} //HP UP!
-else if((_pick > 3) and (_pick <= 5)){_finalPick = 2} //Defense
-else if((_pick > 5) and (_pick <= 7)){_finalPick = 3} //Damage
+else if(_pick = 8) and(!_hpDoubled){_finalPick = 1} //HP UP!
+else if((_pick > 3) and (_pick <= 5)) and (!_dmgDoubled){_finalPick = 3} //Damage
+else{_finalPick = 2} //Defense
 
 var_holding = _finalPick;
 

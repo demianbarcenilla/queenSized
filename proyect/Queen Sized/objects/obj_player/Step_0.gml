@@ -26,7 +26,7 @@ if(!instance_exists(obj_shop))
 		{
 			if(explodeTimer = 0)
 			{
-				skill(normal.explode);
+				skill(normal.explode, false);
 				nextTurn();
 			};
 			else if(frozenCountdown > 0) //If suffering the cost of a skill

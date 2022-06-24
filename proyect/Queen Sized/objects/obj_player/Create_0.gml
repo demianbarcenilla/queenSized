@@ -16,6 +16,7 @@ canPressCards = true;
 initializeEnemy(_player);
 initializeSkills(_self, _other);
 
+var i;
 //Skill Uses
 for(i=0; i < 4; i++)
 {
@@ -24,6 +25,29 @@ for(i=0; i < 4; i++)
 		st_skillUses[i] = arr_skill[st_skills[i], skills.uses];
 	};
 };
+
+var ii;
+for(ii = 0; ii < 4; ii++) //RECHARGE TIME
+{
+	//If the cost of the skill (IN TURNS) is bigger than 0, use a recharge time instead
+	//-1 is NO recharge time, 0 means fully charged
+	
+	if(st_skills[ii] != -1)
+	{
+		st_skillRecharge[ii] = -1;
+		
+		if(arr_skill[st_skills[ii], skills.cost] > 0)
+		{
+			st_skillRecharge[ii] = 0;
+		};
+	};
+	else{st_skillRecharge[ii] = -1}
+}
+
+show_debug_message("RECHARGE TIME 0: " + string(st_skillRecharge[0]));
+show_debug_message("RECHARGE TIME 1: " + string(st_skillRecharge[1]));
+show_debug_message("RECHARGE TIME 2: " + string(st_skillRecharge[2]));
+show_debug_message("RECHARGE TIME 3: " + string(st_skillRecharge[3]));
 chatValues();
 eventValues();
 

@@ -14,7 +14,7 @@ if(global.turn%2 = 1) and (global.canAct)
 		{
 			if(explodeTimer = 0)
 			{
-				skill(normal.explode);
+				skill(normal.explode, false);
 				nextTurn();
 			};
 			else
@@ -58,7 +58,7 @@ if(global.turn%2 = 1) and (global.canAct)
 							};
 							
 							//Trigger Skill
-							skill(st_skills[_ski]);
+							skill(st_skills[_ski], false);
 							st_skillUses[_ski] --;
 							
 							skillsAvailable = false;

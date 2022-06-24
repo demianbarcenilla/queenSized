@@ -12,6 +12,15 @@ if(instance_exists(obj_player))
 			
 			st_specialRecharge --;
 			st_specialRecharge = clamp(st_specialRecharge, 0, mx_specialRecharge);
+			
+			var i;
+			for(i=0; i < 4; i++)
+			{
+				if(st_skillRecharge[i] > 0)
+				{
+					st_skillRecharge[i] --;
+				};
+			};
 		};
 	};
 };

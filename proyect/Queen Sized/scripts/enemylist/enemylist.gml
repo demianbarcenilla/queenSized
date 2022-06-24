@@ -1013,7 +1013,7 @@ function playerEnemies(){
 	arr_enemy[enemy.pillow, character.skill_1] = -1;
 	arr_enemy[enemy.pillow, character.skill_2] = -1;
 	arr_enemy[enemy.pillow, character.skill_3] = -1;
-	arr_enemy[enemy.pillow, character.skill_4] = -1;
+	arr_enemy[enemy.pillow, character.skill_4] = normal.wait;
 	
 	//Rat King
 	arr_enemy[enemy.rat_king, character.name] = "Rat King";
@@ -1062,6 +1062,7 @@ function playerEnemies(){
 	arr_enemy[enemy.phish, character.skill_3] = -1;
 	arr_enemy[enemy.phish, character.skill_4] = -1;
 };
+	
 function stageEnemies(){
 	arr_stageEnemies[stage.city, 0] = enemy.rat;
 	arr_stageEnemies[stage.city, 1] = enemy.pidgeon;
@@ -1163,6 +1164,7 @@ function initializeEnemy(_enemy){
 	st_skillPlus[3] = false;
 	
 	st_special = arr_enemy[_enemy, character.special];
+	
 	tempDef = 0;
 	tempDmg = 0;
 	

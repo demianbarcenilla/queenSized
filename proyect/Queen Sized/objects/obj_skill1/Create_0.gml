@@ -25,3 +25,11 @@ if(obj_player.st_skillUses[_set] = 0) //if no more skill uses, wipe the skill ou
 	obj_player.st_skillUses[_set] = -1;
 	image_index = 0;
 };
+
+//Is Rechargeable
+var_rechargeable = false;
+
+if(obj_player.st_skillRecharge[0] != -1)
+{
+	var_rechargeable = true;	
+};
