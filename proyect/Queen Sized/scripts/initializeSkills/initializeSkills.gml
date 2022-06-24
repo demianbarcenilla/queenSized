@@ -166,7 +166,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.bite, skills.text] = string(var_name) + " BITES HARD!";
 	arr_skill[normal.bite, skills.shop] = 75;
 	
-	arr_skill[normal.bite, skills.recharge] = 6;
+	arr_skill[normal.bite, skills.recharge] = 8;
 	
 	arr_skill[normal.bite, skills.descPlus] = "X3 DAMAGE, EXTENDED USES!";
 	arr_skill[normal.bite, skills.funcPlus] = function(){attack(st_damage*3)};
@@ -350,7 +350,7 @@ function initializeSkills(_self, _other)
 	if(global.player = enemy.rat_king) { arr_skill[normal.steal, skills.desc] = "USE A SKILL FROM YOUR ENEMY! \n REGENS 1/4HP AS WELL"};
 	arr_skill[normal.steal, skills.anim] = ani_blank;
 	
-	arr_skill[normal.steal, skills.cost] = 0; arr_skill[normal.steal, skills.uses] = 2;	
+	arr_skill[normal.steal, skills.cost] = 0; arr_skill[normal.steal, skills.uses] = 3;	
 	arr_skill[normal.steal, skills.text] = string(var_name) + " USES A STOLEN SKILL!";
 	
 	arr_skill[normal.steal, skills.func] = function(){
@@ -500,14 +500,14 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.bitter, skills.anim] = ani_bitter;
 	
 	arr_skill[normal.bitter, skills.func] = function(){_other.arr_status[status.bitter] = true};
-	arr_skill[normal.bitter, skills.cost] = 0; arr_skill[normal.bitter, skills.uses] = 5;
+	arr_skill[normal.bitter, skills.cost] = 1; arr_skill[normal.bitter, skills.uses] = -1;
 	arr_skill[normal.bitter, skills.selfIndex] = 3;
-	arr_skill[normal.bitter, skills.otherIndex] = 1.;
+	arr_skill[normal.bitter, skills.otherIndex] = 1;
 	arr_skill[normal.bitter, skills.sound] = snd_bitter;
 	arr_skill[normal.bitter, skills.text] = string(var_name) + " MAKES THE ENEMY BITTER!";
 	arr_skill[normal.bitter, skills.shop] = 25;
 	
-	arr_skill[normal.bitter, skills.recharge] = 10;
+	arr_skill[normal.bitter, skills.recharge] = 5;
 	
 	arr_skill[normal.bitter, skills.descPlus] = "ENEMY'S REGENERATION IS HALF AS EFFECTIVE! (COSTS NO TURNS)";
 	arr_skill[normal.bitter, skills.funcPlus] = function(){_other.arr_status[status.bitter] = true; global.turn = 1};
@@ -686,7 +686,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.lick, skills.text] = string(var_name) + " LICKS THEIR ENEMY!"
 	arr_skill[normal.lick, skills.shop] = 75;
 	
-	arr_skill[normal.lick, skills.recharge] = 3;
+	arr_skill[normal.lick, skills.recharge] = 8;
 	
 	arr_skill[normal.lick, skills.descPlus] = "FILL UP WITH BLOOD!";
 	arr_skill[normal.lick, skills.funcPlus] = function(){attack(st_damage*2); regen(_self, st_damage*2)};
@@ -736,14 +736,14 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.crown, skills.anim] = ani_crown;
 	
 	arr_skill[normal.crown, skills.func] = function(){_self.arr_status[status.regeneration] = true;  regenCountdown = (_other = obj_enemy ? 10 : 3)};
-	arr_skill[normal.crown, skills.cost] = 0; arr_skill[normal.crown, skills.uses] = 3;	
+	arr_skill[normal.crown, skills.cost] = 1; arr_skill[normal.crown, skills.uses] = -1;	
 	arr_skill[normal.crown, skills.selfIndex] = 3;
 	arr_skill[normal.crown, skills.otherIndex] = 0;
 	arr_skill[normal.crown, skills.sound] = snd_heal;
 	arr_skill[normal.crown, skills.text] = string(var_name) + " CHECKS OUT THEIR CROWN!";
 	arr_skill[normal.crown, skills.shop] = 50;
 	
-	arr_skill[normal.crown, skills.recharge] = 15;
+	arr_skill[normal.crown, skills.recharge] = 8;
 	
 	arr_skill[normal.crown, skills.descPlus] = "HEALS SOME HP, REGENERATE FOR LONGER!";
 	arr_skill[normal.crown, skills.funcPlus] = function(){_self.arr_status[status.regeneration] = true;  regenCountdown = 15};
