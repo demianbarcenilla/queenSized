@@ -44,10 +44,6 @@ for(ii = 0; ii < 4; ii++) //RECHARGE TIME
 	else{st_skillRecharge[ii] = -1}
 }
 
-show_debug_message("RECHARGE TIME 0: " + string(st_skillRecharge[0]));
-show_debug_message("RECHARGE TIME 1: " + string(st_skillRecharge[1]));
-show_debug_message("RECHARGE TIME 2: " + string(st_skillRecharge[2]));
-show_debug_message("RECHARGE TIME 3: " + string(st_skillRecharge[3]));
 chatValues();
 eventValues();
 

@@ -223,7 +223,7 @@ function skillTrigger()
 			{
 				if(isRechargeable)
 				{
-					st_skillRecharge[guiSelected] = arr_skill[st_skills[guiSelected], skills.recharge] + 1; 
+					st_skillRecharge[guiSelected] = arr_skill[st_skills[guiSelected], skills.recharge] + 1;
 				};
 			
 				skillUses();
