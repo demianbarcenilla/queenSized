@@ -78,6 +78,7 @@ function initEnum(){
 		milk,
 		sneeze,
 		cigar,
+		freeze,
 		
 		rat_pocket,
 		rat_bomb,
@@ -123,7 +124,6 @@ function initEnum(){
 		soul_block,
 		lily_juice,
 		burgify,
-		freeze,
 		lifehack,
 		
 		lifeswap,

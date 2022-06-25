@@ -829,7 +829,7 @@ function enemylist(){
 	arr_enemy[enemy.ice_cube, character.defense] = 15;
 	
 	arr_enemy[enemy.ice_cube, character.skill_1] = normal.freeze;
-	arr_enemy[enemy.ice_cube, character.skill_2] = normal.punch;
+	arr_enemy[enemy.ice_cube, character.skill_2] = -1;
 	arr_enemy[enemy.ice_cube, character.skill_3] = -1;
 	arr_enemy[enemy.ice_cube, character.skill_4] = -1;
 	
@@ -1010,10 +1010,10 @@ function playerEnemies(){
 	arr_enemy[enemy.pillow, character.hp] = 100;
 	arr_enemy[enemy.pillow, character.defense] = 0;
 
-	arr_enemy[enemy.pillow, character.skill_1] = normal.napLong;
-	arr_enemy[enemy.pillow, character.skill_2] = normal.napLong;
-	arr_enemy[enemy.pillow, character.skill_3] = normal.napLong;
-	arr_enemy[enemy.pillow, character.skill_4] = normal.napLong;
+	arr_enemy[enemy.pillow, character.skill_1] = -1;
+	arr_enemy[enemy.pillow, character.skill_2] = -1;
+	arr_enemy[enemy.pillow, character.skill_3] = -1;
+	arr_enemy[enemy.pillow, character.skill_4] = normal.wait;
 	
 	//Rat King
 	arr_enemy[enemy.rat_king, character.name] = "Rat King";
@@ -1096,6 +1096,20 @@ function stageEnemies(){
 	arr_stageEnemies[stage.ratlantis, 1] = enemy.wobbly_rat;
 	arr_stageEnemies[stage.ratlantis, 2] = enemy.shivery_rat;
 	
+	arr_stageEnemies[stage.fridge, 0] = enemy.cat;
+	arr_stageEnemies[stage.fridge, 1] = enemy.skimo;
+	arr_stageEnemies[stage.fridge, 2] = enemy.ice_cube;
+	
+	arr_bossList[stage.city] = enemy.rat_king;
+	arr_bossList[stage.tunnel] = enemy.cerberus;
+	arr_bossList[stage.lemon_stand] = enemy.kid;
+	arr_bossList[stage.shortcut] = enemy.mega_bat;
+	arr_bossList[stage.incinerator] = enemy.queen;
+	arr_bossList[stage.sewer] = enemy.slug;
+	arr_bossList[stage.ruins] = enemy.wheel_cheese;
+	arr_bossList[stage.ratlantis] = enemy.rat_queen;
+	arr_bossList[stage.fridge] = enemy.eggplant;
+	
 	/*arr_stageEnemies[stage.cloud, 0] = enemy.outlet;
 	arr_stageEnemies[stage.cloud, 1] = enemy.internaut;
 	arr_stageEnemies[stage.cloud, 2] = enemy.phish;
@@ -1115,20 +1129,6 @@ function stageEnemies(){
 	arr_stageEnemies[stage.council, 0] = enemy.pillow_elder;
 	arr_stageEnemies[stage.council, 1] = enemy.pillow_baby;
 	arr_stageEnemies[stage.council, 2] = enemy.pillow_savvy;*/
-	
-	arr_stageEnemies[stage.fridge, 0] = enemy.cat;
-	arr_stageEnemies[stage.fridge, 1] = enemy.skimo;
-	arr_stageEnemies[stage.fridge, 2] = enemy.ice_cube;
-	
-	arr_bossList[stage.city] = enemy.rat_king;
-	arr_bossList[stage.tunnel] = enemy.cerberus;
-	arr_bossList[stage.lemon_stand] = enemy.kid;
-	arr_bossList[stage.shortcut] = enemy.mega_bat;
-	arr_bossList[stage.incinerator] = enemy.queen;
-	arr_bossList[stage.sewer] = enemy.slug;
-	arr_bossList[stage.ruins] = enemy.wheel_cheese;
-	arr_bossList[stage.ratlantis] = enemy.rat_queen;
-	arr_bossList[stage.fridge] = enemy.eggplant;
 	/*arr_bossList[stage.cloud] = enemy.electrolotl;
 	arr_bossList[stage.breach] = enemy.michael;*/
 };

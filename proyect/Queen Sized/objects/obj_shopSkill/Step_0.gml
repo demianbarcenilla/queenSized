@@ -228,6 +228,7 @@ if(guiSelected != -1)
 				
 					obj_player.st_skills[0] = var_holding;
 					obj_player.st_skillUses[0] = arr_skill[var_holding, skills.uses];
+					obj_player.st_skillRecharge[0]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
 					obj_shop.alarm[0] = 5;
 				
 					global.text = global.textPrev;
@@ -262,6 +263,8 @@ if(guiSelected != -1)
 				
 					obj_player.st_skills[1] = var_holding;
 					obj_player.st_skillUses[1] = arr_skill[var_holding, skills.uses];
+					obj_player.st_skillRecharge[1]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
+					
 					obj_shop.alarm[0] = 5;
 				
 					global.text = global.textPrev;
@@ -293,6 +296,7 @@ if(guiSelected != -1)
 				
 					obj_player.st_skills[2] = var_holding;
 					obj_player.st_skillUses[2] = arr_skill[var_holding, skills.uses];
+					obj_player.st_skillRecharge[2]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
 					obj_shop.alarm[0] = 5;
 				
 					global.text = global.textPrev;
@@ -327,6 +331,7 @@ if(guiSelected != -1)
 				
 					obj_player.st_skills[3] = var_holding;
 					obj_player.st_skillUses[3] = arr_skill[var_holding, skills.uses];
+					obj_player.st_skillRecharge[3]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
 					obj_shop.alarm[0] = 5;
 				
 					global.text = global.textPrev;

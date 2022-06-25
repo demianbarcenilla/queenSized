@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -11,10 +12,10 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_13b.mp3",
-  "duration": 101.093872,
+  "duration": 101.09387,
   "parent": {
-    "name": "fridge",
-    "path": "folders/Sounds/music/fridge.yy",
+    "name": "idk",
+    "path": "folders/Sounds/music/idk.yy",
   },
   "resourceVersion": "1.0",
   "name": "mus_13b",

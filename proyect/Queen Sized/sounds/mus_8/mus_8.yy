@@ -12,10 +12,10 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_8.mp3",
-  "duration": 96.05221,
+  "duration": 144.03917,
   "parent": {
-    "name": "ashtray",
-    "path": "folders/Sounds/music/ashtray.yy",
+    "name": "fridge",
+    "path": "folders/Sounds/music/fridge.yy",
   },
   "resourceVersion": "1.0",
   "name": "mus_8",

@@ -23,11 +23,11 @@ function initializeSkills(_self, _other)
 	
 	//Long Nap - Heals 120HP
 	arr_skill[normal.napLong, skills.name] = "LONG NAP";
-	arr_skill[normal.napLong, skills.desc] = "FILL YOUR HP AT THE COST OF A TURN";
+	arr_skill[normal.napLong, skills.desc] = "FILL UP YOUR HP!";
 	arr_skill[normal.napLong, skills.anim] = ani_napLong;
 	
 	arr_skill[normal.napLong, skills.func] = function(){regen(_self, maxHp)};
-	arr_skill[normal.napLong, skills.cost] = 1; arr_skill[normal.napLong, skills.uses] = 3;	
+	arr_skill[normal.napLong, skills.cost] = 1; arr_skill[normal.napLong, skills.uses] = 2;	
 	arr_skill[normal.napLong, skills.selfIndex] = 3;
 	arr_skill[normal.napLong, skills.otherIndex] = 0;
 	arr_skill[normal.napLong, skills.sound] = snd_heal;
@@ -72,7 +72,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.distract, skills.text] = string(var_name) + " DID SOMETHING DISTRACTING!"
 	arr_skill[normal.distract, skills.shop] = 25;
 	
-	arr_skill[normal.distract, skills.recharge] = 1;
+	arr_skill[normal.distract, skills.recharge] = 3;
 	
 	arr_skill[normal.distract, skills.descPlus] = "SAME AS CONFUSE, WITHOUT COSTING A TURN!";
 	arr_skill[normal.distract, skills.funcPlus] = function(){_other.tempDef -= 25};
@@ -91,7 +91,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.confuse, skills.text] = string(var_name) + " DID SOMETHING CONFUSING!"
 	arr_skill[normal.confuse, skills.shop] = 50;
 	
-	arr_skill[normal.confuse, skills.recharge] = 3;
+	arr_skill[normal.confuse, skills.recharge] = 8;
 	
 	arr_skill[normal.confuse, skills.descPlus] = "DECREASES ENEMY DEFENSE A LOT, FREEZES IT FOR 3 TURNS";
 	arr_skill[normal.confuse, skills.funcPlus] = function(){_other.tempDef -= 999; _other.frozenCountdown = 2; _other.arr_status[status.frozen] = true; global.turn = 1};
@@ -128,7 +128,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.armor, skills.text] = string(var_name) + " GOT SOME ARMOR!";
 	arr_skill[normal.armor, skills.shop] = 50;
 	
-	arr_skill[normal.armor, skills.recharge] = 3;
+	arr_skill[normal.armor, skills.recharge] = 8;
 
 	arr_skill[normal.armor, skills.descPlus] = "LOTS OF DEFENSE, HEALS 1/2HP, +TEMPORARY DAMAGE";
 	arr_skill[normal.armor, skills.funcPlus] = function(){_self.tempDef += 999; regen(_self, maxHp/2); _self.tempDmg += 5};
@@ -159,7 +159,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.bite, skills.anim] = ani_bite;
 	
 	arr_skill[normal.bite, skills.func] = function(){attack(st_damage*3)};
-	arr_skill[normal.bite, skills.cost] = 2; arr_skill[normal.bite, skills.uses] = 3;	
+	arr_skill[normal.bite, skills.cost] = 2; arr_skill[normal.bite, skills.uses] = -1;	
 	arr_skill[normal.bite, skills.selfIndex] = 2;
 	arr_skill[normal.bite, skills.otherIndex] = 1;
 	arr_skill[normal.bite, skills.sound] = snd_bite;
@@ -515,18 +515,18 @@ function initializeSkills(_self, _other)
 	
 	//LEMONADE!
 	arr_skill[normal.lemonade, skills.name] = "LEMONADE";
-	arr_skill[normal.lemonade, skills.desc] = "HEALS, NOT AFFECTED BY BITTER! ALSO RECHARGES";
+	arr_skill[normal.lemonade, skills.desc] = "REFILLS! AVOIDS BITTER";
 	arr_skill[normal.lemonade, skills.anim] = ani_lemonade;
 	
 	arr_skill[normal.lemonade, skills.func] = function(){_self.hp += maxHp/2};
-	arr_skill[normal.lemonade, skills.cost] = 1; arr_skill[normal.lemonade, skills.uses] = 3;	
+	arr_skill[normal.lemonade, skills.cost] = 1; arr_skill[normal.lemonade, skills.uses] = -1;	
 	arr_skill[normal.lemonade, skills.selfIndex] = 3;
 	arr_skill[normal.lemonade, skills.otherIndex] = 0;
 	arr_skill[normal.lemonade, skills.sound] = snd_heal;
 	arr_skill[normal.lemonade, skills.text] = string(var_name) + " DRANK SOME LEMONADE!";
 	arr_skill[normal.lemonade, skills.shop] = 25;
 	
-	arr_skill[normal.lemonade, skills.recharge] = 6;
+	arr_skill[normal.lemonade, skills.recharge] = 8;
 	
 	arr_skill[normal.lemonade, skills.descPlus] = "IF THE ENEMY'S BITTER, HEALS FULL HP AND GIVES PERMANENT DEFENSE";
 	arr_skill[normal.lemonade, skills.funcPlus] = function(){
@@ -846,7 +846,7 @@ function initializeSkills(_self, _other)
 	
 	//CAN
 	arr_skill[normal.can, skills.name] = "A CAN";
-	arr_skill[normal.can, skills.desc] = "TOSS A CAN TO THE ENEMY THAT MAKES DOUBLE YOUR DAMAGE!";
+	arr_skill[normal.can, skills.desc] = "A RUSTY CAN";
 	arr_skill[normal.can, skills.anim] = ani_can;
 	
 	arr_skill[normal.can, skills.func] = function(){attack(st_damage*2)};	
@@ -958,6 +958,19 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.sneeze, skills.descPlus] = "DAMAGE AND FREEZE!";
 	arr_skill[normal.sneeze, skills.funcPlus] = function(){attack(st_damage/2); _other.frozenCountdown = 2; _other.arr_status[status.frozen] = true};
 	arr_skill[normal.sneeze, skills.costPlus] = 0; arr_skill[normal.sneeze, skills.usesPlus] = -1;
+	
+	//Freeze
+	arr_skill[normal.freeze, skills.name] = "FREEZE";
+	arr_skill[normal.freeze, skills.desc] = "FREEZE YOUR ENEMY FOR TWO TURNS!";
+	arr_skill[normal.freeze, skills.anim] = ani_attack;
+	
+	arr_skill[normal.freeze, skills.func] = function(){_other.frozenCountdown = 2; _other.arr_status[status.frozen] = true};	
+	arr_skill[normal.freeze, skills.cost] = 0; arr_skill[normal.freeze, skills.uses] = 3;
+	arr_skill[normal.freeze, skills.selfIndex] = 3;
+	arr_skill[normal.freeze, skills.otherIndex] = 1;
+	arr_skill[normal.freeze, skills.sound] = snd_defenseDown;
+	arr_skill[normal.freeze, skills.text] = string(var_name) + " FREEZES THE ENEMY!";
+	arr_skill[normal.freeze, skills.shop] = 25;
 	
 	//rat
 	arr_skill[normal.rat_pocket, skills.name] = "pocket rat";
@@ -1789,19 +1802,6 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.burgify, skills.shop] = 50;
 	
 	arr_skill[normal.burgify, skills.recharge] = 7;
-	
-	//Freeze
-	arr_skill[normal.freeze, skills.name] = "FREEZE";
-	arr_skill[normal.freeze, skills.desc] = "FREEZE YOUR ENEMY FOR TWO TURNS!";
-	arr_skill[normal.freeze, skills.anim] = ani_attack;
-	
-	arr_skill[normal.freeze, skills.func] = function(){_other.frozenCountdown = 2; _other.arr_status[status.frozen] = true};	
-	arr_skill[normal.freeze, skills.cost] = 0; arr_skill[normal.freeze, skills.uses] = 3;
-	arr_skill[normal.freeze, skills.selfIndex] = 3;
-	arr_skill[normal.freeze, skills.otherIndex] = 1;
-	arr_skill[normal.freeze, skills.sound] = snd_defenseDown;
-	arr_skill[normal.freeze, skills.text] = string(var_name) + " FREEZES THE ENEMY!";
-	arr_skill[normal.freeze, skills.shop] = 25;
 	
 	arr_skill[normal.freeze, skills.recharge] = 7;
 	

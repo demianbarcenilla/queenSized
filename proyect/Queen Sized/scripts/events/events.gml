@@ -92,6 +92,36 @@ function eventValues()
 	arr_event[1, 2] = "RAT KING ASKS FOR THE RAT FLUTE, HE WILL TAKE YOU SOMEWHERE IN RETURN!"//Text
 	arr_event[1, 3] = "RAT KING TAKES YOU TO A DEEPER PLACE"//Text for when you accept
 	arr_event[1, 4] = "RAT KING SAYS YOU'RE MAKING A MISTAKE!"//Text for when you decline
+	
+	//Bitter Lemonade Event
+	arr_event[2, 0] = normal.wait;//Left Choice
+	arr_event[2, 1] = function(){ //Consecuences of event
+		global.battleCount = 0;
+		global.turn = 0;
+		
+		global.stage = stage.fridge;
+		
+		obj_player.hp = obj_player.maxHp;
+		
+		if(global.player = enemy.tito) or (global.player = enemy.bondiola)
+		{
+			if(obj_player.playerSelected = enemy.tito)
+			{
+				ini_open("tempBONDIOLA.ini")
+			}
+			else
+			{
+				ini_open("tempTITO.ini")
+			};
+				ini_write_real("stats", "hp", maxHp);
+				
+			ini_close();
+		};
+	
+	};
+	arr_event[2, 2] = "LEMONADE KID IS FEELING BITTER AND WANTS TO GO SOMEWHERE ELSE TO COOL OFF"//Text
+	arr_event[2, 3] = "LEMONADE KID TAKES YOU TO A COOLER PLACE!"//Text for when you accept
+	arr_event[2, 4] = "LEMONADE KID WILL CONTINUE TO BE BITTER"//Text for when you decline
 };
 
 function eventStart(_value)
@@ -126,43 +156,12 @@ function eventStart(_value)
 		global.eventType = 1;
 		nextTurn();
 	};
-	/*else if(obj_enemy.playerSelected = enemy.car) and (_value = normal.honk) //CAR EVENT
+	else if(obj_enemy.playerSelected = enemy.kid) and (_value = normal.bitter) //BITTER LEMONADE KID EVENT
 	{
 		global.event = true;
 		global.eventType = 2;
 		nextTurn();
 	};
-	
-	else if(obj_enemy.playerSelected = enemy.kid) and (_value = normal.lemonade)
-	{
-		global.event = true;
-		global.eventType = 3;
-		nextTurn();
-	};
-	else if(obj_enemy.playerSelected = enemy.kid) and (_value = normal.lemonade_plus)
-	{
-		global.event = true;
-		global.eventType = 4;
-		nextTurn();
-	};
-	else if(obj_enemy.playerSelected = enemy.kid) and (_value = normal.lemonade_bitter)
-	{
-		global.event = true;
-		global.eventType = 4;
-		nextTurn();
-	};
-	else if(obj_enemy.playerSelected = enemy.kid) and (_value = normal.lemonade_seedy)
-	{
-		global.event = true;
-		global.eventType = 4;
-		nextTurn();
-	};
-	else if(obj_enemy.playerSelected = enemy.kid) and (_value = normal.lemonade_rotten)
-	{
-		global.event = true;
-		global.eventType = 4;
-		nextTurn();
-	};*/
 };
 
 function chatValues()
