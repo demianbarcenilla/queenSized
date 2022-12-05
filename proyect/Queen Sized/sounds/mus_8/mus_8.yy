@@ -12,7 +12,7 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_8.mp3",
-  "duration": 144.03917,
+  "duration": 71.08775,
   "parent": {
     "name": "fridge",
     "path": "folders/Sounds/music/fridge.yy",

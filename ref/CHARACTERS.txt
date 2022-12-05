@@ -1,0 +1,25 @@
+CURRENT:
+pillow: basic character, simple and easy to play
+SPSK - Heal (Regens 1/2HP)
+SHSK - Reroll (for a price, reroll the pool)
+
+rat king: character focused on the usage of skills. survive every battle thru the use of them
+SPSK - Steal (Copies an enemy skill)
+SHSK - Shoplift (Steals an object from the shop)
+
+you regen hp after every battle to compensate for weakness. being able to use the same skills as your enemy + normal skills available in shops really levels the field. use all your dirty tricks to dethrone the queen!
+
+jean:
+
+PLANNED:
+tito y bondiola
+
+omar
+
+merchant
+
+cookie
+
+phish: resource management character. do i use my money to buy stuff or use skills?
+SPSK - Phish (Steals money from enemy)
+SHSK - Discount! (Everything 50% off)

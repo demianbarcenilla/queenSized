@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "ani_cigar",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 79,
   "height": 82,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4d3bbcd3-6a7f-4342-87fb-efbf30638f92","path":"sprites/ani_cigar/ani_cigar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4d3bbcd3-6a7f-4342-87fb-efbf30638f92","path":"sprites/ani_cigar/ani_cigar.yy",},"LayerId":{"name":"0016ea58-b9fc-47c2-884f-fdd193ff26b1","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_cigar","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","name":"4d3bbcd3-6a7f-4342-87fb-efbf30638f92","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9928f631-b6e8-4d35-9dee-d7d0c5150095","path":"sprites/ani_cigar/ani_cigar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9928f631-b6e8-4d35-9dee-d7d0c5150095","path":"sprites/ani_cigar/ani_cigar.yy",},"LayerId":{"name":"0016ea58-b9fc-47c2-884f-fdd193ff26b1","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_cigar","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","name":"9928f631-b6e8-4d35-9dee-d7d0c5150095","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5b71af86-ad2f-430a-8d00-434fcc2ab9ff","path":"sprites/ani_cigar/ani_cigar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5b71af86-ad2f-430a-8d00-434fcc2ab9ff","path":"sprites/ani_cigar/ani_cigar.yy",},"LayerId":{"name":"0016ea58-b9fc-47c2-884f-fdd193ff26b1","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_cigar","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","name":"5b71af86-ad2f-430a-8d00-434fcc2ab9ff","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9675ea55-0c3d-4bad-ab8d-5f0a39828d7c","path":"sprites/ani_cigar/ani_cigar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9675ea55-0c3d-4bad-ab8d-5f0a39828d7c","path":"sprites/ani_cigar/ani_cigar.yy",},"LayerId":{"name":"0016ea58-b9fc-47c2-884f-fdd193ff26b1","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_cigar","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","name":"9675ea55-0c3d-4bad-ab8d-5f0a39828d7c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d3bbcd3-6a7f-4342-87fb-efbf30638f92",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9928f631-b6e8-4d35-9dee-d7d0c5150095",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5b71af86-ad2f-430a-8d00-434fcc2ab9ff",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9675ea55-0c3d-4bad-ab8d-5f0a39828d7c",},
   ],
   "sequence": {
-    "spriteId": {"name":"ani_cigar","path":"sprites/ani_cigar/ani_cigar.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "ani_cigar",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9a87c688-0269-4a94-8f73-5672fbb737cd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4d3bbcd3-6a7f-4342-87fb-efbf30638f92","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c2bae09c-4631-454f-a535-e58f9ab9be67","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9928f631-b6e8-4d35-9dee-d7d0c5150095","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d3abddb2-f536-490c-964f-4238cd42f72e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b71af86-ad2f-430a-8d00-434fcc2ab9ff","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3b0e5e61-b46e-4302-82ee-d60e38455b4c","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9675ea55-0c3d-4bad-ab8d-5f0a39828d7c","path":"sprites/ani_cigar/ani_cigar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 41,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ani_cigar","path":"sprites/ani_cigar/ani_cigar.yy",},
-    "resourceVersion": "1.4",
-    "name": "ani_cigar",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0016ea58-b9fc-47c2-884f-fdd193ff26b1","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0016ea58-b9fc-47c2-884f-fdd193ff26b1","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Skill Animations",
     "path": "folders/Sprites/Skill Animations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ani_cigar",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,3 +1,0 @@
-RUSH+: can be used multiple times in a turn. 3 USES
-CROWN+: heals 1/4HP upon use, regen lasts longer
-RUBBISH+: if you got

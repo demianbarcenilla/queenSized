@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "ani_heal",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 78,
   "height": 81,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6d58152d-544d-40d2-a102-9934011e8e42","path":"sprites/ani_heal/ani_heal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6d58152d-544d-40d2-a102-9934011e8e42","path":"sprites/ani_heal/ani_heal.yy",},"LayerId":{"name":"6d641ccb-3b4a-4a13-be1b-ff657522f27c","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_heal","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","name":"6d58152d-544d-40d2-a102-9934011e8e42","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"455f9a5a-2921-4235-a3c0-d92ab8568f52","path":"sprites/ani_heal/ani_heal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"455f9a5a-2921-4235-a3c0-d92ab8568f52","path":"sprites/ani_heal/ani_heal.yy",},"LayerId":{"name":"6d641ccb-3b4a-4a13-be1b-ff657522f27c","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_heal","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","name":"455f9a5a-2921-4235-a3c0-d92ab8568f52","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7fbfaba2-2d44-4beb-87fc-068b9922b943","path":"sprites/ani_heal/ani_heal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7fbfaba2-2d44-4beb-87fc-068b9922b943","path":"sprites/ani_heal/ani_heal.yy",},"LayerId":{"name":"6d641ccb-3b4a-4a13-be1b-ff657522f27c","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_heal","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","name":"7fbfaba2-2d44-4beb-87fc-068b9922b943","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f07831cd-6aa9-4200-b207-aee8c4d11928","path":"sprites/ani_heal/ani_heal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f07831cd-6aa9-4200-b207-aee8c4d11928","path":"sprites/ani_heal/ani_heal.yy",},"LayerId":{"name":"6d641ccb-3b4a-4a13-be1b-ff657522f27c","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_heal","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","name":"f07831cd-6aa9-4200-b207-aee8c4d11928","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6d58152d-544d-40d2-a102-9934011e8e42",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"455f9a5a-2921-4235-a3c0-d92ab8568f52",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7fbfaba2-2d44-4beb-87fc-068b9922b943",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f07831cd-6aa9-4200-b207-aee8c4d11928",},
   ],
   "sequence": {
-    "spriteId": {"name":"ani_heal","path":"sprites/ani_heal/ani_heal.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "ani_heal",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"949cb19d-1c10-4c15-a367-90532004f4af","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6d58152d-544d-40d2-a102-9934011e8e42","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ada5dc5f-8c4a-4ea4-87e2-68f4e544b61e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"455f9a5a-2921-4235-a3c0-d92ab8568f52","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a9b9d0e0-74f3-49cc-9702-20fda020e569","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7fbfaba2-2d44-4beb-87fc-068b9922b943","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6b07f572-7600-4dbe-bb7a-b668bd254eed","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f07831cd-6aa9-4200-b207-aee8c4d11928","path":"sprites/ani_heal/ani_heal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 40,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ani_heal","path":"sprites/ani_heal/ani_heal.yy",},
-    "resourceVersion": "1.4",
-    "name": "ani_heal",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6d641ccb-3b4a-4a13-be1b-ff657522f27c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6d641ccb-3b4a-4a13-be1b-ff657522f27c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Skill Animations",
     "path": "folders/Sprites/Skill Animations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ani_heal",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

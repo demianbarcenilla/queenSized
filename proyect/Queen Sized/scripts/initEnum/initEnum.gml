@@ -95,10 +95,10 @@ function initEnum(){
 		rat_kamikaze,
 		rat_miniKing,
 		rat_horn,
-		rat_ratify,
 		cheese_expensive,
 		cheese_liquid,
 		rat_ratuary,
+		rat_ratify,
 		
 		rat_iced,
 		rat_electro,

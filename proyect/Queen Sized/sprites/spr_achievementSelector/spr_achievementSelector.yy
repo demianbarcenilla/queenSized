@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_achievementSelector",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 40,
   "height": 40,
   "textureGroupId": {
@@ -24,15 +28,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a3190fcf-27ed-4e1c-a96d-f4e8ab4bd683","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a3190fcf-27ed-4e1c-a96d-f4e8ab4bd683","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},"LayerId":{"name":"52b89c8c-16bf-4b30-8bef-93cc28009446","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_achievementSelector","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},"resourceVersion":"1.0","name":"a3190fcf-27ed-4e1c-a96d-f4e8ab4bd683","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fd74287e-4f81-4e3e-8eec-1c72c7dfa7bf","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fd74287e-4f81-4e3e-8eec-1c72c7dfa7bf","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},"LayerId":{"name":"52b89c8c-16bf-4b30-8bef-93cc28009446","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_achievementSelector","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},"resourceVersion":"1.0","name":"fd74287e-4f81-4e3e-8eec-1c72c7dfa7bf","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a3190fcf-27ed-4e1c-a96d-f4e8ab4bd683",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fd74287e-4f81-4e3e-8eec-1c72c7dfa7bf",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_achievementSelector","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_achievementSelector",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -43,10 +45,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1496afa0-db2e-4caf-8b8b-69a9359a046f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a3190fcf-27ed-4e1c-a96d-f4e8ab4bd683","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"03af0ab9-3eab-4ef4-b1d5-cb067e7bb23e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fd74287e-4f81-4e3e-8eec-1c72c7dfa7bf","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +64,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_achievementSelector","path":"sprites/spr_achievementSelector/spr_achievementSelector.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_achievementSelector",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"52b89c8c-16bf-4b30-8bef-93cc28009446","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"52b89c8c-16bf-4b30-8bef-93cc28009446","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "others",
     "path": "folders/Sprites/UI/game/others.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_achievementSelector",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -92,8 +92,12 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 			
 			if(skillsFull < 4)
 			{
-				
-				if(!global.shoplift)
+				if(global.shoplift)
+				{
+					repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}
+					global.shoplift = false;
+				}
+				else
 				{
 					global.money -= cost;
 					
@@ -101,11 +105,6 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 					{
 						instance_create_depth(x, y, depth, obj_money);
 					};
-				}
-				else
-				{
-					with(obj_shopSkill){instance_destroy(); repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}}
-					with(obj_shopBubble){instance_destroy(); repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}}
 				}
 				
 				obj_shop.canChangeText --;

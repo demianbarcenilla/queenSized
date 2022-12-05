@@ -12,3 +12,12 @@ else
 		instance_destroy();
 	};
 };
+
+if(obj_enemy.arr_status[status.frozen])
+{
+	image_index = 1;
+}
+else
+{
+	image_index = 0;
+};

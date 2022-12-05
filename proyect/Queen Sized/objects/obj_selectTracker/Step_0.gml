@@ -28,12 +28,12 @@ else if(obj_playerSelect_ratKing.selected)
 	}
 	
 };
-/*else if(obj_playerSelect_jean.selected)
+else if(obj_playerSelect_jean.selected)
 {
 	if(obj_playerSelect_jean.unlocked)
 	{
-		global.text = "JEAN\nFREEZE THE ENEMY!"
-		sprite_index = spr_jean;
+		global.text = "JEAN\nDETHRONE THE QUEEN! FOR NO REASON!"
+		sprite_index = spr_jeanPlayable;
 	}
 	else
 	{
@@ -42,6 +42,7 @@ else if(obj_playerSelect_ratKing.selected)
 	}
 	
 };
+/*
 else if(obj_playerSelect_phish.selected)
 {
 	if(obj_playerSelect_phish.unlocked)

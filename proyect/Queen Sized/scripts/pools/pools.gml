@@ -174,11 +174,10 @@ function poolsRat(){
 	arr_poolTable[stage.ruins, 3] = normal.rat_kamikaze; //replace these with something better
 	arr_poolTable[stage.ruins, 4] = normal.rat_ratuary;
 	
-	arr_poolTable[stage.ratlantis, 0] = normal.rat_ratify;
+	arr_poolTable[stage.ratlantis, 0] = normal.rubbish;
 	arr_poolTable[stage.ratlantis, 1] = normal.rat_miniKing;
 	arr_poolTable[stage.ratlantis, 2] = normal.cheese_expensive;
 	arr_poolTable[stage.ratlantis, 3] = normal.rat_nurse;
-	arr_poolTable[stage.ratlantis, 4] = normal.rubbish;
 	
 	/*
 	arr_poolTable[stage.cloud, 0] = normal.cheese;

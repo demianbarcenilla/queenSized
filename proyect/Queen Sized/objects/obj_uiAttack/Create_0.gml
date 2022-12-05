@@ -3,3 +3,5 @@ yPlus = 160
 y = ystart +yPlus;
 alarm[2] = 3;
 selected = false;
+
+image_speed = 0;

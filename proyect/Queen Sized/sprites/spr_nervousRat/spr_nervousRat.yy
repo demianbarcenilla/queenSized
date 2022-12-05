@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_nervousRat",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 163,
   "height": 167,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c409a77b-6670-4687-8b48-e51bc2fc4336","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c409a77b-6670-4687-8b48-e51bc2fc4336","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"LayerId":{"name":"9d52c70d-1631-40b7-8b7d-c1940502a098","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_nervousRat","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","name":"c409a77b-6670-4687-8b48-e51bc2fc4336","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0719fac0-d7fc-4956-b34a-4513becba96b","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0719fac0-d7fc-4956-b34a-4513becba96b","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"LayerId":{"name":"9d52c70d-1631-40b7-8b7d-c1940502a098","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_nervousRat","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","name":"0719fac0-d7fc-4956-b34a-4513becba96b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"475eea7e-1a97-4a7a-975b-774e9c1ac0ee","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"475eea7e-1a97-4a7a-975b-774e9c1ac0ee","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"LayerId":{"name":"9d52c70d-1631-40b7-8b7d-c1940502a098","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_nervousRat","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","name":"475eea7e-1a97-4a7a-975b-774e9c1ac0ee","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"05ea1214-6dab-4405-b21f-bd950748d08b","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"05ea1214-6dab-4405-b21f-bd950748d08b","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"LayerId":{"name":"9d52c70d-1631-40b7-8b7d-c1940502a098","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_nervousRat","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","name":"05ea1214-6dab-4405-b21f-bd950748d08b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c409a77b-6670-4687-8b48-e51bc2fc4336",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0719fac0-d7fc-4956-b34a-4513becba96b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"475eea7e-1a97-4a7a-975b-774e9c1ac0ee",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"05ea1214-6dab-4405-b21f-bd950748d08b",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_nervousRat","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_nervousRat",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"4f93c869-5413-4c36-b1e1-3d9f77e6ffec","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c409a77b-6670-4687-8b48-e51bc2fc4336","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"67a08b52-f169-4bf4-a359-944b205070a2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0719fac0-d7fc-4956-b34a-4513becba96b","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"89304f13-d03c-4e31-80e7-852132830714","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"475eea7e-1a97-4a7a-975b-774e9c1ac0ee","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4a8508e4-ea3f-4a2c-ae68-05fc59096ddc","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"05ea1214-6dab-4405-b21f-bd950748d08b","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 152,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_nervousRat","path":"sprites/spr_nervousRat/spr_nervousRat.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_nervousRat",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9d52c70d-1631-40b7-8b7d-c1940502a098","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9d52c70d-1631-40b7-8b7d-c1940502a098","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "ruins",
     "path": "folders/Sprites/Characters/2nd route/ruins.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_nervousRat",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

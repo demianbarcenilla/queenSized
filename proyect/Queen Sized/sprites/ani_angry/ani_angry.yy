@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "ani_angry",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 89,
   "height": 73,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f44dc640-8af8-4979-834c-8de80b389233","path":"sprites/ani_angry/ani_angry.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f44dc640-8af8-4979-834c-8de80b389233","path":"sprites/ani_angry/ani_angry.yy",},"LayerId":{"name":"8f867ff7-ed1e-4ab8-9d99-5e91873ebb8f","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_angry","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","name":"f44dc640-8af8-4979-834c-8de80b389233","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"17a7eaed-134d-4246-8e39-85528b6e38d9","path":"sprites/ani_angry/ani_angry.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"17a7eaed-134d-4246-8e39-85528b6e38d9","path":"sprites/ani_angry/ani_angry.yy",},"LayerId":{"name":"8f867ff7-ed1e-4ab8-9d99-5e91873ebb8f","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_angry","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","name":"17a7eaed-134d-4246-8e39-85528b6e38d9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b5a30ec1-19fc-4894-aff3-769444aad25f","path":"sprites/ani_angry/ani_angry.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b5a30ec1-19fc-4894-aff3-769444aad25f","path":"sprites/ani_angry/ani_angry.yy",},"LayerId":{"name":"8f867ff7-ed1e-4ab8-9d99-5e91873ebb8f","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_angry","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","name":"b5a30ec1-19fc-4894-aff3-769444aad25f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7a9d066e-97b4-4327-914a-86a118064290","path":"sprites/ani_angry/ani_angry.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7a9d066e-97b4-4327-914a-86a118064290","path":"sprites/ani_angry/ani_angry.yy",},"LayerId":{"name":"8f867ff7-ed1e-4ab8-9d99-5e91873ebb8f","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_angry","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","name":"7a9d066e-97b4-4327-914a-86a118064290","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f44dc640-8af8-4979-834c-8de80b389233",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"17a7eaed-134d-4246-8e39-85528b6e38d9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b5a30ec1-19fc-4894-aff3-769444aad25f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7a9d066e-97b4-4327-914a-86a118064290",},
   ],
   "sequence": {
-    "spriteId": {"name":"ani_angry","path":"sprites/ani_angry/ani_angry.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "ani_angry",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b160cd01-3a09-4b16-a049-054421e8f8e4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f44dc640-8af8-4979-834c-8de80b389233","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ccd66bb2-9e98-44c3-ade9-409540284753","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"17a7eaed-134d-4246-8e39-85528b6e38d9","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"93cbe829-5684-4c24-a69a-47de4581cf51","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b5a30ec1-19fc-4894-aff3-769444aad25f","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"86207866-17ce-4e2a-9834-cc3de772a92d","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7a9d066e-97b4-4327-914a-86a118064290","path":"sprites/ani_angry/ani_angry.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 36,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ani_angry","path":"sprites/ani_angry/ani_angry.yy",},
-    "resourceVersion": "1.4",
-    "name": "ani_angry",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8f867ff7-ed1e-4ab8-9d99-5e91873ebb8f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8f867ff7-ed1e-4ab8-9d99-5e91873ebb8f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Skill Animations",
     "path": "folders/Sprites/Skill Animations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ani_angry",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -17,8 +17,8 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.nap, skills.recharge] = 5;
 	
-	arr_skill[normal.nap, skills.descPlus] = "RECOVER 1/2HP, APPLIES REGENERATION, DOESN'T WASTE ANY TURNS";
-	arr_skill[normal.nap, skills.funcPlus] = function(){regen(_self, maxHp/2); _self.arr_status[status.regeneration] = true; regenCountdown = 3; global.turn = 1};
+	arr_skill[normal.nap, skills.descPlus] = "RECOVER 1/4HP, BUT APPLIES REGENERATION";
+	arr_skill[normal.nap, skills.funcPlus] = function(){regen(_self, maxHp/4); _self.arr_status[status.regeneration] = true; regenCountdown = 3};
 	arr_skill[normal.nap, skills.costPlus] = 0; arr_skill[normal.nap, skills.usesPlus] = 3;
 	
 	//Long Nap - Heals 120HP
@@ -27,16 +27,16 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.napLong, skills.anim] = ani_napLong;
 	
 	arr_skill[normal.napLong, skills.func] = function(){regen(_self, maxHp)};
-	arr_skill[normal.napLong, skills.cost] = 1; arr_skill[normal.napLong, skills.uses] = 2;	
+	arr_skill[normal.napLong, skills.cost] = 0; arr_skill[normal.napLong, skills.uses] = 1;	
 	arr_skill[normal.napLong, skills.selfIndex] = 3;
 	arr_skill[normal.napLong, skills.otherIndex] = 0;
 	arr_skill[normal.napLong, skills.sound] = snd_heal;
 	arr_skill[normal.napLong, skills.text] = string(var_name) + " TOOK A LONG NAP!";
 	arr_skill[normal.napLong, skills.shop] = 50;
 	
-	arr_skill[normal.napLong, skills.recharge] = 2//8;
+	arr_skill[normal.napLong, skills.recharge] = 8;
 	
-	arr_skill[normal.napLong, skills.descPlus] = "REFILLS HP, +20 TEMPDEF";
+	arr_skill[normal.napLong, skills.descPlus] = "REFILLS ALL HP, +20 TEMPDEF";
 	arr_skill[normal.napLong, skills.funcPlus] = function(){_self.tempDef +=20; regen(_self, maxHp)};
 	arr_skill[normal.napLong, skills.costPlus] = 0; arr_skill[normal.napLong, skills.usesPlus] = 1;
 	
@@ -174,10 +174,10 @@ function initializeSkills(_self, _other)
 	
 	//Cheese
 	arr_skill[normal.cheese, skills.name] = "CHEESE";
-	arr_skill[normal.cheese, skills.desc] = "EAT SOME TASTY CHEESE";
+	arr_skill[normal.cheese, skills.desc] = "RATS LOVE EATING THIS!";
 	arr_skill[normal.cheese, skills.anim] = ani_cheese;
 	
-	arr_skill[normal.cheese, skills.func] = function(){regen(_self, maxHp/4)};
+	arr_skill[normal.cheese, skills.func] = function(){regen(_self, maxHp/3)};
 	arr_skill[normal.cheese, skills.cost] = 0; arr_skill[normal.cheese, skills.uses] = 2;	
 	arr_skill[normal.cheese, skills.selfIndex] = 3;
 	arr_skill[normal.cheese, skills.otherIndex] = 0;
@@ -283,9 +283,9 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.heal, skills.recharge] = 5;
 	
-	arr_skill[normal.heal, skills.descPlus] = "RECOVERS 1/2HP! INFLICTS REGENERATION AND DOESN'T USE YOUR TURN";
-	arr_skill[normal.heal, skills.funcPlus] = function(){regen(_self, maxHp/2); _self.arr_status[status.regeneration] = true; regenCountdown = 3; global.turn = 1};
-	arr_skill[normal.heal, skills.costPlus] = 0; arr_skill[normal.heal, skills.usesPlus] = 3;
+	arr_skill[normal.heal, skills.descPlus] = "RECOVER 1/4HP, BUT APPLIES REGENERATION";
+	arr_skill[normal.heal, skills.funcPlus] = function(){regen(_self, maxHp/4); _self.arr_status[status.regeneration] = true; regenCountdown = 3};
+	arr_skill[normal.heal, skills.costPlus] = 0; arr_skill[normal.nap, skills.usesPlus] = 3;
 	
 	//SHOOT
 	arr_skill[normal.shoot, skills.name] = "SHOOT";
@@ -347,14 +347,14 @@ function initializeSkills(_self, _other)
 	//STEAL
 	arr_skill[normal.steal, skills.name] = "STEAL";
 	arr_skill[normal.steal, skills.desc] = "USE A SKILL FROM YOUR ENEMY!";
-	if(global.player = enemy.rat_king) { arr_skill[normal.steal, skills.desc] = "USE A SKILL FROM YOUR ENEMY! \n REGENS 1/4HP AS WELL"};
+	//if(global.player = enemy.rat_king) { arr_skill[normal.steal, skills.desc] = "USE A SKILL FROM YOUR ENEMY! \n REGENS 1/4HP AS WELL"};
 	arr_skill[normal.steal, skills.anim] = ani_blank;
 	
 	arr_skill[normal.steal, skills.cost] = 0; arr_skill[normal.steal, skills.uses] = 3;	
 	arr_skill[normal.steal, skills.text] = string(var_name) + " USES A STOLEN SKILL!";
 	
 	arr_skill[normal.steal, skills.func] = function(){
-			if(global.player = enemy.rat_king){regen(_self, maxHp/4)};
+			//if(global.player = enemy.rat_king){regen(_self, maxHp/4)};
 			var _hasSkill = false;
 			
 			for(i=0; i < 4; i++)
@@ -515,10 +515,10 @@ function initializeSkills(_self, _other)
 	
 	//LEMONADE!
 	arr_skill[normal.lemonade, skills.name] = "LEMONADE";
-	arr_skill[normal.lemonade, skills.desc] = "REFILLS! AVOIDS BITTER";
+	arr_skill[normal.lemonade, skills.desc] = "REFILLS! ignores BITTER";
 	arr_skill[normal.lemonade, skills.anim] = ani_lemonade;
 	
-	arr_skill[normal.lemonade, skills.func] = function(){_self.hp += maxHp/2};
+	arr_skill[normal.lemonade, skills.func] = function(){_self.hp += maxHp/3};
 	arr_skill[normal.lemonade, skills.cost] = 1; arr_skill[normal.lemonade, skills.uses] = -1;	
 	arr_skill[normal.lemonade, skills.selfIndex] = 3;
 	arr_skill[normal.lemonade, skills.otherIndex] = 0;
@@ -736,7 +736,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.crown, skills.anim] = ani_crown;
 	
 	arr_skill[normal.crown, skills.func] = function(){_self.arr_status[status.regeneration] = true;  regenCountdown = (_other = obj_enemy ? 10 : 3)};
-	arr_skill[normal.crown, skills.cost] = 1; arr_skill[normal.crown, skills.uses] = -1;	
+	arr_skill[normal.crown, skills.cost] = 1; arr_skill[normal.crown, skills.uses] = 1;	
 	arr_skill[normal.crown, skills.selfIndex] = 3;
 	arr_skill[normal.crown, skills.otherIndex] = 0;
 	arr_skill[normal.crown, skills.sound] = snd_heal;
@@ -942,11 +942,11 @@ function initializeSkills(_self, _other)
 	
 	//sneeze
 	arr_skill[normal.sneeze, skills.name] = "SNEEZE";
-	arr_skill[normal.sneeze, skills.desc] = "damage with a chance to freeze!";
+	arr_skill[normal.sneeze, skills.desc] = "half your damage with a chance to freeze!";
 	arr_skill[normal.sneeze, skills.anim] = ani_sneeze;
 	
 	arr_skill[normal.sneeze, skills.func] = function(){attack(st_damage/2); var ii= choose(1, 2); if(ii = 1){_other.frozenCountdown = 1; _other.arr_status[status.frozen] = true}};
-	arr_skill[normal.sneeze, skills.cost] = 0; arr_skill[normal.sneeze, skills.uses] = 5;
+	arr_skill[normal.sneeze, skills.cost] = 0; arr_skill[normal.sneeze, skills.uses] = -1;
 	arr_skill[normal.sneeze, skills.selfIndex] = 2;
 	arr_skill[normal.sneeze, skills.otherIndex] = 1;
 	arr_skill[normal.sneeze, skills.sound] = snd_sneeze;
@@ -956,21 +956,27 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.sneeze, skills.recharge] = 3;
 	
 	arr_skill[normal.sneeze, skills.descPlus] = "DAMAGE AND FREEZE!";
-	arr_skill[normal.sneeze, skills.funcPlus] = function(){attack(st_damage/2); _other.frozenCountdown = 2; _other.arr_status[status.frozen] = true};
+	arr_skill[normal.sneeze, skills.funcPlus] = function(){attack(st_damage*1.5); var ii= choose(1, 2); if(ii = 1){_other.frozenCountdown = 1; _other.arr_status[status.frozen] = true}};
 	arr_skill[normal.sneeze, skills.costPlus] = 0; arr_skill[normal.sneeze, skills.usesPlus] = -1;
 	
 	//Freeze
 	arr_skill[normal.freeze, skills.name] = "FREEZE";
-	arr_skill[normal.freeze, skills.desc] = "FREEZE YOUR ENEMY FOR TWO TURNS!";
+	arr_skill[normal.freeze, skills.desc] = "FULL DAMAGE WITH A CHANCE TO FREEZE!";
 	arr_skill[normal.freeze, skills.anim] = ani_attack;
 	
-	arr_skill[normal.freeze, skills.func] = function(){_other.frozenCountdown = 2; _other.arr_status[status.frozen] = true};	
+	arr_skill[normal.freeze, skills.func] = function(){_other.frozenCountdown = 2; _other.arr_status[status.frozen] = true; if(_other = obj_player){_other.frozenCountdown = 2} else{_other.frozenCountdown = 3}};
 	arr_skill[normal.freeze, skills.cost] = 0; arr_skill[normal.freeze, skills.uses] = 3;
 	arr_skill[normal.freeze, skills.selfIndex] = 3;
 	arr_skill[normal.freeze, skills.otherIndex] = 1;
 	arr_skill[normal.freeze, skills.sound] = snd_defenseDown;
 	arr_skill[normal.freeze, skills.text] = string(var_name) + " FREEZES THE ENEMY!";
 	arr_skill[normal.freeze, skills.shop] = 25;
+	
+	arr_skill[normal.freeze, skills.recharge] = 5;
+	
+	arr_skill[normal.freeze, skills.descPlus] = "FREEZE! FOR LONGER!";
+	arr_skill[normal.freeze, skills.funcPlus] = function(){_other.frozenCountdown = 2; _other.arr_status[status.frozen] = true; if(_other = obj_player){_other.frozenCountdown = 4} else{_other.frozenCountdown = 5}};
+	arr_skill[normal.freeze, skills.costPlus] = 0; arr_skill[normal.sneeze, skills.usesPlus] = -1;
 	
 	//rat
 	arr_skill[normal.rat_pocket, skills.name] = "pocket rat";
@@ -1233,7 +1239,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.rat_bad, skills.anim] = ani_angry;
 	
 	arr_skill[normal.rat_bad, skills.text] = string(var_name) + " tosses a " + arr_skill[normal.rat_bad, skills.name];
-	arr_skill[normal.rat_bad, skills.func] = function(){_other.tempDmg = -_other.st_damage/2};
+	arr_skill[normal.rat_bad, skills.func] = function(){_other.tempDmg = round(-_other.st_damage/2)};
 	arr_skill[normal.rat_bad, skills.cost] = 0; arr_skill[normal.rat_bad, skills.uses] = 3;
 	arr_skill[normal.rat_bad, skills.selfIndex] = 3;
 	arr_skill[normal.rat_bad, skills.otherIndex] = 0;
@@ -1311,27 +1317,9 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.rat_horn, skills.costPlus] = 0; arr_skill[normal.rat_horn, skills.usesPlus] = -1;
 	
 	//rat
-	arr_skill[normal.rat_ratify, skills.name] = "ratify";
-	arr_skill[normal.rat_ratify, skills.desc] = "TURNS THE ENEMY INTO A LOVELY RAT";
-	arr_skill[normal.rat_ratify, skills.anim] = ani_ratify;
-	
-	arr_skill[normal.rat_ratify, skills.text] = string(var_name) + " TURNS THE ENEMY INTO A RAT!"
-	arr_skill[normal.rat_ratify, skills.func] = function(){with(_other){initializeEnemy(enemy.rat)}};
-	arr_skill[normal.rat_ratify, skills.cost] = 0; arr_skill[normal.rat_ratify, skills.uses] = 1;
-	arr_skill[normal.rat_ratify, skills.selfIndex] = 0;
-	arr_skill[normal.rat_ratify, skills.otherIndex] = 1;
-	arr_skill[normal.rat_ratify, skills.sound] = snd_steal;
-	arr_skill[normal.rat_ratify, skills.shop] = 50;
-	
-	arr_skill[normal.rat_ratify, skills.recharge] = 3;
-	
-	arr_skill[normal.rat_ratify, skills.descPlus] = "TURNS THE ENEMY INTO A LOVELY RAT";
-	arr_skill[normal.rat_ratify, skills.funcPlus] = arr_skill[normal.rat_ratify, skills.func]
-	arr_skill[normal.rat_ratify, skills.costPlus] = 0; arr_skill[normal.rat_ratify, skills.usesPlus] = 1;
-	//rat
 	arr_skill[normal.rat_ratuary, skills.name] = "ratuary";
 	arr_skill[normal.rat_ratuary, skills.desc] = "use a random rat skill!";
-	arr_skill[normal.rat_ratuary, skills.anim] = ani_ratify;
+	arr_skill[normal.rat_ratuary, skills.anim] = ani_blank;
 	
 	arr_skill[normal.rat_ratuary, skills.text] = string(var_name) + " uses the RATUARY"
 	arr_skill[normal.rat_ratuary, skills.func] = function(){
@@ -1365,7 +1353,7 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.cheese_expensive, skills.sound] = snd_grilledCheese;
 	arr_skill[normal.cheese_expensive, skills.shop] = 25;
 	
-	arr_skill[normal.cheese_expensive, skills.recharge] = 3;
+	arr_skill[normal.cheese_expensive, skills.recharge] = 0;
 	
 	arr_skill[normal.cheese_expensive, skills.descPlus] = "HEALS ALL HP! COSTS NO TURNS";
 	arr_skill[normal.cheese_expensive, skills.funcPlus] = function(){regen(_self, maxHp); global.turn = 1};
@@ -1390,6 +1378,25 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.cheese_liquid, skills.funcPlus] = function(){regen(_self, maxHp *.70); var ii = choose(1, 2, 3, 4); if(ii = 1){_self.arr_status[status.tipsy] = true}};
 	arr_skill[normal.cheese_liquid, skills.costPlus] = 0; arr_skill[normal.cheese_liquid, skills.usesPlus] = 1;
 	/*
+	//rat
+	arr_skill[normal.rat_ratify, skills.name] = "ratify";
+	arr_skill[normal.rat_ratify, skills.desc] = "TURNS THE ENEMY INTO A LOVELY RAT";
+	arr_skill[normal.rat_ratify, skills.anim] = ani_ratify;
+	
+	arr_skill[normal.rat_ratify, skills.text] = string(var_name) + " TURNS THE ENEMY INTO A RAT!"
+	arr_skill[normal.rat_ratify, skills.func] = function(){if(!global.bossFight){with(_other){initializeEnemy(enemy.rat)}}};
+	arr_skill[normal.rat_ratify, skills.cost] = 0; arr_skill[normal.rat_ratify, skills.uses] = 1;
+	arr_skill[normal.rat_ratify, skills.selfIndex] = 0;
+	arr_skill[normal.rat_ratify, skills.otherIndex] = 1;
+	arr_skill[normal.rat_ratify, skills.sound] = snd_steal;
+	arr_skill[normal.rat_ratify, skills.shop] = 50;
+	
+	arr_skill[normal.rat_ratify, skills.recharge] = 3;
+	
+	arr_skill[normal.rat_ratify, skills.descPlus] = "TURNS THE ENEMY INTO A LOVELY RAT";
+	arr_skill[normal.rat_ratify, skills.funcPlus] = arr_skill[normal.rat_ratify, skills.func]
+	arr_skill[normal.rat_ratify, skills.costPlus] = 0; arr_skill[normal.rat_ratify, skills.usesPlus] = 1;
+	
 	//rat
 	arr_skill[normal.rat_electro, skills.name] = "electric rat";
 	arr_skill[normal.rat_electro, skills.desc] = "damages and electrocutes the enemy!";

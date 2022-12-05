@@ -7,7 +7,7 @@ shift = 0;
 image_speed = 0;
 
 ini_open("unlocks.ini");
-	unlocked = ini_read_real("unlocks", "7", false);
+	unlocked = ini_read_real("unlocks", "11", false);
 	if(unlocked)
 	{
 		image_index = 6;

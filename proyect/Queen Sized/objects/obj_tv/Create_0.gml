@@ -5,11 +5,15 @@ text = "Enhances your Special Skill... At a COST!"
 switch(global.player)
 {
 	case enemy.pillow: 
-		text = "HEAL+! AT THE COST OF YOUR DEFENSE"
+		text = "HEAL+! ( HEALS LESS HP BUT APPLIES REGEN )"
 	break;
 	
 	case enemy.rat_king:
-		text = "STEAL+! AT THE COST OF YOUR DAMAGE"
+		text = "STEAL+! ( STEALS AN ENHANCED ENEMY SKILL )"
+	break;
+	
+	case enemy.eggplant:
+		text = "SNEEZE+! ( DEALS FULL DAMAGE INSTEAD OF ONLY HALF )"
 	break;
 	
 	default:

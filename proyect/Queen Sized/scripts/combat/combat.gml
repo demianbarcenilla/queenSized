@@ -1,11 +1,28 @@
 function attack(_value){
+	
+	var _strike = 0, _mult = 0.2;
+	//Freeze if Player is Jean
+	if(_other = obj_player) and (obj_player.playerSelected = enemy.eggplant)
+	{
+		var _rng = irandom_range(0, 1)
+		if(_rng = 1)
+		{
+			frozenCountdown = 1; 
+			arr_status[status.frozen] = true; 
+		};
+	}
+	if(_other = obj_enemy) and (obj_player.playerSelected = enemy.eggplant) and (obj_enemy.arr_status[status.frozen] = true)
+	{
+		_strike = 1;
+	};
+	
 	//If you're spooked
 	if(arr_status[status.spooked])
 	{
 		var ii = choose(1, 2, 3, 4) //Roll
 		if(ii != 1) //If rolled 1, attack
 		{
-			_other.hp -= dmgCalc(_other, _self, _value);
+			_other.hp -= dmgCalc(_other, _self, _value +(_value* _mult *_strike));
 				
 			if(arr_status[status.connected]) //If you're connected to the enemy, recieve the same damage they do
 			{
@@ -33,7 +50,7 @@ function attack(_value){
 	};
 	else
 	{
-		_other.hp -= dmgCalc(_other, _self, _value);
+		_other.hp -= dmgCalc(_other, _self, _value +(_value* _mult *_strike));
 			
 		if(_other.arr_status[status.disengaged]) or ((obj_control.var_calledNope = _other) and (instance_exists(obj_nope)))
 		{
@@ -57,7 +74,7 @@ function attack(_value){
 	};
 	if(arr_status[status.connected]) //If you're connected to the enemy, recieve dmg
 	{
-		hp -= dmgCalc(_other,_self, _value);
+		hp -= dmgCalc(_other,_self, _value +(_value* _mult *_strike));
 	};
 };
 
@@ -201,9 +218,9 @@ function guard()
 	image_index = 3;
 	
 	createAnim(ani_guard);
-	if(playerSelected = enemy.eggplant) and (_other.arr_status[status.frozen])
+	if(_other.arr_status[status.frozen])
 	{
-		hp += maxHp/6;
+		hp += maxHp/4;
 	};
 };
 

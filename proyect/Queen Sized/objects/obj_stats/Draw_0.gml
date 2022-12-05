@@ -76,7 +76,7 @@ if(place_meeting(x, y, obj_mouse))
 			//Text
 			if(target.arr_status[status.rotten])
 			{
-				_tempString = "NO DEFENSE";	
+				_tempString = string(min(target.st_defense + target.tempDef, 0));
 				draw_text(x +_xdisplace, 120 +5+_ydisplace*2, _tempString);
 			};
 			

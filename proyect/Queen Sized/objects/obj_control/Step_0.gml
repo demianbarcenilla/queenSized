@@ -1,7 +1,9 @@
 //Screenshake
 var _add = "";
+
 if(shaking)
 {
+
 	shakeTime--;
 	var xx = choose(-shakeAmmount, shakeAmmount);
 	var yy = choose(-shakeAmmount, shakeAmmount);
@@ -95,7 +97,7 @@ if(!audio_is_playing(music)){
 	};
 };
 
-switch(global.mischaelMode)
+switch(global.michaelMode)
 {
 	case 0: //sine wave
 		window_set_fullscreen(false);

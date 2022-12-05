@@ -21,7 +21,15 @@ function execute_ui()
 	
 			case 0: //Attack
 				//text
-				global.text = "Damage the opponent!"
+				if(obj_player.playerSelected = enemy.eggplant) and (obj_enemy.arr_status[status.frozen] = true)
+				{
+					global.text = "A Stronger basic attack!"
+				}
+				else
+				{
+					global.text = "Damage the opponent!"
+				}
+				
 				
 				//function
 				if(mouse_check_button_pressed(mb_left)) and (canPressCards)
@@ -44,7 +52,14 @@ function execute_ui()
 			break;
 	
 			case 2: //Guard
-				global.text = "Halve damage for this turn! chance to evade attacks"
+				if(obj_enemy.arr_status[status.frozen])
+				{
+					global.text = "Heal some HP and Guard! (Only appears when enemy is Frozen)"
+				}
+				else
+				{
+					global.text = "Halve damage for this turn! chance to evade attacks"
+				};
 				
 				if(mouse_check_button_pressed(mb_left)) and (canPressCards)
 				{
@@ -407,8 +422,16 @@ function skillUses()
 function unlocks()
 {
 	ini_open("unlocks.ini")
-		ini_write_real("other", "timesFinished", global.timesFinished);
-						
+		//Add new victory to global total
+		ini_write_real("timesFinished", "total", global.timesFinished);
+		
+		//Add new victory to character specific total
+		ini_write_real(
+			"timesFinished", 
+			string(obj_player.playerSelected) + "-" + string(global.queenType), 
+			ini_read_real("timesFinished", string(obj_player.playerSelected) + "-" + string(global.queenType), 0) + 1
+		);
+		
 		//Stores the unlocks to compare them to the NEW unlocks after updating them
 		var _arrUnlocked;
 		for(i = 1; i <= 100; i++)
@@ -496,7 +519,8 @@ function hasPlus()
 {
 	ini_open("unlocks.ini")
 	if((global.player = enemy.pillow) and (ini_read_real("unlocks", "3", false))) or
-	((global.player = enemy.rat_king) and (ini_read_real("unlocks", "8", false)))
+	((global.player = enemy.rat_king) and (ini_read_real("unlocks", "8", false))) or
+	((global.player = enemy.eggplant) and (ini_read_real("unlocks", "13", false)))
 	{
 		return true;
 	}

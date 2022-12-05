@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "ani_lemonade",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 68,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"487cab8a-1e3d-4024-bdcf-2bebe6212f32","path":"sprites/ani_lemonade/ani_lemonade.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"487cab8a-1e3d-4024-bdcf-2bebe6212f32","path":"sprites/ani_lemonade/ani_lemonade.yy",},"LayerId":{"name":"c9298e91-fd9c-4512-bebb-6e3d65984f9e","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_lemonade","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","name":"487cab8a-1e3d-4024-bdcf-2bebe6212f32","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8e269cef-3103-42ca-92a1-dbcf30cd5ad1","path":"sprites/ani_lemonade/ani_lemonade.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8e269cef-3103-42ca-92a1-dbcf30cd5ad1","path":"sprites/ani_lemonade/ani_lemonade.yy",},"LayerId":{"name":"c9298e91-fd9c-4512-bebb-6e3d65984f9e","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_lemonade","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","name":"8e269cef-3103-42ca-92a1-dbcf30cd5ad1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"61ae69af-5a14-49c5-828c-67b3dd58be48","path":"sprites/ani_lemonade/ani_lemonade.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"61ae69af-5a14-49c5-828c-67b3dd58be48","path":"sprites/ani_lemonade/ani_lemonade.yy",},"LayerId":{"name":"c9298e91-fd9c-4512-bebb-6e3d65984f9e","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_lemonade","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","name":"61ae69af-5a14-49c5-828c-67b3dd58be48","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"86bfc7fb-63fd-4490-9c77-353d824551da","path":"sprites/ani_lemonade/ani_lemonade.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"86bfc7fb-63fd-4490-9c77-353d824551da","path":"sprites/ani_lemonade/ani_lemonade.yy",},"LayerId":{"name":"c9298e91-fd9c-4512-bebb-6e3d65984f9e","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_lemonade","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","name":"86bfc7fb-63fd-4490-9c77-353d824551da","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"487cab8a-1e3d-4024-bdcf-2bebe6212f32",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8e269cef-3103-42ca-92a1-dbcf30cd5ad1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"61ae69af-5a14-49c5-828c-67b3dd58be48",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"86bfc7fb-63fd-4490-9c77-353d824551da",},
   ],
   "sequence": {
-    "spriteId": {"name":"ani_lemonade","path":"sprites/ani_lemonade/ani_lemonade.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "ani_lemonade",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"178f6d20-b9e6-4509-91fa-27d7900f210f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"487cab8a-1e3d-4024-bdcf-2bebe6212f32","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2d31fa4f-2b32-40b8-83b4-e727882eb24a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8e269cef-3103-42ca-92a1-dbcf30cd5ad1","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e0f818b0-9a0e-4926-a2c0-9ec7145eee91","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"61ae69af-5a14-49c5-828c-67b3dd58be48","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e608430b-db0a-4da0-aeed-11599b48b3a9","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"86bfc7fb-63fd-4490-9c77-353d824551da","path":"sprites/ani_lemonade/ani_lemonade.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 34,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ani_lemonade","path":"sprites/ani_lemonade/ani_lemonade.yy",},
-    "resourceVersion": "1.4",
-    "name": "ani_lemonade",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c9298e91-fd9c-4512-bebb-6e3d65984f9e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c9298e91-fd9c-4512-bebb-6e3d65984f9e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Skill Animations",
     "path": "folders/Sprites/Skill Animations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ani_lemonade",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -139,3 +139,8 @@ if(alarm[0] = -1) //Status FX
 		};
 	};
 };
+
+if(instance_exists(obj_enemy))
+{
+	tempDef = clamp(tempDef, -obj_player.st_damage*2, obj_player.st_damage*2)
+};

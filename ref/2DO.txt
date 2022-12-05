@@ -3,7 +3,7 @@ IF U GET THERE
 
 UPDATE 2:
 -work on THE FRIDGE
--playable characters: JEAN, COOKIE
+-playable characters: JEAN
 
 -solve issues: skills that waste turns are useless, let me see what the enemy'll do next to strategize around it!
 
@@ -15,5 +15,10 @@ UPDATE 3:
 
 UPDATE 4:
 -playable characters: TITO/BONDIOLA, OMAR
+
+-solve issues: ???
+
+UPDATE 5:
+-playable characters: COOKIE
 
 -solve issues: ???

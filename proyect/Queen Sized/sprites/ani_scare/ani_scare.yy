@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "ani_scare",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 73,
   "height": 86,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"af6d6643-e794-4ea7-8735-7a1b811a2e97","path":"sprites/ani_scare/ani_scare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"af6d6643-e794-4ea7-8735-7a1b811a2e97","path":"sprites/ani_scare/ani_scare.yy",},"LayerId":{"name":"ffd259bc-b077-430a-973f-0fef22519d09","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_scare","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","name":"af6d6643-e794-4ea7-8735-7a1b811a2e97","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7d5a734a-1949-436b-ab4b-4ff9073f8293","path":"sprites/ani_scare/ani_scare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7d5a734a-1949-436b-ab4b-4ff9073f8293","path":"sprites/ani_scare/ani_scare.yy",},"LayerId":{"name":"ffd259bc-b077-430a-973f-0fef22519d09","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_scare","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","name":"7d5a734a-1949-436b-ab4b-4ff9073f8293","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1c999dfe-a3f5-425b-bb24-6ca9e1be5009","path":"sprites/ani_scare/ani_scare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1c999dfe-a3f5-425b-bb24-6ca9e1be5009","path":"sprites/ani_scare/ani_scare.yy",},"LayerId":{"name":"ffd259bc-b077-430a-973f-0fef22519d09","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_scare","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","name":"1c999dfe-a3f5-425b-bb24-6ca9e1be5009","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"87e70836-7281-4033-931c-0fe6dd6572cc","path":"sprites/ani_scare/ani_scare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"87e70836-7281-4033-931c-0fe6dd6572cc","path":"sprites/ani_scare/ani_scare.yy",},"LayerId":{"name":"ffd259bc-b077-430a-973f-0fef22519d09","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_scare","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","name":"87e70836-7281-4033-931c-0fe6dd6572cc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"af6d6643-e794-4ea7-8735-7a1b811a2e97",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d5a734a-1949-436b-ab4b-4ff9073f8293",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1c999dfe-a3f5-425b-bb24-6ca9e1be5009",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"87e70836-7281-4033-931c-0fe6dd6572cc",},
   ],
   "sequence": {
-    "spriteId": {"name":"ani_scare","path":"sprites/ani_scare/ani_scare.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "ani_scare",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"36f65d20-425e-46c1-93ac-6be62758ba72","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"af6d6643-e794-4ea7-8735-7a1b811a2e97","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"09b711f9-0b3f-4b61-88a6-c7fba6e87a3e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7d5a734a-1949-436b-ab4b-4ff9073f8293","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"36975507-3bef-42d5-bd14-2cc46279e61a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1c999dfe-a3f5-425b-bb24-6ca9e1be5009","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c342078f-02d7-450d-9b9c-a13237e7f19c","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"87e70836-7281-4033-931c-0fe6dd6572cc","path":"sprites/ani_scare/ani_scare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 43,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ani_scare","path":"sprites/ani_scare/ani_scare.yy",},
-    "resourceVersion": "1.4",
-    "name": "ani_scare",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ffd259bc-b077-430a-973f-0fef22519d09","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ffd259bc-b077-430a-973f-0fef22519d09","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Skill Animations",
     "path": "folders/Sprites/Skill Animations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ani_scare",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

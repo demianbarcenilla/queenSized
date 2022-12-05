@@ -20,16 +20,6 @@ if(place_meeting(x, y, obj_mouse))
 			image_index = 1;
 			obj_player.var_specialPlus = true;	
 			
-			switch(global.player)
-			{
-				case enemy.pillow:
-					obj_player.st_defense = -10;
-				break;
-				
-				case enemy.rat:
-					obj_player.st_damage = 15;
-				break;
-			}
 			repeat(20)
 			{
 				instance_create_depth(x, y, depth-100, obj_glass);

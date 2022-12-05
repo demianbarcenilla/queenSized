@@ -33,7 +33,7 @@ global.event = false;
 global.eventType = 0;
 
 ini_open("unlocks.ini")
-	global.timesFinished = ini_read_real("other", "timesFinished", 0);
+	global.timesFinished = ini_read_real("timesFinished", "total", 0);
 ini_close()
 
 global.newUnlocks = false;

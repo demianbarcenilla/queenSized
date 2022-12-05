@@ -22,9 +22,9 @@ RK UNLOCKS
 
 JEAN UNLOCKS
 
-12- Permafrost! (Paralizes enemies till you hit em) [Beat The Queen]
-13- FREEZE+ [Beat The Queen (Flaming)]
-14- PH [Beat The Queen [ROUTE3]]
+12- PH [Beat The Queen]
+13- SNEEZE+ [Beat The Queen (Flaming)]
+14- Permafrost! (Paralizes enemies till you hit em) [Beat The Queen]
 15- PH [Beat The Queen (Final Form)]
 
 PHASES OF QUEEN:

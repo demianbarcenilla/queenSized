@@ -45,8 +45,8 @@ if(place_meeting(x, y, obj_mouse))
 			
 			if(global.shoplift)
 			{
-				with(obj_shopSkill){instance_destroy(); repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}}
-				with(obj_shopBubble){instance_destroy(); repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}}
+				repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}
+				global.shoplift = false;
 			}
 			else
 			{
@@ -56,7 +56,6 @@ if(place_meeting(x, y, obj_mouse))
 				{
 					instance_create_depth(x, y, depth, obj_money);
 				};
-				
 			}
 			
 			audio_play_sound(var_soundPlay, 0, false);

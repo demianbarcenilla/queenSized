@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "ani_pocket",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 77,
   "height": 52,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5677a91b-a645-4fb7-8a7c-8baa780063b0","path":"sprites/ani_pocket/ani_pocket.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5677a91b-a645-4fb7-8a7c-8baa780063b0","path":"sprites/ani_pocket/ani_pocket.yy",},"LayerId":{"name":"e406be43-fa73-4165-913b-28c6ece1103f","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_pocket","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","name":"5677a91b-a645-4fb7-8a7c-8baa780063b0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"96e890fb-315e-4792-bd27-76060e745efc","path":"sprites/ani_pocket/ani_pocket.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"96e890fb-315e-4792-bd27-76060e745efc","path":"sprites/ani_pocket/ani_pocket.yy",},"LayerId":{"name":"e406be43-fa73-4165-913b-28c6ece1103f","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_pocket","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","name":"96e890fb-315e-4792-bd27-76060e745efc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5f39258e-afb5-457d-b217-3ea68c2a818a","path":"sprites/ani_pocket/ani_pocket.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5f39258e-afb5-457d-b217-3ea68c2a818a","path":"sprites/ani_pocket/ani_pocket.yy",},"LayerId":{"name":"e406be43-fa73-4165-913b-28c6ece1103f","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_pocket","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","name":"5f39258e-afb5-457d-b217-3ea68c2a818a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"331ef254-4472-4092-97a4-10029beb865f","path":"sprites/ani_pocket/ani_pocket.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"331ef254-4472-4092-97a4-10029beb865f","path":"sprites/ani_pocket/ani_pocket.yy",},"LayerId":{"name":"e406be43-fa73-4165-913b-28c6ece1103f","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_pocket","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","name":"331ef254-4472-4092-97a4-10029beb865f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5677a91b-a645-4fb7-8a7c-8baa780063b0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"96e890fb-315e-4792-bd27-76060e745efc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5f39258e-afb5-457d-b217-3ea68c2a818a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"331ef254-4472-4092-97a4-10029beb865f",},
   ],
   "sequence": {
-    "spriteId": {"name":"ani_pocket","path":"sprites/ani_pocket/ani_pocket.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "ani_pocket",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"da477d13-f257-401c-81df-96d20ce47091","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5677a91b-a645-4fb7-8a7c-8baa780063b0","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c62aac65-96e1-43cf-99f9-40a9c1599aef","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"96e890fb-315e-4792-bd27-76060e745efc","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"fc662c68-b159-4135-99ca-3b629d13f4ea","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5f39258e-afb5-457d-b217-3ea68c2a818a","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6b2e80be-4ba2-417d-87bc-b16531eef8be","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"331ef254-4472-4092-97a4-10029beb865f","path":"sprites/ani_pocket/ani_pocket.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 26,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ani_pocket","path":"sprites/ani_pocket/ani_pocket.yy",},
-    "resourceVersion": "1.4",
-    "name": "ani_pocket",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e406be43-fa73-4165-913b-28c6ece1103f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e406be43-fa73-4165-913b-28c6ece1103f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Skill Animations",
     "path": "folders/Sprites/Skill Animations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ani_pocket",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "ani_kamikaze",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 69,
   "height": 63,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9689f516-4a5a-439c-b005-cfb2c6a325e8","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9689f516-4a5a-439c-b005-cfb2c6a325e8","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"LayerId":{"name":"932b12bf-7f4a-489a-a949-c63d3e54a250","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_kamikaze","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","name":"9689f516-4a5a-439c-b005-cfb2c6a325e8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"32f0a7bb-385b-439b-aa89-782f4bcc3a32","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"32f0a7bb-385b-439b-aa89-782f4bcc3a32","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"LayerId":{"name":"932b12bf-7f4a-489a-a949-c63d3e54a250","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_kamikaze","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","name":"32f0a7bb-385b-439b-aa89-782f4bcc3a32","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"73552291-20d6-4fa9-b930-47e63475c0c0","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"73552291-20d6-4fa9-b930-47e63475c0c0","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"LayerId":{"name":"932b12bf-7f4a-489a-a949-c63d3e54a250","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_kamikaze","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","name":"73552291-20d6-4fa9-b930-47e63475c0c0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"febfa37d-da6c-45eb-96d9-13a4f64a27c8","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"febfa37d-da6c-45eb-96d9-13a4f64a27c8","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"LayerId":{"name":"932b12bf-7f4a-489a-a949-c63d3e54a250","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_kamikaze","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","name":"febfa37d-da6c-45eb-96d9-13a4f64a27c8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9689f516-4a5a-439c-b005-cfb2c6a325e8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"32f0a7bb-385b-439b-aa89-782f4bcc3a32",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"73552291-20d6-4fa9-b930-47e63475c0c0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"febfa37d-da6c-45eb-96d9-13a4f64a27c8",},
   ],
   "sequence": {
-    "spriteId": {"name":"ani_kamikaze","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "ani_kamikaze",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"f535122c-94a3-459e-bd64-c4e8b18ae3be","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9689f516-4a5a-439c-b005-cfb2c6a325e8","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f276c862-7b0f-48cc-b146-84627f9d092e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"32f0a7bb-385b-439b-aa89-782f4bcc3a32","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4040ce2f-dc67-4122-9406-f8adc95218ff","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"73552291-20d6-4fa9-b930-47e63475c0c0","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"eed85739-0ac1-498f-b8fb-454e8dbaf3e2","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"febfa37d-da6c-45eb-96d9-13a4f64a27c8","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 31,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ani_kamikaze","path":"sprites/ani_kamikaze/ani_kamikaze.yy",},
-    "resourceVersion": "1.4",
-    "name": "ani_kamikaze",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"932b12bf-7f4a-489a-a949-c63d3e54a250","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"932b12bf-7f4a-489a-a949-c63d3e54a250","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Skill Animations",
     "path": "folders/Sprites/Skill Animations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ani_kamikaze",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "ani_smile",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 85,
   "height": 88,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d9336271-c361-4dab-9415-553ed9b6d780","path":"sprites/ani_smile/ani_smile.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d9336271-c361-4dab-9415-553ed9b6d780","path":"sprites/ani_smile/ani_smile.yy",},"LayerId":{"name":"c9442f15-37f1-4d95-a501-aa20f4369511","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_smile","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","name":"d9336271-c361-4dab-9415-553ed9b6d780","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"47e0cefa-2d1d-4757-a59c-c8838dae09cb","path":"sprites/ani_smile/ani_smile.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"47e0cefa-2d1d-4757-a59c-c8838dae09cb","path":"sprites/ani_smile/ani_smile.yy",},"LayerId":{"name":"c9442f15-37f1-4d95-a501-aa20f4369511","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_smile","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","name":"47e0cefa-2d1d-4757-a59c-c8838dae09cb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2d5fa211-1975-4562-a9fd-4279b935d83a","path":"sprites/ani_smile/ani_smile.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2d5fa211-1975-4562-a9fd-4279b935d83a","path":"sprites/ani_smile/ani_smile.yy",},"LayerId":{"name":"c9442f15-37f1-4d95-a501-aa20f4369511","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_smile","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","name":"2d5fa211-1975-4562-a9fd-4279b935d83a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ee2f60ef-43ac-4d46-a601-3840156a5dfd","path":"sprites/ani_smile/ani_smile.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ee2f60ef-43ac-4d46-a601-3840156a5dfd","path":"sprites/ani_smile/ani_smile.yy",},"LayerId":{"name":"c9442f15-37f1-4d95-a501-aa20f4369511","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_smile","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","name":"ee2f60ef-43ac-4d46-a601-3840156a5dfd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d9336271-c361-4dab-9415-553ed9b6d780",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"47e0cefa-2d1d-4757-a59c-c8838dae09cb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2d5fa211-1975-4562-a9fd-4279b935d83a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ee2f60ef-43ac-4d46-a601-3840156a5dfd",},
   ],
   "sequence": {
-    "spriteId": {"name":"ani_smile","path":"sprites/ani_smile/ani_smile.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "ani_smile",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"2d3507bd-ced4-4dd6-a613-d1f7cfc92eae","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d9336271-c361-4dab-9415-553ed9b6d780","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8c7b84eb-2be4-41c2-916f-45453772e5dd","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"47e0cefa-2d1d-4757-a59c-c8838dae09cb","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ed71355a-0e3d-4679-9dd5-9d26b767b6ae","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2d5fa211-1975-4562-a9fd-4279b935d83a","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"95626c35-7c98-47a2-b1e3-fae98c76d9a8","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ee2f60ef-43ac-4d46-a601-3840156a5dfd","path":"sprites/ani_smile/ani_smile.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 44,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ani_smile","path":"sprites/ani_smile/ani_smile.yy",},
-    "resourceVersion": "1.4",
-    "name": "ani_smile",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c9442f15-37f1-4d95-a501-aa20f4369511","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c9442f15-37f1-4d95-a501-aa20f4369511","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Skill Animations",
     "path": "folders/Sprites/Skill Animations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ani_smile",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

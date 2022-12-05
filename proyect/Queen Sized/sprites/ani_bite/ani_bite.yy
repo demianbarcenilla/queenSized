@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "ani_bite",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 72,
   "height": 85,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"50fbb29c-ecc0-4aa8-a5e0-c66f49b0e751","path":"sprites/ani_bite/ani_bite.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"50fbb29c-ecc0-4aa8-a5e0-c66f49b0e751","path":"sprites/ani_bite/ani_bite.yy",},"LayerId":{"name":"12d56956-49c2-4dd4-9dc1-0afbb8c59bec","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_bite","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","name":"50fbb29c-ecc0-4aa8-a5e0-c66f49b0e751","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e20a5133-46f5-4b88-ac42-2037db20fda6","path":"sprites/ani_bite/ani_bite.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e20a5133-46f5-4b88-ac42-2037db20fda6","path":"sprites/ani_bite/ani_bite.yy",},"LayerId":{"name":"12d56956-49c2-4dd4-9dc1-0afbb8c59bec","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_bite","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","name":"e20a5133-46f5-4b88-ac42-2037db20fda6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f316ce63-99cf-4965-8aee-a5fe116dc265","path":"sprites/ani_bite/ani_bite.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f316ce63-99cf-4965-8aee-a5fe116dc265","path":"sprites/ani_bite/ani_bite.yy",},"LayerId":{"name":"12d56956-49c2-4dd4-9dc1-0afbb8c59bec","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_bite","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","name":"f316ce63-99cf-4965-8aee-a5fe116dc265","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d3d9d54b-e534-4cee-83cf-8a273dc81e10","path":"sprites/ani_bite/ani_bite.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d3d9d54b-e534-4cee-83cf-8a273dc81e10","path":"sprites/ani_bite/ani_bite.yy",},"LayerId":{"name":"12d56956-49c2-4dd4-9dc1-0afbb8c59bec","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_bite","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","name":"d3d9d54b-e534-4cee-83cf-8a273dc81e10","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"50fbb29c-ecc0-4aa8-a5e0-c66f49b0e751",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e20a5133-46f5-4b88-ac42-2037db20fda6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f316ce63-99cf-4965-8aee-a5fe116dc265",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d3d9d54b-e534-4cee-83cf-8a273dc81e10",},
   ],
   "sequence": {
-    "spriteId": {"name":"ani_bite","path":"sprites/ani_bite/ani_bite.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "ani_bite",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"83dc9ad8-5e13-4f06-a9de-dc564c642465","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"50fbb29c-ecc0-4aa8-a5e0-c66f49b0e751","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"522b2856-9088-4f77-843b-d58c4e1025db","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e20a5133-46f5-4b88-ac42-2037db20fda6","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a3c7bbd5-5422-4d3c-803c-aef0d73e8542","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f316ce63-99cf-4965-8aee-a5fe116dc265","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0831c426-beb7-4543-82ae-6dd295509a36","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d3d9d54b-e534-4cee-83cf-8a273dc81e10","path":"sprites/ani_bite/ani_bite.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 42,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ani_bite","path":"sprites/ani_bite/ani_bite.yy",},
-    "resourceVersion": "1.4",
-    "name": "ani_bite",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"12d56956-49c2-4dd4-9dc1-0afbb8c59bec","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"12d56956-49c2-4dd4-9dc1-0afbb8c59bec","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Skill Animations",
     "path": "folders/Sprites/Skill Animations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ani_bite",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

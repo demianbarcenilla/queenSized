@@ -1,0 +1,21 @@
+v3 - Snowy Build!
+Added The Fridge (Including Freeze, Freezy Rat, Skimo, Ice Cube, Cat) *
+Changed some numbers! *
+Skills that used to cost turns now have a cooldown instead (WAY BETTER!!) *
+Fixed Queen's Dialogue *
+Reworked Pillow's Reroll (Price now scales with levels)*
+Defense Buffs and Debuffs now have a cap! (x2 enemy damage)*
+Reworked Rat King*
+
+Added Jean
+getting hit has a chance of freezing enemies
+while the enemy is frozen, you can
+
+Reworked Skills+
+
+
+Bring back the plant to shortcut X
+
+Actual AI Maybe!? X
+2nd Chance! (AT A COST) X
+Reworked death screen X

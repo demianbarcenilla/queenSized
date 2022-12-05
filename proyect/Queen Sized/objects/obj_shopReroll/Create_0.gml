@@ -7,6 +7,6 @@ shift = 0;
 image_speed = 0;
 image_index = 2;
 
-cost = 5;
+cost = 5 + (5*global.mult);
 checked = false;
 text = "REROLL THE SHOP!"

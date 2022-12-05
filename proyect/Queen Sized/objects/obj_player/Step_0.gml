@@ -102,3 +102,8 @@ if(alarm[0] = -1) //Status FX
 };
 
 playerSelected = global.player;
+
+if(instance_exists(obj_enemy))
+{
+	tempDef = clamp(tempDef, -obj_enemy.st_damage*2, obj_enemy.st_damage*2)
+};

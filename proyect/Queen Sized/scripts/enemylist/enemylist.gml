@@ -102,7 +102,7 @@ function enemylist(){
 	arr_enemy[_enemyName, character.name] = "Mad Car";
 	arr_enemy[_enemyName, character.sprite] = spr_driver;
 	arr_enemy[_enemyName, character.damage] = 25;
-	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.hp] = 75;
 	arr_enemy[_enemyName, character.defense] = 0;
 	
 	arr_enemy[_enemyName, character.skill_1] = choose(normal.honk, -1);
@@ -143,8 +143,8 @@ function enemylist(){
 	arr_enemy[_enemyName, character.hp] = 75;
 	arr_enemy[_enemyName, character.defense] = 10;
 	
-	arr_enemy[_enemyName, character.skill_1] = choose(normal.bitter, -1);
-	arr_enemy[_enemyName, character.skill_2] = normal.nap;
+	arr_enemy[_enemyName, character.skill_1] = choose(normal.nap, -1);
+	arr_enemy[_enemyName, character.skill_2] = normal.bitter;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
@@ -162,9 +162,9 @@ function enemylist(){
 	arr_enemy[_enemyName, character.hp] = 60;
 	arr_enemy[_enemyName, character.defense] = 5;
 	
-	arr_enemy[_enemyName, character.skill_1] = choose(normal.bitter, -1);
-	arr_enemy[_enemyName, character.skill_2] = choose(normal.nap, normal.rot);
-	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_1] = normal.bitter;
+	arr_enemy[_enemyName, character.skill_2] = choose(normal.nap, -1);
+	arr_enemy[_enemyName, character.skill_3] = normal.rot;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
 	arr_enemy[_enemyName, character.text_1] = "ROTTEN LEMON IS FEELING FRESH!";
@@ -182,8 +182,8 @@ function enemylist(){
 	arr_enemy[_enemyName, character.defense] = 5;
 	
 	arr_enemy[_enemyName, character.skill_1] = normal.bitter;
-	arr_enemy[_enemyName, character.skill_2] = choose(normal.scare, normal.nap);
-	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_2] = choose(-1, normal.nap);
+	arr_enemy[_enemyName, character.skill_3] = normal.scare;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
 	arr_enemy[_enemyName, character.text_1] = "CURSED LEMON FEELS LIKE ...?";
@@ -220,7 +220,7 @@ function enemylist(){
 	arr_enemy[_enemyName, character.defense] = 5;
 	
 	arr_enemy[_enemyName, character.skill_1] = normal.disengage;
-	arr_enemy[_enemyName, character.skill_2] = normal.nap;
+	arr_enemy[_enemyName, character.skill_2] = -1;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
@@ -258,7 +258,7 @@ function enemylist(){
 	
 	arr_enemy[_enemyName, character.skill_1] = normal.fireball;
 	arr_enemy[_enemyName, character.skill_2] = choose(normal.confuse, normal.armor);
-	arr_enemy[_enemyName, character.skill_3] = choose(normal.nap, -1);
+	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
 	arr_enemy[_enemyName, character.text_1] = "FEU FEELS LIKE BURNING YOUR MATTRESS! (NOT THE WAY YOU WANT TO)";
@@ -508,7 +508,7 @@ function enemylist(){
 	arr_enemy[_enemyName, character.hp] = 100;
 	arr_enemy[_enemyName, character.defense] = 10;
 	
-	arr_enemy[_enemyName, character.skill_1] = choose(normal.bark, normal.explode);
+	arr_enemy[_enemyName, character.skill_1] = normal.bark;
 	arr_enemy[_enemyName, character.skill_2] = -1;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
@@ -528,7 +528,7 @@ function enemylist(){
 	arr_enemy[_enemyName, character.defense] = 10;
 	
 	arr_enemy[_enemyName, character.skill_1] = normal.bark;
-	arr_enemy[_enemyName, character.skill_2] = choose(-1, normal.explode);
+	arr_enemy[_enemyName, character.skill_2] = -1;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
@@ -550,7 +550,7 @@ function enemylist(){
 	arr_enemy[_enemyName, character.defense] = 5;
 	
 	arr_enemy[_enemyName, character.skill_1] = normal.explode;
-	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_2] = normal.bark;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
@@ -608,12 +608,12 @@ function enemylist(){
 		arr_enemy[_enemyName, character.name] = "Queen";
 		arr_enemy[_enemyName, character.sprite] = spr_queen;
 		arr_enemy[_enemyName, character.damage] = 45;
-		arr_enemy[_enemyName, character.hp] = 300;
+		arr_enemy[_enemyName, character.hp] = 250;
 		arr_enemy[_enemyName, character.defense] = 15;
 	
 		arr_enemy[_enemyName, character.skill_1] = normal.crown;
-		arr_enemy[_enemyName, character.skill_2] = normal.fireball;
-		arr_enemy[_enemyName, character.skill_3] = normal.crown;
+		arr_enemy[_enemyName, character.skill_2] = normal.crown;
+		arr_enemy[_enemyName, character.skill_3] = normal.fireball;
 		arr_enemy[_enemyName, character.skill_4] = -1;
 	
 		arr_enemy[_enemyName, character.text_1] = "QUEEN FEELS ENHANCED!";
@@ -628,12 +628,12 @@ function enemylist(){
 		arr_enemy[_enemyName, character.name] = "Queen";
 		arr_enemy[_enemyName, character.sprite] = spr_queen;
 		arr_enemy[_enemyName, character.damage] = 40;
-		arr_enemy[_enemyName, character.hp] = 250;
+		arr_enemy[_enemyName, character.hp] = 200;
 		arr_enemy[_enemyName, character.defense] = 15;
 	
 		arr_enemy[_enemyName, character.skill_1] = normal.crown;
-		arr_enemy[_enemyName, character.skill_2] = normal.napLong;
-		arr_enemy[_enemyName, character.skill_3] = normal.armor;
+		arr_enemy[_enemyName, character.skill_2] = normal.armor;
+		arr_enemy[_enemyName, character.skill_3] = normal.napLong;
 		arr_enemy[_enemyName, character.skill_4] = -1;
 	
 		arr_enemy[_enemyName, character.text_1] = "QUEEN FEELS LIKE STOPPING YOU!";
@@ -700,6 +700,24 @@ function enemylist(){
 	arr_enemy[_enemyName, character.text_3] = "RAT QUEEN RAT QUEEN RAT QUEEN RAT QUEEN RAT QUEEN...";
 	
 	arr_enemy[_enemyName, character.special] = -1;
+	
+	//JEAN
+	arr_enemy[enemy.eggplant, character.name] = "jean";
+	arr_enemy[enemy.eggplant, character.sprite] = spr_jean;
+	arr_enemy[enemy.eggplant, character.damage] = 30;
+	arr_enemy[enemy.eggplant, character.hp] = 200;
+	arr_enemy[enemy.eggplant, character.defense] = 0;
+	
+	arr_enemy[enemy.eggplant, character.skill_1] = normal.freeze;
+	arr_enemy[enemy.eggplant, character.skill_2] = -1;
+	arr_enemy[enemy.eggplant, character.skill_3] = -1;
+	arr_enemy[enemy.eggplant, character.skill_4] = -1;
+	
+	arr_enemy[enemy.eggplant, character.text_1] = "scrambled or fried ( thats not how it works )";
+	arr_enemy[enemy.eggplant, character.text_2] = "CHILL";
+	arr_enemy[enemy.eggplant, character.text_3] = "jean is writing his name in the snow";
+	
+	arr_enemy[enemy.eggplant, character.special] = normal.freeze;
 	
 	//CLOUD
 	arr_enemy[enemy.internaut, character.name] = "INTERNAUT";
@@ -807,9 +825,9 @@ function enemylist(){
 	//FRIDGE
 	arr_enemy[enemy.skimo, character.name] = "skimo";
 	arr_enemy[enemy.skimo, character.sprite] = spr_skimo;
-	arr_enemy[enemy.skimo, character.damage] = 30;
+	arr_enemy[enemy.skimo, character.damage] = 25;
 	arr_enemy[enemy.skimo, character.hp] = 85;
-	arr_enemy[enemy.skimo, character.defense] = 15;
+	arr_enemy[enemy.skimo, character.defense] = 5;
 	
 	arr_enemy[enemy.skimo, character.skill_1] = normal.sneeze;
 	arr_enemy[enemy.skimo, character.skill_2] = -1;
@@ -825,8 +843,8 @@ function enemylist(){
 	arr_enemy[enemy.ice_cube, character.name] = "ICE CUBE";
 	arr_enemy[enemy.ice_cube, character.sprite] = spr_ice;
 	arr_enemy[enemy.ice_cube, character.damage] = 30;
-	arr_enemy[enemy.ice_cube, character.hp] = 85;
-	arr_enemy[enemy.ice_cube, character.defense] = 15;
+	arr_enemy[enemy.ice_cube, character.hp] = 70;
+	arr_enemy[enemy.ice_cube, character.defense] = 0;
 	
 	arr_enemy[enemy.ice_cube, character.skill_1] = normal.freeze;
 	arr_enemy[enemy.ice_cube, character.skill_2] = -1;
@@ -842,8 +860,8 @@ function enemylist(){
 	arr_enemy[enemy.cat, character.name] = "CAT";
 	arr_enemy[enemy.cat, character.sprite] = spr_cat;
 	arr_enemy[enemy.cat, character.damage] = 30;
-	arr_enemy[enemy.cat, character.hp] = 85;
-	arr_enemy[enemy.cat, character.defense] = 15;
+	arr_enemy[enemy.cat, character.hp] = 50;
+	arr_enemy[enemy.cat, character.defense] = 0;
 	
 	arr_enemy[enemy.cat, character.skill_1] = normal.nap;
 	arr_enemy[enemy.cat, character.skill_2] = -1;
@@ -946,24 +964,6 @@ function enemylist(){
 	
 	arr_enemy[enemy.merchant, character.special] = normal.cheese;
 	
-	//JEAN
-	arr_enemy[enemy.eggplant, character.name] = "jean";
-	arr_enemy[enemy.eggplant, character.sprite] = spr_jean;
-	arr_enemy[enemy.eggplant, character.damage] = 25;
-	arr_enemy[enemy.eggplant, character.hp] = 100;
-	arr_enemy[enemy.eggplant, character.defense] = 0;
-	
-	arr_enemy[enemy.eggplant, character.skill_1] = normal.freeze;
-	arr_enemy[enemy.eggplant, character.skill_2] = -1;
-	arr_enemy[enemy.eggplant, character.skill_3] = -1;
-	arr_enemy[enemy.eggplant, character.skill_4] = -1;
-	
-	arr_enemy[enemy.eggplant, character.text_1] = "scrambled or fried ( thats not how it works )";
-	arr_enemy[enemy.eggplant, character.text_2] = "CHILL";
-	arr_enemy[enemy.eggplant, character.text_3] = "jean is writing his name in the snow";
-	
-	arr_enemy[enemy.eggplant, character.special] = normal.freeze;
-	
 	/*//ELECTROLOTL
 	arr_enemy[enemy.electrolotl, character.name] = "ELECTROLOTL"
 	arr_enemy[enemy.electrolotl, character.sprite] = spr_electrolotl;
@@ -1013,19 +1013,34 @@ function playerEnemies(){
 	arr_enemy[enemy.pillow, character.skill_1] = -1;
 	arr_enemy[enemy.pillow, character.skill_2] = -1;
 	arr_enemy[enemy.pillow, character.skill_3] = -1;
-	arr_enemy[enemy.pillow, character.skill_4] = normal.wait;
+	arr_enemy[enemy.pillow, character.skill_4] = -1;
 	
 	//Rat King
 	arr_enemy[enemy.rat_king, character.name] = "Rat King";
 	arr_enemy[enemy.rat_king, character.sprite] = spr_ratKing;
-	arr_enemy[enemy.rat_king, character.damage] = 30;
-	arr_enemy[enemy.rat_king, character.hp] = 75;
+	arr_enemy[enemy.rat_king, character.damage] = 20;
+	arr_enemy[enemy.rat_king, character.hp] = 50;
 	arr_enemy[enemy.rat_king, character.defense] = 5;
 	
 	arr_enemy[enemy.rat_king, character.skill_1] = -1;
 	arr_enemy[enemy.rat_king, character.skill_2] = -1;
 	arr_enemy[enemy.rat_king, character.skill_3] = -1;
 	arr_enemy[enemy.rat_king, character.skill_4] = -1;
+	
+	//JEAN
+	arr_enemy[enemy.eggplant, character.name] = "jean";
+	arr_enemy[enemy.eggplant, character.sprite] = spr_jean;
+	arr_enemy[enemy.eggplant, character.damage] = 30;
+	arr_enemy[enemy.eggplant, character.hp] = 100;
+	arr_enemy[enemy.eggplant, character.defense] = 0;
+	
+	arr_enemy[enemy.eggplant, character.skill_1] = -1;
+	arr_enemy[enemy.eggplant, character.skill_2] = -1;
+	arr_enemy[enemy.eggplant, character.skill_3] = -1;
+	arr_enemy[enemy.eggplant, character.skill_4] = -1;
+	
+	arr_enemy[enemy.eggplant, character.special] = normal.sneeze;
+	arr_enemy[enemy.eggplant, character.sprite] = spr_jeanPlayable;
 	
 	//Tito
 	arr_enemy[enemy.tito, character.name] = "tito";

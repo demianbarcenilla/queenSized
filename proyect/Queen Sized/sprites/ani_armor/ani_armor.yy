@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "ani_armor",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 91,
   "height": 82,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7e843707-bc31-4afa-80e5-77f11e573747","path":"sprites/ani_armor/ani_armor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7e843707-bc31-4afa-80e5-77f11e573747","path":"sprites/ani_armor/ani_armor.yy",},"LayerId":{"name":"8b14a60f-c4c3-4685-811a-da861586351d","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_armor","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","name":"7e843707-bc31-4afa-80e5-77f11e573747","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"18d26256-3242-4ff3-bd0d-8cab1dabda79","path":"sprites/ani_armor/ani_armor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"18d26256-3242-4ff3-bd0d-8cab1dabda79","path":"sprites/ani_armor/ani_armor.yy",},"LayerId":{"name":"8b14a60f-c4c3-4685-811a-da861586351d","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_armor","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","name":"18d26256-3242-4ff3-bd0d-8cab1dabda79","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"35c4ab32-9330-423f-86fa-596421549c58","path":"sprites/ani_armor/ani_armor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"35c4ab32-9330-423f-86fa-596421549c58","path":"sprites/ani_armor/ani_armor.yy",},"LayerId":{"name":"8b14a60f-c4c3-4685-811a-da861586351d","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_armor","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","name":"35c4ab32-9330-423f-86fa-596421549c58","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"db2f3cfc-ddfe-4363-9df2-6b5343a4f8dc","path":"sprites/ani_armor/ani_armor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"db2f3cfc-ddfe-4363-9df2-6b5343a4f8dc","path":"sprites/ani_armor/ani_armor.yy",},"LayerId":{"name":"8b14a60f-c4c3-4685-811a-da861586351d","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ani_armor","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","name":"db2f3cfc-ddfe-4363-9df2-6b5343a4f8dc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7e843707-bc31-4afa-80e5-77f11e573747",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"18d26256-3242-4ff3-bd0d-8cab1dabda79",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"35c4ab32-9330-423f-86fa-596421549c58",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db2f3cfc-ddfe-4363-9df2-6b5343a4f8dc",},
   ],
   "sequence": {
-    "spriteId": {"name":"ani_armor","path":"sprites/ani_armor/ani_armor.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "ani_armor",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"8a424b35-548d-4d79-b0a5-bcca2f19e45a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7e843707-bc31-4afa-80e5-77f11e573747","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8222f5dd-9511-4ecc-aeb5-c29b6762886a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"18d26256-3242-4ff3-bd0d-8cab1dabda79","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8f9166cf-774b-4580-a0e5-dd6ac212c8be","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"35c4ab32-9330-423f-86fa-596421549c58","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ab57993f-acd4-4c77-b4e8-4ed99f1c9ca6","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"db2f3cfc-ddfe-4363-9df2-6b5343a4f8dc","path":"sprites/ani_armor/ani_armor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 41,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ani_armor","path":"sprites/ani_armor/ani_armor.yy",},
-    "resourceVersion": "1.4",
-    "name": "ani_armor",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8b14a60f-c4c3-4685-811a-da861586351d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8b14a60f-c4c3-4685-811a-da861586351d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Skill Animations",
     "path": "folders/Sprites/Skill Animations.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ani_armor",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

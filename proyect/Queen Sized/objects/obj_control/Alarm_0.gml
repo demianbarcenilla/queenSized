@@ -49,7 +49,11 @@ if(instance_exists(obj_enemy))
 			obj_player.tempDmg = 0;
 			obj_player.canPressCards = false;
 			obj_player.alarm[10] = 15;
-
+			if(obj_player.playerSelected = enemy.rat_king)
+			{
+				obj_player.hp += obj_player.maxHp/2;
+			};
+			
 			for(i=0; i <= 10; i++)
 			{
 				obj_player.arr_status[i]= false;
@@ -71,21 +75,23 @@ if(instance_exists(obj_enemy))
 			
 					instance_destroy();
 					
-					//Unlocks Omar and Tito/Bondiola once you beat them
+					//Unlocks Enemies once you beat them
+					
+					//Jean!
 					var _newUnlock = false;
-					/*if(_enemy = enemy.omar)
+					if(_enemy = enemy.eggplant)
 					{
 						ini_open("unlocks.ini")
-							if(ini_read_real("unlocks", "4", false) = false)
+							if(ini_read_real("unlocks", "11", false) = false)
 							{
 								_newUnlock = true;
 								instance_create_depth(0, 0, depth, obj_newUnlockBattle);
 							}
-							ini_write_real("unlocks", "4", true);
+							ini_write_real("unlocks", "11", true);
 						ini_close();
-					}
+					};
 					
-					if(_enemy = enemy.tito) or (_enemy = enemy.bondiola)
+					/*if(_enemy = enemy.tito) or (_enemy = enemy.bondiola)
 					{
 						ini_open("unlocks.ini")
 							if(ini_read_real("unlocks", "6", false) = false)
