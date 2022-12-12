@@ -27,7 +27,9 @@ if(instance_exists(obj_optionsMenu))
 	};
 };
 
-scribble("[wave]"+ string_upper(global.text) +"[/wave]")
+if(canChangeText){var_text = global.text}
+else if(alarm[10] = -1){alarm[10] = 60}
+scribble("[wave]"+ string_upper(var_text) +"[/wave]")
 .typewriter_in(2, 10)
 .align(fa_center, fa_middle)
 .animation_wave(1, 1, .5)

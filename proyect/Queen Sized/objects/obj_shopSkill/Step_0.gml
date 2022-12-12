@@ -26,6 +26,27 @@ if(reroll)
 	if(!audio_is_playing(snd_text)){audio_play_sound(snd_text, 0, 0)}
 	_poolPlace = irandom_range(0, array_length(obj_shop.arr_pool)-1); //select a random spot from the pool
 	var_holding = obj_shop.arr_pool[_poolPlace]; //convert that spot from the pool into a skill ID
+	holdingPlus = false;
+	ini_open("unlocks.ini")
+		if(ini_read_real("unlocks", "3", false) = true)
+		{
+			var _rng = irandom_range(1, 100)
+			if(_rng <= 12)
+			{
+				holdingPlus = true;	
+			};
+		};
+	ini_close();
+
+	if(holdingPlus)
+	{
+		text = arr_skill[var_holding, skills.descPlus]
+		sprite_index = spr_skillsPlus
+	};
+	else
+	{
+		text = arr_skill[var_holding, skills.desc]
+	};
 }
 while(reroll)
 {
@@ -45,6 +66,28 @@ while(reroll)
 			_poolPlace = irandom_range(0, array_length(obj_shop.arr_pool)-1); //select a random spot from the pool
 			var_holding = obj_shop.arr_pool[_poolPlace]; //convert that spot from the pool into a skill ID
 			break;
+			
+			holdingPlus = false;
+			ini_open("unlocks.ini")
+			if(ini_read_real("unlocks", "3", false) = true)
+			{
+				var _rng = irandom_range(1, 100)
+				if(_rng <= 12)
+				{
+					holdingPlus = true;	
+				};
+			};
+			ini_close();
+
+			if(holdingPlus)
+			{
+				text = arr_skill[var_holding, skills.descPlus]
+				sprite_index = spr_skillsPlus
+			};
+			else
+			{
+				text = arr_skill[var_holding, skills.desc]
+			};
 		};
 	};
 };
@@ -57,9 +100,12 @@ shift = amp * dsin(t);
 x = lerp(x, xx, .1);
 y = lerp(y, yy + shift, .1);
 
+
 //IF CLICKED
 if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 {
+	show_debug_message(preserved)
+	show_debug_message(reroll)
 	if(!checked)
 	{
 		checked = true;
@@ -71,16 +117,36 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 	
 	if(mouse_check_button_pressed(mb_left)) and (!centered) and (global.canPurchase)
 	{
-		if(global.money >= cost) or (global.shoplift)
+		if(global.preserve = true)
+		{
+			preserved = true;
+			global.preserve = false;
+					
+			with(obj_shopSkill)
+			{
+				if(!preserved){reroll = true}
+			}
+		}
+		else if(global.money >= cost) or (global.shoplift)
 		{
 			for(i=0; i < 4; i++)
 			{
 				if(obj_player.st_skills[i] = -1)
 				{
 					obj_player.st_skills[i]= var_holding;
-					obj_player.st_skillUses[i]= arr_skill[var_holding, skills.uses];
-					obj_player.st_skillRecharge[i]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
-	
+					obj_player.st_skillPlus[i] = holdingPlus;
+					
+					if(!holdingPlus)
+					{
+						obj_player.st_skillUses[i]= arr_skill[var_holding, skills.uses];
+						obj_player.st_skillRecharge[i]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
+					}
+					else
+					{
+						
+						obj_player.st_skillUses[i]= arr_skill[var_holding, skills.usesPlus];
+						obj_player.st_skillRecharge[i]= arr_skill[var_holding, skills.costPlus] > 0 ? 0 : -1;
+					}
 					break;
 				};
 				
@@ -92,6 +158,13 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 			
 			if(skillsFull < 4)
 			{
+				if(!global.preserve)
+				{
+					obj_shop.canChangeText --;
+					audio_play_sound(snd_heal, 0, false);
+					instance_destroy();
+				}
+				
 				if(global.shoplift)
 				{
 					repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}
@@ -106,10 +179,6 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 						instance_create_depth(x, y, depth, obj_money);
 					};
 				}
-				
-				obj_shop.canChangeText --;
-				audio_play_sound(snd_heal, 0, false);
-				instance_destroy();
 			}
 			else
 			{
@@ -223,134 +292,28 @@ if(guiSelected != -1)
 			case 0:
 				if(place_meeting(x, y, obj_skill1))
 				{
-					audio_play_sound(snd_heal, 0, false);
-				
-					obj_player.st_skills[0] = var_holding;
-					obj_player.st_skillUses[0] = arr_skill[var_holding, skills.uses];
-					obj_player.st_skillRecharge[0]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
-					obj_shop.alarm[0] = 5;
-				
-					global.text = global.textPrev;
-				
-					obj_shop.canChangeText = 0;
-					
-					with(obj_shopSkill){reroll = true};
-					
-					if(!global.shoplift)
-					{
-						global.money -= cost;
-				
-						repeat(cost)
-						{
-							instance_create_depth(x, y, depth, obj_money);
-						};
-					};
-					
-					else
-					{
-						global.shoplift = false;
-					}
-					
-					instance_destroy();
+					replaceSkill()
 				};
 			break;
 		
 			case 1:
 				if(place_meeting(x, y, obj_skill2))
 				{
-					audio_play_sound(snd_heal, 0, false);
-				
-					obj_player.st_skills[1] = var_holding;
-					obj_player.st_skillUses[1] = arr_skill[var_holding, skills.uses];
-					obj_player.st_skillRecharge[1]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
-					
-					obj_shop.alarm[0] = 5;
-				
-					global.text = global.textPrev;
-				
-					obj_shop.canChangeText = 0;
-					with(obj_shopSkill){reroll = true};
-					instance_destroy();
-					
-					if(!global.shoplift)
-					{
-						global.money -= cost;
-				
-						repeat(cost)
-						{
-							instance_create_depth(x, y, depth, obj_money);
-						};
-					};
-					else
-					{
-						global.shoplift = false;
-					}
+					replaceSkill();
 				};
 			break;
 		
 			case 2:
 				if(place_meeting(x, y, obj_skill3))
 				{
-					audio_play_sound(snd_heal, 0, false);
-				
-					obj_player.st_skills[2] = var_holding;
-					obj_player.st_skillUses[2] = arr_skill[var_holding, skills.uses];
-					obj_player.st_skillRecharge[2]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
-					obj_shop.alarm[0] = 5;
-				
-					global.text = global.textPrev;
-				
-					obj_shop.canChangeText = 0;
-					with(obj_shopSkill){reroll = true};
-					instance_destroy();
-					
-					if(!global.shoplift)
-					{
-						global.money -= cost;
-				
-						repeat(cost)
-						{
-							instance_create_depth(x, y, depth, obj_money);
-						};
-					};
-					else
-					{
-						global.shoplift = false;
-					}
+					replaceSkill()
 				};
 			break;
 		
 			case 3:
 				if(place_meeting(x, y, obj_skill4))
 				{
-					audio_play_sound(snd_heal, 0, false);
-					
-					with(obj_shopSkill){reroll = true};
-					instance_destroy();
-				
-					obj_player.st_skills[3] = var_holding;
-					obj_player.st_skillUses[3] = arr_skill[var_holding, skills.uses];
-					obj_player.st_skillRecharge[3]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
-					obj_shop.alarm[0] = 5;
-				
-					global.text = global.textPrev;
-				
-					obj_shop.canChangeText = 0;
-					instance_destroy();
-					
-					if(!global.shoplift)
-					{
-						global.money -= cost;
-				
-						repeat(cost)
-						{
-							instance_create_depth(x, y, depth, obj_money);
-						};
-					};
-					else
-					{
-						global.shoplift = false;
-					}
+					replaceSkill()
 				};
 			break;
 		};
@@ -360,4 +323,15 @@ if(guiSelected != -1)
 if(!instance_exists(obj_shop))
 {	
 	instance_destroy();
+};
+
+if(holdingPlus)
+{
+	text = arr_skill[var_holding, skills.descPlus]
+	sprite_index = spr_skillsPlus
+};
+else
+{
+	text = arr_skill[var_holding, skills.desc]
+	sprite_index = spr_skills
 };

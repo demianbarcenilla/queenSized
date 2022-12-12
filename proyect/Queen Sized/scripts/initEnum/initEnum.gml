@@ -79,6 +79,7 @@ function initEnum(){
 		sneeze,
 		cigar,
 		freeze,
+		snowball,
 		
 		rat_pocket,
 		rat_bomb,
@@ -98,21 +99,12 @@ function initEnum(){
 		cheese_expensive,
 		cheese_liquid,
 		rat_ratuary,
-		rat_ratify,
-		
 		rat_iced,
+		
 		rat_electro,
 		rat_e,
 		rat_cookie,
 		
-		lemon_toss,
-		pretend,
-		honk2,
-		juggle,
-		lemonade_seedy,
-		lemonade_plus,
-		lemonade_rotten,
-		lemonade_bitter,
 		swap,
 		connect,
 		phish,
@@ -216,7 +208,7 @@ function initEnum(){
 		cursed_lemon,
 	
 		shroom,
-		worm, 
+		plant, 
 		bat,
 	
 		feu,

@@ -211,22 +211,22 @@ function enemylist(){
 	
 	arr_enemy[_enemyName, character.special] = normal.shroom;
 	
-	_enemyName = enemy.worm
+	_enemyName = enemy.plant
 	
-	arr_enemy[_enemyName, character.name] = "Worm";
+	arr_enemy[_enemyName, character.name] = "Plant";
 	arr_enemy[_enemyName, character.sprite] = spr_plant;
-	arr_enemy[_enemyName, character.damage] = 30;
+	arr_enemy[_enemyName, character.damage] = 15;
 	arr_enemy[_enemyName, character.hp] = 115;
-	arr_enemy[_enemyName, character.defense] = 5;
+	arr_enemy[_enemyName, character.defense] = 0;
 	
-	arr_enemy[_enemyName, character.skill_1] = normal.disengage;
+	arr_enemy[_enemyName, character.skill_1] = normal.bite;
 	arr_enemy[_enemyName, character.skill_2] = -1;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[_enemyName, character.text_1] = "WORM FEELS LIKE DROOLING!";
-	arr_enemy[_enemyName, character.text_2] = "WORM IS DUMB DUBM WORM IS!!!";
-	arr_enemy[_enemyName, character.text_3] = "WORM IS A COWARD";
+	arr_enemy[_enemyName, character.text_1] = "PLANT FEELS LIKE BITING SOMETHING!";
+	arr_enemy[_enemyName, character.text_2] = "PLANT NEEDS MORE SUNLIGHT!";
+	arr_enemy[_enemyName, character.text_3] = "PLANT WANTS BETTER SOIL";
 	
 	arr_enemy[_enemyName, character.special] = normal.bite;
 	
@@ -994,7 +994,7 @@ function enemylist(){
 	arr_enemy[enemy.michael, character.skill_3] = -1;
 	arr_enemy[enemy.michael, character.skill_4] = -1;
 	
-	arr_enemy[enemy.michael, character.text_1] = "MICHAEL FEELS LIKE A SCREWING WITH YOUR SYSTEM!";
+	arr_enemy[enemy.michael, character.text_1] = "MICHAEL FEELS LIKE SCREWING WITH YOUR SYSTEM!";
 	arr_enemy[enemy.michael, character.text_2] = "MICHAEL DOESN'T LIKE SECURITY BREACHES";
 	arr_enemy[enemy.michael, character.text_3] = "WHAT A NERD";
 	
@@ -1030,7 +1030,7 @@ function playerEnemies(){
 	//JEAN
 	arr_enemy[enemy.eggplant, character.name] = "jean";
 	arr_enemy[enemy.eggplant, character.sprite] = spr_jean;
-	arr_enemy[enemy.eggplant, character.damage] = 30;
+	arr_enemy[enemy.eggplant, character.damage] = 20;
 	arr_enemy[enemy.eggplant, character.hp] = 100;
 	arr_enemy[enemy.eggplant, character.defense] = 0;
 	
@@ -1093,7 +1093,7 @@ function stageEnemies(){
 	
 	arr_stageEnemies[stage.shortcut, 0] = enemy.bat;
 	arr_stageEnemies[stage.shortcut, 1] = enemy.shroom;
-	arr_stageEnemies[stage.shortcut, 2] = enemy.worm;
+	arr_stageEnemies[stage.shortcut, 2] = enemy.plant;
 	
 	arr_stageEnemies[stage.incinerator, 0] = enemy.feu;
 	arr_stageEnemies[stage.incinerator, 1] = enemy.smokey;

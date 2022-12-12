@@ -556,3 +556,75 @@ function drawRecharge(rechargeNumber)
 		draw_text(_rechargeX, y-_displace, string(rechargeNumber))
 	};
 };
+
+function replaceSkill()
+{
+	audio_play_sound(snd_heal, 0, false);
+				
+	obj_player.st_skills[guiSelected]= var_holding;
+	obj_player.st_skillPlus[guiSelected] = holdingPlus;
+					
+	if(!holdingPlus)
+	{
+		obj_player.st_skillUses[guiSelected]= arr_skill[var_holding, skills.uses];
+		obj_player.st_skillRecharge[guiSelected]= arr_skill[var_holding, skills.cost] > 0 ? 0 : -1;
+	}
+	else
+	{
+						
+		obj_player.st_skillUses[guiSelected]= arr_skill[var_holding, skills.usesPlus];
+		obj_player.st_skillRecharge[guiSelected]= arr_skill[var_holding, skills.costPlus] > 0 ? 0 : -1;
+	}
+					
+	obj_shop.alarm[0] = 5;
+				
+	global.text = global.textPrev;
+				
+	obj_shop.canChangeText = 0;
+					
+	with(obj_shopSkill){reroll = true};
+					
+	if(!global.shoplift)
+	{
+		global.money -= cost;
+				
+		repeat(cost)
+		{
+			instance_create_depth(x, y, depth, obj_money);
+		};
+	};
+					
+	else
+	{
+		global.shoplift = false;
+	}
+					
+	instance_destroy();
+}
+
+function shopSkills()
+{
+	//check if shop skills are unlocked
+	var _rerollUnlocked, _shopliftUnlocked, _preserveUnlocked;
+	ini_open("unlocks.ini");
+		_rerollUnlocked = ini_read_real("unlocks", "2", false);
+		_shopliftUnlocked = ini_read_real("unlocks", "7", false);
+		_preserveUnlocked = ini_read_real("unlocks", "12", false);
+	ini_close();
+
+	//if playing as pillow and the reroll skill is unlocked, spawn it
+	if(global.player = enemy.pillow) and (_rerollUnlocked)
+	{
+		instance_create_depth(ROOMWIDTH-50, room_height-20,depth-1, obj_shopReroll);
+	};
+
+	//If playing as the Rat King and the conditions are met, spawn SHOPLIFT
+	if(global.player = enemy.rat_king) and (_shopliftUnlocked)
+	{
+		instance_create_depth(ROOMWIDTH-50, room_height-20,depth-1, obj_shopLift);
+	};
+	if(global.player = enemy.eggplant) and (_preserveUnlocked)
+	{
+		instance_create_depth(ROOMWIDTH-50, room_height-20,depth-1, obj_shopPreserve);
+	};
+}

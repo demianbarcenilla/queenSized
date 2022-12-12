@@ -71,21 +71,37 @@ ini_open("unlocks.ini") //Ocasional discount
 ini_close()
 
 holdingPlus = false;
+ini_open("unlocks.ini")
+	if(ini_read_real("unlocks", "3", false) = true)
+	{
+		var _rng = irandom_range(1, 100)
+		if(_rng <= 12)
+		{
+			holdingPlus = true;	
+		};
+	};
+ini_close();
 
-if(holdingPlus){text = arr_skill[var_holding, skills.descPlus]}
-else{text = arr_skill[var_holding, skills.desc]};
+if(holdingPlus)
+{
+	text = arr_skill[var_holding, skills.descPlus]
+	sprite_index = spr_skillsPlus
+};
+else
+{
+	text = arr_skill[var_holding, skills.desc]
+};
 
 cost = arr_skill[var_holding, skills.shop] + (10 * global.mult);
-
 checked = false;
-
 skillsFull = 0;
-
 centered = false;
-
 guiSelected = -1;
 xx = x;
 yy = ystart;
 
 reroll = false;
 global.shoplift = false;
+global.preserve = false;
+
+preserved = false;

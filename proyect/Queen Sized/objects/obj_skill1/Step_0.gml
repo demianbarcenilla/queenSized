@@ -19,7 +19,7 @@ else
 }
 
 //SPRITE INDEX
-if(obj_player.st_skillPlus[0])
+if(obj_player.st_skillPlus[0]) and (obj_player.st_skills[0] != -1)
 {
 	sprite_index = spr_uiSkillsetPlus;
 };

@@ -91,7 +91,7 @@ function eventValues()
 	};
 	arr_event[1, 2] = "RAT KING ASKS FOR THE RAT FLUTE, HE WILL TAKE YOU SOMEWHERE IN RETURN!"//Text
 	arr_event[1, 3] = "RAT KING TAKES YOU TO A DEEPER PLACE"//Text for when you accept
-	arr_event[1, 4] = "RAT KING SAYS YOU'RE MAKING A MISTAKE!"//Text for when you decline
+	arr_event[1, 4] = "ALRIGHT, YOU MISS IT!"//Text for when you decline
 	
 	//Bitter Lemonade Event
 	arr_event[2, 0] = normal.wait;//Left Choice
@@ -119,9 +119,9 @@ function eventValues()
 		};
 	
 	};
-	arr_event[2, 2] = "LEMONADE KID IS FEELING BITTER AND WANTS TO GO SOMEWHERE ELSE TO COOL OFF"//Text
+	arr_event[2, 2] = "YOU... YOU LIKE MY LEMONADE?"//Text
 	arr_event[2, 3] = "LEMONADE KID TAKES YOU TO A COOLER PLACE!"//Text for when you accept
-	arr_event[2, 4] = "LEMONADE KID WILL CONTINUE TO BE BITTER"//Text for when you decline
+	arr_event[2, 4] = "LEMONADE KID DISLIKES YOU!"//Text for when you decline
 };
 
 function eventStart(_value)
@@ -156,7 +156,7 @@ function eventStart(_value)
 		global.eventType = 1;
 		nextTurn();
 	};
-	else if(obj_enemy.playerSelected = enemy.kid) and (_value = normal.bitter) //BITTER LEMONADE KID EVENT
+	else if(obj_enemy.playerSelected = enemy.kid) and (_value = normal.lemonade) //BITTER LEMONADE KID EVENT
 	{
 		global.event = true;
 		global.eventType = 2;
@@ -264,7 +264,7 @@ function chatValues()
 			//Queen
 			arr_chat[1, 0] = "I STILL DON'T KNOW WHAT YOU'RE DOING IN HERE!";
 			arr_chat[1, 1] = "WHAT'S THE POINT? YOU LIKE WINTER MORE THAN SUMMER?";
-			arr_chat[1, 2] = "IT'S THAT THE CONFLICT?";
+			arr_chat[1, 2] = "ITS THAT THE CONFLICT?";
 			
 			//Flaming Queen
 			arr_chat[2, 0] = "THIS AGAIN?";
@@ -431,24 +431,35 @@ function execute_event(_value)
 	{
 		if(obj_uiChoice.selected)
 		{
-			global.event = false;
 			global.primaryUI = true;
 			
 			arr_event[global.eventType, 1]();
-			global.text = arr_event[global.eventType, 3];
+			
+			obj_text.canChangeText = true;
+				global.text = arr_event[global.eventType, 3];
+				global.textPrev = global.text
+			obj_text.canChangeText = false;
+			
 			obj_enemy.newX = 540;
 			obj_enemy.alarm[1] = 59;
 			
 			global.enemyPrev = playerSelected;
+			global.event = false;
 			
 			resetToPrimary();
 		};
 		else if(obj_uiChoice2.selected)
 		{
-			global.event = false;
+			
 			global.primaryUI = true;
 			
-			global.text = arr_event[global.eventType, 4];
+			obj_text.canChangeText = true;
+				global.text = arr_event[global.eventType, 4];
+				global.textPrev = global.text
+			obj_text.canChangeText = false;
+			
+			global.event = false;
+			
 			resetToPrimary();
 		};
 	};

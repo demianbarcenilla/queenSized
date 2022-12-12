@@ -14,7 +14,7 @@ else
 }
 
 
-if(obj_enemy.arr_status[status.frozen])
+if(obj_enemy.arr_status[status.frozen]) and (obj_player.playerSelected = enemy.eggplant)
 {
 	image_index = 1;
 }

@@ -19,3 +19,6 @@ else
 {
 	xx = ROOMWIDTH/2;
 };
+
+canChangeText = true;
+var_text = global.text;

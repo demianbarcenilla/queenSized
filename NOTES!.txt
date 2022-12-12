@@ -7,12 +7,16 @@ Reworked Pillow's Reroll (Price now scales with levels)*
 Defense Buffs and Debuffs now have a cap! (x2 enemy damage)*
 Reworked Rat King*
 
-Added Jean
-getting hit has a chance of freezing enemies
-while the enemy is frozen, you can
+Added Jean 
+-Finish ShopSkill
+-Finish 2nd unlock
 
-Reworked Skills+
+2nd unlock could b the cookie
 
+Reworked Skills+ *
+
+Added Snowball Skill
+-Add it to the fridge pool
 
 Bring back the plant to shortcut X
 
