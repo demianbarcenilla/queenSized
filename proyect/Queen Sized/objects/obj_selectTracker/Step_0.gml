@@ -42,6 +42,19 @@ else if(obj_playerSelect_jean.selected)
 	}
 	
 };
+else if(obj_playerSelect_cookie.selected)
+{
+	if(obj_playerSelect_cookie.unlocked)
+	{
+		global.text = "COOKIE\nDETHRONE THE QUEEN! RUIN THE FUN!"
+		sprite_index = spr_cookie;
+	};
+	else
+	{
+		global.text = "BEAT THE 2ND ROUTE AS ???"
+		sprite_index = spr_empty;
+	};
+};
 /*
 else if(obj_playerSelect_phish.selected)
 {
@@ -57,19 +70,7 @@ else if(obj_playerSelect_phish.selected)
 	};
 	
 };
-else if(obj_playerSelect_lemon.selected)
-{
-	if(obj_playerSelect_lemon.unlocked)
-	{
-		global.text = "LEMON\nBITTER BUDDY!"
-		sprite_index = spr_lemon;
-	};
-	else
-	{
-		global.text = "IDK WHAT THIS DOES OR HOW TO UNLOCK IT"
-		sprite_index = spr_empty;
-	};
-};
+
 else if(obj_playerSelect_omar.selected)
 {
 	if(obj_playerSelect_omar.unlocked)

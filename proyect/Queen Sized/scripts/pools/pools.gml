@@ -126,7 +126,7 @@ function pools(){
 		arr_poolTable[stage.incinerator, array_length(arr_poolTable[stage.incinerator])] = normal.cookie_burnt;
 		
 		arr_poolTable[stage.sewer, array_length(arr_poolTable[stage.sewer])] = normal.cookie_thrashy;
-		arr_poolTable[stage.ruins, array_length(arr_poolTable[stage.ruins])] = normal.ghost_cookie;
+		arr_poolTable[stage.ruins, array_length(arr_poolTable[stage.ruins])] = normal.cookie_ghost;
 		arr_poolTable[stage.ratlantis, array_length(arr_poolTable[stage.ratlantis])] = normal.cookie_void;
 		
 		/*arr_poolTable[stage.cloud, array_length(arr_poolTable[stage.cloud])] = normal.cookie_electric;

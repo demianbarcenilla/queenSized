@@ -963,6 +963,25 @@ function enemylist(){
 	arr_enemy[enemy.merchant, character.text_3] = "YOU'RE BLINDED BY THE ROYALTY";
 	
 	arr_enemy[enemy.merchant, character.special] = normal.cheese;
+
+	//Cookie
+	_enemyName = enemy.cookie
+	arr_enemy[_enemyName, character.name] = "Cookie";
+	arr_enemy[_enemyName, character.sprite] = spr_cookie;
+	arr_enemy[_enemyName, character.damage] = 25;
+	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.defense] = 0;
+
+	arr_enemy[_enemyName, character.skill_1] = -1;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "COOKIE FEELS THE SPIRIT OF CHRISTMAS";
+	arr_enemy[_enemyName, character.text_2] = "COOKIE LOVES UHH IDK YOU'RE NOT EVEN GONNA READ THIS";
+	arr_enemy[_enemyName, character.text_3] = "COOKIE IS THE ONLY CHARACTER THAT CHANGES DEPENDING ON THE DATE. THAT'S JUST A FUN FACT BUT I THINK IT'S KINDA COOL";
+	
+	arr_enemy[_enemyName, character.special] = normal.heal;
 	
 	/*//ELECTROLOTL
 	arr_enemy[enemy.electrolotl, character.name] = "ELECTROLOTL"
@@ -1066,6 +1085,26 @@ function playerEnemies(){
 	arr_enemy[enemy.bondiola, character.skill_3] = -1;
 	arr_enemy[enemy.bondiola, character.skill_4] = -1;
 	
+	//Cookie
+	_enemyName = enemy.cookie
+	arr_enemy[_enemyName, character.name] = "Cookie";
+	arr_enemy[_enemyName, character.sprite] = spr_cookie;
+	arr_enemy[_enemyName, character.damage] = 25;
+	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.defense] = 0;
+
+	arr_enemy[_enemyName, character.skill_1] = normal.cookie_jar;
+	arr_enemy[_enemyName, character.skill_2] = normal.wait;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
+	
+	arr_enemy[_enemyName, character.text_1] = "COOKIE FEELS THE SPIRIT OF CHRISTMAS";
+	arr_enemy[_enemyName, character.text_2] = "COOKIE LOVES UHH IDK YOU'RE NOT EVEN GONNA READ THIS";
+	arr_enemy[_enemyName, character.text_3] = "COOKIE IS THE ONLY CHARACTER THAT CHANGES DEPENDING ON THE DATE. THAT'S JUST A FUN FACT BUT I THINK IT'S KINDA COOL";
+	
+	arr_enemy[_enemyName, character.special] = normal.cookie_jar;
+	
+	//Phish
 	arr_enemy[enemy.phish, character.name] = "phish";
 	arr_enemy[enemy.phish, character.sprite] = spr_phish;
 	arr_enemy[enemy.phish, character.damage] = 20;

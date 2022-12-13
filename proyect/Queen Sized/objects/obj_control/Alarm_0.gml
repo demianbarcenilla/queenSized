@@ -47,7 +47,7 @@ if(instance_exists(obj_enemy))
 			};
 			obj_player.tempDef = 0;
 			obj_player.tempDmg = 0;
-			obj_player.var_snowballDmg = 0;
+			obj_player.var_snowballDmg = 1;
 			obj_player.canPressCards = false;
 			obj_player.alarm[10] = 15;
 			if(obj_player.playerSelected = enemy.rat_king)

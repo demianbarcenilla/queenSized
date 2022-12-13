@@ -1,25 +1,22 @@
-v3 - Snowy Build!
-Added The Fridge (Including Freeze, Freezy Rat, Skimo, Ice Cube, Cat) *
-Changed some numbers! *
-Skills that used to cost turns now have a cooldown instead (WAY BETTER!!) *
-Fixed Queen's Dialogue *
-Reworked Pillow's Reroll (Price now scales with levels)*
-Defense Buffs and Debuffs now have a cap! (x2 enemy damage)*
-Reworked Rat King*
+v4 - Cookie!
+Added Cookie
+-skills*
+-unlocks: cookie leak* shopSkill (Bake)
 
-Added Jean 
--Finish ShopSkill
--Finish 2nd unlock
 
-2nd unlock could b the cookie
 
-Reworked Skills+ *
+Fix Fridge Shopkeeper's sprite*
 
-Added Snowball Skill
--Add it to the fridge pool
+Fixed Skills+*
+there's a fucking bug with snowball idk figure it out*
+Lemonade+ No longer has limited uses*
+Snowball starts at 0, should start at 1*
+Fix Jean's Theme*
+ARMOR+ no longer gives health*
 
-Bring back the plant to shortcut X
+v5 - Electric Build!
 
 Actual AI Maybe!? X
 2nd Chance! (AT A COST) X
 Reworked death screen X
+Weight System for Skills?
