@@ -57,22 +57,22 @@ function pools(){
 	arr_poolTable[stage.fridge, 3] = normal.sneeze;
 	arr_poolTable[stage.fridge, 4] = normal.snowball;
 	
-	/*arr_poolTable[stage.cloud, 0] = normal.connect;
+	arr_poolTable[stage.cloud, 0] = normal.connect;
 	arr_poolTable[stage.cloud, 1] = normal.electric;
-	arr_poolTable[stage.cloud, 2] = normal.napLong;
+	arr_poolTable[stage.cloud, 2] = normal.popup;
 	arr_poolTable[stage.cloud, 3] = normal.nap;
-	arr_poolTable[stage.cloud, 4] = normal.confuse;
+	arr_poolTable[stage.cloud, 4] = normal.armor;
 	
 	arr_poolTable[stage.breach, 0] = normal.phish;
 	arr_poolTable[stage.breach, 1] = normal.electric;
 	arr_poolTable[stage.breach, 2] = normal.napLong;
-	arr_poolTable[stage.breach, 3] = normal.resist;
-	arr_poolTable[stage.breach, 4] = normal.confuse;*/
+	arr_poolTable[stage.breach, 3] = normal.glitch;
+	arr_poolTable[stage.breach, 4] = normal.confuse;
 	
 	var _ratLeak, _cookieLeak;
 	ini_open("unlocks.ini");
 		_ratLeak = ini_read_real("unlocks", "8", false);
-		_cookieLeak = ini_read_real("unlocks", "100", false);
+		_cookieLeak = ini_read_real("unlocks", "17", false);
 	ini_close();
 	
 	if(_ratLeak)
@@ -110,9 +110,9 @@ function pools(){
 		/*arr_poolTable[stage.ashtray, array_length(arr_poolTable[stage.ashtray])] = normal.rat_ratify;
 		arr_poolTable[stage.ashtray, array_length(arr_poolTable[stage.ashtray])] = normal.rat_miniKing;*/
 		
-		/*arr_poolTable[stage.cloud, array_length(arr_poolTable[stage.cloud])] = normal.rat_electro;
+		arr_poolTable[stage.cloud, array_length(arr_poolTable[stage.cloud])] = normal.rat_electro;
 		arr_poolTable[stage.breach, array_length(arr_poolTable[stage.breach])] = normal.rat_e;
-		arr_poolTable[stage.breach, array_length(arr_poolTable[stage.breach])] = normal.rat_gym;*/
+		arr_poolTable[stage.breach, array_length(arr_poolTable[stage.breach])] = normal.rat_gym;
 		
 		
 	};
@@ -129,8 +129,8 @@ function pools(){
 		arr_poolTable[stage.ruins, array_length(arr_poolTable[stage.ruins])] = normal.cookie_ghost;
 		arr_poolTable[stage.ratlantis, array_length(arr_poolTable[stage.ratlantis])] = normal.cookie_void;
 		
-		/*arr_poolTable[stage.cloud, array_length(arr_poolTable[stage.cloud])] = normal.cookie_electric;
-		arr_poolTable[stage.breach, array_length(arr_poolTable[stage.breach])] = normal.cookie_phishy;*/
+		arr_poolTable[stage.cloud, array_length(arr_poolTable[stage.cloud])] = normal.cookie_electric;
+		arr_poolTable[stage.breach, array_length(arr_poolTable[stage.breach])] = normal.cookie_phishy;
 		
 		arr_poolTable[stage.fridge, array_length(arr_poolTable[stage.fridge])] = normal.cookie_frozen;
 	};
@@ -196,7 +196,6 @@ function poolsRat(){
 	arr_poolTable[stage.fridge, 3] = normal.rat_miniKing;
 	arr_poolTable[stage.fridge, 4] = normal.rat_jester;
 	
-	/*
 	arr_poolTable[stage.cloud, 0] = normal.cheese;
 	arr_poolTable[stage.cloud, 1] = normal.rat_electro;
 	arr_poolTable[stage.cloud, 2] = normal.cheese_expensive;
@@ -208,5 +207,80 @@ function poolsRat(){
 	arr_poolTable[stage.breach, 2] = normal.cheese_expensive;
 	arr_poolTable[stage.breach, 3] = normal.rat_e;
 	arr_poolTable[stage.breach, 4] = normal.rat_nurse;
-	*/
+};
+	
+function poolsCookie(){
+	//1st route
+	arr_poolTable[stage.city, 0] = normal.cookie;
+	arr_poolTable[stage.city, 1] = normal.cookie_glass;
+	arr_poolTable[stage.city, 2] = normal.cookie_valentine;
+	arr_poolTable[stage.city, 3] = normal.cookie_void;
+	arr_poolTable[stage.city, 4] = normal.cookie_cheap;
+	arr_poolTable[stage.city, 5] = normal.cheese;
+	
+	arr_poolTable[stage.tunnel, 0] = normal.cookie;
+	arr_poolTable[stage.tunnel, 1] = normal.cookie_spicy;
+	arr_poolTable[stage.tunnel, 2] = normal.cookie_dog;
+	arr_poolTable[stage.tunnel, 3] = normal.cookie_void;
+	arr_poolTable[stage.tunnel, 4] = normal.cookie_lucky;
+			
+	arr_poolTable[stage.lemon_stand, 0] = normal.cookie_bitter;
+	arr_poolTable[stage.lemon_stand, 1] = normal.cookie_thrashy;
+	arr_poolTable[stage.lemon_stand, 2] = normal.cookie_cheap;
+	arr_poolTable[stage.lemon_stand, 3] = normal.cookie;
+	arr_poolTable[stage.lemon_stand, 4] = normal.cookie_ghost;
+	arr_poolTable[stage.lemon_stand, 5] = normal.lemonade;
+	
+	arr_poolTable[stage.shortcut, 0] = normal.cookie_mossy;
+	arr_poolTable[stage.shortcut, 1] = normal.cookie_ghost;
+	arr_poolTable[stage.shortcut, 2] = normal.cookie_lucky;
+	arr_poolTable[stage.shortcut, 3] = normal.cookie_cheap;
+	arr_poolTable[stage.shortcut, 4] = normal.cookie;
+	
+	arr_poolTable[stage.incinerator, 0] = normal.cookie_burnt;
+	arr_poolTable[stage.incinerator, 1] = normal.cookie_spicy;
+	arr_poolTable[stage.incinerator, 2] = normal.cookie_valentine;
+	arr_poolTable[stage.incinerator, 3] = normal.cookie_glass;
+	arr_poolTable[stage.incinerator, 4] = normal.cookie_jar;
+	arr_poolTable[stage.incinerator, 5] = normal.cookie_void;
+	
+	//2nd route
+	arr_poolTable[stage.sewer, 0] = normal.cookie;
+	arr_poolTable[stage.sewer, 1] = normal.cookie_thrashy;
+	arr_poolTable[stage.sewer, 2] = normal.cookie_cheap;
+	arr_poolTable[stage.sewer, 3] = normal.cookie_ghost;
+	arr_poolTable[stage.sewer, 4] = normal.cookie_skeleton;
+	arr_poolTable[stage.sewer, 5] = normal.cookie_lucky;
+	
+	arr_poolTable[stage.ruins, 0] = normal.rat_cookie;
+	arr_poolTable[stage.ruins, 1] = normal.cookie;
+	arr_poolTable[stage.ruins, 2] = normal.cookie_void;
+	arr_poolTable[stage.ruins, 3] = normal.cookie_jar;
+	arr_poolTable[stage.ruins, 4] = normal.cookie_cheap;
+	
+	arr_poolTable[stage.ratlantis, 0] = normal.cookie;
+	arr_poolTable[stage.ratlantis, 1] = normal.cookie_cheap;
+	arr_poolTable[stage.ratlantis, 2] = normal.cookie_mossy;
+	arr_poolTable[stage.ratlantis, 3] = normal.cookie_lucky;
+	
+	//Fridge
+	arr_poolTable[stage.fridge, 0] = normal.cookie_frozen;
+	arr_poolTable[stage.fridge, 1] = normal.cookie_bitter;
+	arr_poolTable[stage.fridge, 2] = normal.cookie_jar;
+	arr_poolTable[stage.fridge, 3] = normal.cookie_lucky;
+	arr_poolTable[stage.fridge, 4] = normal.cookie_void;
+	
+	
+	//3rd Route
+	arr_poolTable[stage.cloud, 0] = normal.cookie_electric;
+	arr_poolTable[stage.cloud, 1] = normal.cookie_phishy;
+	arr_poolTable[stage.cloud, 2] = normal.cookie;
+	arr_poolTable[stage.cloud, 3] = normal.cookie_lucky;
+	arr_poolTable[stage.cloud, 4] = normal.cookie_jar;
+	
+	arr_poolTable[stage.breach, 0] = normal.cookie_phishy;
+	arr_poolTable[stage.breach, 1] = normal.cookie_electric;
+	arr_poolTable[stage.breach, 2] = normal.cookie_void;
+	arr_poolTable[stage.breach, 3] = normal.rat_cookie;
+	arr_poolTable[stage.breach, 4] = normal.glitch;
 };

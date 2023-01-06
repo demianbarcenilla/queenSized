@@ -20,17 +20,17 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 		obj_shop.canChangeText ++;
 		obj_moneyText.costDisplay = cost;
 	};
-	if(mouse_check_button_pressed(mb_left)) and (global.money >= 5)
+	if(mouse_check_button_pressed(mb_left)) and (global.money >= cost)
 	{
 		global.preserve = true;
 		screenshake(5, 10, .2)
-		repeat(5)
+		repeat(cost)
 		{
 			instance_create_depth(x, y, depth-1, obj_money)
 		};
 	
 		audio_play_sound(snd_select, 0, 0);
-		global.money -= 5;
+		global.money -= cost;
 		
 		instance_destroy();
 	};

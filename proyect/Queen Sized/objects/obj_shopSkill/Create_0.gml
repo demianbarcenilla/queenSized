@@ -44,7 +44,6 @@ while(_gotThat)
 };
 image_index = var_holding; //Display the corresponding image
 
-//for avoiding mouse clicky shit
 isLerping = false;
 
 //wave
@@ -70,6 +69,7 @@ ini_open("unlocks.ini") //Ocasional discount
 	};
 ini_close()
 
+//Ocasional SKILL+
 holdingPlus = false;
 ini_open("unlocks.ini")
 	if(ini_read_real("unlocks", "3", false) = true)
@@ -103,5 +103,6 @@ yy = ystart;
 reroll = false;
 global.shoplift = false;
 global.preserve = false;
-
 preserved = false;
+
+poolsCookie();

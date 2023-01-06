@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "mus_dead",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/ag_music",
   },
   "soundFile": "mus_dead.mp3",
-  "duration": 74.55346,
+  "duration": 64.032,
   "parent": {
     "name": "music",
     "path": "folders/Sounds/music.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "mus_dead",
-  "tags": [],
-  "resourceType": "GMSound",
 }

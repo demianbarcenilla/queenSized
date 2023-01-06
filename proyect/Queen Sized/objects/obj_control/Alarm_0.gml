@@ -31,6 +31,7 @@ if(instance_exists(obj_enemy))
 	{
 		if(dead)
 		{
+			instance_destroy(obj_popup);
 			global.turn = 0;
 			global.enemyPrev = playerSelected;
 			if(obj_player.playerSelected = enemy.tito)

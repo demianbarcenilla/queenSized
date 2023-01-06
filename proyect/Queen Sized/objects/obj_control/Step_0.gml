@@ -59,6 +59,10 @@ else if(room = rm_achievements)
 {
 	music = mus_achievementSelect;
 };
+else if(room = rm_thanks)
+{
+	music = mus_thanks;
+};
 else if(room = rm_characterSelect)
 {
 	music = mus_charsel;
@@ -66,6 +70,14 @@ else if(room = rm_characterSelect)
 else if(global.queenType = 1) and (_queenThemeChange)
 {
 	music = mus_4b2;
+};
+else if(global.queenType = 2) and (_queenThemeChange)
+{
+	music = mus_4b3;
+};
+else if(global.queenType = 3) and (_queenThemeChange)
+{
+	music = mus_4b4;
 };
 else //Music
 {
@@ -86,7 +98,8 @@ if(!audio_is_playing(music)){
 	audio_play_sound(music, 1, true);
 };
 
-/* MICHAEL MODE if(instance_exists(obj_enemy))
+// MICHAEL MODE 
+if(instance_exists(obj_enemy))
 {
 	if(global.player = enemy.michael) or (obj_enemy.playerSelected = enemy.michael)
 	{
@@ -123,4 +136,4 @@ switch(global.michaelMode)
 		var _shift = amp * dcos(t);
 		window_set_position((display_get_width()/2)-(window_get_width()/2) + shift, (display_get_height()/2)-(window_get_height()/2) + _shift); //circular wave motion
 	break;
-};*/
+};

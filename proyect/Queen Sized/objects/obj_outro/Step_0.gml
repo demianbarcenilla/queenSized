@@ -2,7 +2,7 @@ image_index = i;
 
 if(mouse_check_button_pressed(mb_left))
 {
-	if(i = 3)
+	if(i = array_length(arr_text)-1)
 	{
 		if(global.newUnlocks)
 		{

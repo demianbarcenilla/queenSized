@@ -81,6 +81,13 @@ function initEnum(){
 		freeze,
 		snowball,
 		
+		connect,
+		phish,
+		download,
+		popup,
+		electric,
+		os,
+		
 		rat_pocket,
 		rat_bomb,
 		rat_spooky,
@@ -129,30 +136,16 @@ function initEnum(){
 		
 		cookie_electric,
 		cookie_phishy,
+	
+		glitch, //GOTTA BE THE LAST ONE ALLWAYS
 		
 		swap,
-		connect,
-		phish,
-		download,
-		warn,
-		electric,
-		lily_juice,
-		burgify,
 		lifehack,
 		lifeswap,
 		
-		melk,
-		muah,
-		frown,
-		
-		book_white,
 		grape_soda,
-		
 		change,
 		rubber_glove,
-		
-		os, //for michael
-		glitch //GOTTA BE THE LAST ONE ALLWAYS
 		};
 
 		enum character
@@ -181,10 +174,15 @@ function initEnum(){
 		lemon_stand,
 		shortcut,
 		incinerator,
+		
 		sewer,
 		ruins,
 		ratlantis,
-		fridge
+		
+		fridge,
+		
+		cloud,
+		breach
 		};
 		
 		enum enemy
@@ -260,6 +258,10 @@ function initEnum(){
 		bondiola,
 		
 		cookie,
+		
+		electrolotl, //cloud
+		michael, //breach
+		
 		rock_blunt
 		
 		/*omar, //ashtray

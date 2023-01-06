@@ -8,7 +8,7 @@ image_speed = 0;
 
 ini_open("unlocks.ini");
 	unlocked = ini_read_real("unlocks", "13", false);
-	if(unlocked)
+	if(unlocked) or (current_month = 12)
 	{
 		image_index = 4;
 	}

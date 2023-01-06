@@ -6,7 +6,7 @@ NEW ORDER!
 PILLOW UNLOCKS
 02- Reroll [Beat The Queen]
 03- Plus Leak! [Beat The Queen (Flaming)]
-04- PH [Beat The Queen [ROUTE3]]
+04- PH [Beat The Queen (Electric)]
 05- PH [Beat The Queen (Final Form)]
 
 06- RAT KING
@@ -15,7 +15,7 @@ RK UNLOCKS
 
 07- SHOPLIFT! [Beat The Queen]
 08- Rat Leak! [Beat The Queen (Flaming)]
-09- PH [Beat The Queen [ROUTE3]]
+09- PH [Beat The Queen (Electric)]
 10- PH [Beat The Queen (Final Form)]
 
 11- JEAN
@@ -24,13 +24,29 @@ JEAN UNLOCKS
 
 12- Preserve [Beat The Queen]
 13- A Cookie! [Beat The Queen (Flaming)]
-14- Permafrost! (Paralizes enemies till you hit em) [Beat The Queen]
+14- Permafrost! (Paralizes enemies till you hit em) [Beat The Queen (Electric)]
 15- PH [Beat The Queen (Final Form)]
+
+COOKIE UNLOCKS
+
+16- BAKE [Beat The Queen]
+17- COOKIE LEAK! [Beat The Queen (Flaming)]
+18- PH [Beat The Queen (Electric)]
+19- PH [Beat The Queen (Final Form)]
+
+20- PHISH
+
+21- PH [Beat The Queen]
+22- Discount Leak! [Beat The Queen (Flaming)]
+23- PH [Beat The Queen (Electric)]
+24- PH [Beat The Queen (Final Form)]
+
 
 PHASES OF QUEEN:
 -Normal/Smokey Queen
 -Flaming Queen
 -Oily Queen 
+-Electric Queen
 
 OLD ORDER:
 01- Events

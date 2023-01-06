@@ -1,0 +1,131 @@
+	//MELK
+	arr_skill[normal.melk, skills.name] = "MELK";
+	arr_skill[normal.melk, skills.desc] = "INFLICTS ALL STATUS EFFECTS";
+	arr_skill[normal.melk, skills.anim] = ani_attack;
+	
+	arr_skill[normal.melk, skills.target] = _self;
+	arr_skill[normal.melk, skills.func] = function(){for(i=0; i <= 10; i++){_self.arr_status[i]= true}};
+	arr_skill[normal.melk, skills.cost] = 0; arr_skill[normal.melk, skills.uses] = 1;
+	arr_skill[normal.melk, skills.selfIndex] = 1;
+	arr_skill[normal.melk, skills.otherIndex] = 0;
+	arr_skill[normal.melk, skills.sound] = snd_heal;
+	arr_skill[normal.melk, skills.text] = string(var_name) + " DRANK SOME WEIRD MELK!";
+	arr_skill[normal.melk, skills.shop] = 25;
+	
+	arr_skill[normal.melk, skills.recharge] = 3;
+	
+	//MUAH
+	arr_skill[normal.muah, skills.name] = "MUAH";
+	arr_skill[normal.muah, skills.desc] = "LOWER ENEMY DAMAGE!";
+	arr_skill[normal.muah, skills.anim] = ani_attack;
+	
+	arr_skill[normal.muah, skills.func] = function(){_other.tempDmg -= 5};
+	arr_skill[normal.muah, skills.cost] = 0; arr_skill[normal.muah, skills.uses] = 5;
+	arr_skill[normal.muah, skills.selfIndex] = 3;
+	arr_skill[normal.muah, skills.otherIndex] = 3;
+	arr_skill[normal.muah, skills.sound] = snd_heal;
+	arr_skill[normal.muah, skills.text] = string(var_name) + " MUAH!";
+	arr_skill[normal.muah, skills.shop] = 50;
+	
+	arr_skill[normal.muah, skills.recharge] = 5;
+
+//lilyJuice
+	arr_skill[normal.lily_juice, skills.name] = "LILY JUICE";
+	arr_skill[normal.lily_juice, skills.desc] = "HEALS YOUR WOUNDS AND MAKES YOU TIPSY!";
+	arr_skill[normal.lily_juice, skills.anim] = ani_attack;
+	
+	arr_skill[normal.lily_juice, skills.func] = function(){regen(_self, maxHp *.70); _self.arr_status[status.tipsy] = true};
+	arr_skill[normal.lily_juice, skills.cost] = 0; arr_skill[normal.lily_juice, skills.uses] = 3;	
+	arr_skill[normal.lily_juice, skills.selfIndex] = 3;
+	arr_skill[normal.lily_juice, skills.otherIndex] = 0;
+	arr_skill[normal.lily_juice, skills.sound] = snd_heal;
+	arr_skill[normal.lily_juice, skills.text] = string(var_name) + " DRINKS SOME LILY JUICE!"
+	arr_skill[normal.lily_juice, skills.shop] = 50;
+	
+	arr_skill[normal.lily_juice, skills.recharge] = 5;
+	
+	//burgify
+	arr_skill[normal.burgify, skills.name] = "BURGIFY";
+	arr_skill[normal.burgify, skills.desc] = "TURN THE ENEMY INTO A LITTLE BURGER!";
+	arr_skill[normal.burgify, skills.anim] = ani_attack;
+	
+	arr_skill[normal.burgify, skills.sound] = snd_heal;
+	arr_skill[normal.burgify, skills.text] = string(var_name) + " TURNS THE ENEMY INTO A BURGER!"
+	arr_skill[normal.burgify, skills.func] = function(){
+		if(!global.bossFight) and (_other != obj_player)
+			{
+				with(_other){initializeEnemy(enemy.burger); initializeSkills(id, obj_player)};screenshake(5, 10, 2)
+			}
+			else
+			{
+				arr_skill[normal.burgify, skills.sound] = snd_error;
+				arr_skill[normal.burgify, skills.text] = string(var_name) + " CANNOT TURN BOSSES INTO BURGERS!"
+				attack(st_damage*2)
+			};
+		}
+	arr_skill[normal.burgify, skills.cost] = 0; arr_skill[normal.burgify, skills.uses] = 3;	
+	arr_skill[normal.burgify, skills.selfIndex] = 3;
+	arr_skill[normal.burgify, skills.otherIndex] = 0;	
+	arr_skill[normal.burgify, skills.shop] = 50;
+	
+	arr_skill[normal.burgify, skills.recharge] = 7;
+
+//frown
+	arr_skill[normal.frown, skills.name] = "frown";
+	arr_skill[normal.frown, skills.desc] = "MAKE DOUBLE DAMAGE FOR REST OF THE FIGHT!";
+	arr_skill[normal.frown, skills.anim] = ani_attack;
+	
+	arr_skill[normal.frown, skills.func] = function(){_self.tempDmg = st_damage};
+	arr_skill[normal.frown, skills.cost] = 0; arr_skill[normal.frown, skills.uses] = 1;
+	arr_skill[normal.frown, skills.selfIndex] = 1;
+	arr_skill[normal.frown, skills.otherIndex] = 0;
+	arr_skill[normal.frown, skills.sound] = snd_heal;
+	arr_skill[normal.frown, skills.text] = string(var_name) + " FROWNS!";
+	arr_skill[normal.frown, skills.shop] = 50;
+	
+	arr_skill[normal.frown, skills.recharge] = 5;
+	
+	//grape soda
+	arr_skill[normal.grape_soda, skills.name] = "grape soda";
+	arr_skill[normal.grape_soda, skills.desc] = "HEALS SOME HP";
+	arr_skill[normal.grape_soda, skills.anim] = ani_attack;
+	
+	arr_skill[normal.grape_soda, skills.func] = function(){_self.hp += maxHp/2};
+	arr_skill[normal.grape_soda, skills.cost] = 0; arr_skill[normal.grape_soda, skills.uses] = 2;
+	arr_skill[normal.grape_soda, skills.selfIndex] = 3;
+	arr_skill[normal.grape_soda, skills.otherIndex] = 0;
+	arr_skill[normal.grape_soda, skills.sound] = snd_heal;
+	arr_skill[normal.grape_soda, skills.text] = string(var_name) + " DRINKS CHEAP SODA!";
+	arr_skill[normal.grape_soda, skills.shop] = 15;
+	
+	arr_skill[normal.grape_soda, skills.recharge] = 7;
+	
+	//change
+	arr_skill[normal.change, skills.name] = "change";
+	arr_skill[normal.change, skills.desc] = "HIT THE ENEMY WITH YOUR MONEY!";
+	arr_skill[normal.change, skills.anim] = ani_attack;
+	
+	arr_skill[normal.change, skills.func] = function(){if(global.money >= 5){attack(st_damage*1.5); global.money -=5} else{attack(st_damage)}};
+	arr_skill[normal.change, skills.cost] = 0; arr_skill[normal.change, skills.uses] = -1;
+	arr_skill[normal.change, skills.selfIndex] = 2;
+	arr_skill[normal.change, skills.otherIndex] = 1;
+	arr_skill[normal.change, skills.sound] = snd_heal;
+	arr_skill[normal.change, skills.text] = string(var_name) + " TOSSES SOME COINS";
+	arr_skill[normal.change, skills.shop] = 25;
+	
+	arr_skill[normal.change, skills.recharge] = 3;
+	
+	//glove
+	arr_skill[normal.rubber_glove, skills.name] = "rubber glove";
+	arr_skill[normal.rubber_glove, skills.desc] = "x2 damage to the enemy, but x1 damage to yourself";
+	arr_skill[normal.rubber_glove, skills.anim] = ani_attack;
+	
+	arr_skill[normal.rubber_glove, skills.func] = function(){attack(st_damage*2); self.hp -= dmgCalc(_self, _self, st_damage)};
+	arr_skill[normal.rubber_glove, skills.cost] = 0; arr_skill[normal.rubber_glove, skills.uses] = -1;
+	arr_skill[normal.rubber_glove, skills.selfIndex] = 2;
+	arr_skill[normal.rubber_glove, skills.otherIndex] = 1;
+	arr_skill[normal.rubber_glove, skills.sound] = snd_heal;
+	arr_skill[normal.rubber_glove, skills.text] = string(var_name) + " SLAPS WITH A GLOVE!";
+	arr_skill[normal.rubber_glove, skills.shop] = 25;
+	
+	arr_skill[normal.rubber_glove, skills.recharge] = 3;

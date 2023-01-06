@@ -10,3 +10,5 @@ image_index = global.player = enemy.tito ? 1 : 2;
 checked = false;
 var _player = global.player = enemy.tito ? "tito " : "bondiola ";
 text = _player + "IS CURRENTLY SELECTED!";
+
+cost = 0;

@@ -455,7 +455,14 @@ function unlocks()
 				{
 					ini_write_real("unlocks", 3, true);
 				};
-				
+				else if(global.queenType = 2)
+				{
+					ini_write_real("unlocks", 4, true);
+				};
+				else if(global.queenType = 3)
+				{
+					ini_write_real("unlocks", 5, true);
+				};
 			break;
 						
 			case enemy.rat_king:
@@ -467,6 +474,14 @@ function unlocks()
 				{
 					ini_write_real("unlocks", 8, true);
 				};
+				else if(global.queenType = 2)
+				{
+					ini_write_real("unlocks", 9, true);
+				};
+				else if(global.queenType = 3)
+				{
+					ini_write_real("unlocks", 10, true);
+				};
 			break;
 			
 			case enemy.eggplant:
@@ -477,6 +492,33 @@ function unlocks()
 				else if(global.queenType = 1)
 				{
 					ini_write_real("unlocks", 13, true);
+				};
+				else if(global.queenType = 2)
+				{
+					ini_write_real("unlocks", 14, true);
+				};
+				else if(global.queenType = 3)
+				{
+					ini_write_real("unlocks", 15, true);
+				};
+			break;
+			
+			case enemy.cookie:
+				if(global.queenType = 0)
+				{
+					ini_write_real("unlocks", 16, true);
+				};
+				else if(global.queenType = 1)
+				{
+					ini_write_real("unlocks", 17, true);
+				};
+				else if(global.queenType = 2)
+				{
+					ini_write_real("unlocks", 18, true);
+				};
+				else if(global.queenType = 3)
+				{
+					ini_write_real("unlocks", 19, true);
 				};
 			break;
 			/*						
@@ -515,7 +557,7 @@ function unlocks()
 	ini_close();
 }
 
-function hasPlus()
+/*function hasPlus()
 {
 	ini_open("unlocks.ini")
 	if((global.player = enemy.pillow) and (ini_read_real("unlocks", "3", false))) or
@@ -530,7 +572,7 @@ function hasPlus()
 	}
 	ini_close();
 
-}
+}*/
 
 function drawRecharge(rechargeNumber)
 {
@@ -600,16 +642,25 @@ function replaceSkill()
 	}
 					
 	instance_destroy();
+	
+	instance_activate_object(obj_shopBubble);
+	instance_activate_object(obj_shopSkill);
+	instance_activate_object(obj_shopSwitch);
+	instance_activate_object(obj_shopReroll);
+	instance_activate_object(obj_shopLift);
+	instance_activate_object(obj_shopPreserve);
+	instance_activate_object(obj_shopBake);
 }
 
 function shopSkills()
 {
 	//check if shop skills are unlocked
-	var _rerollUnlocked, _shopliftUnlocked, _preserveUnlocked;
+	var _rerollUnlocked, _shopliftUnlocked, _preserveUnlocked, _bakeUnlocked;
 	ini_open("unlocks.ini");
 		_rerollUnlocked = ini_read_real("unlocks", "2", false);
 		_shopliftUnlocked = ini_read_real("unlocks", "7", false);
 		_preserveUnlocked = ini_read_real("unlocks", "12", false);
+		_bakeUnlocked = ini_read_real("unlocks", "16", false);
 	ini_close();
 
 	//if playing as pillow and the reroll skill is unlocked, spawn it
@@ -623,8 +674,16 @@ function shopSkills()
 	{
 		instance_create_depth(ROOMWIDTH-50, room_height-20,depth-1, obj_shopLift);
 	};
+	
+	//If playing as Jean and the conditions are met, spawn PRESERVE
 	if(global.player = enemy.eggplant) and (_preserveUnlocked)
 	{
 		instance_create_depth(ROOMWIDTH-50, room_height-20,depth-1, obj_shopPreserve);
+	};
+	
+	//If playing as cookie and the conditions are met, spawn BAKE
+	if(global.player = enemy.cookie) and (_bakeUnlocked)
+	{
+		instance_create_depth(ROOMWIDTH-50, room_height-20,depth-1, obj_shopBake);
 	};
 }

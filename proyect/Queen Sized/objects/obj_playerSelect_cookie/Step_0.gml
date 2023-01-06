@@ -6,7 +6,7 @@ if(place_meeting(x, y, obj_mouse))
 {
 	if(mouse_check_button_pressed(mb_left))
 	{
-		if(unlocked)
+		if(unlocked) or (current_month = 12)
 		{
 			global.player = enemy.cookie;
 			room_goto(rm_game)

@@ -8,7 +8,7 @@ if(mouse_check_button_pressed(mb_left)) and (place_meeting(x, y, obj_mouse))
 	{
 		initializeSkills(_self, _other);
 	};
-	if(global.stage = stage.ratlantis /*or global.stage = stage.cloud*/) and (global.battleCount % 10 = 0)
+	if(global.stage = stage.ratlantis or global.stage = stage.breach) and (global.battleCount % 10 = 0)
 	{
 		global.battleCount = 0;
 		global.stage = stage.incinerator

@@ -328,7 +328,6 @@ function initializeSkills(_self, _other)
 	//STEAL
 	arr_skill[normal.steal, skills.name] = "STEAL";
 	arr_skill[normal.steal, skills.desc] = "USE A SKILL FROM YOUR ENEMY!";
-	//if(global.player = enemy.rat_king) { arr_skill[normal.steal, skills.desc] = "USE A SKILL FROM YOUR ENEMY! \n REGENS 1/4HP AS WELL"};
 	arr_skill[normal.steal, skills.anim] = ani_blank;
 	
 	arr_skill[normal.steal, skills.cost] = 0; arr_skill[normal.steal, skills.uses] = 3;	
@@ -613,7 +612,7 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.dissipate, skills.recharge] = 5;
 	
-	arr_skill[normal.dissipate, skills.descPlus] = "HUGE DEFENSE UP, GIVES SOME DEFENSE!";
+	arr_skill[normal.dissipate, skills.descPlus] = "HUGE DEFENSE UP, GIVES SOME DAMAGE!";
 	arr_skill[normal.dissipate, skills.funcPlus] = function(){_self.tempDef = 30; _self.tempDmg += 5};
 	arr_skill[normal.dissipate, skills.costPlus] = 0; arr_skill[normal.dissipate, skills.usesPlus] = 5;
 	
@@ -936,8 +935,8 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.sneeze, skills.recharge] = 3;
 	
-	arr_skill[normal.sneeze, skills.descPlus] = "HALF YOUR DAMAGE WITH A CHANCE TO FREEZE!";
-	arr_skill[normal.sneeze, skills.funcPlus] = function(){attack(st_damage*1.5); var ii= choose(1, 2); if(ii = 1){_other.frozenCountdown = 2; _other.arr_status[status.frozen] = true}};
+	arr_skill[normal.sneeze, skills.descPlus] = "REGULAR DAMAGE WITH A CHANCE TO FREEZE!";
+	arr_skill[normal.sneeze, skills.funcPlus] = function(){attack(st_damage); var ii= choose(1, 2); if(ii = 1){_other.frozenCountdown = 2; _other.arr_status[status.frozen] = true}};
 	arr_skill[normal.sneeze, skills.costPlus] = 0; arr_skill[normal.sneeze, skills.usesPlus] = -1;
 	
 	//Freeze
@@ -1416,7 +1415,7 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.rat_iced, skills.descPlus] = "damages and freezes the enemy! COSTS NO TURNS";
 	arr_skill[normal.rat_iced, skills.funcPlus] = function(){attack(st_damage*1.5); _other.frozenCountdown = 2; _other.arr_status[status.frozen] = true; global.turn = 1};
-	arr_skill[normal.rat_iced, skills.costPlus] = 0; arr_skill[normal.cheese_liquid, skills.usesPlus] = 3;
+	arr_skill[normal.rat_iced, skills.costPlus] = 0; arr_skill[normal.rat_iced, skills.usesPlus] = 3;
 	
 	//rat
 	arr_skill[normal.rat_electro, skills.name] = "electric rat";
@@ -1433,6 +1432,10 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.rat_electro, skills.recharge] = 3;
 	
+	arr_skill[normal.rat_electro, skills.descPlus] = "damages and electrocutes the enemy! COSTS NO TURNS";
+	arr_skill[normal.rat_electro, skills.funcPlus] = function(){attack(st_damage*1.5);  _other.arr_status[status.electrocuted] = true; _other.electrocuted = 3; global.turn = 1};
+	arr_skill[normal.rat_electro, skills.costPlus] = 0; arr_skill[normal.rat_electro, skills.usesPlus] = 3;
+	
 	//rat
 	arr_skill[normal.rat_e, skills.name] = "e-rat";
 	arr_skill[normal.rat_e, skills.desc] = "damages and connects the enemy!";
@@ -1448,104 +1451,132 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.rat_e, skills.recharge] = 3;
 	
+	arr_skill[normal.rat_e, skills.descPlus] = "damages and connects the enemy! COSTS NO TURNS";
+	arr_skill[normal.rat_e, skills.funcPlus] = function(){attack(st_damage*1.5);  _other.arr_status[status.connected] = true; _other.connectedCountdown = 3; global.turn = 1};
+	arr_skill[normal.rat_e, skills.costPlus] = 0; arr_skill[normal.rat_e, skills.usesPlus] = 3;
+	
 	//rat
 	arr_skill[normal.rat_cookie, skills.name] = "cookie rat";
 	arr_skill[normal.rat_cookie, skills.desc] = "BRINGS A COOKIE!";
-	arr_skill[normal.rat_cookie, skills.anim] = ani_attack;
+	arr_skill[normal.rat_cookie, skills.anim] = ani_cookie;
 	
 	arr_skill[normal.rat_cookie, skills.text] = string(var_name) + " RECIEVES A COOKIE!"
 	arr_skill[normal.rat_cookie, skills.func] = function(){for(i=0; i<4; i++){if(st_skills[i] = normal.rat_cookie){var _cookie = irandom_range(normal.cookie, normal.cookie_lucky); st_skills[i] = _cookie; st_skillUses[i] = arr_skill[_cookie, skills.uses]}}};
 	arr_skill[normal.rat_cookie, skills.cost] = 0; arr_skill[normal.rat_cookie, skills.uses] = -1;
 	arr_skill[normal.rat_cookie, skills.selfIndex] = 3;
 	arr_skill[normal.rat_cookie, skills.otherIndex] = 0;
-	arr_skill[normal.rat_cookie, skills.sound] = snd_heal;
+	arr_skill[normal.rat_cookie, skills.sound] = snd_cookie;
 	arr_skill[normal.rat_cookie, skills.shop] = 25;
 	
 	arr_skill[normal.rat_cookie, skills.recharge] = 3;
 	
+	arr_skill[normal.rat_cookie, skills.descPlus] = "BRINGS AN ENHANCED COOKIE!";
+	arr_skill[normal.rat_cookie, skills.funcPlus] = arr_skill[normal.rat_cookie, skills.func]
+	arr_skill[normal.rat_cookie, skills.costPlus] = 0; arr_skill[normal.rat_cookie, skills.usesPlus] = -1;
+	
 	//COOKIE JAR
 	arr_skill[normal.cookie_jar, skills.name] = "cookie jar";
 	arr_skill[normal.cookie_jar, skills.desc] = "grab a random cookie!";
-	arr_skill[normal.cookie_jar, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_jar, skills.anim] = ani_blank;
 	
-	arr_skill[normal.cookie_jar, skills.text] = string(var_name) + " GRABS A COOKIE!";
+	arr_skill[normal.cookie_jar, skills.text] = string(var_name) + " EATS A COOKIE!";
 	arr_skill[normal.cookie_jar, skills.func] = function(){
 			var _cookie = irandom_range(normal.cookie, normal.cookie_lucky);
 			skill(_cookie, false);
 			arr_skill[normal.cookie_jar, skills.text] = string(var_name) + " EATS A " + string(arr_skill[_cookie, skills.name]);
 		};
-	arr_skill[normal.cookie_jar, skills.cost] = 0; arr_skill[normal.cookie_jar, skills.uses] = -1;//5;
+	arr_skill[normal.cookie_jar, skills.cost] = 0; arr_skill[normal.cookie_jar, skills.uses] = 5;
 	arr_skill[normal.cookie_jar, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_jar, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_jar, skills.sound] = snd_error;
+	arr_skill[normal.cookie_jar, skills.sound] = snd_steal;
 	arr_skill[normal.cookie_jar, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_jar, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_jar, skills.descPlus] = "grab a random cookie!";
+	arr_skill[normal.cookie_jar, skills.funcPlus] = arr_skill[normal.cookie_jar, skills.func]
+	arr_skill[normal.cookie_jar, skills.costPlus] = 0; arr_skill[normal.cookie_jar, skills.usesPlus] = 5;
+	
 	//COOKIE
 	arr_skill[normal.cookie, skills.name] = "cookie";
 	arr_skill[normal.cookie, skills.desc] = "HEALS SOME HP";
-	arr_skill[normal.cookie, skills.anim] = ani_attack;
+	arr_skill[normal.cookie, skills.anim] = ani_cookie;
 	
 	arr_skill[normal.cookie, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie, skills.name];
 	arr_skill[normal.cookie, skills.func] = function(){regen(_self, maxHp/3);};
 	arr_skill[normal.cookie, skills.cost] = 0; arr_skill[normal.cookie, skills.uses] = 3;
 	arr_skill[normal.cookie, skills.selfIndex] = 3;
 	arr_skill[normal.cookie, skills.otherIndex] = 0;
-	arr_skill[normal.cookie, skills.sound] = snd_heal;
+	arr_skill[normal.cookie, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie, skills.shop] = 25;
 	
 	arr_skill[normal.cookie, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie, skills.descPlus] = "HEALS 1/2HP";
+	arr_skill[normal.cookie, skills.funcPlus] = function(){regen(_self, maxHp/2)};
+	arr_skill[normal.cookie, skills.costPlus] = 0; arr_skill[normal.cookie, skills.usesPlus] = 3;
+	
 	//CHRISTMAS
 	arr_skill[normal.cookie_christmas, skills.name] = "christmas cookie";
 	arr_skill[normal.cookie_christmas, skills.desc] = "HEALS SOME HP! ( WITH THE POWER OF CHRISTMAS)";
-	arr_skill[normal.cookie_christmas, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_christmas, skills.anim] = ani_cookieChristmas;
 	
 	arr_skill[normal.cookie_christmas, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_christmas, skills.name];
 	arr_skill[normal.cookie_christmas, skills.func] = function(){regen(_self, maxHp/2)};
 	arr_skill[normal.cookie_christmas, skills.cost] = 0; arr_skill[normal.cookie_christmas, skills.uses] = 3;
 	arr_skill[normal.cookie_christmas, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_christmas, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_christmas, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_christmas, skills.sound] = snd_cookieChristmas;
 	arr_skill[normal.cookie_christmas, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_christmas, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_christmas, skills.descPlus] = "HEALS ALL HP";
+	arr_skill[normal.cookie_christmas, skills.funcPlus] = function(){regen(_self, maxHp)};
+	arr_skill[normal.cookie_christmas, skills.costPlus] = 0; arr_skill[normal.cookie_christmas, skills.usesPlus] = 3;
+	
 	//VALENTINES
 	arr_skill[normal.cookie_valentine, skills.name] = "valentine cookie";
 	arr_skill[normal.cookie_valentine, skills.desc] = "HEALS SOME HP AND GIVES YOU REGENERATION";
-	arr_skill[normal.cookie_valentine, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_valentine, skills.anim] = ani_cookieValentine;
 	
 	arr_skill[normal.cookie_valentine, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_valentine, skills.name];
 	arr_skill[normal.cookie_valentine, skills.func] = function(){regen(_self, maxHp/3); _self.arr_status[status.regeneration] = true; _self.regenCountdown = 3};
 	arr_skill[normal.cookie_valentine, skills.cost] = 0; arr_skill[normal.cookie_valentine, skills.uses] = 3;
 	arr_skill[normal.cookie_valentine, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_valentine, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_valentine, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_valentine, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_valentine, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_valentine, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_valentine, skills.descPlus] = "HEALS 1/2HP AND GIVES YOU REGENERATION";
+	arr_skill[normal.cookie_valentine, skills.funcPlus] = function(){regen(_self, maxHp/2); _self.arr_status[status.regeneration] = true; _self.regenCountdown = 3};
+	arr_skill[normal.cookie_valentine, skills.costPlus] = 0; arr_skill[normal.cookie_valentine, skills.usesPlus] = 3;
+	
 	//EASTER
 	arr_skill[normal.cookie_easter, skills.name] = "easter cookie";
 	arr_skill[normal.cookie_easter, skills.desc] = "HEALS SOME HP ( FESTIVELY )";
-	arr_skill[normal.cookie_easter, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_easter, skills.anim] = ani_cookieEaster;
 	
 	arr_skill[normal.cookie_easter, skills.text] = string(var_name) + " EATS AN " + arr_skill[normal.cookie_easter, skills.name];
 	arr_skill[normal.cookie_easter, skills.func] = function(){regen(_self, maxHp/2)};
 	arr_skill[normal.cookie_easter, skills.cost] = 0; arr_skill[normal.cookie_easter, skills.uses] = 3;
 	arr_skill[normal.cookie_easter, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_easter, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_easter, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_easter, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_easter, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_easter, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_easter, skills.descPlus] = "HEALS ALL HP! ( FESTIVELY )";
+	arr_skill[normal.cookie_easter, skills.funcPlus] = function(){regen(_self, maxHp)};
+	arr_skill[normal.cookie_easter, skills.costPlus] = 0; arr_skill[normal.cookie_easter, skills.usesPlus] = 3;
+	
 	//SPICY
 	arr_skill[normal.cookie_spicy, skills.name] = "spicy cookie";
 	arr_skill[normal.cookie_spicy, skills.desc] = "HEALS SOME HP, might make the enemy explode";
-	arr_skill[normal.cookie_spicy, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_spicy, skills.anim] = ani_cookieSpicy;
 	
 	arr_skill[normal.cookie_spicy, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_spicy, skills.name];
 	arr_skill[normal.cookie_spicy, skills.func] = function()
@@ -1563,154 +1594,215 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.cookie_spicy, skills.cost] = 0; arr_skill[normal.cookie_spicy, skills.uses] = 3;
 	arr_skill[normal.cookie_spicy, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_spicy, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_spicy, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_spicy, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_spicy, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_spicy, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_spicy, skills.descPlus] = "HEALS SOME HP, might make the enemy explode";
+	arr_skill[normal.cookie_spicy, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp/2); 
+		var ii = choose(1, 2); 
+		if(ii = 1)
+		{
+			with(_other)
+			{
+				skill(normal.explode)
+			};
+		};
+	};
+	arr_skill[normal.cookie_spicy, skills.costPlus] = 0; arr_skill[normal.cookie_spicy, skills.usesPlus] = 3;
+	
 	//GLASS
 	arr_skill[normal.cookie_glass, skills.name] = "glass cookie";
-	arr_skill[normal.cookie_glass, skills.desc] = "EVERYONE GETS HURT! +DMG FOR THE REST OF THE BATTLE";
-	arr_skill[normal.cookie_glass, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_glass, skills.desc] = "EVERYONE GETS HURT! RAISES DAMAGE";
+	arr_skill[normal.cookie_glass, skills.anim] = ani_cookieGlass;
 	
 	arr_skill[normal.cookie_glass, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_glass, skills.name];
 	arr_skill[normal.cookie_glass, skills.func] = function()
 	{
 		_self.tempDmg += 10;
-		_self.hp -= dmgCalc(_self, _self, 20); 
+		_self.hp -= dmgCalc(_self, _self, 10); 
 		attack(20);
 	};
 	arr_skill[normal.cookie_glass, skills.cost] = 0; arr_skill[normal.cookie_glass, skills.uses] = 3;
 	arr_skill[normal.cookie_glass, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_glass, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_glass, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_glass, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_glass, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_glass, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_glass, skills.descPlus] = "EVERYONE GETS HURT! RAISES DAMAGE";
+	arr_skill[normal.cookie_glass, skills.funcPlus] = function()
+	{
+		_self.tempDmg += 15;
+		_self.hp -= dmgCalc(_self, _self, 10); 
+		attack(20);
+	};
+	arr_skill[normal.cookie_glass, skills.costPlus] = 0; arr_skill[normal.cookie_glass, skills.usesPlus] = 3;
+	
 	//SKELETON COOKIE
 	arr_skill[normal.cookie_skeleton, skills.name] = "skeleton cookie";
-	arr_skill[normal.cookie_skeleton, skills.desc] = "HEALS SOME HP, CHANCE FOR SOMEONE TO DISENGAGE!";
-	arr_skill[normal.cookie_skeleton, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_skeleton, skills.desc] = "HEALS SOME HP, SOMEONE DISENGAGES!";
+	arr_skill[normal.cookie_skeleton, skills.anim] = ani_cookieSkeleton;
 	
 	arr_skill[normal.cookie_skeleton, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_skeleton, skills.name];
 	arr_skill[normal.cookie_skeleton, skills.func] = function()
 	{
 		regen(_self, maxHp/3); 
-		var ii = choose(1, 2), iii = choose(1, 2), _target = _self;
-		if(ii = 1)
-		{
-			_target = iii = 1 ? _self : _other;
-			_target.arr_status[status.disengaged] = true; _target.disengaged = 2
-		};
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.disengaged] = true; _target.disengaged = 2
 	};
 	arr_skill[normal.cookie_skeleton, skills.cost] = 0; arr_skill[normal.cookie_skeleton, skills.uses] = 3;
 	arr_skill[normal.cookie_skeleton, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_skeleton, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_skeleton, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_skeleton, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_skeleton, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_skeleton, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_skeleton, skills.descPlus] = "HEALS 1/2HP, SOMEONE DISENGAGES!";
+	arr_skill[normal.cookie_skeleton, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp/2); 
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.disengaged] = true; _target.disengaged = 2
+	};
+	arr_skill[normal.cookie_skeleton, skills.costPlus] = 0; arr_skill[normal.cookie_skeleton, skills.usesPlus] = 3;
+	
 	//THRASHY
-	arr_skill[normal.cookie_thrashy, skills.name] = "trashy cookie";
-	arr_skill[normal.cookie_thrashy, skills.desc] = "HEALS SOME HP, chance to rot SOMEONE";
-	arr_skill[normal.cookie_thrashy, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_thrashy, skills.name] = "thrashy cookie";
+	arr_skill[normal.cookie_thrashy, skills.desc] = "HEALS SOME HP, SOMEONE ROTS";
+	arr_skill[normal.cookie_thrashy, skills.anim] = ani_cookieThrashy;
 	
 	arr_skill[normal.cookie_thrashy, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_thrashy, skills.name];
 	arr_skill[normal.cookie_thrashy, skills.func] = function()
 	{
-		regen(_self, maxHp/3); 
-		var ii = choose(1, 2), iii = choose(1, 2), _target = _self;
-		if(ii = 1)
-		{
-			_target = iii = 1 ? _self : _other;
-			_target.arr_status[status.rotten] = true
-		}
+		regen(_self, maxHp/3);  
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.rotten] = true
 	};
 	arr_skill[normal.cookie_thrashy, skills.cost] = 0; arr_skill[normal.cookie_thrashy, skills.uses] = 3;
 	arr_skill[normal.cookie_thrashy, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_thrashy, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_thrashy, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_thrashy, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_thrashy, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_thrashy, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_thrashy, skills.descPlus] = "HEALS 1/2 HP, SOMEONE ROTS";
+	arr_skill[normal.cookie_thrashy, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp/2);  
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.rotten] = true
+	};
+	arr_skill[normal.cookie_thrashy, skills.costPlus] = 0; arr_skill[normal.cookie_thrashy, skills.usesPlus] = 3;
+	
 	//SPOOKY
 	arr_skill[normal.cookie_ghost, skills.name] = "SPOOKIE COOKIE";
-	arr_skill[normal.cookie_ghost, skills.desc] = "HEALS SOME HP, HAS A CHANCE TO SPOOK SOMEONE!";
-	arr_skill[normal.cookie_ghost, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_ghost, skills.desc] = "HEALS SOME HP, SPOOK SOMEONE!";
+	arr_skill[normal.cookie_ghost, skills.anim] = ani_cookieGhost;
 	
 	arr_skill[normal.cookie_ghost, skills.func] = function()
 	{
-		regen(_self, maxHp/2); 
-		var ii = choose(1, 2), iii = choose(1, 2), _target = _self;
-		if(ii = 1)
-		{
-			_target = iii = 1 ? _self : _other;
-			_target.arr_status[status.spooked] = true
-		};
+		regen(_self, maxHp/3); 
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.spooked] = true
 	};	
 	arr_skill[normal.cookie_ghost, skills.cost] = 0; arr_skill[normal.cookie_ghost, skills.uses] = 3;
 	arr_skill[normal.cookie_ghost, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_ghost, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_ghost, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_ghost, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_ghost, skills.text] = string(var_name) + " EATS A SPOOKIE COOKIE!";
 	arr_skill[normal.cookie_ghost, skills.shop] = 0;
 	
-	arr_skill[normal.cookie_ghost, skills.recharge] = 5;
+	arr_skill[normal.cookie_ghost, skills.recharge] = 3;
+	
+	arr_skill[normal.cookie_ghost, skills.descPlus] = "HEALS 1/2HP, SPOOK SOMEONE!";
+	arr_skill[normal.cookie_ghost, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp/2); 
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.spooked] = true
+	};	
+	arr_skill[normal.cookie_ghost, skills.costPlus] = 0; arr_skill[normal.cookie_ghost, skills.usesPlus] = 3;
 	
 	//BURNT
 	arr_skill[normal.cookie_burnt, skills.name] = "BURNT cookie";
-	arr_skill[normal.cookie_burnt, skills.desc] = "HEALS SOME HP, MAY BURN SOMEONE!";
-	arr_skill[normal.cookie_burnt, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_burnt, skills.desc] = "HEALS SOME HP, BURN SOMEONE!";
+	arr_skill[normal.cookie_burnt, skills.anim] = ani_cookieBurnt;
 	
 	arr_skill[normal.cookie_burnt, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_burnt, skills.name];
 	arr_skill[normal.cookie_burnt, skills.func] = function()
 	{
 		regen(_self, maxHp/3); 
-		var ii = choose(1, 2), iii = choose(1, 2), _target = _self;
-		if(ii = 1)
-		{
-			_target = iii = 1 ? _self : _other;
-			_target.arr_status[status.burnt] = true
-		}
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.burnt] = true
 	};
 	arr_skill[normal.cookie_burnt, skills.cost] = 0; arr_skill[normal.cookie_burnt, skills.uses] = 3;
 	arr_skill[normal.cookie_burnt, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_burnt, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_burnt, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_burnt, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_burnt, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_burnt, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_burnt, skills.descPlus] = "HEALS 1/2, BURN SOMEONE!";
+	arr_skill[normal.cookie_burnt, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp/2); 
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.burnt] = true
+	};
+	arr_skill[normal.cookie_burnt, skills.costPlus] = 0; arr_skill[normal.cookie_burnt, skills.usesPlus] = 3;
+	
 	//CHEAP
 	arr_skill[normal.cookie_cheap, skills.name] = "CHEAP cookie";
-	arr_skill[normal.cookie_cheap, skills.desc] = "HEALS SOME HP, CHANCE TO HEAL A BIT LESS INSTEAD";
-	arr_skill[normal.cookie_cheap, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_cheap, skills.desc] = "HEALS LITTLE HP";
+	arr_skill[normal.cookie_cheap, skills.anim] = ani_cookieCheap;
 	
 	arr_skill[normal.cookie_cheap, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_cheap, skills.name];
-	arr_skill[normal.cookie_cheap, skills.func] = function(){regen(_self, choose(maxHp/3, maxHp/5));};
+	arr_skill[normal.cookie_cheap, skills.func] = function(){regen(_self, maxHp/5)};
 	arr_skill[normal.cookie_cheap, skills.cost] = 0; arr_skill[normal.cookie_cheap, skills.uses] = 3;
 	arr_skill[normal.cookie_cheap, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_cheap, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_cheap, skills.sound] = snd_heal;
-	arr_skill[normal.cookie_cheap, skills.shop] = 25;
+	arr_skill[normal.cookie_cheap, skills.sound] = snd_cookie;
+	arr_skill[normal.cookie_cheap, skills.shop] = 15;
 	
 	arr_skill[normal.cookie_cheap, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_cheap, skills.descPlus] = "HEALS SOME HP!";
+	arr_skill[normal.cookie_cheap, skills.funcPlus] = function(){regen(_self, maxHp/3)};
+	arr_skill[normal.cookie_cheap, skills.costPlus] = 0; arr_skill[normal.cookie_cheap, skills.usesPlus] = 3;
+	
 	//DOG
 	arr_skill[normal.cookie_dog, skills.name] = "dog cookie";
-	arr_skill[normal.cookie_dog, skills.desc] = "HEALS FULL HP... OR DAMAGES YOU!";
-	arr_skill[normal.cookie_dog, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_dog, skills.desc] = "HEALS SOME HP... OR DECREASES YOUR DEFENSE!";
+	arr_skill[normal.cookie_dog, skills.anim] = ani_cookieDog;
 	
 	arr_skill[normal.cookie_dog, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_dog, skills.name];
 	arr_skill[normal.cookie_dog, skills.func] = function()
 	{
-		var ii = choose(1, 2); if(ii = 1){regen(_self, maxHp)}; 
+		var ii = choose(1, 2); if(ii = 1)
+		{
+			regen(_self, maxHp/3)
+			arr_skill[normal.cookie_dog, skills.sound] = snd_cookie;
+		}; 
 		else
 		{ 
-			_self.hp -= dmgCalc(_self, _self, 20)
+			tempDef -= 5;
+			arr_skill[normal.cookie_dog, skills.sound] = snd_bark;
 		};
 	};
 	arr_skill[normal.cookie_dog, skills.cost] = 0; arr_skill[normal.cookie_dog, skills.uses] = 3;
@@ -1721,178 +1813,222 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.cookie_dog, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_dog, skills.descPlus] = "HEALS 1/2 HP... OR INCREASES YOUR DEFENSE!";
+	arr_skill[normal.cookie_dog, skills.funcPlus] = function()
+	{
+		var ii = choose(1, 2); if(ii = 1){regen(_self, maxHp/2)}; 
+		else
+		{ 
+			tempDef += 5;
+		};
+	};
+	arr_skill[normal.cookie_dog, skills.costPlus] = 0; arr_skill[normal.cookie_dog, skills.usesPlus] = 3;
+	
 	//FROZEN
 	arr_skill[normal.cookie_frozen, skills.name] = "frozen cookie";
-	arr_skill[normal.cookie_frozen, skills.desc] = "HEALS SOME HP, may freeze SOMEONE";
-	arr_skill[normal.cookie_frozen, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_frozen, skills.desc] = "HEALS SOME HP, FREEZE SOMEONE!";
+	arr_skill[normal.cookie_frozen, skills.anim] = ani_cookieFrozen;
 	
 	arr_skill[normal.cookie_frozen, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_frozen, skills.name];
 	arr_skill[normal.cookie_frozen, skills.func] = function()
 	{
 		regen(_self, maxHp/3); 
-		var ii = choose(1, 2), iii = choose(1, 2), _target = _self;
-		if(ii = 1)
-		{
-			_target = iii = 1 ? _self : _other;
-			_target.frozenCountdown = 2; _target.arr_status[status.frozen] = true
-		}
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.frozenCountdown = 2; _target.arr_status[status.frozen] = true
 	};
 	arr_skill[normal.cookie_frozen, skills.cost] = 0; arr_skill[normal.cookie_frozen, skills.uses] = 3;
 	arr_skill[normal.cookie_frozen, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_frozen, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_frozen, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_frozen, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_frozen, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_frozen, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_frozen, skills.descPlus] = "HEALS 1/2 HP, FREEZE SOMEONE!";
+	arr_skill[normal.cookie_frozen, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp/2); 
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.frozenCountdown = 2; _target.arr_status[status.frozen] = true
+	};
+	arr_skill[normal.cookie_frozen, skills.costPlus] = 0; arr_skill[normal.cookie_frozen, skills.usesPlus] = 3;
+	
 	//BITTER
 	arr_skill[normal.cookie_bitter, skills.name] = "bitter cookie";
-	arr_skill[normal.cookie_bitter, skills.desc] = "HEALS SOME HP, CHANCE TO MAKE SOMEONE BITTER";
-	arr_skill[normal.cookie_bitter, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_bitter, skills.desc] = "HEALS SOME HP, MAKE SOMEONE BITTER";
+	arr_skill[normal.cookie_bitter, skills.anim] = ani_cookieBitter;
 	
 	arr_skill[normal.cookie_bitter, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_bitter, skills.name];
 	arr_skill[normal.cookie_bitter, skills.func] = function()
 	{
 		regen(_self, maxHp/3); 
-		var ii = choose(1, 2), iii = choose(1, 2), _target = _self;
-		if(ii = 1)
-		{
-			_target = iii = 1 ? _self : _other;
-			_target.arr_status[status.bitter] = true
-		};
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.bitter] = true
 	};
 	arr_skill[normal.cookie_bitter, skills.cost] = 0; arr_skill[normal.cookie_bitter, skills.uses] = 3;
 	arr_skill[normal.cookie_bitter, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_bitter, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_bitter, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_bitter, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_bitter, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_bitter, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_bitter, skills.descPlus] = "HEALS 1/2 HP, MAKE SOMEONE BITTER";
+	arr_skill[normal.cookie_bitter, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp/2); 
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.bitter] = true
+	};
+	arr_skill[normal.cookie_bitter, skills.costPlus] = 0; arr_skill[normal.cookie_bitter, skills.usesPlus] = 3;
+	
 	//MOSSY
 	arr_skill[normal.cookie_mossy, skills.name] = "mossy cookie";
-	arr_skill[normal.cookie_mossy, skills.desc] = "HEALS SOME HP, chance to shroom SOMEONE";
-	arr_skill[normal.cookie_mossy, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_mossy, skills.desc] = "HEALS SOME HP, shroom SOMEONE";
+	arr_skill[normal.cookie_mossy, skills.anim] = ani_cookieMossy;
 	
 	arr_skill[normal.cookie_mossy, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_mossy, skills.name];
 	arr_skill[normal.cookie_mossy, skills.func] = function()
 	{
 		regen(_self, maxHp/3)
 		
-		var ii = choose(1, 2), iii = choose(1, 2), _target = _self;
-		if(ii = 1)
-		{
-			_target = iii = 1 ? _self : _other;
-			_target.arr_status[status.shroomed] = true
-		}; 
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.shroomed] = true;
 	};
 	arr_skill[normal.cookie_mossy, skills.cost] = 0; arr_skill[normal.cookie_mossy, skills.uses] = 3;
 	arr_skill[normal.cookie_mossy, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_mossy, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_mossy, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_mossy, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_mossy, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_mossy, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_mossy, skills.descPlus] = "HEALS 1/2 HP, shroom SOMEONE";
+	arr_skill[normal.cookie_mossy, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp/2)
+		
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.shroomed] = true;
+	};
+	arr_skill[normal.cookie_mossy, skills.costPlus] = 0; arr_skill[normal.cookie_mossy, skills.usesPlus] = 3;
+	
 	//VOID
 	arr_skill[normal.cookie_void, skills.name] = "void cookie";
 	arr_skill[normal.cookie_void, skills.desc] = "HEALS SOME HP, AND MAYBE STATUS EFFECTS";
-	arr_skill[normal.cookie_void, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_void, skills.anim] = ani_cookieVoid;
 	
 	arr_skill[normal.cookie_void, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_void, skills.name];
 	arr_skill[normal.cookie_void, skills.func] = function(){regen(_self, maxHp/3); var ii = choose(1, 2); if(ii = 1){for(i=0; i <= 10; i++){_self.arr_status[i]= false}}};
 	arr_skill[normal.cookie_void, skills.cost] = 0; arr_skill[normal.cookie_void, skills.uses] = 3;
 	arr_skill[normal.cookie_void, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_void, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_void, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_void, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_void, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_void, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_void, skills.descPlus] = "HEALS 1/2HP AND ERASES STATUS EFFECTS";
+	arr_skill[normal.cookie_void, skills.funcPlus] = function(){regen(_self, maxHp/2); for(i=0; i <= 10; i++){_self.arr_status[i]= false}};
+	arr_skill[normal.cookie_void, skills.costPlus] = 0; arr_skill[normal.cookie_void, skills.usesPlus] = 3;
+	
 	//LUCKY
 	arr_skill[normal.cookie_lucky, skills.name] = "lucky cookie";
 	arr_skill[normal.cookie_lucky, skills.desc] = "HEALS SOME HP, MAYBE EVEN MORE!";
-	arr_skill[normal.cookie_lucky, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_lucky, skills.anim] = ani_cookieLucky;
 	
 	arr_skill[normal.cookie_lucky, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_lucky, skills.name];
 	arr_skill[normal.cookie_lucky, skills.func] = function(){regen(_self, choose(maxHp/3, maxHp*0.70))};
 	arr_skill[normal.cookie_lucky, skills.cost] = 0; arr_skill[normal.cookie_lucky, skills.uses] = 3;
 	arr_skill[normal.cookie_lucky, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_lucky, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_lucky, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_lucky, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_lucky, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_lucky, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_lucky, skills.descPlus] = "HEALS ALL HP, MAYBE INCREASES DAMAGE!";
+	arr_skill[normal.cookie_lucky, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp)
+		var ii = choose(1, 2); if(ii = 1){tempDmg += 10}; 
+	};
+	arr_skill[normal.cookie_lucky, skills.costPlus] = 0; arr_skill[normal.cookie_lucky, skills.usesPlus] = 3;
+	
 	//PHISHY
 	arr_skill[normal.cookie_phishy, skills.name] = "phishy cookie";
 	arr_skill[normal.cookie_phishy, skills.desc] = "HEALS SOME HP, EITHER STEALS OR GIVES YOU MONEY!";
-	arr_skill[normal.cookie_phishy, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_phishy, skills.anim] = ani_cookiePhishy;
 	
 	arr_skill[normal.cookie_phishy, skills.text] = string(var_name) + " EATS A " + arr_skill[normal.cookie_phishy, skills.name];
 	arr_skill[normal.cookie_phishy, skills.func] = function()
 	{
 		regen(_self, maxHp/3); 
 		var ii = choose(1, 2)
-		if(ii = 1){global.money -=5; if(global.money <= 0){global.money = 0}}
-		else{global.money += 10}
+		if(ii = 1)
+		{
+			global.money -=5; 
+			if(global.money <= 0){global.money = 0}
+			repeat(5){instance_create_depth(_self.x, _self.y, depth-1, obj_money)}
+		}
+		else
+		{
+			global.money += 10
+			repeat(10){instance_create_depth(_other.x, _other.y, depth-1, obj_money)}
+		}
 	};
 	arr_skill[normal.cookie_phishy, skills.cost] = 0; arr_skill[normal.cookie_phishy, skills.uses] = 3;
 	arr_skill[normal.cookie_phishy, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_phishy, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_phishy, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_phishy, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_phishy, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_phishy, skills.recharge] = 3;
 	
+	arr_skill[normal.cookie_phishy, skills.descPlus] = "HEALS 1/2HP, GIVES YOU MONEY!";
+	arr_skill[normal.cookie_phishy, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp/2); 
+		global.money += 20
+	};
+	arr_skill[normal.cookie_phishy, skills.costPlus] = 0; arr_skill[normal.cookie_phishy, skills.usesPlus] = 3;
+	
 	//ELECTRIC
 	arr_skill[normal.cookie_electric, skills.name] = "electric cookie";
-	arr_skill[normal.cookie_electric, skills.desc] = "HEALS SOME HP, chance to electrocute SOMEONE";
-	arr_skill[normal.cookie_electric, skills.anim] = ani_attack;
+	arr_skill[normal.cookie_electric, skills.desc] = "HEALS SOME HP, electrocute SOMEONE";
+	arr_skill[normal.cookie_electric, skills.anim] = ani_cookieElectric;
 	
 	arr_skill[normal.cookie_electric, skills.text] = string(var_name) + " EATS AN " + arr_skill[normal.cookie_electric, skills.name];
 	arr_skill[normal.cookie_electric, skills.func] = function()
 	{
 		regen(_self, maxHp/3); 
-		var ii = choose(1, 2), iii = choose(1, 2), _target = _self;
-		if(ii = 1)
-		{
-			_target = iii = 1 ? _self : _other;
-			_target.arr_status[status.electrocuted] = true; _target.electrocuted = 3
-		};
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.electrocuted] = true; _target.electrocuted = 3
 	};
 	arr_skill[normal.cookie_electric, skills.cost] = 0; arr_skill[normal.cookie_electric, skills.uses] = 3;
 	arr_skill[normal.cookie_electric, skills.selfIndex] = 3;
 	arr_skill[normal.cookie_electric, skills.otherIndex] = 0;
-	arr_skill[normal.cookie_electric, skills.sound] = snd_heal;
+	arr_skill[normal.cookie_electric, skills.sound] = snd_cookie;
 	arr_skill[normal.cookie_electric, skills.shop] = 25;
 	
 	arr_skill[normal.cookie_electric, skills.recharge] = 3;
 	
-	//SWAP
-	arr_skill[normal.swap, skills.name] = "SWAP";
-	arr_skill[normal.swap, skills.desc] = "SWAP CHARACTERS!";
-	arr_skill[normal.swap, skills.anim] = ani_attack;
-	
-	arr_skill[normal.swap, skills.func] = function(){
-		if(playerSelected = enemy.tito)
-		{
-			global.player = enemy.bondiola
-		}
-		else
-		{
-			global.player = enemy.tito
-		}
-		initializeTB()
+	arr_skill[normal.cookie_electric, skills.descPlus] = "HEALS 1/2HP, electrocute SOMEONE";
+	arr_skill[normal.cookie_electric, skills.funcPlus] = function()
+	{
+		regen(_self, maxHp/2); 
+		var iii = choose(1, 2), _target = _self;
+		_target = iii = 1 ? _self : _other;
+		_target.arr_status[status.electrocuted] = true; _target.electrocuted = 3
 	};
-	arr_skill[normal.swap, skills.cost] = 0; arr_skill[normal.swap, skills.uses] = 3;	
-	arr_skill[normal.swap, skills.selfIndex] = 0;
-	arr_skill[normal.swap, skills.otherIndex] = 0;
-	arr_skill[normal.swap, skills.sound] = snd_defenseDown;
-	arr_skill[normal.swap, skills.text] = string(var_name) + " SWAPPED!"
-	arr_skill[normal.swap, skills.shop] = 50;
-	
-	arr_skill[normal.swap, skills.recharge] = 7;
+	arr_skill[normal.cookie_electric, skills.costPlus] = 0; arr_skill[normal.cookie_electric, skills.usesPlus] = 3;
 	
 	//CONNECT
 	arr_skill[normal.connect, skills.name] = "CONNECT";
@@ -1908,6 +2044,10 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.connect, skills.shop] = 50;
 	
 	arr_skill[normal.connect, skills.recharge] = 7;
+	
+	arr_skill[normal.connect, skills.descPlus] = "CONNECT YOURSELF WITH THE ENEMY! FOR A LONG TIME!";
+	arr_skill[normal.connect, skills.funcPlus] = function(){_other.arr_status[status.connected] = true; _other.connectedCountdown = 5};
+	arr_skill[normal.connect, skills.costPlus] = 0; arr_skill[normal.connect, skills.usesPlus] = 5;
 	
 	//PHISH
 	arr_skill[normal.phish, skills.name] = "PHISH";
@@ -1929,7 +2069,8 @@ function initializeSkills(_self, _other)
 				};
 			ini_close();
 		};
-		if(_other = obj_player){global.money -= 5}; else{global.money +=10}
+		
+		if(_other = obj_player){global.money -= 5}; else{global.money += 10 + (global.mult * 2)}
 		repeat(5){instance_create_depth(_other.x, _other.y, depth-1, obj_money)}
 	};
 	arr_skill[normal.phish, skills.cost] = 0; arr_skill[normal.phish, skills.uses] = -1;	
@@ -1940,6 +2081,27 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.phish, skills.shop] = 50;
 	
 	arr_skill[normal.phish, skills.recharge] = 3;
+	
+	arr_skill[normal.phish, skills.descPlus] = "TAKES MONEY AWAY!";
+	arr_skill[normal.phish, skills.funcPlus] = function()
+	{
+		if(_other = obj_enemy)
+		{
+			ini_open("unlocks.ini");
+				var _scammed = ini_read_real("other", "scams", 0);
+				ini_write_real("other", "scams", _scammed +1);
+			
+				if(ini_read_real("other", "scams", 0) >= 10) and (!ini_read_real("unlocks", "20", false))
+				{
+					ini_write_real("unlocks", "20", true);
+					instance_create_depth(x, y, depth, obj_newUnlockBattle);
+				};
+			ini_close();
+		};
+		if(_other = obj_player){global.money -= 10}; else{global.money +=20  + (global.mult * 3)}
+		repeat(10){instance_create_depth(_other.x, _other.y, depth-1, obj_money)}
+	};
+	arr_skill[normal.phish, skills.costPlus] = 0; arr_skill[normal.phish, skills.usesPlus] = -1;
 	
 	//DOWNLOAD
 	arr_skill[normal.download, skills.name] = "DOWNLOAD";
@@ -1969,20 +2131,32 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.download, skills.recharge] = 15;
 	
+	arr_skill[normal.download, skills.descPlus] = "DOWNLOADS AND COPIES YOUR DATA!";
+	arr_skill[normal.download, skills.funcPlus] = arr_skill[normal.download, skills.func];
+	arr_skill[normal.download, skills.costPlus] = 0; arr_skill[normal.download, skills.usesPlus] = -1;
+	
 	//WARN
-	arr_skill[normal.warn, skills.name] = "WARN";
-	arr_skill[normal.warn, skills.desc] = "RAISE ENEMY DEFENSE BUT LOWER THEIR DAMAGE!";
-	arr_skill[normal.warn, skills.anim] = ani_attack;
+	arr_skill[normal.popup, skills.name] = "POP-UP";
+	arr_skill[normal.popup, skills.desc] = "CREATE A POP-UP!";
+	arr_skill[normal.popup, skills.anim] = ani_blank;
 	
-	arr_skill[normal.warn, skills.func] = function(){_other.tempDef += 15; _other.tempDmg -= 10};
-	arr_skill[normal.warn, skills.cost] = 0; arr_skill[normal.warn, skills.uses] = -1;	
-	arr_skill[normal.warn, skills.selfIndex] = 3;
-	arr_skill[normal.warn, skills.otherIndex] = 1;
-	arr_skill[normal.warn, skills.sound] = snd_defenseDown;
-	arr_skill[normal.warn, skills.text] = string(var_name) + " WARNS YOU!"
-	arr_skill[normal.warn, skills.shop] = 50;
+	arr_skill[normal.popup, skills.func] = function(){
+		var _popup = instance_create_depth(irandom_range(250, room_width-250), irandom_range(250, room_height-250), 0, obj_popup)
+		_popup.createdBy = self;
+		_popup._other = _other;
+	};
+	arr_skill[normal.popup, skills.cost] = 1; arr_skill[normal.popup, skills.uses] = -1;	
+	arr_skill[normal.popup, skills.selfIndex] = 3;
+	arr_skill[normal.popup, skills.otherIndex] = 1;
+	arr_skill[normal.popup, skills.sound] = snd_popup;
+	arr_skill[normal.popup, skills.text] = string(var_name) + " SPAMS YOU!"
+	arr_skill[normal.popup, skills.shop] = 50;
 	
-	arr_skill[normal.warn, skills.recharge] = 7;
+	arr_skill[normal.popup, skills.recharge] = 3;
+	
+	arr_skill[normal.popup, skills.descPlus] = "DOWNLOADS AND COPIES YOUR DATA!";
+	arr_skill[normal.popup, skills.funcPlus] = arr_skill[normal.popup, skills.func];
+	arr_skill[normal.popup, skills.costPlus] = 0; arr_skill[normal.popup, skills.usesPlus] = -1;
 	
 	//ELECTRIC
 	arr_skill[normal.electric, skills.name] = "ELECTRIC";
@@ -1999,49 +2173,50 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.electric, skills.recharge] = 7;
 	
-	//lilyJuice
-	arr_skill[normal.lily_juice, skills.name] = "LILY JUICE";
-	arr_skill[normal.lily_juice, skills.desc] = "HEALS YOUR WOUNDS AND MAKES YOU TIPSY!";
-	arr_skill[normal.lily_juice, skills.anim] = ani_attack;
+	arr_skill[normal.electric, skills.descPlus] = "ELECTROCUTES YOUR ENEMY! FOR A LONG TIME!";
+	arr_skill[normal.electric, skills.funcPlus] = function(){_other.arr_status[status.electrocuted] = true; _other.electrocuted = 5};
+	arr_skill[normal.electric, skills.costPlus] = 0; arr_skill[normal.electric, skills.usesPlus] = 5;
 	
-	arr_skill[normal.lily_juice, skills.func] = function(){regen(_self, maxHp *.70); _self.arr_status[status.tipsy] = true};
-	arr_skill[normal.lily_juice, skills.cost] = 0; arr_skill[normal.lily_juice, skills.uses] = 3;	
-	arr_skill[normal.lily_juice, skills.selfIndex] = 3;
-	arr_skill[normal.lily_juice, skills.otherIndex] = 0;
-	arr_skill[normal.lily_juice, skills.sound] = snd_heal;
-	arr_skill[normal.lily_juice, skills.text] = string(var_name) + " DRINKS SOME LILY JUICE!"
-	arr_skill[normal.lily_juice, skills.shop] = 50;
+	//SWAP
+	arr_skill[normal.swap, skills.name] = "SWAP";
+	arr_skill[normal.swap, skills.desc] = "SWAP CHARACTERS!";
+	arr_skill[normal.swap, skills.anim] = ani_attack;
 	
-	arr_skill[normal.lily_juice, skills.recharge] = 5;
-	
-	//burgify
-	arr_skill[normal.burgify, skills.name] = "BURGIFY";
-	arr_skill[normal.burgify, skills.desc] = "TURN THE ENEMY INTO A LITTLE BURGER!";
-	arr_skill[normal.burgify, skills.anim] = ani_attack;
-	
-	arr_skill[normal.burgify, skills.sound] = snd_heal;
-	arr_skill[normal.burgify, skills.text] = string(var_name) + " TURNS THE ENEMY INTO A BURGER!"
-	arr_skill[normal.burgify, skills.func] = function(){
-		if(!global.bossFight) and (_other != obj_player)
-			{
-				with(_other){initializeEnemy(enemy.burger); initializeSkills(id, obj_player)};screenshake(5, 10, 2)
-			}
-			else
-			{
-				arr_skill[normal.burgify, skills.sound] = snd_error;
-				arr_skill[normal.burgify, skills.text] = string(var_name) + " CANNOT TURN BOSSES INTO BURGERS!"
-				attack(st_damage*2)
-			};
+	arr_skill[normal.swap, skills.func] = function(){
+		if(playerSelected = enemy.tito)
+		{
+			global.player = enemy.bondiola
 		}
-	arr_skill[normal.burgify, skills.cost] = 0; arr_skill[normal.burgify, skills.uses] = 3;	
-	arr_skill[normal.burgify, skills.selfIndex] = 3;
-	arr_skill[normal.burgify, skills.otherIndex] = 0;	
-	arr_skill[normal.burgify, skills.shop] = 50;
+		else
+		{
+			global.player = enemy.tito
+		}
+		initializeTB()
+	};
+	arr_skill[normal.swap, skills.cost] = 0; arr_skill[normal.swap, skills.uses] = -1;	
+	arr_skill[normal.swap, skills.selfIndex] = 0;
+	arr_skill[normal.swap, skills.otherIndex] = 0;
+	arr_skill[normal.swap, skills.sound] = snd_defenseDown;
+	arr_skill[normal.swap, skills.text] = string(var_name) + " SWAPPED!"
+	arr_skill[normal.swap, skills.shop] = 50;
 	
-	arr_skill[normal.burgify, skills.recharge] = 7;
+	arr_skill[normal.swap, skills.recharge] = 7;
 	
-	arr_skill[normal.freeze, skills.recharge] = 7;
-	
+	arr_skill[normal.swap, skills.descPlus] = "SWAP CHARACTERS! NO WASTE IN TURNS!";
+	arr_skill[normal.swap, skills.funcPlus] = function()
+	{
+		if(playerSelected = enemy.tito)
+		{
+			global.player = enemy.bondiola
+		}
+		else
+		{
+			global.player = enemy.tito
+		}
+		initializeTB()
+		global.turn = 1;
+	};
+	arr_skill[normal.swap, skills.costPlus] = 0; arr_skill[normal.swap, skills.usesPlus] = -1;
 	//Lifehack
 	arr_skill[normal.lifehack, skills.name] = "LIFEHACK";
 	arr_skill[normal.lifehack, skills.desc] = "RESTORES ALL LIFE, SETS ENEMY'S HP TO RANDOM VALUE";
@@ -2056,6 +2231,10 @@ function initializeSkills(_self, _other)
 	arr_skill[normal.lifehack, skills.shop] = 25;
 	
 	arr_skill[normal.lifehack, skills.recharge] = 7;
+	
+	arr_skill[normal.lifehack, skills.descPlus] = "RESTORES ALL LIFE, SETS ENEMY'S HP TO A LOW, RANDOM VALUE";
+	arr_skill[normal.lifehack, skills.funcPlus] = function(){regen(_self, maxHp); _other.hp = irandom_range(5, _other.maxHp/2)};
+	arr_skill[normal.lifehack, skills.costPlus] = 0; arr_skill[normal.lifehack, skills.usesPlus] = 1;
 	
 	//LIFESWAP
 	arr_skill[normal.lifeswap, skills.name] = "LIFESWAP";
@@ -2072,101 +2251,14 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.lifeswap, skills.recharge] = 25;
 	
-	//MELK
-	arr_skill[normal.melk, skills.name] = "MELK";
-	arr_skill[normal.melk, skills.desc] = "INFLICTS ALL STATUS EFFECTS";
-	arr_skill[normal.melk, skills.anim] = ani_attack;
-	
-	arr_skill[normal.melk, skills.target] = _self;
-	arr_skill[normal.melk, skills.func] = function(){for(i=0; i <= 10; i++){_self.arr_status[i]= true}};
-	arr_skill[normal.melk, skills.cost] = 0; arr_skill[normal.melk, skills.uses] = 1;
-	arr_skill[normal.melk, skills.selfIndex] = 1;
-	arr_skill[normal.melk, skills.otherIndex] = 0;
-	arr_skill[normal.melk, skills.sound] = snd_heal;
-	arr_skill[normal.melk, skills.text] = string(var_name) + " DRANK SOME WEIRD MELK!";
-	arr_skill[normal.melk, skills.shop] = 25;
-	
-	arr_skill[normal.melk, skills.recharge] = 3;
-	
-	//MUAH
-	arr_skill[normal.muah, skills.name] = "MUAH";
-	arr_skill[normal.muah, skills.desc] = "LOWER ENEMY DAMAGE!";
-	arr_skill[normal.muah, skills.anim] = ani_attack;
-	
-	arr_skill[normal.muah, skills.func] = function(){_other.tempDmg -= 5};
-	arr_skill[normal.muah, skills.cost] = 0; arr_skill[normal.muah, skills.uses] = 5;
-	arr_skill[normal.muah, skills.selfIndex] = 3;
-	arr_skill[normal.muah, skills.otherIndex] = 3;
-	arr_skill[normal.muah, skills.sound] = snd_heal;
-	arr_skill[normal.muah, skills.text] = string(var_name) + " MUAH!";
-	arr_skill[normal.muah, skills.shop] = 50;
-	
-	arr_skill[normal.muah, skills.recharge] = 5;
-	
-	//frown
-	arr_skill[normal.frown, skills.name] = "frown";
-	arr_skill[normal.frown, skills.desc] = "MAKE DOUBLE DAMAGE FOR REST OF THE FIGHT!";
-	arr_skill[normal.frown, skills.anim] = ani_attack;
-	
-	arr_skill[normal.frown, skills.func] = function(){_self.tempDmg = st_damage};
-	arr_skill[normal.frown, skills.cost] = 0; arr_skill[normal.frown, skills.uses] = 1;
-	arr_skill[normal.frown, skills.selfIndex] = 1;
-	arr_skill[normal.frown, skills.otherIndex] = 0;
-	arr_skill[normal.frown, skills.sound] = snd_heal;
-	arr_skill[normal.frown, skills.text] = string(var_name) + " FROWNS!";
-	arr_skill[normal.frown, skills.shop] = 50;
-	
-	arr_skill[normal.frown, skills.recharge] = 5;
-	
-	//grape soda
-	arr_skill[normal.grape_soda, skills.name] = "grape soda";
-	arr_skill[normal.grape_soda, skills.desc] = "HEALS SOME HP";
-	arr_skill[normal.grape_soda, skills.anim] = ani_attack;
-	
-	arr_skill[normal.grape_soda, skills.func] = function(){_self.hp += maxHp/2};
-	arr_skill[normal.grape_soda, skills.cost] = 0; arr_skill[normal.grape_soda, skills.uses] = 2;
-	arr_skill[normal.grape_soda, skills.selfIndex] = 3;
-	arr_skill[normal.grape_soda, skills.otherIndex] = 0;
-	arr_skill[normal.grape_soda, skills.sound] = snd_heal;
-	arr_skill[normal.grape_soda, skills.text] = string(var_name) + " DRINKS CHEAP SODA!";
-	arr_skill[normal.grape_soda, skills.shop] = 15;
-	
-	arr_skill[normal.grape_soda, skills.recharge] = 7;
-	
-	//change
-	arr_skill[normal.change, skills.name] = "change";
-	arr_skill[normal.change, skills.desc] = "HIT THE ENEMY WITH YOUR MONEY!";
-	arr_skill[normal.change, skills.anim] = ani_attack;
-	
-	arr_skill[normal.change, skills.func] = function(){if(global.money >= 5){attack(st_damage*1.5); global.money -=5} else{attack(st_damage)}};
-	arr_skill[normal.change, skills.cost] = 0; arr_skill[normal.change, skills.uses] = -1;
-	arr_skill[normal.change, skills.selfIndex] = 2;
-	arr_skill[normal.change, skills.otherIndex] = 1;
-	arr_skill[normal.change, skills.sound] = snd_heal;
-	arr_skill[normal.change, skills.text] = string(var_name) + " TOSSES SOME COINS";
-	arr_skill[normal.change, skills.shop] = 25;
-	
-	arr_skill[normal.change, skills.recharge] = 3;
-	
-	//glove
-	arr_skill[normal.rubber_glove, skills.name] = "rubber glove";
-	arr_skill[normal.rubber_glove, skills.desc] = "x2 damage to the enemy, but x1 damage to yourself";
-	arr_skill[normal.rubber_glove, skills.anim] = ani_attack;
-	
-	arr_skill[normal.rubber_glove, skills.func] = function(){attack(st_damage*2); self.hp -= dmgCalc(_self, _self, st_damage)};
-	arr_skill[normal.rubber_glove, skills.cost] = 0; arr_skill[normal.rubber_glove, skills.uses] = -1;
-	arr_skill[normal.rubber_glove, skills.selfIndex] = 2;
-	arr_skill[normal.rubber_glove, skills.otherIndex] = 1;
-	arr_skill[normal.rubber_glove, skills.sound] = snd_heal;
-	arr_skill[normal.rubber_glove, skills.text] = string(var_name) + " SLAPS WITH A GLOVE!";
-	arr_skill[normal.rubber_glove, skills.shop] = 25;
-	
-	arr_skill[normal.rubber_glove, skills.recharge] = 3;
+	arr_skill[normal.lifeswap, skills.descPlus] = "SWAP YOUR HP WITH THE ENEMY'S HP!";
+	arr_skill[normal.lifeswap, skills.funcPlus] = arr_skill[normal.lifeswap, skills.func]
+	arr_skill[normal.lifeswap, skills.costPlus] = 0; arr_skill[normal.lifeswap, skills.usesPlus] = 1;
 	
 	//os
 	arr_skill[normal.os, skills.name] = "OS";
 	arr_skill[normal.os, skills.desc] = "PLAY WITH YOUR ENVIRONMENT!";
-	arr_skill[normal.os, skills.anim] = ani_attack;
+	arr_skill[normal.os, skills.anim] = ani_blank;
 	
 	arr_skill[normal.os, skills.text] = string(var_name) + " HACKS THE OS!"
 	arr_skill[normal.os, skills.func] = function(){
@@ -2181,10 +2273,14 @@ function initializeSkills(_self, _other)
 	
 	arr_skill[normal.os, skills.recharge] = 1;
 	
+	arr_skill[normal.os, skills.descPlus] = "PLAY WITH YOUR ENVIRONMENT!";
+	arr_skill[normal.os, skills.funcPlus] = arr_skill[normal.os, skills.func]
+	arr_skill[normal.os, skills.costPlus] = 0; arr_skill[normal.os, skills.usesPlus] = -1;
+	
 	//GLITCH
 	arr_skill[normal.glitch, skills.name] = " ";
 	arr_skill[normal.glitch, skills.desc] = "? A A11QWE JKFJLQ NO";
-	arr_skill[normal.glitch, skills.anim] = ani_attack;
+	arr_skill[normal.glitch, skills.anim] = ani_blank;
 	
 	arr_skill[normal.glitch, skills.text] = string(var_name) + " USES ";
 	arr_skill[normal.glitch, skills.func] = function(){
@@ -2197,13 +2293,17 @@ function initializeSkills(_self, _other)
 			
 			arr_skill[normal.glitch, skills.text] = string(var_name) + " USES " + string(arr_skill[_choice, skills.name]);
 		};	
-	arr_skill[normal.glitch, skills.cost] = 0; arr_skill[normal.glitch, skills.uses] = -1;
+	arr_skill[normal.glitch, skills.cost] = 1; arr_skill[normal.glitch, skills.uses] = -1;
 	arr_skill[normal.glitch, skills.selfIndex] = 3;
 	arr_skill[normal.glitch, skills.otherIndex] = 1;
-	arr_skill[normal.glitch, skills.sound] = snd_select;
+	arr_skill[normal.glitch, skills.sound] = mus_silent;
 	arr_skill[normal.glitch, skills.shop] = 25;
 	
-	arr_skill[normal.glitch, skills.recharge] = 5;
+	arr_skill[normal.glitch, skills.recharge] = 3;
+	
+	arr_skill[normal.glitch, skills.descPlus] = "? !! ASJDKALS !! QWOPEIWPOE YES!!";
+	arr_skill[normal.glitch, skills.funcPlus] = arr_skill[normal.glitch, skills.func]
+	arr_skill[normal.glitch, skills.costPlus] = 0; arr_skill[normal.glitch, skills.usesPlus] = -1;
 };
 	
 function phishPrices()
@@ -2242,10 +2342,8 @@ function phishPrices()
 	arr_price[normal.connect] = 10;
 	arr_price[normal.phish] = 15;
 	arr_price[normal.download] = 10;
-	arr_price[normal.warn] = 5;
+	arr_price[normal.popup] = 5;
 	arr_price[normal.electric] = 10;
-	arr_price[normal.lily_juice] = 5;
-	arr_price[normal.burgify] = 20;
 	arr_price[normal.rot] = 10;
 	arr_price[normal.freeze] = 10;
 	arr_price[normal.lifehack] = 12;
@@ -2256,11 +2354,7 @@ function phishPrices()
 	arr_price[normal.lifeswap] = 20;
 	arr_price[normal.grilled_cheese] = 30;
 	arr_price[normal.milk] = 10;
-	arr_price[normal.melk] = 5;
-	arr_price[normal.muah] = 10;
 	arr_price[normal.plunger] = 10;
-	arr_price[normal.frown] = 20;
-	arr_price[normal.book_white] = 5;
 	arr_price[normal.grape_soda] = 5;
 	arr_price[normal.cigar] = 5;
 	arr_price[normal.change] = 0;
@@ -2287,7 +2381,7 @@ function phishPrices()
 	arr_price[normal.cookie_easter] = 3;
 	arr_price[normal.cookie_ghost] = 3;
 	arr_price[normal.rat_pocket] = 15;
-	arr_price[normal.rat_bomb] = 15;
+	arr_price[normal.rat_bomb] = 20;
 	arr_price[normal.rat_spooky] = 15;
 	arr_price[normal.rat_bitter] = 15;
 	arr_price[normal.rat_electro] = 15;

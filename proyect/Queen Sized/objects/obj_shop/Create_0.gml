@@ -117,10 +117,8 @@ arr_shopText[6] ="PLEASE DON'T BITE MY FACE!"; //RUINS
 arr_shopText[7] ="BUY OUR JUNK!!"; //RATLANTIS
 arr_shopText[8] ="SO... COLD... BUY... ICE..."; //FRIDGE
 
-/*
 arr_shopText[9] ="BUY E - MARKET NOW!!"; //CLOUD
-arr_shopText[10] ="B   Y ERKET   NOW !!! 102601"; //BREACH
-*/
+arr_shopText[10] ="B   Y ERKET   -NOW !!!"; //BREACH
 
 global.text = arr_shopText[global.stage];
 global.textPrev = global.text;

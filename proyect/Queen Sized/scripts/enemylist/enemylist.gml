@@ -479,6 +479,162 @@ function enemylist(){
 	
 	arr_enemy[_enemyName,character.special] = normal.sneeze;
 	
+	//FRIDGE
+	arr_enemy[enemy.skimo, character.name] = "skimo";
+	arr_enemy[enemy.skimo, character.sprite] = spr_skimo;
+	arr_enemy[enemy.skimo, character.damage] = 25;
+	arr_enemy[enemy.skimo, character.hp] = 85;
+	arr_enemy[enemy.skimo, character.defense] = 5;
+	
+	arr_enemy[enemy.skimo, character.skill_1] = normal.sneeze;
+	arr_enemy[enemy.skimo, character.skill_2] = -1;
+	arr_enemy[enemy.skimo, character.skill_3] = -1;
+	arr_enemy[enemy.skimo, character.skill_4] = -1;
+	
+	arr_enemy[enemy.skimo, character.text_1] = "CAN SOMEONE TURN ON THE STOVE PLEASE?";
+	arr_enemy[enemy.skimo, character.text_2] = "SKIMO HAS NO PERSONALITY HE'S JUST COLD";
+	arr_enemy[enemy.skimo, character.text_3] = "SKIMO SNEEZES AS A HOBBY";
+	
+	arr_enemy[enemy.skimo, character.special] = normal.sneeze;
+
+	arr_enemy[enemy.ice_cube, character.name] = "ICE CUBE";
+	arr_enemy[enemy.ice_cube, character.sprite] = spr_ice;
+	arr_enemy[enemy.ice_cube, character.damage] = 30;
+	arr_enemy[enemy.ice_cube, character.hp] = 70;
+	arr_enemy[enemy.ice_cube, character.defense] = 0;
+	
+	arr_enemy[enemy.ice_cube, character.skill_1] = normal.freeze;
+	arr_enemy[enemy.ice_cube, character.skill_2] = -1;
+	arr_enemy[enemy.ice_cube, character.skill_3] = -1;
+	arr_enemy[enemy.ice_cube, character.skill_4] = -1;
+	
+	arr_enemy[enemy.ice_cube, character.text_1] = "ICE CUBE FEELS VIOLENT!";
+	arr_enemy[enemy.ice_cube, character.text_2] = "ICE CUBE	FIGHTS FOR A SHINY BELT";
+	arr_enemy[enemy.ice_cube, character.text_3] = "WHO DO I NEED TO PUNCH TO GET A COOKIE IN THIS PLACE?";
+	
+	arr_enemy[enemy.ice_cube, character.special] = normal.freeze;
+	
+	arr_enemy[enemy.cat, character.name] = "CAT";
+	arr_enemy[enemy.cat, character.sprite] = spr_cat;
+	arr_enemy[enemy.cat, character.damage] = 30;
+	arr_enemy[enemy.cat, character.hp] = 50;
+	arr_enemy[enemy.cat, character.defense] = 0;
+	
+	arr_enemy[enemy.cat, character.skill_1] = normal.nap;
+	arr_enemy[enemy.cat, character.skill_2] = -1;
+	arr_enemy[enemy.cat, character.skill_3] = -1;
+	arr_enemy[enemy.cat, character.skill_4] = -1;
+	
+	arr_enemy[enemy.cat, character.text_1] = "CAT WOULD RATHER GO TO SLEEP THAN THIS";
+	arr_enemy[enemy.cat, character.text_2] = "CAT'S NOT PUTTING MUCH EFFORT INTO THIS FIGHT";
+	arr_enemy[enemy.cat, character.text_3] = "MEOW";
+	
+	arr_enemy[enemy.cat, character.special] = normal.freeze;
+	
+	//CLOUD
+	arr_enemy[enemy.internaut, character.name] = "INTERNAUT";
+	arr_enemy[enemy.internaut, character.sprite] = spr_internaut;
+	arr_enemy[enemy.internaut, character.damage] = 25;
+	arr_enemy[enemy.internaut, character.hp] = 75;
+	arr_enemy[enemy.internaut, character.defense] = 0;
+	
+	arr_enemy[enemy.internaut, character.skill_1] = normal.connect;
+	arr_enemy[enemy.internaut, character.skill_2] = -1;
+	arr_enemy[enemy.internaut, character.skill_3] = -1;
+	arr_enemy[enemy.internaut, character.skill_4] = -1;
+	
+	arr_enemy[enemy.internaut, character.text_1] = "INTERNAUT FEELS LIKE UPLOADING YOUR MATRESS!";
+	arr_enemy[enemy.internaut, character.text_2] = "INTERNAUT LIKES TO BROWSE";
+	arr_enemy[enemy.internaut, character.text_3] = "INTERNAUT IS A FANATIC OF ALL SORTS OF MICE";
+	
+	arr_enemy[enemy.internaut, character.special] = normal.connect;
+	
+	
+	arr_enemy[enemy.phish, character.name] = "phish";
+	arr_enemy[enemy.phish, character.sprite] = spr_phish;
+	arr_enemy[enemy.phish, character.damage] = 25;
+	arr_enemy[enemy.phish, character.hp] = 60;
+	arr_enemy[enemy.phish, character.defense] = 2;
+	
+	arr_enemy[enemy.phish, character.skill_1] = normal.phish;
+	arr_enemy[enemy.phish, character.skill_2] = choose(-1, normal.confuse);
+	arr_enemy[enemy.phish, character.skill_3] = -1;
+	arr_enemy[enemy.phish, character.skill_4] = -1;
+	
+	arr_enemy[enemy.phish, character.text_1] = "PHISH WON'T TELL YOU WHAT HE FEELS LIKE DOING";
+	arr_enemy[enemy.phish, character.text_2] = "PHISH POLITELY ASKS FOR YOUR PERSONAL DATA!";
+	arr_enemy[enemy.phish, character.text_3] = "PHISH IS A CHEAP LITTLE BASTARD";
+	
+	arr_enemy[enemy.phish, character.special] = normal.phish;
+	
+	arr_enemy[enemy.outlet, character.name] = "OUTLET";
+	arr_enemy[enemy.outlet, character.sprite] = spr_outlet;
+	arr_enemy[enemy.outlet, character.damage] = 30;
+	arr_enemy[enemy.outlet, character.hp] = 50;
+	arr_enemy[enemy.outlet, character.defense] = 5;
+	
+	arr_enemy[enemy.outlet, character.skill_1] = normal.electric;
+	arr_enemy[enemy.outlet, character.skill_2] = -1;
+	arr_enemy[enemy.outlet, character.skill_3] = -1;
+	arr_enemy[enemy.outlet, character.skill_4] = -1;
+	
+	arr_enemy[enemy.outlet, character.text_1] = "OUTLET FEELS LIKE SHOCKING YOU!";
+	arr_enemy[enemy.outlet, character.text_2] = "ZAP ZAP!!";
+	arr_enemy[enemy.outlet, character.text_3] = "COME ON, CHARGE YOUR PHONE";
+	
+	arr_enemy[enemy.outlet, character.special] = normal.electric;
+	
+	arr_enemy[enemy.virus, character.name] = "virus";
+	arr_enemy[enemy.virus, character.sprite] = spr_virus;
+	arr_enemy[enemy.virus, character.damage] = 25;
+	arr_enemy[enemy.virus, character.hp] = 100;
+	arr_enemy[enemy.virus, character.defense] = 2;
+	
+	arr_enemy[enemy.virus, character.skill_1] = normal.download;
+	arr_enemy[enemy.virus, character.skill_2] = -1;
+	arr_enemy[enemy.virus, character.skill_3] = -1;
+	arr_enemy[enemy.virus, character.skill_4] = -1;
+	
+	arr_enemy[enemy.virus, character.text_1] = "VIRUS FEELS LIKE STEALING YOUR INFORMATION!";
+	arr_enemy[enemy.virus, character.text_2] = "CAN YOU UNINSTALL YOUR ANTIVIRUS REAL QUICK? IT'S FOR HOMEWORK";
+	arr_enemy[enemy.virus, character.text_3] = "VIRUS IS INSTALLING NEW SEARCH BARS ON YOUR COMPUTER";
+	
+	arr_enemy[enemy.virus, character.special] = normal.download;
+	
+	arr_enemy[enemy.bug, character.name] = "bug";
+	arr_enemy[enemy.bug, character.sprite] = spr_bug;
+	arr_enemy[enemy.bug, character.damage] = 25;
+	arr_enemy[enemy.bug, character.hp] = 75;
+	arr_enemy[enemy.bug, character.defense] = 10;
+	
+	arr_enemy[enemy.bug, character.skill_1] = normal.glitch;
+	arr_enemy[enemy.bug, character.skill_2] = -1;
+	arr_enemy[enemy.bug, character.skill_3] = -1;
+	arr_enemy[enemy.bug, character.skill_4] = -1;
+	
+	arr_enemy[enemy.bug, character.text_1] = "Aa0 E30 134jojaS";
+	arr_enemy[enemy.bug, character.text_2] = "01100010 01110101 01100111";
+	arr_enemy[enemy.bug, character.text_3] = "!!?!?!? OIQWPEO!?";
+	
+	arr_enemy[enemy.bug, character.special] = normal.glitch;
+	
+	arr_enemy[enemy.warning, character.name] = "warning";
+	arr_enemy[enemy.warning, character.sprite] = spr_warning;
+	arr_enemy[enemy.warning, character.damage] = 25;
+	arr_enemy[enemy.warning, character.hp] = 85;
+	arr_enemy[enemy.warning, character.defense] = 15;
+	
+	arr_enemy[enemy.warning, character.skill_1] = normal.popup;
+	arr_enemy[enemy.warning, character.skill_2] = -1;
+	arr_enemy[enemy.warning, character.skill_3] = -1;
+	arr_enemy[enemy.warning, character.skill_4] = -1;
+	
+	arr_enemy[enemy.warning, character.text_1] = "WARNING IS SCREAMING!";
+	arr_enemy[enemy.warning, character.text_2] = "THERE IS NO TIME";
+	arr_enemy[enemy.warning, character.text_3] = "WARNING IS ALTERED!";
+	
+	arr_enemy[enemy.warning, character.special] = normal.popup;
+	
 	//BOSSES
 	_enemyName = enemy.rat_king;
 	
@@ -606,14 +762,21 @@ function enemylist(){
 	if(global.queenType = 1)
 	{
 		arr_enemy[_enemyName, character.name] = "Queen";
-		arr_enemy[_enemyName, character.sprite] = spr_queen;
+		if(global.player = enemy.cookie)
+		{
+			arr_enemy[_enemyName, character.sprite] = spr_queenCrunch;
+		}
+		else
+		{
+			arr_enemy[_enemyName, character.sprite] = spr_queen;
+		}
 		arr_enemy[_enemyName, character.damage] = 45;
-		arr_enemy[_enemyName, character.hp] = 250;
+		arr_enemy[_enemyName, character.hp] = 200;
 		arr_enemy[_enemyName, character.defense] = 15;
 	
 		arr_enemy[_enemyName, character.skill_1] = normal.crown;
-		arr_enemy[_enemyName, character.skill_2] = normal.crown;
-		arr_enemy[_enemyName, character.skill_3] = normal.fireball;
+		arr_enemy[_enemyName, character.skill_2] = normal.fireball;
+		arr_enemy[_enemyName, character.skill_3] = -1;
 		arr_enemy[_enemyName, character.skill_4] = -1;
 	
 		arr_enemy[_enemyName, character.text_1] = "QUEEN FEELS ENHANCED!";
@@ -623,10 +786,43 @@ function enemylist(){
 		arr_enemy[_enemyName, character.special] = normal.crown;
 	};
 	
+	else if(global.queenType = 2)
+	{
+		arr_enemy[_enemyName, character.name] = "Queen";
+		if(global.player = enemy.cookie)
+		{
+			arr_enemy[_enemyName, character.sprite] = spr_queenCrunch;
+		}
+		else
+		{
+			arr_enemy[_enemyName, character.sprite] = spr_queen;
+		}
+		arr_enemy[_enemyName, character.damage] = 45;
+		arr_enemy[_enemyName, character.hp] = 200;
+		arr_enemy[_enemyName, character.defense] = 15;
+	
+		arr_enemy[_enemyName, character.skill_1] = normal.crown;
+		arr_enemy[_enemyName, character.skill_2] = normal.electric;
+		arr_enemy[_enemyName, character.skill_3] = normal.connect;
+		arr_enemy[_enemyName, character.skill_4] = -1;
+	
+		arr_enemy[_enemyName, character.text_1] = "QUEEN FEELS... POWERFUL!";
+		arr_enemy[_enemyName, character.text_2] = "QUEEN FEELS ELECTRIFYING";
+		arr_enemy[_enemyName, character.text_3] = "ZAP ZAP!";
+	
+		arr_enemy[_enemyName, character.special] = normal.crown;
+	};
 	else
 	{
 		arr_enemy[_enemyName, character.name] = "Queen";
-		arr_enemy[_enemyName, character.sprite] = spr_queen;
+		if(global.player = enemy.cookie)
+		{
+			arr_enemy[_enemyName, character.sprite] = spr_queenCrunch;
+		}
+		else
+		{
+			arr_enemy[_enemyName, character.sprite] = spr_queen;
+		}
 		arr_enemy[_enemyName, character.damage] = 40;
 		arr_enemy[_enemyName, character.hp] = 200;
 		arr_enemy[_enemyName, character.defense] = 15;
@@ -719,160 +915,61 @@ function enemylist(){
 	
 	arr_enemy[enemy.eggplant, character.special] = normal.freeze;
 	
-	//CLOUD
-	arr_enemy[enemy.internaut, character.name] = "INTERNAUT";
-	arr_enemy[enemy.internaut, character.sprite] = spr_internaut;
-	arr_enemy[enemy.internaut, character.damage] = 30;
-	arr_enemy[enemy.internaut, character.hp] = 75;
-	arr_enemy[enemy.internaut, character.defense] = 10;
+	//ELECTROLOTL
+	arr_enemy[enemy.electrolotl, character.name] = "ELECTROLOTL"
+	arr_enemy[enemy.electrolotl, character.sprite] = spr_electrolotl;
+	arr_enemy[enemy.electrolotl, character.damage] = 20;
+	arr_enemy[enemy.electrolotl, character.hp] = 150;
+	arr_enemy[enemy.electrolotl, character.defense] = 15;
 	
-	arr_enemy[enemy.internaut, character.skill_1] = normal.connect;
-	arr_enemy[enemy.internaut, character.skill_2] = -1;
-	arr_enemy[enemy.internaut, character.skill_3] = -1;
-	arr_enemy[enemy.internaut, character.skill_4] = -1;
+	arr_enemy[enemy.electrolotl, character.skill_1] = normal.electric;
+	arr_enemy[enemy.electrolotl, character.skill_2] = -1;
+	arr_enemy[enemy.electrolotl, character.skill_3] = -1;
+	arr_enemy[enemy.electrolotl, character.skill_4] = -1;
 	
-	arr_enemy[enemy.internaut, character.text_1] = "INTERNAUT FEELS LIKE UPLOADING YOUR MATRESS!";
-	arr_enemy[enemy.internaut, character.text_2] = "INTERNAUT LIKES TO BROWSE";
-	arr_enemy[enemy.internaut, character.text_3] = "INTERNAUT IS A FANATIC OF ALL SORTS OF MICE";
+	arr_enemy[enemy.electrolotl, character.text_1] = "ELECTROLOTL FEELS LIKE BZZZZZZZZZZZ";
+	arr_enemy[enemy.electrolotl, character.text_2] = "ELECTROLOTL IS EATING YOUR OPTICAL FIBER!";
+	arr_enemy[enemy.electrolotl, character.text_3] = "THIS IS WHAT WE WATCH ON THE INTERNET";
 	
-	arr_enemy[enemy.internaut, character.special] = normal.connect;
+	arr_enemy[enemy.electrolotl, character.special] = normal.electric;
 	
-	arr_enemy[enemy.virus, character.name] = "virus";
-	arr_enemy[enemy.virus, character.sprite] = spr_virus;
-	arr_enemy[enemy.virus, character.damage] = 25;
-	arr_enemy[enemy.virus, character.hp] = 100;
-	arr_enemy[enemy.virus, character.defense] = 2;
+	//MICHAEL
+	arr_enemy[enemy.michael, character.name] = "MICHAEL"
+	arr_enemy[enemy.michael, character.sprite] = spr_michael;
+	arr_enemy[enemy.michael, character.damage] = 25;
+	arr_enemy[enemy.michael, character.hp] = 300;
+	arr_enemy[enemy.michael, character.defense] = 0;
 	
-	arr_enemy[enemy.virus, character.skill_1] = normal.download;
-	arr_enemy[enemy.virus, character.skill_2] = -1;
-	arr_enemy[enemy.virus, character.skill_3] = -1;
-	arr_enemy[enemy.virus, character.skill_4] = -1;
+	arr_enemy[enemy.michael, character.skill_1] = normal.os;
+	arr_enemy[enemy.michael, character.skill_2] = -1;
+	arr_enemy[enemy.michael, character.skill_3] = -1;
+	arr_enemy[enemy.michael, character.skill_4] = -1;
 	
-	arr_enemy[enemy.virus, character.text_1] = "VIRUS FEELS LIKE STEALING YOUR INFORMATION!";
-	arr_enemy[enemy.virus, character.text_2] = "CAN YOU UNINSTALL YOUR ANTIVIRUS REAL QUICK? IT'S FOR HOMEWORK";
-	arr_enemy[enemy.virus, character.text_3] = "VIRUS IS INSTALLING NEW SEARCH BARS ON YOUR COMPUTER";
+	arr_enemy[enemy.michael, character.text_1] = "MICHAEL FEELS LIKE SCREWING WITH YOUR SYSTEM!";
+	arr_enemy[enemy.michael, character.text_2] = "MICHAEL DOESN'T LIKE SECURITY BREACHES";
+	arr_enemy[enemy.michael, character.text_3] = "WHAT A NERD";
 	
-	arr_enemy[enemy.virus, character.special] = normal.download;
+	arr_enemy[enemy.michael, character.special] = -1;
+	arr_enemy[enemy.michael, character.special] = -1;
 	
-	arr_enemy[enemy.phish, character.name] = "phish";
-	arr_enemy[enemy.phish, character.sprite] = spr_phish;
-	arr_enemy[enemy.phish, character.damage] = 25;
-	arr_enemy[enemy.phish, character.hp] = 60;
-	arr_enemy[enemy.phish, character.defense] = 2;
-	
-	arr_enemy[enemy.phish, character.skill_1] = normal.phish;
-	arr_enemy[enemy.phish, character.skill_2] = choose(-1, normal.confuse);
-	arr_enemy[enemy.phish, character.skill_3] = -1;
-	arr_enemy[enemy.phish, character.skill_4] = -1;
-	
-	arr_enemy[enemy.phish, character.text_1] = "PHISH WON'T TELL YOU WHAT HE FEELS LIKE DOING";
-	arr_enemy[enemy.phish, character.text_2] = "PHISH POLITELY ASKS FOR YOUR PERSONAL DATA!";
-	arr_enemy[enemy.phish, character.text_3] = "PHISH IS A CHEAP LITTLE BASTARD";
-	
-	arr_enemy[enemy.phish, character.special] = normal.phish;
-	
-	arr_enemy[enemy.bug, character.name] = "bug";
-	arr_enemy[enemy.bug, character.sprite] = spr_bug;
-	arr_enemy[enemy.bug, character.damage] = 30;
-	arr_enemy[enemy.bug, character.hp] = 75;
-	arr_enemy[enemy.bug, character.defense] = 10;
-	
-	arr_enemy[enemy.bug, character.skill_1] = normal.glitch;
-	arr_enemy[enemy.bug, character.skill_2] = -1;
-	arr_enemy[enemy.bug, character.skill_3] = -1;
-	arr_enemy[enemy.bug, character.skill_4] = -1;
-	
-	arr_enemy[enemy.bug, character.text_1] = "Aa0 E30 134jojaS";
-	arr_enemy[enemy.bug, character.text_2] = "01100010 01110101 01100111";
-	arr_enemy[enemy.bug, character.text_3] = "!!?!?!? OIQWPEO!?";
-	
-	arr_enemy[enemy.bug, character.special] = normal.glitch;
-	
-	arr_enemy[enemy.outlet, character.name] = "OUTLET";
-	arr_enemy[enemy.outlet, character.sprite] = spr_outlet;
-	arr_enemy[enemy.outlet, character.damage] = 30;
-	arr_enemy[enemy.outlet, character.hp] = 50;
-	arr_enemy[enemy.outlet, character.defense] = 10;
-	
-	arr_enemy[enemy.outlet, character.skill_1] = normal.electric;
-	arr_enemy[enemy.outlet, character.skill_2] = -1;
-	arr_enemy[enemy.outlet, character.skill_3] = -1;
-	arr_enemy[enemy.outlet, character.skill_4] = -1;
-	
-	arr_enemy[enemy.outlet, character.text_1] = "OUTLET FEELS LIKE SHOCKING YOU!";
-	arr_enemy[enemy.outlet, character.text_2] = "ZAP ZAP!!";
-	arr_enemy[enemy.outlet, character.text_3] = "COME ON, CHARGE YOUR PHONE";
-	
-	arr_enemy[enemy.outlet, character.special] = normal.electric;
-	
-	arr_enemy[enemy.warning, character.name] = "warning";
-	arr_enemy[enemy.warning, character.sprite] = spr_warning;
-	arr_enemy[enemy.warning, character.damage] = 30;
-	arr_enemy[enemy.warning, character.hp] = 85;
-	arr_enemy[enemy.warning, character.defense] = 15;
-	
-	arr_enemy[enemy.warning, character.skill_1] = normal.warn;
-	arr_enemy[enemy.warning, character.skill_2] = -1;
-	arr_enemy[enemy.warning, character.skill_3] = -1;
-	arr_enemy[enemy.warning, character.skill_4] = -1;
-	
-	arr_enemy[enemy.warning, character.text_1] = "WARNING IS SCREAMING!";
-	arr_enemy[enemy.warning, character.text_2] = "THERE IS NO TIME";
-	arr_enemy[enemy.warning, character.text_3] = "WARNING IS ALTERED!";
-	
-	arr_enemy[enemy.warning, character.special] = normal.warn;
-	
-	//FRIDGE
-	arr_enemy[enemy.skimo, character.name] = "skimo";
-	arr_enemy[enemy.skimo, character.sprite] = spr_skimo;
-	arr_enemy[enemy.skimo, character.damage] = 25;
-	arr_enemy[enemy.skimo, character.hp] = 85;
-	arr_enemy[enemy.skimo, character.defense] = 5;
-	
-	arr_enemy[enemy.skimo, character.skill_1] = normal.sneeze;
-	arr_enemy[enemy.skimo, character.skill_2] = -1;
-	arr_enemy[enemy.skimo, character.skill_3] = -1;
-	arr_enemy[enemy.skimo, character.skill_4] = -1;
-	
-	arr_enemy[enemy.skimo, character.text_1] = "CAN SOMEONE TURN ON THE STOVE PLEASE?";
-	arr_enemy[enemy.skimo, character.text_2] = "SKIMO HAS NO PERSONALITY HE'S JUST COLD";
-	arr_enemy[enemy.skimo, character.text_3] = "SKIMO SNEEZES AS A HOBBY";
-	
-	arr_enemy[enemy.skimo, character.special] = normal.sneeze;
+	//Cookie
+	_enemyName = enemy.cookie
+	arr_enemy[_enemyName, character.name] = "The Crunch";
+	arr_enemy[_enemyName, character.sprite] = spr_cookie;
+	arr_enemy[_enemyName, character.damage] = 25;
+	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.defense] = 0;
 
-	arr_enemy[enemy.ice_cube, character.name] = "ICE CUBE";
-	arr_enemy[enemy.ice_cube, character.sprite] = spr_ice;
-	arr_enemy[enemy.ice_cube, character.damage] = 30;
-	arr_enemy[enemy.ice_cube, character.hp] = 70;
-	arr_enemy[enemy.ice_cube, character.defense] = 0;
+	arr_enemy[_enemyName, character.skill_1] = normal.cookie_jar;
+	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_3] = -1;
+	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[enemy.ice_cube, character.skill_1] = normal.freeze;
-	arr_enemy[enemy.ice_cube, character.skill_2] = -1;
-	arr_enemy[enemy.ice_cube, character.skill_3] = -1;
-	arr_enemy[enemy.ice_cube, character.skill_4] = -1;
+	arr_enemy[_enemyName, character.text_1] = "The Crunch FEELS THE SPIRIT OF CHRISTMAS";
+	arr_enemy[_enemyName, character.text_2] = "THE CRUNCH LOVES TO RUIN OTHER PEOPLE'S LIVES";
+	arr_enemy[_enemyName, character.text_3] = "THE CRUNCH PROBABLY CAUSED THE BREACH";
 	
-	arr_enemy[enemy.ice_cube, character.text_1] = "ICE CUBE FEELS VIOLENT!";
-	arr_enemy[enemy.ice_cube, character.text_2] = "ICE CUBE	FIGHTS FOR A SHINY BELT";
-	arr_enemy[enemy.ice_cube, character.text_3] = "WHO DO I NEED TO PUNCH TO GET A COOKIE IN THIS PLACE?";
-	
-	arr_enemy[enemy.ice_cube, character.special] = normal.freeze;
-	
-	arr_enemy[enemy.cat, character.name] = "CAT";
-	arr_enemy[enemy.cat, character.sprite] = spr_cat;
-	arr_enemy[enemy.cat, character.damage] = 30;
-	arr_enemy[enemy.cat, character.hp] = 50;
-	arr_enemy[enemy.cat, character.defense] = 0;
-	
-	arr_enemy[enemy.cat, character.skill_1] = normal.nap;
-	arr_enemy[enemy.cat, character.skill_2] = -1;
-	arr_enemy[enemy.cat, character.skill_3] = -1;
-	arr_enemy[enemy.cat, character.skill_4] = -1;
-	
-	arr_enemy[enemy.cat, character.text_1] = "CAT WOULD RATHER GO TO SLEEP THAN THIS";
-	arr_enemy[enemy.cat, character.text_2] = "CAT'S NOT PUTTING MUCH EFFORT INTO THIS FIGHT";
-	arr_enemy[enemy.cat, character.text_3] = "MEOW";
-	
-	arr_enemy[enemy.cat, character.special] = normal.freeze;
+	arr_enemy[_enemyName, character.special] = normal.cookie_jar;
 	
 	//Omar
 	arr_enemy[enemy.omar, character.name] = "Omar";
@@ -881,7 +978,7 @@ function enemylist(){
 	arr_enemy[enemy.omar, character.hp] = 125;
 	arr_enemy[enemy.omar, character.defense] = 15;
 	
-	arr_enemy[enemy.omar, character.skill_1] = normal.lily_juice;
+	arr_enemy[enemy.omar, character.skill_1] = normal.nap;
 	arr_enemy[enemy.omar, character.skill_2] = -1;
 	arr_enemy[enemy.omar, character.skill_3] = -1;
 	arr_enemy[enemy.omar, character.skill_4] = -1;
@@ -890,7 +987,7 @@ function enemylist(){
 	arr_enemy[enemy.omar, character.text_2] = "BURGAHOLIC";
 	arr_enemy[enemy.omar, character.text_3] = "OMAR LOVES BURGERS";
 	
-	arr_enemy[enemy.omar, character.special] = normal.burgify;
+	arr_enemy[enemy.omar, character.special] = normal.nap;
 	
 	//Burger
 	arr_enemy[enemy.burger, character.name] = "Burger";
@@ -963,62 +1060,6 @@ function enemylist(){
 	arr_enemy[enemy.merchant, character.text_3] = "YOU'RE BLINDED BY THE ROYALTY";
 	
 	arr_enemy[enemy.merchant, character.special] = normal.cheese;
-
-	//Cookie
-	_enemyName = enemy.cookie
-	arr_enemy[_enemyName, character.name] = "Cookie";
-	arr_enemy[_enemyName, character.sprite] = spr_cookie;
-	arr_enemy[_enemyName, character.damage] = 25;
-	arr_enemy[_enemyName, character.hp] = 100;
-	arr_enemy[_enemyName, character.defense] = 0;
-
-	arr_enemy[_enemyName, character.skill_1] = -1;
-	arr_enemy[_enemyName, character.skill_2] = -1;
-	arr_enemy[_enemyName, character.skill_3] = -1;
-	arr_enemy[_enemyName, character.skill_4] = -1;
-	
-	arr_enemy[_enemyName, character.text_1] = "COOKIE FEELS THE SPIRIT OF CHRISTMAS";
-	arr_enemy[_enemyName, character.text_2] = "COOKIE LOVES UHH IDK YOU'RE NOT EVEN GONNA READ THIS";
-	arr_enemy[_enemyName, character.text_3] = "COOKIE IS THE ONLY CHARACTER THAT CHANGES DEPENDING ON THE DATE. THAT'S JUST A FUN FACT BUT I THINK IT'S KINDA COOL";
-	
-	arr_enemy[_enemyName, character.special] = normal.heal;
-	
-	/*//ELECTROLOTL
-	arr_enemy[enemy.electrolotl, character.name] = "ELECTROLOTL"
-	arr_enemy[enemy.electrolotl, character.sprite] = spr_electrolotl;
-	arr_enemy[enemy.electrolotl, character.damage] = 20;
-	arr_enemy[enemy.electrolotl, character.hp] = 150;
-	arr_enemy[enemy.electrolotl, character.defense] = 15;
-	
-	arr_enemy[enemy.electrolotl, character.skill_1] = normal.electric;
-	arr_enemy[enemy.electrolotl, character.skill_2] = -1;
-	arr_enemy[enemy.electrolotl, character.skill_3] = -1;
-	arr_enemy[enemy.electrolotl, character.skill_4] = -1;
-	
-	arr_enemy[enemy.electrolotl, character.text_1] = "ELECTROLOTL FEELS LIKE BZZZZZZZZZZZ";
-	arr_enemy[enemy.electrolotl, character.text_2] = "SHOCKING!";
-	arr_enemy[enemy.electrolotl, character.text_3] = "THIS IS WHAT WE WATCH ON THE INTERNET";
-	
-	arr_enemy[enemy.electrolotl, character.special] = normal.electric;
-	
-	//MICHAEL
-	arr_enemy[enemy.michael, character.name] = "MICHAEL"
-	arr_enemy[enemy.michael, character.sprite] = spr_michael;
-	arr_enemy[enemy.michael, character.damage] = 25;
-	arr_enemy[enemy.michael, character.hp] = 300;
-	arr_enemy[enemy.michael, character.defense] = 0;
-	
-	arr_enemy[enemy.michael, character.skill_1] = normal.os;
-	arr_enemy[enemy.michael, character.skill_2] = -1;
-	arr_enemy[enemy.michael, character.skill_3] = -1;
-	arr_enemy[enemy.michael, character.skill_4] = -1;
-	
-	arr_enemy[enemy.michael, character.text_1] = "MICHAEL FEELS LIKE SCREWING WITH YOUR SYSTEM!";
-	arr_enemy[enemy.michael, character.text_2] = "MICHAEL DOESN'T LIKE SECURITY BREACHES";
-	arr_enemy[enemy.michael, character.text_3] = "WHAT A NERD";
-	
-	arr_enemy[enemy.michael, character.special] = -1;
-	*/
 };
 
 function playerEnemies(){
@@ -1029,7 +1070,7 @@ function playerEnemies(){
 	arr_enemy[enemy.pillow, character.hp] = 100;
 	arr_enemy[enemy.pillow, character.defense] = 0;
 
-	arr_enemy[enemy.pillow, character.skill_1] = -1;
+	arr_enemy[enemy.pillow, character.skill_1] = normal.popup;
 	arr_enemy[enemy.pillow, character.skill_2] = -1;
 	arr_enemy[enemy.pillow, character.skill_3] = -1;
 	arr_enemy[enemy.pillow, character.skill_4] = -1;
@@ -1061,6 +1102,46 @@ function playerEnemies(){
 	arr_enemy[enemy.eggplant, character.special] = normal.sneeze;
 	arr_enemy[enemy.eggplant, character.sprite] = spr_jeanPlayable;
 	
+	//Cookie
+	arr_enemy[enemy.cookie, character.name] = "THE CRUNCH";
+	arr_enemy[enemy.cookie, character.sprite] = spr_cookie;
+	arr_enemy[enemy.cookie, character.damage] = 25;
+	arr_enemy[enemy.cookie, character.hp] = 100;
+	arr_enemy[enemy.cookie, character.defense] = 5;
+
+	arr_enemy[enemy.cookie, character.skill_1] = normal.milk;
+	
+	if(current_month = 12) and (current_day = 24 or current_day = 25)  //IF CHRISTMAS
+	{
+		arr_enemy[enemy.cookie, character.skill_2] = normal.cookie_christmas;
+	}
+	else if(current_month = 10) and (current_day = 29)
+	{
+		arr_enemy[enemy.cookie, character.skill_2] = normal.cookie_easter;
+	}
+	else if(current_month = 2) and (current_day = 14)
+	{
+		arr_enemy[enemy.cookie, character.skill_2] = normal.cookie_valentine;
+	}
+	else
+	{
+		arr_enemy[enemy.cookie, character.skill_2] = -1;
+	}
+	arr_enemy[enemy.cookie, character.skill_3] = -1;
+	arr_enemy[enemy.cookie, character.skill_4] = -1;
+	
+	//Phish
+	arr_enemy[enemy.phish, character.name] = "phish";
+	arr_enemy[enemy.phish, character.sprite] = spr_phish;
+	arr_enemy[enemy.phish, character.damage] = 20;
+	arr_enemy[enemy.phish, character.hp] = 75;
+	arr_enemy[enemy.phish, character.defense] = 2;
+	
+	arr_enemy[enemy.phish, character.skill_1] = normal.nap;
+	arr_enemy[enemy.phish, character.skill_2] = -1;
+	arr_enemy[enemy.phish, character.skill_3] = -1;
+	arr_enemy[enemy.phish, character.skill_4] = -1;
+	
 	//Tito
 	arr_enemy[enemy.tito, character.name] = "tito";
 	arr_enemy[enemy.tito, character.sprite] = spr_tito;
@@ -1084,37 +1165,6 @@ function playerEnemies(){
 	arr_enemy[enemy.bondiola, character.skill_2] = -1;
 	arr_enemy[enemy.bondiola, character.skill_3] = -1;
 	arr_enemy[enemy.bondiola, character.skill_4] = -1;
-	
-	//Cookie
-	_enemyName = enemy.cookie
-	arr_enemy[_enemyName, character.name] = "Cookie";
-	arr_enemy[_enemyName, character.sprite] = spr_cookie;
-	arr_enemy[_enemyName, character.damage] = 25;
-	arr_enemy[_enemyName, character.hp] = 100;
-	arr_enemy[_enemyName, character.defense] = 0;
-
-	arr_enemy[_enemyName, character.skill_1] = normal.cookie_jar;
-	arr_enemy[_enemyName, character.skill_2] = normal.wait;
-	arr_enemy[_enemyName, character.skill_3] = -1;
-	arr_enemy[_enemyName, character.skill_4] = -1;
-	
-	arr_enemy[_enemyName, character.text_1] = "COOKIE FEELS THE SPIRIT OF CHRISTMAS";
-	arr_enemy[_enemyName, character.text_2] = "COOKIE LOVES UHH IDK YOU'RE NOT EVEN GONNA READ THIS";
-	arr_enemy[_enemyName, character.text_3] = "COOKIE IS THE ONLY CHARACTER THAT CHANGES DEPENDING ON THE DATE. THAT'S JUST A FUN FACT BUT I THINK IT'S KINDA COOL";
-	
-	arr_enemy[_enemyName, character.special] = normal.cookie_jar;
-	
-	//Phish
-	arr_enemy[enemy.phish, character.name] = "phish";
-	arr_enemy[enemy.phish, character.sprite] = spr_phish;
-	arr_enemy[enemy.phish, character.damage] = 20;
-	arr_enemy[enemy.phish, character.hp] = 60;
-	arr_enemy[enemy.phish, character.defense] = 2;
-	
-	arr_enemy[enemy.phish, character.skill_1] = normal.nap;
-	arr_enemy[enemy.phish, character.skill_2] = -1;
-	arr_enemy[enemy.phish, character.skill_3] = -1;
-	arr_enemy[enemy.phish, character.skill_4] = -1;
 };
 	
 function stageEnemies(){
@@ -1164,27 +1214,16 @@ function stageEnemies(){
 	arr_bossList[stage.ratlantis] = enemy.rat_queen;
 	arr_bossList[stage.fridge] = enemy.eggplant;
 	
-	/*arr_stageEnemies[stage.cloud, 0] = enemy.outlet;
+	arr_bossList[stage.cloud] = enemy.electrolotl;
+	arr_bossList[stage.breach] = enemy.michael;
+	
+	arr_stageEnemies[stage.cloud, 0] = enemy.outlet;
 	arr_stageEnemies[stage.cloud, 1] = enemy.internaut;
 	arr_stageEnemies[stage.cloud, 2] = enemy.phish;
 	
 	arr_stageEnemies[stage.breach, 0] = enemy.bug;
 	arr_stageEnemies[stage.breach, 1] = enemy.virus;
 	arr_stageEnemies[stage.breach, 2] = enemy.warning;
-	
-	arr_stageEnemies[stage.ashtray, 0] = enemy.omar;
-	arr_stageEnemies[stage.ashtray, 1] = enemy.rat;
-	arr_stageEnemies[stage.ashtray, 2] = enemy.bat;
-	
-	arr_stageEnemies[stage.strip, 0] = enemy.tito;
-	arr_stageEnemies[stage.strip, 1] = enemy.rat;
-	arr_stageEnemies[stage.strip, 2] = enemy.bat;
-	
-	arr_stageEnemies[stage.council, 0] = enemy.pillow_elder;
-	arr_stageEnemies[stage.council, 1] = enemy.pillow_baby;
-	arr_stageEnemies[stage.council, 2] = enemy.pillow_savvy;*/
-	/*arr_bossList[stage.cloud] = enemy.electrolotl;
-	arr_bossList[stage.breach] = enemy.michael;*/
 };
 
 function initializeEnemy(_enemy){

@@ -44,34 +44,33 @@ else if(obj_playerSelect_jean.selected)
 };
 else if(obj_playerSelect_cookie.selected)
 {
-	if(obj_playerSelect_cookie.unlocked)
+	if(obj_playerSelect_cookie.unlocked) or (current_month = 12)
 	{
-		global.text = "COOKIE\nDETHRONE THE QUEEN! RUIN THE FUN!"
+		global.text = "THE CRUNCH\n HATE PEOPLE! DESTROY FESTIVITIES!"
 		sprite_index = spr_cookie;
 	};
 	else
 	{
-		global.text = "BEAT THE 2ND ROUTE AS ???"
+		global.text = "BEAT THE 2ND ROUTE AS ??? / ALSO UNLOCKED IN DECEMBER"
 		sprite_index = spr_empty;
 	};
 };
-/*
 else if(obj_playerSelect_phish.selected)
 {
 	if(obj_playerSelect_phish.unlocked)
 	{
-		global.text = "PHISH\nPROFESSIONAL SCAMMER!"
+		global.text = "PHISH\nDETHRONE THE QUEEN! STEAL HER RICHES!"
 		sprite_index = spr_phish;
 	};
 	else
 	{
-		global.text = "SCAM 10 ENEMIES TO UNLOCK";
+		global.text = "PHISH ENEMIES 10 TIMES TO UNLOCK";
 		sprite_index = spr_empty;
 	};
 	
 };
 
-else if(obj_playerSelect_omar.selected)
+/*else if(obj_playerSelect_omar.selected)
 {
 	if(obj_playerSelect_omar.unlocked)
 	{

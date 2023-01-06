@@ -37,7 +37,7 @@ if(reroll)
 			};
 		};
 	ini_close();
-
+	
 	if(holdingPlus)
 	{
 		text = arr_skill[var_holding, skills.descPlus]
@@ -92,7 +92,6 @@ while(reroll)
 	};
 };
 
-cost = arr_skill[var_holding, skills.shop] + (10 * global.mult);
 //HOVER
 t = (t + inc) mod 360;
 shift = amp * dsin(t);
@@ -104,8 +103,6 @@ y = lerp(y, yy + shift, .1);
 //IF CLICKED
 if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 {
-	show_debug_message(preserved)
-	show_debug_message(reroll)
 	if(!checked)
 	{
 		checked = true;
@@ -197,6 +194,8 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 				instance_deactivate_object(obj_shopSwitch);
 				instance_deactivate_object(obj_shopReroll);
 				instance_deactivate_object(obj_shopLift);
+				instance_deactivate_object(obj_shopPreserve);
+				instance_deactivate_object(obj_shopBake);
 				
 				instance_activate_object(id)
 				centered = true;
@@ -334,4 +333,19 @@ else
 {
 	text = arr_skill[var_holding, skills.desc]
 	sprite_index = spr_skills
+};
+
+if(var_holding = normal.glitch)
+{
+	image_speed = 1;
+}
+
+if(discount)
+{
+	cost = (arr_skill[var_holding, skills.shop] + (10 * global.mult))/2;
+	cost = floor(cost);
+};
+else
+{
+	cost = arr_skill[var_holding, skills.shop] + (10 * global.mult);
 };

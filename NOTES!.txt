@@ -1,22 +1,39 @@
-v4 - Cookie!
-Added Cookie
--skills*
--unlocks: cookie leak* shopSkill (Bake)
+v5 - Electric Update!
+phish: finish unlocks, 
+put a price tag on top of individual skills so you know how much they cost (as of now, prices appear as text at the top of the screen)
+
+queen dialogues
+
+make unlocks for the characters when they finish this route:
+PILLOW: TV!
+RAT KING: THE VAULT! save your money in the vault. this will buy you extras
+JEAN: 
+COOKIE:
+PHISH: PHISHING ROD
 
 
+animations for new skills
 
-Fix Fridge Shopkeeper's sprite*
+cookie shop for breach/cloud*
+better death screen*
 
-Fixed Skills+*
-there's a fucking bug with snowball idk figure it out*
-Lemonade+ No longer has limited uses*
-Snowball starts at 0, should start at 1*
-Fix Jean's Theme*
-ARMOR+ no longer gives health*
+spr_stage remake*
+make shopkeepers*
+upgrade shops a little*
+make electric queen*
+delete the cooldown marks when playing as phish*
+make an event to access the 3rd route*
 
-v5 - Electric Build!
+make skill 4 electrolotl?X
+
+upgrade 2nd route maybe?
+there's probably something else but idk right now, i THINK that's it
+
+ADD TO BANDCAMP WHEN FINISHED:
+new beardy songs
+thank u song
+new death song
+new queen song
 
 Actual AI Maybe!? X
-2nd Chance! (AT A COST) X
-Reworked death screen X
 Weight System for Skills?
