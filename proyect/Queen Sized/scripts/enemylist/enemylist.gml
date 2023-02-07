@@ -1066,11 +1066,11 @@ function playerEnemies(){
 	//Pillow
 	arr_enemy[enemy.pillow, character.name] = "Pillow";
 	arr_enemy[enemy.pillow, character.sprite] = spr_pillow;
-	arr_enemy[enemy.pillow, character.damage] = 25;
+	arr_enemy[enemy.pillow, character.damage] = 999925;
 	arr_enemy[enemy.pillow, character.hp] = 100;
 	arr_enemy[enemy.pillow, character.defense] = 0;
 
-	arr_enemy[enemy.pillow, character.skill_1] = normal.popup;
+	arr_enemy[enemy.pillow, character.skill_1] = -1;
 	arr_enemy[enemy.pillow, character.skill_2] = -1;
 	arr_enemy[enemy.pillow, character.skill_3] = -1;
 	arr_enemy[enemy.pillow, character.skill_4] = -1;

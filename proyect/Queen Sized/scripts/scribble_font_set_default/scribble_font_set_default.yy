@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scribble_font_set_default",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Font Setup",
     "path": "folders/Scribble/Font Setup.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scribble_font_set_default",
-  "tags": [],
-  "resourceType": "GMScript",
 }
