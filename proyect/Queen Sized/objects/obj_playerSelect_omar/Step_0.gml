@@ -10,7 +10,7 @@ if(place_meeting(x, y, obj_mouse))
 		{
 			global.player = enemy.omar;
 			room_goto(rm_game)
-		};
+		}
 		else
 		{
 			audio_play_sound(snd_error, 1, false);

@@ -62,7 +62,7 @@ if(place_meeting(x, y, obj_mouse))
 			obj_shop.canChangeText --;
 			
 			instance_destroy();
-		};
+		}
 		else
 		{
 			audio_play_sound(snd_hit, 0, false)

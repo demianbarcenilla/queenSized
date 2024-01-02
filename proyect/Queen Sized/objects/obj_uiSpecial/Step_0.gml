@@ -24,7 +24,7 @@ else
 if(obj_player.var_specialPlus)
 {
 	sprite_index = spr_uiSkillsetPlus;
-};
+}
 else
 {
 	sprite_index = spr_uiSkillset;
@@ -33,7 +33,7 @@ else
 if(global.primaryUI)
 {
 	uiBehave()
-};
+}
 else
 {
 	if(alarm[0] = -1){alarm[0] = 12 +1};

@@ -6,10 +6,10 @@ function execute_ui()
 		if(instance_exists(obj_uiAttack))
 		{
 			//Check for which button is Selected;
-			if(obj_uiAttack.selected = true){ guiSelected = 0 };
-			else if(obj_uiSkills.selected = true){ guiSelected = 1 };
-			else if(obj_uiGuard.selected = true){ guiSelected = 2 };
-			else if(obj_uiSpecial.selected = true){ guiSelected = 3 };
+			if(obj_uiAttack.selected = true){ guiSelected = 0 }
+			else if(obj_uiSkills.selected = true){ guiSelected = 1 }
+			else if(obj_uiGuard.selected = true){ guiSelected = 2 }
+			else if(obj_uiSpecial.selected = true){ guiSelected = 3 }
 			else{ guiSelected = -1 };
 		};
 		
@@ -77,13 +77,13 @@ function execute_ui()
 						if(st_specialRecharge > 0) //if charging, display text
 						{
 							global.text = "( " + string(st_specialRecharge) + " ) TURNS UNTIL IT RECHARGES";
-						};
+						}
 						else
 						{
 							if(var_specialPlus)
 							{
 								global.text = arr_skill[obj_player.st_special, skills.descPlus];
-							};
+							}
 							else
 							{
 								global.text = arr_skill[obj_player.st_special, skills.desc];
@@ -96,7 +96,7 @@ function execute_ui()
 						{
 							special(st_special);
 						};
-					};
+					}
 					else
 					{
 						global.text = "no special skill available";
@@ -107,7 +107,7 @@ function execute_ui()
 							audio_play_sound(snd_error, 10, false);
 						};
 					};
-				};
+				}
 				else
 				{
 					global.text = " YOU CAN'T USE THIS BECAUSE YOU'RE ELECTROCUTED";
@@ -121,16 +121,16 @@ function execute_ui()
 				
 			break;
 		};
-	};
+	}
 	else
 	{
 		//Check for which button is Selected;
 		if(instance_exists(obj_skill1))
 		{
-			if(obj_skill1.selected = true){ guiSelected = 0 };
-			else if(obj_skill2.selected = true){ guiSelected = 1 };
-			else if(obj_skill3.selected = true){ guiSelected = 2 };
-			else if(obj_skill4.selected = true){ guiSelected = 3 };
+			if(obj_skill1.selected = true){ guiSelected = 0 }
+			else if(obj_skill2.selected = true){ guiSelected = 1 }
+			else if(obj_skill3.selected = true){ guiSelected = 2 }
+			else if(obj_skill4.selected = true){ guiSelected = 3 }
 			else{ guiSelected = -1 };
 			
 		switch(guiSelected)
@@ -223,13 +223,13 @@ function skillTrigger()
 			resetToPrimary();
 						
 			nextTurn();
-		};
+		}
 						
 		else
 		{
 			audio_play_sound(snd_error, 1, 0);
 		};
-	};
+	}
 	else
 	{
 		if(st_skills[guiSelected] != -1)
@@ -248,13 +248,13 @@ function skillTrigger()
 				resetToPrimary();
 			
 				nextTurn();
-			};
+			}
 			
 			else
 			{
 				audio_play_sound(snd_error, 1, 0);
 			};
-		};
+		}
 			
 		else
 		{
@@ -284,7 +284,7 @@ function uiBehave()
 		{
 			yPlus = 0;
 			selected = true;
-		};
+		}
 		else
 		{
 			yPlus = 20;
@@ -302,7 +302,7 @@ function resetToPrimary()
 		instance_create_depth(140, 240, depth, obj_uiSkills);
 		instance_create_depth(240, 240, depth, obj_uiGuard);
 		instance_create_depth(340, 240, depth, obj_uiSpecial);
-	};
+	}
 	else
 	{
 		instance_activate_object(obj_arrow);
@@ -346,29 +346,29 @@ function skillText(_obj)
 	if(st_skills[guiSelected] != -1)
 	{
 		//text
-		if(global.player != enemy.phish)
+		var _uses = "";
+		
+		if(st_skillUses[guiSelected] >= 1)//If uses remain, use item
 		{
-			var _uses = "";
-			if(st_skillUses[guiSelected] >= 1) //If uses remain, use item
+			if(st_skillUses[guiSelected] = 1)
 			{
-				if(st_skillUses[guiSelected] = 1)
-				{
-					_uses = "( ONE USE LEFT )";
-				};
-				else
-				{
-					_uses = "( " + string(st_skillUses[guiSelected]) + " USES LEFT )";
-				};
+				_uses = "( ONE USE LEFT )";
 			}
-			global.text = _obj.text +_uses;
+			else
+			{
+				_uses = "( " + string(st_skillUses[guiSelected]) + " USES LEFT )";
+			};
 		}
-		else
+		
+		if(global.player != enemy.phish) //If you're not Phish, write uses left
 		{
-			var _cost = st_skillUses[guiSelected],
-				_costText = " ( COSTS " + string(_cost) + " DOUGH )"
-			
-			global.text = _obj.text +_costText;
+			global.text = _obj.text +_uses;
+		};
+		else //If you ARE phish, just write the description
+		{
+			global.text = _obj.text;
 		}
+		
 	};
 }
 
@@ -408,7 +408,7 @@ function skillUses()
 		{
 			st_skillUses[guiSelected] --;
 		};
-	};
+	}
 	else
 	{
 		for(i=0; i < st_skillUses[guiSelected]; i++)
@@ -434,7 +434,7 @@ function unlocks()
 		
 		//Stores the unlocks to compare them to the NEW unlocks after updating them
 		var _arrUnlocked;
-		for(i = 1; i <= 100; i++)
+		for(i = 1; i <= 50; i++)
 		{
 			_arrUnlocked[i] = ini_read_real("unlocks", i, false);
 		}
@@ -450,15 +450,15 @@ function unlocks()
 				if(global.queenType = 0)
 				{
 					ini_write_real("unlocks", 2, true);
-				};
+				}
 				else if(global.queenType = 1)
 				{
 					ini_write_real("unlocks", 3, true);
-				};
+				}
 				else if(global.queenType = 2)
 				{
 					ini_write_real("unlocks", 4, true);
-				};
+				}
 				else if(global.queenType = 3)
 				{
 					ini_write_real("unlocks", 5, true);
@@ -469,15 +469,15 @@ function unlocks()
 				if(global.queenType = 0)
 				{
 					ini_write_real("unlocks", 7, true);
-				};
+				}
 				else if(global.queenType = 1)
 				{
 					ini_write_real("unlocks", 8, true);
-				};
+				}
 				else if(global.queenType = 2)
 				{
 					ini_write_real("unlocks", 9, true);
-				};
+				}
 				else if(global.queenType = 3)
 				{
 					ini_write_real("unlocks", 10, true);
@@ -488,15 +488,15 @@ function unlocks()
 				if(global.queenType = 0)
 				{
 					ini_write_real("unlocks", 12, true);
-				};
+				}
 				else if(global.queenType = 1)
 				{
 					ini_write_real("unlocks", 13, true);
-				};
+				}
 				else if(global.queenType = 2)
 				{
 					ini_write_real("unlocks", 14, true);
-				};
+				}
 				else if(global.queenType = 3)
 				{
 					ini_write_real("unlocks", 15, true);
@@ -507,15 +507,15 @@ function unlocks()
 				if(global.queenType = 0)
 				{
 					ini_write_real("unlocks", 16, true);
-				};
+				}
 				else if(global.queenType = 1)
 				{
 					ini_write_real("unlocks", 17, true);
-				};
+				}
 				else if(global.queenType = 2)
 				{
 					ini_write_real("unlocks", 18, true);
-				};
+				}
 				else if(global.queenType = 3)
 				{
 					ini_write_real("unlocks", 19, true);
@@ -525,14 +525,28 @@ function unlocks()
 			case enemy.omar:
 				ini_write_real("unlocks", 9, true);
 				ini_write_real("unlocks", 12, true);
-			break;
+			break;*/
 						
 			case enemy.phish:
-				ini_write_real("unlocks", 8, true);
-				ini_write_real("unlocks", 14, true);
+				if(global.queenType = 0)
+				{
+					ini_write_real("unlocks", 21, true);
+				}
+				else if(global.queenType = 1)
+				{
+					ini_write_real("unlocks", 22, true);
+				}
+				else if(global.queenType = 2)
+				{
+					ini_write_real("unlocks", 23, true);
+				}
+				else if(global.queenType = 3)
+				{
+					ini_write_real("unlocks", 24, true);
+				};
 			break;
 						
-			case (enemy.tito or enemy.bondiola):
+			/*case (enemy.tito or enemy.bondiola):
 				ini_write_real("unlocks", 13, true);
 				ini_write_real("unlocks", 15, true);
 			break;
@@ -546,7 +560,7 @@ function unlocks()
 			break;*/
 		}
 		
-		for(i = 1; i <= 20; i++)
+		for(i = 1; i <= 50; i++)
 		{
 			if(_arrUnlocked[i] != ini_read_real("unlocks", i, false))
 			{
@@ -557,6 +571,24 @@ function unlocks()
 	ini_close();
 }
 
+function drawBadges(player)
+{
+	ini_open("unlocks.ini");
+	for(i = 0; i < 4; i++)
+	{
+		var _routeFinished = ini_read_real("timesFinished", string(player) + "-" +string(i), 0);
+			
+		if(_routeFinished)
+		{
+			draw_sprite(spr_badges, i, room_width -75 -(75*i), room_height-75)
+		}
+		else
+		{
+			draw_sprite(spr_badgesLocked, i, room_width -75 -(75*i), room_height-75)
+		};
+	};
+	ini_close();
+};
 /*function hasPlus()
 {
 	ini_open("unlocks.ini")
@@ -574,16 +606,16 @@ function unlocks()
 
 }*/
 
-function drawRecharge(rechargeNumber)
+function drawRecharge(rechargeNumber, isSpecial)
 {
 	var _rechargeX = x+80, _displace = 7;
 
 	var _subimage 
 
-	if(!obj_player.arr_status[status.electrocuted])
+	if(!obj_player.arr_status[status.electrocuted]) or (!isSpecial)
 	{
 		_subimage = rechargeNumber > 0 ? 0 : 1;
-	};
+	}
 	else
 	{
 		_subimage = 2;
@@ -597,6 +629,18 @@ function drawRecharge(rechargeNumber)
 	{
 		draw_text(_rechargeX, y-_displace, string(rechargeNumber))
 	};
+};
+
+function drawPrice(price)
+{
+	var _priceX = 40, _displace = 17;
+	
+	draw_sprite(spr_phishPrice, 0, x, y -_displace);
+	
+	draw_set_color(c_white)
+	draw_set_font(global.blackFont);
+	draw_set_halign(fa_left)
+	draw_text(x+ _priceX-3, y -6, string(price + (2 * global.mult)))
 };
 
 function replaceSkill()
@@ -634,7 +678,7 @@ function replaceSkill()
 		{
 			instance_create_depth(x, y, depth, obj_money);
 		};
-	};
+	}
 					
 	else
 	{

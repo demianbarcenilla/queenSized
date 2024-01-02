@@ -129,7 +129,7 @@ function enemylist(){
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
 	arr_enemy[_enemyName, character.text_1] = "SKATER FEELS LIKE STEALING YOUR MATTRESS!";
-	arr_enemy[_enemyName, character.text_2] = "SKATER IS RESTLESS!"
+	arr_enemy[_enemyName, character.text_2] = "CARS ARE SO LAST DECADE!"
 	arr_enemy[_enemyName, character.text_3] = "SKATER IS IN A SUGAR RUSH!";
 	
 	arr_enemy[_enemyName, character.special] = normal.rush;
@@ -188,7 +188,7 @@ function enemylist(){
 	
 	arr_enemy[_enemyName, character.text_1] = "CURSED LEMON FEELS LIKE ...?";
 	arr_enemy[_enemyName, character.text_2] = "CURSED LEMON IS"
-	arr_enemy[_enemyName, character.text_3] = "SMELLS LIKE D:";
+	arr_enemy[_enemyName, character.text_3] = "SMELLS LIKE WITCHCRAFT";
 	
 	arr_enemy[_enemyName, character.special] = normal.scare;
 	
@@ -370,10 +370,10 @@ function enemylist(){
 	arr_enemy[_enemyName, character.sprite] = spr_wetRat;
 	arr_enemy[_enemyName, character.damage] = 25;
 	arr_enemy[_enemyName, character.hp] = 50;
-	arr_enemy[_enemyName, character.defense] = 10;
+	arr_enemy[_enemyName, character.defense] = 5;
 	
-	arr_enemy[_enemyName, character.skill_1] = normal.cheese;
-	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_1] = normal.rat_jester;
+	arr_enemy[_enemyName, character.skill_2] = normal.steal;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
@@ -392,7 +392,7 @@ function enemylist(){
 	arr_enemy[_enemyName, character.defense] = 5;
 	
 	arr_enemy[_enemyName, character.skill_1] = normal.cheese_liquid;
-	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_2] = normal.steal;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
@@ -411,7 +411,7 @@ function enemylist(){
 	arr_enemy[_enemyName, character.defense] = 2;
 
 	arr_enemy[_enemyName, character.skill_1] = normal.cigar;
-	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_2] = normal.cheese;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
@@ -427,15 +427,15 @@ function enemylist(){
 	arr_enemy[_enemyName, character.name] = "FAT RAT";
 	arr_enemy[_enemyName, character.sprite] = spr_fatRat;
 	arr_enemy[_enemyName, character.damage] = 30;
-	arr_enemy[_enemyName, character.hp] = 80;
+	arr_enemy[_enemyName, character.hp] = 50;
 	arr_enemy[_enemyName, character.defense] = 15;
 	
 	arr_enemy[_enemyName, character.skill_1] = normal.cheese_expensive;
-	arr_enemy[_enemyName, character.skill_2] = -1;
+	arr_enemy[_enemyName, character.skill_2] = normal.rat_angry;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
-	arr_enemy[_enemyName, character.text_1] = "FAT RAT FEELS LIKE CHEWING ON YOUR MATRESS!!";
+	arr_enemy[_enemyName, character.text_1] = "FAT RAT FEELS LIKE CHEWING ON YOUR ANKLES!";
 	arr_enemy[_enemyName, character.text_2] = "FAT RAT LAUGHS IN RAT LANGUAGE";
 	arr_enemy[_enemyName, character.text_3] = "FAT RAT LOVES TO FIGHT WITH OUTSIDERS!";
 	
@@ -446,11 +446,11 @@ function enemylist(){
 	arr_enemy[_enemyName, character.name] = "Wobbly Rat";
 	arr_enemy[_enemyName, character.sprite] = spr_wobblyRat;
 	arr_enemy[_enemyName, character.damage] = 35;
-	arr_enemy[_enemyName, character.hp] = 100;
+	arr_enemy[_enemyName, character.hp] = 30;
 	arr_enemy[_enemyName, character.defense] = 5;
 	
 	arr_enemy[_enemyName, character.skill_1] = normal.cheese;
-	arr_enemy[_enemyName, character.skill_2] = normal.resist;
+	arr_enemy[_enemyName, character.skill_2] = -1;
 	arr_enemy[_enemyName, character.skill_3] = -1;
 	arr_enemy[_enemyName, character.skill_4] = -1;
 	
@@ -486,7 +486,7 @@ function enemylist(){
 	arr_enemy[enemy.skimo, character.hp] = 85;
 	arr_enemy[enemy.skimo, character.defense] = 5;
 	
-	arr_enemy[enemy.skimo, character.skill_1] = normal.sneeze;
+	arr_enemy[enemy.skimo, character.skill_1] = normal.snowball;
 	arr_enemy[enemy.skimo, character.skill_2] = -1;
 	arr_enemy[enemy.skimo, character.skill_3] = -1;
 	arr_enemy[enemy.skimo, character.skill_4] = -1;
@@ -495,7 +495,7 @@ function enemylist(){
 	arr_enemy[enemy.skimo, character.text_2] = "SKIMO HAS NO PERSONALITY HE'S JUST COLD";
 	arr_enemy[enemy.skimo, character.text_3] = "SKIMO SNEEZES AS A HOBBY";
 	
-	arr_enemy[enemy.skimo, character.special] = normal.sneeze;
+	arr_enemy[enemy.skimo, character.special] = normal.snowball;
 
 	arr_enemy[enemy.ice_cube, character.name] = "ICE CUBE";
 	arr_enemy[enemy.ice_cube, character.sprite] = spr_ice;
@@ -529,7 +529,7 @@ function enemylist(){
 	arr_enemy[enemy.cat, character.text_2] = "CAT'S NOT PUTTING MUCH EFFORT INTO THIS FIGHT";
 	arr_enemy[enemy.cat, character.text_3] = "MEOW";
 	
-	arr_enemy[enemy.cat, character.special] = normal.freeze;
+	arr_enemy[enemy.cat, character.special] = normal.nap;
 	
 	//CLOUD
 	arr_enemy[enemy.internaut, character.name] = "INTERNAUT";
@@ -784,7 +784,7 @@ function enemylist(){
 		arr_enemy[_enemyName, character.text_3] = "YOU'RE BLINDED BY THE ROYALTY (AND THE FIRE)";
 	
 		arr_enemy[_enemyName, character.special] = normal.crown;
-	};
+	}
 	
 	else if(global.queenType = 2)
 	{
@@ -811,7 +811,35 @@ function enemylist(){
 		arr_enemy[_enemyName, character.text_3] = "ZAP ZAP!";
 	
 		arr_enemy[_enemyName, character.special] = normal.crown;
-	};
+	}
+	
+	else if(global.queenType = 3)
+	{
+		arr_enemy[_enemyName, character.name] = "Final Queen";
+		if(global.player = enemy.cookie)
+		{
+			arr_enemy[_enemyName, character.sprite] = spr_queen4Crunch;
+		}
+		else
+		{
+			arr_enemy[_enemyName, character.sprite] = spr_queen4;
+		}
+		arr_enemy[_enemyName, character.damage] = 45;
+		arr_enemy[_enemyName, character.hp] = 250;
+		arr_enemy[_enemyName, character.defense] = 15;
+	
+		arr_enemy[_enemyName, character.skill_1] = normal.crown;
+		arr_enemy[_enemyName, character.skill_2] = normal.milk;
+		arr_enemy[_enemyName, character.skill_3] = -1;
+		arr_enemy[_enemyName, character.skill_4] = -1;
+	
+		arr_enemy[_enemyName, character.text_1] = "QUEEN FEELS ANNOYED BY YOUR PRESENCE!";
+		arr_enemy[_enemyName, character.text_2] = "QUEEN DOESN'T FEEL LIKE DOING PAPERWORK TODAY";
+		arr_enemy[_enemyName, character.text_3] = "QUEEN WANTS YOU TO LEAVE HER ALONE!";
+	
+		arr_enemy[_enemyName, character.special] = normal.crown;
+	}
+	
 	else
 	{
 		arr_enemy[_enemyName, character.name] = "Queen";
@@ -973,7 +1001,7 @@ function enemylist(){
 	
 	//Omar
 	arr_enemy[enemy.omar, character.name] = "Omar";
-	arr_enemy[enemy.omar, character.sprite] = spr_baby;
+	arr_enemy[enemy.omar, character.sprite] = spr_omar;
 	arr_enemy[enemy.omar, character.damage] = 25;
 	arr_enemy[enemy.omar, character.hp] = 125;
 	arr_enemy[enemy.omar, character.defense] = 15;
@@ -1066,7 +1094,7 @@ function playerEnemies(){
 	//Pillow
 	arr_enemy[enemy.pillow, character.name] = "Pillow";
 	arr_enemy[enemy.pillow, character.sprite] = spr_pillow;
-	arr_enemy[enemy.pillow, character.damage] = 999925;
+	arr_enemy[enemy.pillow, character.damage] = 25;
 	arr_enemy[enemy.pillow, character.hp] = 100;
 	arr_enemy[enemy.pillow, character.defense] = 0;
 
@@ -1094,9 +1122,9 @@ function playerEnemies(){
 	arr_enemy[enemy.eggplant, character.hp] = 100;
 	arr_enemy[enemy.eggplant, character.defense] = 0;
 	
-	arr_enemy[enemy.eggplant, character.skill_1] = -1;
-	arr_enemy[enemy.eggplant, character.skill_2] = -1;
-	arr_enemy[enemy.eggplant, character.skill_3] = -1;
+	arr_enemy[enemy.eggplant, character.skill_1] = normal.nap;
+	arr_enemy[enemy.eggplant, character.skill_2] = normal.crown;
+	arr_enemy[enemy.eggplant, character.skill_3] = normal.napLong;
 	arr_enemy[enemy.eggplant, character.skill_4] = -1;
 	
 	arr_enemy[enemy.eggplant, character.special] = normal.sneeze;
@@ -1111,17 +1139,21 @@ function playerEnemies(){
 
 	arr_enemy[enemy.cookie, character.skill_1] = normal.milk;
 	
-	if(current_month = 12) and (current_day = 24 or current_day = 25)  //IF CHRISTMAS
+	if(current_month = 12) and ((current_day = 24) or (current_day = 25))//IF CHRISTMAS
 	{
 		arr_enemy[enemy.cookie, character.skill_2] = normal.cookie_christmas;
 	}
-	else if(current_month = 10) and (current_day = 29)
+	else if(current_month = 10) and (current_day = 31)
 	{
-		arr_enemy[enemy.cookie, character.skill_2] = normal.cookie_easter;
+		arr_enemy[enemy.cookie, character.skill_2] = normal.cookie_ghost;
 	}
 	else if(current_month = 2) and (current_day = 14)
 	{
 		arr_enemy[enemy.cookie, character.skill_2] = normal.cookie_valentine;
+	}
+	else if(current_month = 1) and (current_day = 1)
+	{
+		arr_enemy[enemy.cookie, character.skill_2] = normal.cookie_lucky;
 	}
 	else
 	{
@@ -1165,6 +1197,8 @@ function playerEnemies(){
 	arr_enemy[enemy.bondiola, character.skill_2] = -1;
 	arr_enemy[enemy.bondiola, character.skill_3] = -1;
 	arr_enemy[enemy.bondiola, character.skill_4] = -1;
+	
+	
 };
 	
 function stageEnemies(){
@@ -1244,7 +1278,30 @@ function initializeEnemy(_enemy){
 	st_skills[0] = arr_enemy[_enemy, character.skill_1];
 	st_skills[1] = arr_enemy[_enemy, character.skill_2];
 	st_skills[2] = arr_enemy[_enemy, character.skill_3];
-	st_skills[3] = arr_enemy[_enemy, character.skill_4];
+	
+	//DECREE UNLOCKED
+	var _decreeUnlocked = true;
+	ini_open("unlocks.ini");
+		for(i = 0; i < 3; i++)
+		{
+			var _routeFinished = ini_read_real("timesFinished", string(_enemy) + "-" +string(i), 0);
+			
+			if(!_routeFinished)
+			{
+				_decreeUnlocked = false;
+				break;
+			};
+		};
+	ini_close();
+	
+	if(_decreeUnlocked)
+	{
+		st_skills[3] = normal.decree;
+	}
+	else
+	{
+		st_skills[3] = arr_enemy[_enemy, character.skill_4];
+	}
 	
 	st_skillUses[0] = -1;
 	st_skillUses[1] = -1;

@@ -42,22 +42,22 @@ cost = 10;
 switch(var_holding)
 {
 	case 0:
-		text = "REGENERATES 1/4 OF YOUR HEALTH";
+		text = "HEALS 1/4 OF YOUR HEALTH!";
 		cost = 5 + 10 * global.mult;
 	break;
 		
 	case 1:
-		text = "INCREASES YOUR TOTAL HP BY 25"
+		text = "PERMANENTLY INCREASES YOUR TOTAL HP BY 25"
 		cost = 15 + (15 * global.mult);
 	break;
 		
 	case 2:
-		text = "INCREASES YOUR DEFENSE BY 2"
+		text = "PERMANENTLY INCREASES YOUR DEFENSE BY 2"
 		cost = 10 + (10 * global.mult);
 	break;
 	
 	case 3:
-		text = "INCREASES YOUR DAMAGE BY 2"
+		text = "PERMANENTLY INCREASES YOUR DAMAGE BY 2"
 		cost = 15 +(10 * global.mult);
 	break;
 };

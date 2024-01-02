@@ -1,22 +1,56 @@
-v5 - Electric Update!
-phish: finish unlocks, 
-put a price tag on top of individual skills so you know how much they cost (as of now, prices appear as text at the top of the screen)
+V6 - Cameo update!
+Playable Omar
+Playable TB
+Playable MiniQueen
+agift.foryou
 
-queen dialogues
+make grilled cheese
+make gamemodes maybe
+functional Trophies?
 
-make unlocks for the characters when they finish this route:
-PILLOW: TV!
-RAT KING: THE VAULT! save your money in the vault. this will buy you extras
-JEAN: 
-COOKIE:
-PHISH: PHISHING ROD
+PILLOW: PILLOW TROPHY! Upgrades a skill of your choice to a SKILL+
+RAT KING: RAT TROPHY! Rat Skills are always skills+
+JEAN: FROSTY TROPHY! Enemies have a random chance of starting frozen
+COOKIE: SUGAR TROPHY! Cookies work in you favour every time
+PHISH: BAIT TROPHY! Gives you an ultra rare skill
+TB:
+OMAR:
+MINIQUEEN:
 
+ALL
 
+MINI QUEEN:
+1- MIXUP MODE (Everything except for the final boss is random)
+2- BAD MEMORY MODE (every turn a random skill changes to a different random skill)
+3- GOLD RUSH MODE ()
+4- QUEEN TROPHY ()
+
+OMAR:
+1-
+2-
+3-
+4-
+
+TITO/BONDIOLA:
+1-
+2-
+3-
+4-
+
+ULTRA RARE SKILLS:
+1- GLITCH (Activates a random skill every time) 
+2- STANCE (Every time you use it it swaps between armor/punch)
+3- MELK (inflicts every status effect onto the enemy)
+4- WEAKEN (Your enemy's HP gets reduced by half)
+5- WAIT (ID+1)
 animations for new skills
 
 cookie shop for breach/cloud*
 better death screen*
 
+better plunger!
+old plunger: x3 uses, makes 1.2 damage and has a chance to rot
+new plunger: infinite uses, makes 0.8 damage and has a chance to rot *
 spr_stage remake*
 make shopkeepers*
 upgrade shops a little*
@@ -26,14 +60,25 @@ make an event to access the 3rd route*
 
 make skill 4 electrolotl?X
 
-upgrade 2nd route maybe?
+YOU CAN NOW USE RMB TO GET OUT OF PAUSE MENU*
 there's probably something else but idk right now, i THINK that's it
 
 ADD TO BANDCAMP WHEN FINISHED:
-new beardy songs
-thank u song
+new lizzy songs
+
 new death song
 new queen song
 
-Actual AI Maybe!? X
-Weight System for Skills?
+Weight System for Skills? *
+
+v6 - Final Nap
+Final Queen
+-UNLOCKS! (They're all trophies lol i just wanna write down the names)
+-PILLOW:
+-RAT KING: CARDBOARD THRONE!
+-JEAN: 
+-COOKIE: SUGAR RUSH
+-PHISH:
+Actual AI
+upgrade 2nd route
+

@@ -1,13 +1,12 @@
 ORDER OR THE ACHIEVEMENTS: 
 
-NEW ORDER!
 01- Events
 
 PILLOW UNLOCKS
 02- Reroll [Beat The Queen]
 03- Plus Leak! [Beat The Queen (Flaming)]
-04- PH [Beat The Queen (Electric)]
-05- PH [Beat The Queen (Final Form)]
+04- Ultra Rare! [Beat The Queen (Electric)]
+05- Soft Trophy [Beat The Queen (Final Form)]
 
 06- RAT KING
 
@@ -15,8 +14,8 @@ RK UNLOCKS
 
 07- SHOPLIFT! [Beat The Queen]
 08- Rat Leak! [Beat The Queen (Flaming)]
-09- PH [Beat The Queen (Electric)]
-10- PH [Beat The Queen (Final Form)]
+09- UNSTUCK FLUTE! (rat flute gives you a random rat skill) [Beat The Queen (Electric)]
+10- Rat Trophy [Beat The Queen (Final Form)]
 
 11- JEAN
 
@@ -24,29 +23,48 @@ JEAN UNLOCKS
 
 12- Preserve [Beat The Queen]
 13- A Cookie! [Beat The Queen (Flaming)]
-14- Permafrost! (Paralizes enemies till you hit em) [Beat The Queen (Electric)]
-15- PH [Beat The Queen (Final Form)]
+14- HEALTH FREEZE! [Beat The Queen (Electric)]
+15- FROSTY TROPHY [Beat The Queen (Final Form)]
 
 COOKIE UNLOCKS
 
 16- BAKE [Beat The Queen]
 17- COOKIE LEAK! [Beat The Queen (Flaming)]
-18- PH [Beat The Queen (Electric)]
-19- PH [Beat The Queen (Final Form)]
+18- Cookie Box! [Beat The Queen (Electric)]
+19- SUGAR TROPHY [Beat The Queen (Final Form)]
 
 20- PHISH
 
-21- PH [Beat The Queen]
+21- BARGAIN (low chance for a skill to be free to use) [Beat The Queen]
 22- Discount Leak! [Beat The Queen (Flaming)]
-23- PH [Beat The Queen (Electric)]
-24- PH [Beat The Queen (Final Form)]
+23- PHISHING ROD [Beat The Queen (Electric)]
+24- BAIT TROPHY [Beat The Queen (Final Form)]
 
+25- TITO/BONDIOLA
+26- PH [Beat The Queen]
+27- PH [Beat The Queen (Flaming)]
+28- PH [Beat The Queen (Electric)]
+29- PH [Beat The Queen (Final Form)]
+
+30- OMAR
+31- PH [Beat The Queen]
+32- PH [Beat The Queen (Flaming)]
+33- PH [Beat The Queen (Electric)]
+34- PH [Beat The Queen (Final Form)]
+
+35- LITTLE QUEEN (complete the whole game with one character)
+36- Mixup! [Beat The Queen]
+37- Bad Memory [Beat The Queen (Flaming)]
+38- Gold Rush [Beat The Queen (Electric)]
+39- Queen Trophy [Beat The Queen (Final Form)]
+
+40- AGIFT.FORYOU
 
 PHASES OF QUEEN:
--Normal/Smokey Queen
+-Normal/Smoked Queen
 -Flaming Queen
--Oily Queen 
 -Electric Queen
+-Final Queen
 
 OLD ORDER:
 01- Events

@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 64.06079,
+  "duration": 146.328,
   "parent": {
     "name": "incinerator",
     "path": "folders/Sounds/music/1st route/incinerator.yy",

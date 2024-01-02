@@ -24,7 +24,7 @@ if(place_meeting(x, y, obj_mouse))
 	};
 	
 	selected = true;
-};
+}
 else
 {
 	selected = false;

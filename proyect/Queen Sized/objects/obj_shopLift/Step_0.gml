@@ -4,7 +4,7 @@ y = ystart + shift; //vertical wave motion
 if(!instance_exists(obj_shop)) 
 {
 	instance_destroy();
-};
+}
 
 else if((!instance_exists(obj_shopSkill)) and (!instance_exists(obj_shopBubble)))
 {
@@ -31,7 +31,7 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 		instance_destroy();
 		audio_play_sound(snd_select, 0, 0);
 	};
-};
+}
 else
 {
 	if(checked)

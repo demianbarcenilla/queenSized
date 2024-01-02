@@ -1,81 +1,93 @@
 function attack(_value){
-	
-	var _strike = 0, _mult = 0.2;
-	//Freeze if Player is Jean
-	if(_other = obj_player) and (obj_player.playerSelected = enemy.eggplant)
+	if(_other.var_hpFreeze <= 0) //IF HP IS NOT FROZEN
 	{
-		var _rng = irandom_range(0, 1)
-		if(_rng = 1)
+		//If striking with jean, multiply dmg *1.2
+		var _strike = 0, _mult = 0.2;
+	
+	
+		//Freeze if Player is Jean
+		if(_other = obj_player) and (obj_player.playerSelected = enemy.eggplant)
 		{
-			frozenCountdown = 1; 
-			arr_status[status.frozen] = true; 
+			var _rng = irandom_range(0, 1)
+			if(_rng = 1)
+			{
+				frozenCountdown = 1; 
+				arr_status[status.frozen] = true; 
+			};
+		}
+		if(_other = obj_enemy) and (obj_player.playerSelected = enemy.eggplant) and (obj_enemy.arr_status[status.frozen] = true)
+		{
+			_strike = 1;
 		};
-	}
-	if(_other = obj_enemy) and (obj_player.playerSelected = enemy.eggplant) and (obj_enemy.arr_status[status.frozen] = true)
-	{
-		_strike = 1;
-	};
 	
-	//If you're spooked
-	if(arr_status[status.spooked])
-	{
-		var ii = choose(1, 2, 3, 4) //Roll
-		if(ii != 1) //If rolled 1, attack
+		//If you're spooked
+		if(arr_status[status.spooked])
+		{
+			var ii = choose(1, 2, 3, 4) //Roll
+			if(ii != 1) //If DIDN'T ROLL 1, attack
+			{
+				_other.hp -= dmgCalc(_other, _self, _value +(_value* _mult *_strike));
+				
+				if(arr_status[status.connected]) //If you're connected to the enemy, recieve the same damage they do
+				{
+					hp -= dmgCalc(_other, _self, _value);
+				};
+				
+				_other.image_index = 1;
+				_self.image_index = 2;
+		
+				screenshake(5, 2, .25);
+				global.text = string(_self.var_name) + " ATTACKS!";
+			
+				with(obj_control)
+				{
+					alarm[0] = stopCinematics;
+				};
+			}
+			else //If rolled 2/3/4, miss turn
+			{
+				_other.image_index = 3;
+				_self.image_index = 1;
+				
+				global.text = string(_self.var_name) + " IS TOO SCARED TO ATTACK!";
+			};
+		}
+		else
 		{
 			_other.hp -= dmgCalc(_other, _self, _value +(_value* _mult *_strike));
-				
-			if(arr_status[status.connected]) //If you're connected to the enemy, recieve the same damage they do
+			
+			if(_other.arr_status[status.disengaged]) or ((obj_control.var_calledNope = _other) and (instance_exists(obj_nope)))
 			{
-				hp -= dmgCalc(_other, _self, _value);
+				_other.image_index = 3;
+			}
+			else
+			{
+				_other.image_index = 1;
 			};
-				
-			_other.image_index = 1;
 			_self.image_index = 2;
 		
 			screenshake(5, 2, .25);
 			global.text = string(_self.var_name) + " ATTACKS!";
-			
+		
 			with(obj_control)
 			{
 				alarm[0] = stopCinematics;
 			};
+		
+			_other.arr_status[status.disengaged] = false;
 		};
-		else //If rolled two, miss turn
+		if(arr_status[status.connected]) //If you're connected to the enemy, recieve dmg
 		{
-			_other.image_index = 3;
-			_self.image_index = 1;
-				
-			global.text = string(_self.var_name) + " IS TOO SCARED TO ATTACK!";
+			hp -= dmgCalc(_other,_self, _value +(_value* _mult *_strike));
 		};
-	};
+	}
 	else
 	{
-		_other.hp -= dmgCalc(_other, _self, _value +(_value* _mult *_strike));
-			
-		if(_other.arr_status[status.disengaged]) or ((obj_control.var_calledNope = _other) and (instance_exists(obj_nope)))
-		{
-			_other.image_index = 3;
-		};
-		else
-		{
-			_other.image_index = 1;
-		};
-		_self.image_index = 2;
-		
-		screenshake(5, 2, .25);
-		global.text = string(_self.var_name) + " ATTACKS!";
-		
-		with(obj_control)
-		{
-			alarm[0] = stopCinematics;
-		};
-		
-		_other.arr_status[status.disengaged] = false;
-	};
-	if(arr_status[status.connected]) //If you're connected to the enemy, recieve dmg
-	{
-		hp -= dmgCalc(_other,_self, _value +(_value* _mult *_strike));
-	};
+	_other.image_index = 0;
+	_self.image_index = 2;
+				
+	global.text = string(_self.var_name) + " ATTACKS!";
+	}
 };
 
 function skill(value, isPlus){
@@ -124,7 +136,7 @@ function setSkillRecharge(value){
 	if(obj_player.arr_skill[st_skills[value], skills.cost] > 0)
 	{
 		st_skillRecharge[value] = 0;
-	};
+	}
 	else
 	{
 		st_skillRecharge[value] = -1;
@@ -168,7 +180,7 @@ function dmgCalc(_target, _self, _val)
 		if(_target != obj_enemy)
 		{
 			_whiff = irandom_range(0, 3);
-		};
+		}
 		else
 		{
 			_whiff = -1;
@@ -180,7 +192,7 @@ function dmgCalc(_target, _self, _val)
 			
 			obj_control.var_calledNope = _target;
 			instance_create_depth(_target.x, _target.y,_target.depth+1, obj_nope);
-		};
+		}
 		else
 		{
 			_finalDMG = floor(_finalDMG /2);
@@ -203,7 +215,7 @@ function special(_skill)
 		st_specialRecharge = mx_specialRecharge;
 			
 		nextTurn();	
-	};
+	}
 		
 	else
 	{
@@ -226,14 +238,17 @@ function guard()
 
 function regen(target, val)
 {
-	if(arr_status[status.bitter] = true)
+	if(_self.var_hpFreeze <= 0) //IF HP IS NOT FROZEN
 	{
-		target.hp += val/2
-	};
+		if(arr_status[status.bitter] = true)
+		{
+			target.hp += val/2
+		}
 	
-	else
-	{
-		target.hp += val;
+		else
+		{
+			target.hp += val;
+		};	
 	};
 };
 
@@ -284,6 +299,11 @@ function statusEffects()
 		arr_status[status.connected] = false
 	};
 	tipsyRoll = choose(1, 2, 3, 4);
+	
+	if(var_hpFreeze > 0)
+	{
+		var_hpFreeze --
+	};
 }
 
 function createAnim(sprite)

@@ -22,7 +22,7 @@ else
 if(obj_player.st_skillPlus[0]) and (obj_player.st_skills[0] != -1)
 {
 	sprite_index = spr_uiSkillsetPlus;
-};
+}
 else
 {
 	sprite_index = spr_uiSkillset;
@@ -31,7 +31,7 @@ else
 if(!global.primaryUI)
 {
 	uiBehave()
-};
+}
 
 else
 {

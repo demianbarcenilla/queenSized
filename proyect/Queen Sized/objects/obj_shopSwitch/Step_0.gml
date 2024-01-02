@@ -31,7 +31,7 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 		
 		image_index = global.player = enemy.tito ? 1 : 2		
 	};
-};
+}
 else
 {
 	if(checked)

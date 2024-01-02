@@ -152,6 +152,48 @@ function eventValues()
 	arr_event[3, 2] = "YOU USE HORNS? THAT'S SO LAST DECADE! LET ME TAKE YOU SOMEWHERE MORE... MODERN"//Text
 	arr_event[3, 3] = "SKATER SHOWS YOU THE INTERNET!"//Text for when you accept
 	arr_event[3, 4] = "YOU'RE SUCH AN ANTIQUE..."//Text for when you decline
+	
+	//QUEEN DECREE EVENT
+	arr_event[4, 0] = normal.wait;//Left Choice
+	arr_event[4, 1] = function(){ //Consecuences of event
+		global.queenType = 3;
+		with(obj_enemy){initializeEnemy(enemy.queen)};
+		
+		with(obj_player)
+		{
+			var hasCheese = false;
+			for(i=0; i < 4; i++)
+			{
+				if(st_skills[i] = normal.decree)
+				{
+					st_skills[i] = normal.nap;
+					st_skillUses[i] = arr_skill[normal.nap, skills.uses];
+					hasCheese = true
+					break;
+				}
+				else if(st_skills[i] = normal.nap)
+				{
+					break;
+				};
+			};
+			
+			if(!hasCheese)
+			{
+				for(i=0; i < 4; i++)
+				{
+					if(st_skills[i] = -1)
+					{
+						st_skills[i] = normal.nap;
+						st_skillUses[i] = arr_skill[normal.nap, skills.uses];
+						break;
+					};
+				};
+			}
+		}
+	};
+	arr_event[4, 2] = "I SEE... IF I SIGN THIS WILL YOU LEAVE ME ALONE?"//Text
+	arr_event[4, 3] = "OKAY THEN, BUT ONLY IF YOU DEFEAT ME"//Text for when you accept
+	arr_event[4, 4] = "WHY EVEN SHOW THIS TO ME THEN?"//Text for when you decline
 };
 
 function eventStart(_value)
@@ -185,17 +227,23 @@ function eventStart(_value)
 		global.event = true;
 		global.eventType = 1;
 		nextTurn();
-	};
+	}
 	else if(obj_enemy.playerSelected = enemy.kid) and (_value = normal.lemonade) //LEMONADE KID EVENT
 	{
 		global.event = true;
 		global.eventType = 2;
 		nextTurn();
-	};
+	}
 	else if(obj_enemy.playerSelected = enemy.skater) and ((_value = normal.honk) or (_value = normal.rat_horn)) //SKATER+HONK EVENT
 	{
 		global.event = true;
 		global.eventType = 3;
+		nextTurn();
+	};
+	else if(obj_enemy.playerSelected = enemy.queen) and ((_value = normal.decree)) //QUEEN+DECREE EVENT
+	{
+		global.event = true;
+		global.eventType = 4;
 		nextTurn();
 	};
 };
@@ -221,7 +269,7 @@ function chatValues()
 			arr_chat[1, 0] = "YOU AGAIN?";
 			arr_chat[1, 1] = "YOU DIDN'T LEARN THE LESSON DID YOU?";
 			arr_chat[1, 2] = "WE'VE BEEN THROUGH THIS OVER AND OVER AGAIN HUN!";
-			arr_chat[1, 3] = "IT DOESN'T MATTER IF YOU DEFEAT ME LIKE, " + string(_timesFinished) + " TIMES OR WHATEVER";
+			arr_chat[1, 3] = "IT DOESN'T MATTER IF I'M DEFEATED LIKE, " + string(_timesFinished) + " TIMES OR WHATEVER";
 			arr_chat[1, 4] = "THIS WILL ALLWAYS END WITH ME GETTING UP AND KICKING YOU OUT OF MY CASTLE";
 			arr_chat[1, 5] = "SO YEAH, I'LL LET YOU START YOUR LITTLE ATTEMPT TO DETHRONE ME";
 			
@@ -230,7 +278,7 @@ function chatValues()
 			
 			arr_chat[3, 0] = "ZAP ZAP! YOU AGAIN?"
 			arr_chat[3, 1] = "I GUESS I COULD TRY TO LOSE ONE MORE TIME!"
-		};
+		}
 		else
 		{
 			//Rat Queen
@@ -239,30 +287,21 @@ function chatValues()
 			arr_chat[0, 2] = "If you lose i steal ALL OF your belongings. Deal?";
 			
 			//Queen
-			arr_chat[1, 0] = "OH MY GOD, YOU REALLY CAME!";
-			arr_chat[1, 1] = "I COULDN'T BELIEVE IT WHEN I HEARD A TALKING PILLOW HAD THE LAST MATRESS IN THE WORLD";
-			arr_chat[1, 2] = "BUT YOU ARE HERE! YOU BRANG IT RIGHT TO ME!";
-			arr_chat[1, 3] = "DID YOU REALLY BUY THE WHOLE ''MATRESS IS SO BIG IT CAN'T FIT IN THE INCINERATOR'' STORY?";
-			arr_chat[1, 4] = "THAT'S LITERALLY WHAT THE INCINERATOR IS FOR!";
-			arr_chat[1, 5] = "HAHAHAH! YOU'RE SO DUMB! LET'S END THIS";
+			arr_chat[1, 0] = "OH MY, SO IT'S TRUE..";
+			arr_chat[1, 1] = "YOU HAVE THE LAST MATRESS IN THE WORLD?";
+			arr_chat[1, 2] = "AND YOU THOUGHT THE BEST POSSIBLE PLAN WAS TO BRING IT TO A GIGANTIC INCINERATOR?";
+			arr_chat[1, 3] = "YOU DO GET HOW THAT'S THE DUMBEST THING YOU COULD POSSIBLY DO, RIGHT?";
+			arr_chat[1, 4] = "SO YEAH I DO NOT CARE FOR YOU, LET'S JUST END THIS";
 			
-			arr_chat[2, 0] = "AWWW LITTLE BABY GOT A SKILL UPGRADE?"
-			arr_chat[2, 1] = "LIKE I HAVEN'T SEEN IT BEFORE!"
-			arr_chat[2, 2] = "JUST GIVE UP, I'VE BEEN THROUGH THIS ENOUGH TIMES TO KNOW HOW IT ENDS"
+			arr_chat[2, 0] = "AWWW LITTLE BABY GOT AN UPGRADE?"
+			arr_chat[2, 1] = "I LOVE IT!"
+			arr_chat[2, 2] = "IT EVEN MATCHES WITH MINE!"
 			
-			arr_chat[3, 0] = "OH NO! YOU FOUND ABOUT THE INTERNET!"
+			arr_chat[3, 0] = "OH NO! YOU FOUND OUT ABOUT THE INTERNET!"
 			arr_chat[3, 1] = "WHAT'S NEXT? YOU LEARN ABOUT PHONES AND BEAT ME UP TROUGH A CALL?"
 			arr_chat[3, 2] = "UGH.. LET'S JUST GET THIS OVER WITH"
-			
-			arr_chat[4, 0] = "Alright, that's it"
-			arr_chat[4, 1] = "You really wanna dethrone me, huh?"
-			arr_chat[4, 2] = "There's not a lot of people who made this many attempts, i'll give you that"
-			arr_chat[4, 3] = "so this is what i'm gonna do";
-			arr_chat[4, 4] = "you beat me in this fight, and i'll give you the throne";
-			arr_chat[4, 5] = "really, i will. it's very tiring to fight dummies who try to kick you out everyday, anyways";
-			arr_chat[4, 2] = "so yeah, do your best";
 		};
-	};
+	}
 	
 	//RAT KING DIALOGUES
 	else if(obj_player.playerSelected = enemy.rat_king)
@@ -285,8 +324,8 @@ function chatValues()
 			
 			//Electric Queen
 			arr_chat[3, 0] = "YOU GOT HOOKED ON THE INTERNET, HUH?"
-			arr_chat[3, 1] = "LEARN TO CONTROL YOUR ADICTIONS BUDDY"
-		};
+			arr_chat[3, 1] = "LEARN TO CONTROL YOUR ADDICTIONS BUDDY"
+		}
 		else
 		{
 			//Rat Queen
@@ -303,15 +342,15 @@ function chatValues()
 			arr_chat[1, 5] = "ALRIGHT I GUESS YOU'RE GOING DOWN THEN";
 			
 			//Flaming Queen
-			arr_chat[2, 0] = "AWW YOU GOT THE PWEETY COLORS IN YOUR PWEETY LITTLE SKILLS?"
-			arr_chat[2, 1] = "THAT'S SO CUTE! IT GIVES YOU ALMOST ENOUGH POWER TO LICK MY SHOES!"
+			arr_chat[2, 0] = "OH, I SEE YOU GOT BETTER AT STEALING?"
+			arr_chat[2, 1] = "THAT'S GONNA BE SO USEFUL HERE!"
 			
 			//Electric Queen
 			arr_chat[3, 0] = "WAIT, YOU ARE ON THE INTERNET?"
 			arr_chat[3, 1] = "I DIDN'T KNOW RATS COULD DO THAT"
 			arr_chat[3, 2] = "ANYWAYS, I'M NOT WASTING ANY MORE TIME WITH YOU!"
 		};
-	};
+	}
 	else if(obj_player.playerSelected = enemy.eggplant)
 	{
 		if(_routeFinished)
@@ -322,8 +361,7 @@ function chatValues()
 			
 			//Queen
 			arr_chat[1, 0] = "I STILL DON'T KNOW WHAT YOU'RE DOING IN HERE!";
-			arr_chat[1, 1] = "WHAT'S THE POINT? YOU LIKE WINTER MORE THAN SUMMER?";
-			arr_chat[1, 2] = "ITS THAT THE CONFLICT?";
+			arr_chat[1, 1] = "WHAT'S THE POINT OF ALL THIS? DO YOU NEED SOMETHING?";
 			
 			//Flaming Queen
 			arr_chat[2, 0] = "THIS AGAIN?";
@@ -331,7 +369,7 @@ function chatValues()
 			
 			//Electric Queen
 			arr_chat[3, 0] = "UGH. GET. A. LIFE.";
-		};
+		}
 		else
 		{
 			//Rat Queen
@@ -355,7 +393,7 @@ function chatValues()
 			arr_chat[3, 0] = "AAAAND HE'S BACK!";
 			arr_chat[3, 1] = "YEAH YEAH I KNOW HOW THIS GOES";
 		};
-	};
+	}
 	//COOKIE DIALOGUES
 	else if(obj_player.playerSelected = enemy.cookie)
 	{
@@ -363,39 +401,37 @@ function chatValues()
 		{
 			//Rat Queen
 			arr_chat[0, 0] = "OH NO! NOT THE CRUNCH AGAIN!";
-			arr_chat[0, 1] = "STOP RUINING THE FUN!";
+			arr_chat[0, 1] = "IT'S OK.. IT'S OK.. I CAN HANDLE THIS";
 			
 			//Queen
 			arr_chat[1, 0] = "NO! NOT THE CRUNCH AGAIN!";
-			arr_chat[1, 1] = "GO AWAY!";
+			arr_chat[1, 1] = "HAVEN'T YOU DONE ENOUGH?..";
 			
 			//Queen (Flaming)
-			arr_chat[2, 0] = "PLEASE MAN I JUST WANT TO BE LEFT ALONE"
-			arr_chat[2, 1] = "GO BACK TO THE COOKIE REALM"
+			arr_chat[2, 0] = "PLEASE... LEAVE ME ALONE.."
+			arr_chat[2, 1] = "WHY ARE YOU LIKE THIS?"
 			
 			//Queen (Electric)
 			arr_chat[3, 0] = "WAIT! THERE'S NO NEED TO DO THIS!"
-			arr_chat[3, 1] = "WHAT DO I HAVE TO DO FOR YOU TO LEAVE ME ALONE!"
-		};
+			arr_chat[3, 1] = "WHAT DO I HAVE TO DO FOR YOU TO LEAVE ME ALONE!?"
+		}
 		else
 		{
 			//Rat Queen
 			arr_chat[0, 0] = "OH NO! NOT THE CRUNCH!";
-			arr_chat[0, 1] = "YOU WON'T RUIN THE SPIRIT OF RATMADAN TODAY!";
 			
 			//Queen
 			arr_chat[1, 0] = "OH NO! IT'S THE CRUNCH!";
-			arr_chat[1, 1] = "ARE YOU HERE TO RUIN THE SPIRIT OF QUEENMAS?";
+			arr_chat[1, 1] = "ARE YOU HERE TO RUIN THE SPIRIT OF QUEENXMAS?";
 			arr_chat[1, 2] = "LE-LEAVE ME ALONE!";
 			
 			arr_chat[2, 0] = "OH NO! IT'S THE ENHANCED CRUNCH!"
 			arr_chat[2, 1] = "OKAY OKAY DON'T BE SCARED QUEEN, YOU CAN DO THIS..."
 			
-			arr_chat[3, 0] = "OH NO! OH NO OH NO OH NO!"
-			arr_chat[3, 1] = "I'M DONE WITH THIS!"
-			arr_chat[3, 2] = "MAYBE ELECTRICITY CAN STOP THE CRUNCH"
+			arr_chat[3, 0] = "OH NO.."
+			arr_chat[3, 1] = "NOT THE CRUNCH.PNG!"
 		};
-	};
+	}
 	else if(obj_player.playerSelected = enemy.phish)
 	{
 		if(_routeFinished)
@@ -414,9 +450,9 @@ function chatValues()
 			arr_chat[2, 0] = "WHY ARE YOU TRYING TO LOOT RATLANTIS?"
 			arr_chat[2, 1] = "THEY LITERALLY PAY STUFF WITH CHEESE. THAT'S NOT NORMAL"
 			
-			arr_chat[3, 0] = "ZAP ZAP! HEY!"
-			arr_chat[3, 1] = "WANNA HAVE ANOTHER ELECTRIC BATTLE?"
-		};
+			arr_chat[3, 0] = "HEY! JUST GOT YOUR EMAIL"
+			arr_chat[3, 1] = "NO, I WON'T GIVE YOU MY CREDIT CARD NUMBER"
+		}
 		else
 		{
 			//Rat Queen
@@ -426,17 +462,17 @@ function chatValues()
 			
 			//Queen
 			arr_chat[1, 0] = "OH! IF IT ISN'T MY CYBERNETIC LITTLE FRIEND!";
-			arr_chat[1, 1] = "I'M GUESSING YOU WANNA TRY TO STEAL MY WEALTH AGAIN?";
-			arr_chat[1, 2] = "WELL, YOU KNOW HOW THIS GOES!";
+			arr_chat[1, 1] = "I'M GUESSING YOU WANNA TRY TO STEAL MY WEALTH?";
+			arr_chat[1, 2] = "COOL THEN";
 			
-			arr_chat[2, 0] = "HEY BUDDY! BACK FOR ANOTHER ROUND?"
+			arr_chat[2, 0] = "HEY BUDDY! GONNA TRY TO GET INTO MY BANK ACCOUNT AGAIN?"
 			arr_chat[2, 1] = "OH AND I SEE YOU GOT BETTER AT SCAMMING!"
 			arr_chat[2, 2] = "FINALLY! YOUR METHODS SOMETIMES COME ACROSS AS CHEAP, YOU KNOW?"
 			
-			arr_chat[3, 0] = "YOU PAID A LITTLE VISIT TO YOUR HOME? THAT'S NICE"
+			arr_chat[3, 0] = "YOU PAID A LITTLE VISIT HOME? THAT'S NICE"
 			arr_chat[3, 1] = "ANYWAYS I CAN ALSO DO THAT! LOOK!"
 		};
-	};
+	}
 	else
 	{
 		//Rat Queen
@@ -473,19 +509,18 @@ function execute_chat()
 			
 			global.queenType = 1;
 			chatFunctions(0);
-		};
+		}
 		else if(obj_enemy.playerSelected = enemy.michael)
 		{
 			global.queenType = 2;
-		};
+		}
 		else if(obj_enemy.playerSelected = enemy.queen)
 		{
 			global.chat = true;
 			global.primaryUI = false;
-			if(global.queenType = 0){chatFunctions(1)};
-			else if(global.queenType = 1){chatFunctions(2)};
+			if(global.queenType = 0){chatFunctions(1)}
+			else if(global.queenType = 1){chatFunctions(2)}
 			else if(global.queenType = 2){chatFunctions(3)};
-			else if(global.queenType = 3){chatFunctions(4)};
 		};
 	};
 };
@@ -504,6 +539,7 @@ function chatFunctions(_chat)
 		instance_destroy(obj_back);
 	};
 	obj_control.music = mus_silent;
+	
 	//Create YAY!
 	if(!instance_exists(obj_uiYay))
 	{
@@ -526,7 +562,7 @@ function chatFunctions(_chat)
 				
 				obj_uiYay.y += 40;
 				audio_play_sound(snd_select, 0, false);
-			};
+			}
 			
 			else
 			{
@@ -599,7 +635,6 @@ function execute_event(_value)
 		instance_create_depth(140, 240, depth, obj_uiChoice);
 		instance_create_depth(240, 240, depth, obj_uiChoice2);
 		
-		//obj_uiChoice.image_index = normal.wait+1;
 		obj_uiChoice.image_index = arr_event[global.eventType, 0]+1;
 		global.text = arr_event[global.eventType, 2];
 	};
@@ -614,6 +649,7 @@ function execute_event(_value)
 			
 			obj_text.canChangeText = true;
 				global.text = arr_event[global.eventType, 3];
+				obj_text.var_text = arr_event[global.eventType, 3];
 				global.textPrev = global.text
 			obj_text.canChangeText = false;
 			
@@ -623,8 +659,10 @@ function execute_event(_value)
 			global.enemyPrev = playerSelected;
 			global.event = false;
 			
+			obj_text.eventText = true;
+			
 			resetToPrimary();
-		};
+		}
 		else if(obj_uiChoice2.selected)
 		{
 			
@@ -632,10 +670,13 @@ function execute_event(_value)
 			
 			obj_text.canChangeText = true;
 				global.text = arr_event[global.eventType, 4];
+				obj_text.var_text = arr_event[global.eventType, 4];
 				global.textPrev = global.text
 			obj_text.canChangeText = false;
 			
 			global.event = false;
+			
+			obj_text.eventText = true;
 			
 			resetToPrimary();
 		};

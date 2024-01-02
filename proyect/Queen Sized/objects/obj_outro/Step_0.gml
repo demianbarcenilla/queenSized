@@ -6,14 +6,14 @@ if(mouse_check_button_pressed(mb_left))
 	{
 		if(global.newUnlocks)
 		{
-			room_goto(rm_newUnlocks)
+			room_goto(rm_newUnlocks);
 		}
 		else
 		{
 			resetGameState();
 			room_goto(rm_menu);
 		}
-	};
+	}
 	else
 	{
 		i++;

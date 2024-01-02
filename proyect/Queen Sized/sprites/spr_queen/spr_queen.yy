@@ -71,8 +71,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "queen",
+    "path": "texturegroups/queen",
   },
   "type": 0,
   "VTile": false,

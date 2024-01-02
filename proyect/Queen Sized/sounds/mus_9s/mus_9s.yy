@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 98.16816,
+  "duration": 27.428583,
   "parent": {
     "name": "cloud",
     "path": "folders/Sounds/music/3rd route/cloud.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "mus_9s.mp3",
+  "soundFile": "mus_9s.wav",
   "type": 1,
   "volume": 1.0,
 }

@@ -14,6 +14,10 @@ function draw_healthBar(x, y, hp, maxHp){
 		false
 	);
 	
+	if(var_hpFreeze)
+	{
+		draw_sprite(spr_hpFreeze, 0, x, y +h_hb+8)
+	};
 	prevHp = lerp(prevHp, hp, ammount);
 	return prevHp;
 };

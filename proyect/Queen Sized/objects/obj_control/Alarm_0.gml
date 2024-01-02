@@ -39,7 +39,7 @@ if(instance_exists(obj_enemy))
 				global.player = enemy.bondiola;
 				with(obj_player){initializeTB()};
 				screenshake(10, 2, .1);
-			};		
+			}	
 			else if(obj_player.playerSelected = enemy.bondiola)
 			{
 				global.player = enemy.tito
@@ -113,7 +113,7 @@ if(instance_exists(obj_enemy))
 					{
 						instance_create_depth(0, 0, depth, obj_shop);
 					};
-				};
+				}
 			
 				else
 				{
@@ -122,9 +122,17 @@ if(instance_exists(obj_enemy))
 					//Unlock Function
 					unlocks();
 					
-					room_goto(rm_outro)
+					if(global.queenType = 3)
+					{
+						var _ending = instance_create_depth(x, y, depth, obj_video);
+						room_goto(rm_newUnlocks);
+					}
+					else
+					{
+						room_goto(rm_outro);
+					};
 				};
-			};
+			}
 			else //if dealing with a cerberus
 			{
 				if(_enemy = enemy.cerberus)
@@ -137,7 +145,7 @@ if(instance_exists(obj_enemy))
 					dead = false
 					coinsDropped = false;
 					explodeTimer = -1;
-				};
+				}
 		
 				else
 				{
@@ -151,7 +159,7 @@ if(instance_exists(obj_enemy))
 					explodeTimer = -1;
 				};
 			};
-		};
+		}
 		else
 		{
 			if(global.turn % 2 = 1)

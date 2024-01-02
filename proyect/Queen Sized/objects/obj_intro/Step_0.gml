@@ -5,7 +5,7 @@ if(mouse_check_button_pressed(mb_left))
 	if(i = 4)
 	{
 		room_goto(rm_game);
-	};
+	}
 	else
 	{
 		i++;

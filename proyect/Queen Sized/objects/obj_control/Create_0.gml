@@ -1,13 +1,13 @@
-#macro PINK make_color_rgb(255, 128, 128) 
+#macro PINK make_color_rgb(255, 132, 186) 
 #macro PURPLE make_color_rgb(146, 77, 249) 
-#macro BLUE make_color_rgb(0, 128, 255) 
-#macro ORANGE make_color_rgb(255, 100, 0) 
-#macro RED make_color_rgb(255, 0, 0) 
-#macro YELLOW make_color_rgb(255, 205, 89) 
-#macro LIGHT_BLUE make_color_rgb(82, 186, 193) 
+#macro BLUE make_color_rgb(30, 74, 209) 
+#macro ORANGE make_color_rgb(255, 128, 64) 
+#macro RED make_color_rgb(193, 0, 71) 
+#macro YELLOW make_color_rgb(224, 205, 0) 
+#macro LIGHT_BLUE make_color_rgb(38, 175, 191) 
 #macro GREEN make_color_rgb(109, 178, 6) 
 #macro CYAN make_color_rgb(0, 128, 128) 
-#macro GRAY make_color_rgb(128, 128, 128)
+#macro GRAY make_color_rgb(119, 119, 142)
 
 #macro ROOMWIDTH 460
 
@@ -23,6 +23,7 @@ global.canPurchase = false;
 //Set font
 scribble_font_add_from_sprite("spr_font", "ABCDEFGHIJKLMNOPQRSTUVWXYZÑ1234567890.,:!+-_/=$<()'?", 0, 4, true)
 global.invertedFont = font_add_sprite_ext(fnt_generalWhite, "ABCDEFGHIJKLMNOPQRSTUVWXYZÑ1234567890.,:!+-_/=$<()'?", true, 1);
+global.blackFont = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZÑ1234567890.,:!+-_/=$<()'?", true, 1);
 
 depth = 999;
 

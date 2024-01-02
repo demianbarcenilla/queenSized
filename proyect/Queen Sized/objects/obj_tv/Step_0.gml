@@ -27,7 +27,7 @@ if(place_meeting(x, y, obj_mouse))
 			audio_play_sound(snd_tv, 0, 0);
 		}
 	}
-};
+}
 else
 {
 	if(selected)

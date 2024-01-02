@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5ca33e6b-f30c-4363-bca6-53a28cf183a7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6783ef37-5870-4025-ac3d-4ab77ac2262c",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 159,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ff788dd0-122c-4795-8623-94e18d459efe","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"85f4cbbf-e0a5-4f6e-bbc9-74d9b954cbf1","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5ca33e6b-f30c-4363-bca6-53a28cf183a7","path":"sprites/spr_beardy/spr_beardy.yy",},},},"Disabled":false,"id":"bf68b41c-10c3-47b8-a9d3-99041cb1c101","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6783ef37-5870-4025-ac3d-4ab77ac2262c","path":"sprites/spr_beardy/spr_beardy.yy",},},},"Disabled":false,"id":"458b006b-7e89-458a-adf1-2bb9571fc0d2","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -65,8 +65,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "menu",
+    "path": "texturegroups/menu",
   },
   "type": 0,
   "VTile": false,

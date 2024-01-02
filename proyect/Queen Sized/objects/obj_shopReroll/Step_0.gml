@@ -35,7 +35,7 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 		audio_play_sound(snd_select, 0, 0);
 		global.money -= cost;
 	};
-};
+}
 else
 {
 	if(checked)

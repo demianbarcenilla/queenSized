@@ -8,7 +8,7 @@ if((global.battleCount -9) %10 = 0) //boss
 {
 	global.bossFight = true;
 	_enemy = arr_bossList[global.stage];
-};
+}
 else //enemy = a random enemy from selection, based on stage
 {
 	global.bossFight = false; 

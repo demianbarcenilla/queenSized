@@ -9,7 +9,7 @@ if(place_meeting(x, y, obj_mouse))
 		if(global.musVol < 1)
 		{
 			global.musVol += .25;
-		};
+		}
 		else
 		{
 			global.musVol = 0;
@@ -23,7 +23,7 @@ if(place_meeting(x, y, obj_mouse))
 	};
 	selected = true;
 	text = "CHANGE THE VOLUME OF THE MUSIC! CURRENT: "+string(global.musVol*100) + "PERCENT!";
-};
+}
 else
 {
 	selected = false;

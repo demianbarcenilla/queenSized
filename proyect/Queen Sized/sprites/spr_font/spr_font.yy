@@ -167,8 +167,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "texgroup1",
-    "path": "texturegroups/texgroup1",
+    "name": "UI",
+    "path": "texturegroups/UI",
   },
   "type": 0,
   "VTile": false,

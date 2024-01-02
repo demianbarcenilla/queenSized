@@ -4,30 +4,36 @@ if(instance_exists(obj_optionsMenu))
 	if(obj_sfx.selected = true)
 	{
 		global.text = obj_sfx.text;
-	};
+	}
 	else if(obj_sound.selected = true)
 	{
 		global.text = obj_sound.text;
-	};
+	}
 	else if(obj_fullScreen.selected = true)
 	{
 		global.text = obj_fullScreen.text;
-	};
+	}
 	else if(obj_backMenu.selected = true)
 	{
 		global.text = obj_backMenu.text;
-	};
+	}
 	else if(obj_colorPal.selected = true)
 	{
 		global.text = obj_colorPal.text;
-	};
+	}
 	else
 	{
 		global.text = "CHANGE THE GAME OPTIONS!";
 	};
 };
 
-if(canChangeText){var_text = global.text}
+if(canChangeText) and (!eventText) {var_text = global.text}
+
+if(eventText) and (alarm[0] = -1)
+{
+	alarm[0] = 120;
+};
+
 else if(alarm[10] = -1){alarm[10] = 60}
 scribble("[wave]"+ string_upper(var_text) +"[/wave]")
 .typewriter_in(2, 10)

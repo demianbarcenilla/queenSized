@@ -12,13 +12,13 @@ if(pause)
 	
 	draw_set_font(global.invertedFont)
 	draw_set_color(c_white);
-	draw_text(room_width/2, room_height/2, "PRESS ESC TO RETURN TO GAME");
+	draw_text(room_width/2, room_height/2, "ESC/RIGHT CLICK TO RETURN TO GAME");
 	
 	if(!instance_exists(obj_optionsMenu))
 	{
 		instance_create_depth(x, y, depth-100, obj_optionsMenu)
 	};
-};
+}
 
 else if(room != rm_options)
 {

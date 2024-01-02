@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 92.02939,
+  "duration": 34.909103,
   "parent": {
     "name": "breach",
     "path": "folders/Sounds/music/3rd route/breach.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "mus_10b.mp3",
+  "soundFile": "mus_10b.wav",
   "type": 1,
   "volume": 1.0,
 }

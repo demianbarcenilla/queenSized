@@ -4,7 +4,7 @@ y = ystart + shift; //vertical wave motion
 if(!instance_exists(obj_shop))
 {
 	instance_destroy();
-};
+}
 else if(!instance_exists(obj_shopSkill))
 {
 	repeat(10){instance_create_depth(x, y, depth-10, obj_confetti)}
@@ -34,7 +34,7 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 		
 		instance_destroy();
 	};
-};
+}
 else
 {
 	if(checked)

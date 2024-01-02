@@ -20,7 +20,7 @@ if(place_meeting(x, y, obj_mouse))
 		audio_play_sound(snd_error, 0, 0);
 	};
 	selected = true;
-};
+}
 else
 {
 	selected = false;

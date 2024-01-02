@@ -48,7 +48,7 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 		
 		instance_destroy();
 	};
-};
+}
 else
 {
 	if(checked)

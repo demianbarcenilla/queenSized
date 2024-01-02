@@ -21,7 +21,7 @@ vendor = global.stage;
 if(obj_player.playerSelected = enemy.rat_king)
 {
 	poolsRat();
-};
+}
 else
 {
 	pools();
@@ -109,16 +109,16 @@ with(obj_player)
 };
 arr_shopText[0] ="WELCOME TO THE SHOP"; //CITY
 arr_shopText[1] ="WOOF WOOF!! SHOP!!"; //TUNNEL
-arr_shopText[2] ="WELCOME TO THE LEMONADE STAND"; //LEMON
-arr_shopText[3] ="SHOP... OR SOMETHING"; //SHORTCUT
-arr_shopText[4] ="WELCOME TO THE SHOP"; //INCINERATOR
+arr_shopText[2] ="WELCOME TO THE LEMONADE STAND! WE GOT LEMONS, AND THEY DO STAND!"; //LEMON
+arr_shopText[3] ="WILL YOU BUY SOMETHING OR NAH?"; //SHORTCUT
+arr_shopText[4] ="I SHOULDN'T SELL YOU ANYTHING, BUUT..."; //INCINERATOR
 arr_shopText[5] ="WAWAAA, BUYYY!!"; //SEWER
-arr_shopText[6] ="PLEASE DON'T BITE MY FACE!"; //RUINS
+arr_shopText[6] ="PLEASE DON'T BITE MY FACE"; //RUINS
 arr_shopText[7] ="BUY OUR JUNK!!"; //RATLANTIS
-arr_shopText[8] ="SO... COLD... BUY... ICE..."; //FRIDGE
+arr_shopText[8] ="WELCOME... FRIDGE... BUY... ICE..."; //FRIDGE
 
 arr_shopText[9] ="BUY E - MARKET NOW!!"; //CLOUD
-arr_shopText[10] ="B   Y ERKET   -NOW !!!"; //BREACH
+arr_shopText[10] ="B   Y ERKET   -NOW !?!"; //BREACH
 
 global.text = arr_shopText[global.stage];
 global.textPrev = global.text;

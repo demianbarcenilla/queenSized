@@ -3,7 +3,7 @@ if(room = rm_game)
 	if(instance_exists(obj_shop))
 	{
 		draw_sprite(spr_shop, global.stage, 0, 0);
-	};
+	}
 	else
 	{
 		draw_sprite(spr_backgrounds, global.stage, 0 , 0);	

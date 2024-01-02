@@ -1,7 +1,7 @@
 if(global.event)
 {
 	uiBehave()
-};
+}
 else
 {
 	if(alarm[0] = -1){alarm[0] = 3};

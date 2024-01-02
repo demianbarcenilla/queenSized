@@ -34,6 +34,8 @@ function initEnum(){
 		funcPlus,
 		costPlus,
 		usesPlus,
+		
+		weight //The higher it is, the rarest the item is. 0 is normal, 4 is SUPER rare
 		};
 
 		enum normal
@@ -136,16 +138,22 @@ function initEnum(){
 		
 		cookie_electric,
 		cookie_phishy,
-	
-		glitch, //GOTTA BE THE LAST ONE ALLWAYS
 		
-		swap,
+		stance,
+		weaken,
+		hp_freeze,
+		
+		cookie_box,
+		phishing_rod,
+		
+		melk,
+		decree,
+		glitch, //GOTTA BE THE LAST ONE SO IT CAN USE ANY SKILL
+		
 		lifehack,
 		lifeswap,
+		swap
 		
-		grape_soda,
-		change,
-		rubber_glove,
 		};
 
 		enum character

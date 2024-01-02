@@ -9,7 +9,7 @@ if(place_meeting(x, y, obj_mouse))
 		if(global.sfxVol < 1)
 		{
 			global.sfxVol += .25
-		};
+		}
 		else
 		{
 			global.sfxVol = 0;
@@ -24,7 +24,7 @@ if(place_meeting(x, y, obj_mouse))
 	};
 	selected = true;
 	text = "CHANGE THE VOLUME OF THE SOUND EFFECTS! CURRENT: "+string(global.sfxVol*100) + "PERCENT!";
-};
+}
 else
 {
 	selected = false;

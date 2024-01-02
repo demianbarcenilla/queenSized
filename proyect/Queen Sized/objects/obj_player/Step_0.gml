@@ -21,26 +21,26 @@ if(!instance_exists(obj_shop))
 			image_index = 3;
 			
 			nextTurn();
-		};
+		}
 		else
 		{
 			if(explodeTimer = 0)
 			{
 				skill(normal.explode, false);
 				nextTurn();
-			};
+			}
 			else if(frozenCountdown > 0) //If suffering the cost of a skill
-				{
-					global.text = string(var_name) + " IS FROZEN!";
-					frozenCountdown --;
+			{
+				global.text = string(var_name) + " IS FROZEN!";
+				frozenCountdown --;
 				
-					nextTurn();
-				};
+				nextTurn();
+			}
 			else
 			{
 				if(var_turnWait != 0) //If suffering the cost of a skill
 				{
-					if(var_turnWait = 1){ global.text = string(var_name) + " HAS TO WAIT A TURN TO ACT AGAIN!" };
+					if(var_turnWait = 1){ global.text = string(var_name) + " HAS TO WAIT A TURN TO ACT AGAIN!" }
 					else{ global.text = string(var_name) + " HAS TO WAIT " + string(var_turnWait) + " TURNS TO ACT AGAIN!" };
 		
 					if(var_turnWait > 0)
@@ -53,7 +53,7 @@ if(!instance_exists(obj_shop))
 						explodeTimer--;
 					};
 					nextTurn();
-				};
+				}
 	
 				else
 				{
@@ -62,7 +62,7 @@ if(!instance_exists(obj_shop))
 					if(!global.event)
 					{
 						if(instance_exists(obj_uiAttack) or (instance_exists(obj_skill4))){ execute_ui();};
-					};
+					}
 					else
 					{
 						execute_event(global.eventType);

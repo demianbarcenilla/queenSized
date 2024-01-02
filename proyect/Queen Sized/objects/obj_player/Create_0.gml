@@ -1,6 +1,5 @@
 image_speed = 0;
 
-
 //initialize
 enemylist();
 playerEnemies(); //Sets the changes for playable enemies
@@ -40,7 +39,7 @@ for(ii = 0; ii < 4; ii++) //RECHARGE TIME
 		{
 			st_skillRecharge[ii] = 0;
 		};
-	};
+	}
 	else{st_skillRecharge[ii] = -1}
 }
 
@@ -86,3 +85,7 @@ for(i=0; i < 3; i++)
 };
 
 var_specialPlus = false;
+
+instance_create_depth(x, y, 0, obj_ui);
+instance_create_depth(x, y, 0, obj_text);
+instance_create_depth(550, 20, depth, obj_moneyText);

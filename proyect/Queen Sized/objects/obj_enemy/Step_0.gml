@@ -16,12 +16,12 @@ if(global.turn%2 = 1) and (global.canAct)
 			{
 				skill(normal.explode, false);
 				nextTurn();
-			};
+			}
 			else
 			{
 				if(var_turnWait != 0) //If suffering the cost of a skill
 				{
-					if(var_turnWait = 1){ global.text = string(var_name) + " HAS TO WAIT A TURN TO ACT AGAIN!" };
+					if(var_turnWait = 1){ global.text = string(var_name) + " HAS TO WAIT A TURN TO ACT AGAIN!" }
 					else{ global.text = string(var_name) + " HAS TO WAIT " + string(var_turnWait) + " TURNS TO ACT AGAIN!" };
 		
 					if(var_turnWait > 0)
@@ -34,14 +34,14 @@ if(global.turn%2 = 1) and (global.canAct)
 						explodeTimer--;
 					};
 					nextTurn();
-				};
+				}
 				else if(frozenCountdown > 0) //If suffering the cost of a skill
 				{
 					global.text = string(var_name) + " IS FROZEN!";
 					frozenCountdown --;
 				
 					nextTurn();
-				};
+				}
 				else
 				{
 					if(var_guarding){var_guarding = false};
@@ -69,16 +69,16 @@ if(global.turn%2 = 1) and (global.canAct)
 									skillsAvailable = true;
 								};
 							};
-						};
+						}
 						else
 						{
 							global.text = string(var_name) +" IS ELECTROCUTED AND CAN'T USE ANY SKILLS!"
 						}
-					};
+					}
 					else if(choose(1, 2, 3, 4) = 1) //Guard
 					{
 						guard();	
-					};
+					}
 					else
 					{
 						attack(st_damage);
@@ -88,7 +88,7 @@ if(global.turn%2 = 1) and (global.canAct)
 				};
 			};
 		};
-	};
+	}
 		
 	else
 	{

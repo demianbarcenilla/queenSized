@@ -29,9 +29,9 @@ if(place_meeting(x, y, obj_mouse))
 			//Colors
 			if(target.tempDmg != 0)
 			{
-				if(target.tempDmg > 0){draw_set_color(c_lime)};
+				if(target.tempDmg > 0){draw_set_color(c_lime)}
 				else{draw_set_color(c_red)};
-			};
+			}
 			else
 			{
 				draw_set_color(c_white);
@@ -42,7 +42,7 @@ if(place_meeting(x, y, obj_mouse))
 			{
 				var _tempString = statText(target.st_damage, target.tempDmg);
 				draw_text(x +_xdisplace, 120 +5+ _ydisplace, _tempString)
-			};
+			}
 			else
 			{
 				
@@ -63,9 +63,9 @@ if(place_meeting(x, y, obj_mouse))
 			{
 				if(target.tempDef != 0)
 				{
-					if(target.tempDef > 0){draw_set_color(c_lime)};
+					if(target.tempDef > 0){draw_set_color(c_lime)}
 					else{draw_set_color(c_red)};
-				};
+				}
 				else
 				{
 					draw_set_color(c_white);
@@ -78,13 +78,13 @@ if(place_meeting(x, y, obj_mouse))
 			{
 				_tempString = string(min(target.st_defense + target.tempDef, 0));
 				draw_text(x +_xdisplace, 120 +5+_ydisplace*2, _tempString);
-			};
+			}
 			
 			else if(target.tempDef != 0) and (target != obj_enemy)
 			{
 				_tempString = statText(target.st_defense, target.tempDef);
 				draw_text(x +_xdisplace, 120 +5+_ydisplace*2, _tempString);
-			};
+			}
 			else
 			{
 				draw_text(x +_xdisplace, 120 +5+_ydisplace*2, string(target.st_defense + target.tempDef));

@@ -14,6 +14,15 @@ for(i=0; i< 4; i++)
 		_poolPlace = irandom_range(0, array_length(obj_shop.arr_pool)-1); //select a random spot from the pool
 		var_holding = obj_shop.arr_pool[_poolPlace]; //convert that spot from the pool into a skill ID
 		break;
+		var _weight = arr_skill[var_holding, skills.weight], //get rarity of skill
+			_random = irandom_range(1, 100), //A random number from 1 to 100
+			_place = 12.5*_weight; 
+
+			if(_random <= _place)
+			{
+				_poolPlace = irandom_range(0, array_length(obj_shop.arr_pool)-1); //select a random spot from the pool
+				var_holding = obj_shop.arr_pool[_poolPlace]; //convert that spot from the pool into a skill ID
+			};
 	};
 };
 if(reroll)
@@ -42,7 +51,7 @@ if(reroll)
 	{
 		text = arr_skill[var_holding, skills.descPlus]
 		sprite_index = spr_skillsPlus
-	};
+	}
 	else
 	{
 		text = arr_skill[var_holding, skills.desc]
@@ -83,7 +92,7 @@ while(reroll)
 			{
 				text = arr_skill[var_holding, skills.descPlus]
 				sprite_index = spr_skillsPlus
-			};
+			}
 			else
 			{
 				text = arr_skill[var_holding, skills.desc]
@@ -145,7 +154,7 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 						obj_player.st_skillRecharge[i]= arr_skill[var_holding, skills.costPlus] > 0 ? 0 : -1;
 					}
 					break;
-				};
+				}
 				
 				else
 				{
@@ -200,14 +209,14 @@ if(place_meeting(x, y, obj_mouse)) and (!instance_exists(obj_skill1))
 				instance_activate_object(id)
 				centered = true;
 			};
-		};
+		}
 		
 		else
 		{
 			audio_play_sound(snd_error, 0, false);
 		};
 	};
-};
+}
 else
 {
 	if(checked)
@@ -231,25 +240,25 @@ if(skillsFull = 4)
 		if(obj_skill1.selected = true) 
 		{
 			guiSelected = 0;
-		};
+		}
 		else if(obj_skill2.selected = true)
 		{
 			guiSelected = 1;
-		};
+		}
 		else if(obj_skill3.selected = true)
 		{
 			guiSelected = 2;
-		};
+		}
 		else if(obj_skill4.selected = true)
 		{
 			guiSelected = 3;
-		};
+		}
 		else
 		{
 			guiSelected = -1;
 		};
 	};
-};
+}
 else
 {
 	xx = xstart;
@@ -328,7 +337,7 @@ if(holdingPlus)
 {
 	text = arr_skill[var_holding, skills.descPlus]
 	sprite_index = spr_skillsPlus
-};
+}
 else
 {
 	text = arr_skill[var_holding, skills.desc]
@@ -344,7 +353,7 @@ if(discount)
 {
 	cost = (arr_skill[var_holding, skills.shop] + (10 * global.mult))/2;
 	cost = floor(cost);
-};
+}
 else
 {
 	cost = arr_skill[var_holding, skills.shop] + (10 * global.mult);
