@@ -1174,6 +1174,20 @@ function playerEnemies(){
 	arr_enemy[enemy.phish, character.skill_3] = -1;
 	arr_enemy[enemy.phish, character.skill_4] = -1;
 	
+	//Omar
+	arr_enemy[enemy.omar, character.name] = "Omar";
+	arr_enemy[enemy.omar, character.sprite] = spr_omar;
+	arr_enemy[enemy.omar, character.damage] = 25;
+	arr_enemy[enemy.omar, character.hp] = 100;
+	arr_enemy[enemy.omar, character.defense] = 0;
+	
+	arr_enemy[enemy.omar, character.skill_1] = normal.cheese_liquid;
+	arr_enemy[enemy.omar, character.skill_2] = -1;
+	arr_enemy[enemy.omar, character.skill_3] = -1;
+	arr_enemy[enemy.omar, character.skill_4] = -1;
+	
+	arr_enemy[enemy.omar, character.special] = normal.craft;
+	
 	//Tito
 	arr_enemy[enemy.tito, character.name] = "tito";
 	arr_enemy[enemy.tito, character.sprite] = spr_tito;
@@ -1261,6 +1275,9 @@ function stageEnemies(){
 };
 
 function initializeEnemy(_enemy){
+	//Burgs
+	omarBurgTable();
+
 	global.text = arr_enemy[_enemy, character.text_1];
 	global.textPrev = global.text;
 	

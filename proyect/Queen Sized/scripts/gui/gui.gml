@@ -202,9 +202,12 @@ function skillTrigger()
 	{
 		if(st_skills[guiSelected] != -1)
 		{
-			if(global.money >= arr_price[st_skills[guiSelected]])
+			var _price = arr_price[st_skills[guiSelected]];
+			
+			if(global.money >= _price)
 			{
 				_phishUse = true;
+				
 			};
 		};
 	};
@@ -273,6 +276,26 @@ function screenshake(time, ammount, fade)
 		shakeAmmount = ammount;
 		shakeFade = fade;
 	};
+};
+
+function osc_step(increment, amplitude)
+{
+	//oscilation
+	var _shift;
+	
+	t = (t + increment) mod 360; //add *_increment* degrees every step, reset at 360
+	_shift = -dsin(t) * amplitude;
+	return _shift;
+};
+
+function lowerClamp(variable, minimum)
+{
+	if(variable < minimum)
+	{
+		variable = minimum
+	};
+	
+	return variable;
 };
 
 function uiBehave()
@@ -521,11 +544,25 @@ function unlocks()
 					ini_write_real("unlocks", 19, true);
 				};
 			break;
-			/*						
+						
 			case enemy.omar:
-				ini_write_real("unlocks", 9, true);
-				ini_write_real("unlocks", 12, true);
-			break;*/
+				if(global.queenType = 0)
+				{
+					ini_write_real("unlocks", 31, true);
+				}
+				else if(global.queenType = 1)
+				{
+					ini_write_real("unlocks", 32, true);
+				}
+				else if(global.queenType = 2)
+				{
+					ini_write_real("unlocks", 33, true);
+				}
+				else if(global.queenType = 3)
+				{
+					ini_write_real("unlocks", 34, true);
+				};
+			break;
 						
 			case enemy.phish:
 				if(global.queenType = 0)
@@ -546,18 +583,29 @@ function unlocks()
 				};
 			break;
 						
-			/*case (enemy.tito or enemy.bondiola):
-				ini_write_real("unlocks", 13, true);
-				ini_write_real("unlocks", 15, true);
+			case (enemy.tito or enemy.bondiola):
+				if(global.queenType = 0)
+				{
+					ini_write_real("unlocks", 26, true);
+				}
+				else if(global.queenType = 1)
+				{
+					ini_write_real("unlocks", 27, true);
+				}
+				else if(global.queenType = 2)
+				{
+					ini_write_real("unlocks", 28, true);
+				}
+				else if(global.queenType = 3)
+				{
+					ini_write_real("unlocks", 29, true);
+				};
 			break;
 						
-			case enemy.merchant:
+			/*case enemy.merchant:
 				ini_write_real("unlocks", 19, true);
 			break;
-						
-			case enemy.cookie:
-				ini_write_real("unlocks", 18, true);
-			break;*/
+			*/
 		}
 		
 		for(i = 1; i <= 50; i++)

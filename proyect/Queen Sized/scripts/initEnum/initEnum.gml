@@ -35,12 +35,13 @@ function initEnum(){
 		costPlus,
 		usesPlus,
 		
-		weight //The higher it is, the rarest the item is. 0 is normal, 4 is SUPER rare
+		weight, //The higher it is, the rarest the item is. 0 is normal, 4 is SUPER rare
+		type //What does this skill do? Heal? Damage?
 		};
 
 		enum normal
 		{
-		nap,
+		nap, //Base Skills
 		napLong,
 		drain,
 		distract,
@@ -78,19 +79,20 @@ function initEnum(){
 		grilled_cheese,
 		plunger,
 		milk,
-		sneeze,
+		
+		sneeze, //Fridge Skills
 		cigar,
 		freeze,
 		snowball,
 		
-		connect,
+		connect, //Elec. Skills
 		phish,
 		download,
 		popup,
 		electric,
 		os,
 		
-		rat_pocket,
+		rat_pocket, //Rat Skills
 		rat_bomb,
 		rat_spooky,
 		rat_bitter,
@@ -114,7 +116,7 @@ function initEnum(){
 		rat_e,
 		rat_cookie,
 		
-		cookie_jar,
+		cookie_jar, //Cookie Skills
 		cookie,
 		
 		cookie_christmas,
@@ -132,21 +134,47 @@ function initEnum(){
 		cookie_frozen,
 		cookie_bitter,
 		cookie_mossy,
-		
 		cookie_void,
 		cookie_lucky,
 		
 		cookie_electric,
 		cookie_phishy,
 		
-		stance,
+		stance, //Tier 4 Skills
 		weaken,
 		hp_freeze,
 		
-		cookie_box,
+		cookie_box, //Inventory Replace Skills
 		phishing_rod,
 		
-		melk,
+		melk, //Melk
+		craft, //Omar's SPSK
+		
+		burger_hat, //Burger Skills
+		burger_cheese,
+		burger_blood,
+		burger_dr,
+		
+		burger_wide,
+		burger_exe,
+		burger_maw,
+		burger_bomb,
+		
+		burger_stone,
+		burger_knight,
+		burger_kreatin,
+		burger_pixie,
+		
+		burger_kiss,
+		burger_core,
+		burger_rag,
+		burger_bit,
+		
+		burger_void,
+		burger_incognito,
+		burger_jester,
+		burger_king,
+		
 		decree,
 		glitch, //GOTTA BE THE LAST ONE SO IT CAN USE ANY SKILL
 		
@@ -155,7 +183,17 @@ function initEnum(){
 		swap
 		
 		};
-
+		
+		enum skType
+		{
+			heal,
+			dmg,
+			def,
+			debuff,
+			sfx,
+			misc,
+		}
+		
 		enum character
 		{
 		name,

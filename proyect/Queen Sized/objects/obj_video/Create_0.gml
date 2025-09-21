@@ -17,6 +17,9 @@ switch(global.player)
 	case enemy.phish: _vid = "vid_phish.mp4"
 	break;
 	
+	case enemy.omar: _vid = "vid_omar.mp4"
+	break;
+	
 	default: instance_destroy();
 	break;
 };

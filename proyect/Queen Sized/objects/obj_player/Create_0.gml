@@ -2,17 +2,30 @@ image_speed = 0;
 
 //initialize
 enemylist();
-playerEnemies(); //Sets the changes for playable enemies
+
 
 _self = id;
 _other = obj_enemy;
+
+pickleAmmount = 0;
+pickleUpdate();
 
 var _player = global.player;
 phishPrices();
 
 canPressCards = true;
-
+playerEnemies(); //Sets the changes for playable enemies
 initializeEnemy(_player);
+
+ini_open("unlocks.ini");
+	var _lilyJuicePlus = ini_read_real("unlocks", "32", false)
+ini_close();
+
+if(_lilyJuicePlus) and (_player = enemy.omar)
+{
+	st_skillPlus[0] = true;
+}
+	
 initializeSkills(_self, _other);
 
 var i;
@@ -63,7 +76,8 @@ if(playerSelected = enemy.tito) or (playerSelected = enemy.bondiola)
 {
 	x +=40;
 	tempWrite();
-};
+}
+
 dead = false;
 
 healthbarDisplace = (sprite_get_width(sprite_index)/2);

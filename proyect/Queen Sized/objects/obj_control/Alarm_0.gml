@@ -1,3 +1,4 @@
+///@desc Turns
 global.canAct = true;
 
 if(instance_exists(obj_player))
@@ -46,11 +47,23 @@ if(instance_exists(obj_enemy))
 				with(obj_player){initializeTB()};
 				screenshake(10, 2, .1);
 			};
+			
+			if(obj_player.playerSelected = enemy.omar)
+			{
+				with(obj_player)
+				{
+					pickleAmmount += 1 //Update pickle ammount
+					pickleUpdate();
+				}
+			}
+			
 			obj_player.tempDef = 0;
 			obj_player.tempDmg = 0;
 			obj_player.var_snowballDmg = 1;
+			
 			obj_player.canPressCards = false;
 			obj_player.alarm[10] = 15;
+			
 			if(obj_player.playerSelected = enemy.rat_king)
 			{
 				obj_player.hp += obj_player.maxHp/2;

@@ -79,20 +79,37 @@ else if(obj_playerSelect_phish.selected)
 		sprite_index = spr_empty;
 	};
 }
-
-/*else if(obj_playerSelect_omar.selected)
+else if(obj_playerSelect_omar.selected)
 {
 	if(obj_playerSelect_omar.unlocked)
 	{
-		global.text = "OMAR\nA BURGER COLLECTOR!"
+		global.text = "OMAR\nKILL THE ENEMIES! COLLECT THE BURGERS!"
 		sprite_index = spr_omar;
+		
+		drawBadges(enemy.omar);
 	};
 	else
 	{
-		global.text = "\nBEAT THE ASHTRAY TO UNLOCK"
+		global.text = "\nDRINK LILY JUICE 5 TIMES TO UNLOCK!"
 		sprite_index = spr_empty;
 	};
 	
+};
+/*
+else if(obj_playerSelect_tb.selected)
+{
+	if(obj_playerSelect_tb.unlocked)
+	{
+		global.text = "TITO/BONDIOLA\nSALE UN TRUQUITO?"
+		sprite_index = spr_both;
+		
+		drawBadges(enemy.tito);
+	};
+	else
+	{
+		global.text = "BEAT ??? TO UNLOCK"
+		sprite_index = spr_empty;
+	}
 };
 else if(obj_playerSelect_merchant.selected)
 {
@@ -107,20 +124,8 @@ else if(obj_playerSelect_merchant.selected)
 		sprite_index = spr_empty;
 	};
 	
-};
-else if(obj_playerSelect_tb.selected)
-{
-	if(obj_playerSelect_tb.unlocked)
-	{
-		global.text = "TITO/BONDIOLA\nSALE UN TRUQUITO?"
-		sprite_index = spr_both;
-	};
-	else
-	{
-		global.text = "BEAT ??? TO UNLOCK"
-		sprite_index = spr_empty;
-	}
 };*/
+
 else
 {
 	global.text = "SELECT A CHARACTER!";

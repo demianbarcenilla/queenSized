@@ -2,6 +2,7 @@ image_speed = 0;
 
 enemylist();
 stageEnemies(); //assign enemies for each stage
+pickleAmmount = 0;
 
 //initialize Character
 if((global.battleCount -9) %10 = 0) //boss

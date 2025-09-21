@@ -1,3 +1,4 @@
+/// @desc Draw Backgrounds
 if(room = rm_game)
 {
 	if(instance_exists(obj_shop))

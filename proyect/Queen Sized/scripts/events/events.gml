@@ -198,6 +198,9 @@ function eventValues()
 
 function eventStart(_value)
 {
+	ini_open("unlocks.ini")
+		var _hatburger = ini_read_real("unlocks", 31, false) and (_value = normal.burger_hat);
+	ini_close();
 	if(instance_exists(obj_stats))
 	{
 		obj_stats.alarm[0] = 1;
@@ -222,19 +225,19 @@ function eventStart(_value)
 			nextTurn();
 		};
 	}
-	else if(obj_enemy.playerSelected = enemy.rat_king) and (_value = normal.rat_flute) //KING+FLUTE EVENT
+	else if(obj_enemy.playerSelected = enemy.rat_king) and ((_value = normal.rat_flute) or (_hatburger)) //KING+FLUTE EVENT
 	{
 		global.event = true;
 		global.eventType = 1;
 		nextTurn();
 	}
-	else if(obj_enemy.playerSelected = enemy.kid) and (_value = normal.lemonade) //LEMONADE KID EVENT
+	else if(obj_enemy.playerSelected = enemy.kid) and ((_value = normal.lemonade) or (_hatburger)) //LEMONADE KID EVENT
 	{
 		global.event = true;
 		global.eventType = 2;
 		nextTurn();
 	}
-	else if(obj_enemy.playerSelected = enemy.skater) and ((_value = normal.honk) or (_value = normal.rat_horn)) //SKATER+HONK EVENT
+	else if(obj_enemy.playerSelected = enemy.skater) and ((_value = normal.honk) or (_value = normal.rat_horn) or (_hatburger)) //SKATER+HONK EVENT
 	{
 		global.event = true;
 		global.eventType = 3;

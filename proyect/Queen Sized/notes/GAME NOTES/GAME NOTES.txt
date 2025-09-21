@@ -8,7 +8,7 @@ PILLOW UNLOCKS
 04- Ultra Rare! [Beat The Queen (Electric)]
 05- Soft Trophy [Beat The Queen (Final Form)]
 
-06- RAT KING
+06- RAT KING [Go to the RAT ROUTE]
 
 RK UNLOCKS
 
@@ -17,7 +17,7 @@ RK UNLOCKS
 09- UNSTUCK FLUTE! (rat flute gives you a random rat skill) [Beat The Queen (Electric)]
 10- Rat Trophy [Beat The Queen (Final Form)]
 
-11- JEAN
+11- JEAN [Defeat JEAN]
 
 JEAN UNLOCKS
 
@@ -26,14 +26,14 @@ JEAN UNLOCKS
 14- HEALTH FREEZE! [Beat The Queen (Electric)]
 15- FROSTY TROPHY [Beat The Queen (Final Form)]
 
-COOKIE UNLOCKS
+COOKIE UNLOCKS 
 
 16- BAKE [Beat The Queen]
 17- COOKIE LEAK! [Beat The Queen (Flaming)]
 18- Cookie Box! [Beat The Queen (Electric)]
 19- SUGAR TROPHY [Beat The Queen (Final Form)]
 
-20- PHISH
+20- PHISH [USE PHISH 20 TIMES]
 
 21- BARGAIN (low chance for a skill to be free to use) [Beat The Queen]
 22- Discount Leak! [Beat The Queen (Flaming)]
@@ -41,16 +41,18 @@ COOKIE UNLOCKS
 24- BAIT TROPHY [Beat The Queen (Final Form)]
 
 25- TITO/BONDIOLA
+
 26- PH [Beat The Queen]
 27- PH [Beat The Queen (Flaming)]
 28- PH [Beat The Queen (Electric)]
 29- PH [Beat The Queen (Final Form)]
 
-30- OMAR
-31- PH [Beat The Queen]
-32- PH [Beat The Queen (Flaming)]
+30- OMAR [Deplete the LILY JUICE]
+
+31- HATBURGER ALT ROUTES [Beat The Queen]
+32- LILY JUICE + [Beat The Queen (Flaming)]
 33- PH [Beat The Queen (Electric)]
-34- PH [Beat The Queen (Final Form)]
+34- HOLIC TROPHY [Beat The Queen (Final Form)]
 
 35- LITTLE QUEEN (complete the whole game with one character)
 36- Mixup! [Beat The Queen]

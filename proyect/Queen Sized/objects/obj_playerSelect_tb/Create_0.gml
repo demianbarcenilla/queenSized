@@ -7,7 +7,7 @@ shift = 0;
 image_speed = 0;
 
 ini_open("unlocks.ini");
-	unlocked = ini_read_real("unlocks", "6", false);
+	unlocked = ini_read_real("unlocks", "1", false);
 	if(unlocked)
 	{
 		sprite_index = spr_tbSelect;
